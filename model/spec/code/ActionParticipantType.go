@@ -1,0 +1,29 @@
+package code
+
+type ActionParticipantType int
+
+const (
+	ActionParticipantTypeCareTeam ActionParticipantType = iota
+	ActionParticipantTypeDevice
+	ActionParticipantTypeGroup
+	ActionParticipantTypeHealthcareService
+	ActionParticipantTypeLocation
+	ActionParticipantTypeOrganization
+	ActionParticipantTypePatient
+	ActionParticipantTypePractitioner
+	ActionParticipantTypePractitionerRole
+	ActionParticipantTypeRelatedPerson
+)
+
+/*
+CareTeam
+Device
+Group
+HealthcareService
+Location
+Organization
+Patient
+Practitioner
+PractitionerRole
+RelatedPerson
+*/

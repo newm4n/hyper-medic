@@ -1,0 +1,21 @@
+package code
+
+type AdverseEventCausalityAssess int
+
+const (
+	AdverseEventCausalityAssessCertain AdverseEventCausalityAssess = iota
+	AdverseEventCausalityAssessProbablyLikely
+	AdverseEventCausalityAssessPossible
+	AdverseEventCausalityAssessUnlikely
+	AdverseEventCausalityAssessConditionalClassified
+	AdverseEventCausalityAssessUnassessableUnclassifiable
+)
+
+/*
+Certain
+Probably/Likely
+Possible
+Unlikely
+Conditional/Classified
+Unassessable/Unclassifiable
+*/

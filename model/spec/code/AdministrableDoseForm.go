@@ -1,0 +1,412 @@
+package code
+
+type AdministrableDoseForm int
+
+const (
+	AdministrableDoseFormOralSuspension AdministrableDoseForm = iota
+	AdministrableDoseFormOralGel
+	AdministrableDoseFormPowderForOralSolution
+	AdministrableDoseFormGranulesForOralSolution
+	AdministrableDoseFormLyophilisateForSuspension
+	AdministrableDoseFormPowderForSyrup
+	AdministrableDoseFormSolubleTablet
+	AdministrableDoseFormHerbalTea
+	AdministrableDoseFormInstantHerbalTea
+	AdministrableDoseFormGranules
+	AdministrableDoseFormGastroResistantGranules
+	AdministrableDoseFormModifiedReleaseGranules
+	AdministrableDoseFormCapsuleHard
+	AdministrableDoseFormGastroResistantCapsuleHard
+	AdministrableDoseFormChewableCapsuleSoft
+	AdministrableDoseFormProlongedReleaseCapsuleSoft
+	AdministrableDoseFormModifiedReleaseCapsuleSoft
+	AdministrableDoseFormCoatedTablet
+	AdministrableDoseFormOralDropsSolution
+	AdministrableDoseFormOralDropsSuspension
+	AdministrableDoseFormOralDropsEmulsion
+	AdministrableDoseFormOralLiquid
+	AdministrableDoseFormOralSolution
+	AdministrableDoseFormOralEmulsion
+	AdministrableDoseFormOralPaste
+	AdministrableDoseFormPowderForOralSuspension
+	AdministrableDoseFormGranulesForOralSuspension
+	AdministrableDoseFormSyrup
+	AdministrableDoseFormGranulesForSyrup
+	AdministrableDoseFormDispersibleTablet
+	AdministrableDoseFormOralPowder
+	AdministrableDoseFormEffervescentPowder
+	AdministrableDoseFormEffervescentGranules
+	AdministrableDoseFormProlongedReleaseGranules
+	AdministrableDoseFormCachet
+	AdministrableDoseFormCapsuleSoft
+	AdministrableDoseFormGastroResistantCapsuleSoft
+	AdministrableDoseFormProlongedReleaseCapsuleHard
+	AdministrableDoseFormModifiedReleaseCapsuleHard
+	AdministrableDoseFormTablet
+	AdministrableDoseFormFilmCoatedTablet
+	AdministrableDoseFormOrodispersibleTablet
+	AdministrableDoseFormGastroResistantTablet
+	AdministrableDoseFormModifiedReleaseTablet
+	AdministrableDoseFormMedicatedChewingGum
+	AdministrableDoseFormPillules
+	AdministrableDoseFormPulsatileReleaseIntraruminalDevice
+	AdministrableDoseFormPremixForMedicatedFeedingStuff
+	AdministrableDoseFormGargle
+	AdministrableDoseFormGarglePowderForSolution
+	AdministrableDoseFormOromucosalSuspension
+	AdministrableDoseFormOromucosalSpray
+	AdministrableDoseFormMouthwash
+	AdministrableDoseFormGingivalSolution
+	AdministrableDoseFormOromucosalPaste
+	AdministrableDoseFormGingivalGel
+	AdministrableDoseFormEffervescentTablet
+	AdministrableDoseFormOralLyophilisate
+	AdministrableDoseFormProlongedReleaseTablet
+	AdministrableDoseFormChewableTablet
+	AdministrableDoseFormOralGum
+	AdministrableDoseFormContinuousReleaseIntraruminalDevice
+	AdministrableDoseFormLickBlock
+	AdministrableDoseFormMedicatedPellets
+	AdministrableDoseFormConcentrateForGargle
+	AdministrableDoseFormGargleTabletForSolution
+	AdministrableDoseFormOromucosalSolution
+	AdministrableDoseFormOromucosalDrops
+	AdministrableDoseFormSublingualSpray
+	AdministrableDoseFormMouthwashTabletForSolution
+	AdministrableDoseFormOromucosalGel
+	AdministrableDoseFormOromucosalCream
+	AdministrableDoseFormGingivalPaste
+	AdministrableDoseFormSublingualTablet
+	AdministrableDoseFormBuccalTablet
+	AdministrableDoseFormCompressedLozenge
+	AdministrableDoseFormOromucosalCapsule
+	AdministrableDoseFormMucoAdhesiveBuccalTablet
+	AdministrableDoseFormLozenge
+	AdministrableDoseFormPastille
+	AdministrableDoseFormDentalGel
+	AdministrableDoseFormDentalInsert
+	AdministrableDoseFormDentalPowder
+	AdministrableDoseFormDentalSuspension
+	AdministrableDoseFormToothpaste
+	AdministrableDoseFormPeriodontalGel
+	AdministrableDoseFormBathAdditive
+	AdministrableDoseFormCream
+	AdministrableDoseFormOintment
+	AdministrableDoseFormMedicatedPlaster
+	AdministrableDoseFormShampoo
+	AdministrableDoseFormCutaneousSpraySuspension
+	AdministrableDoseFormCutaneousLiquid
+	AdministrableDoseFormConcentrateForCutaneousSolution
+	AdministrableDoseFormCutaneousEmulsion
+	AdministrableDoseFormCutaneousPatch
+	AdministrableDoseFormPeriodontalPowder
+	AdministrableDoseFormDentalStick
+	AdministrableDoseFormDentalSolution
+	AdministrableDoseFormDentalEmulsion
+	AdministrableDoseFormPeriodontalInsert
+	AdministrableDoseFormGel
+	AdministrableDoseFormCutaneousPaste
+	AdministrableDoseFormCutaneousFoam
+	AdministrableDoseFormCutaneousSpraySolution
+	AdministrableDoseFormCutaneousSprayPowder
+	AdministrableDoseFormCutaneousSolution
+	AdministrableDoseFormCutaneousSuspension
+	AdministrableDoseFormCutaneousPowder
+	AdministrableDoseFormSolutionForIontophoresis
+	AdministrableDoseFormCollodion
+	AdministrableDoseFormPoultice
+	AdministrableDoseFormCutaneousSponge
+	AdministrableDoseFormCollar
+	AdministrableDoseFormEarTag
+	AdministrableDoseFormDipSuspension
+	AdministrableDoseFormTransdermalPatch
+	AdministrableDoseFormMedicatedNailLacquer
+	AdministrableDoseFormCutaneousStick
+	AdministrableDoseFormImpregnatedDressing
+	AdministrableDoseFormMedicatedPendant
+	AdministrableDoseFormDipSolution
+	AdministrableDoseFormDipEmulsion
+	AdministrableDoseFormConcentrateForDipSuspension
+	AdministrableDoseFormPowderForDipSolution
+	AdministrableDoseFormPowderForSuspensionForFishTreatment
+	AdministrableDoseFormPourOnSuspension
+	AdministrableDoseFormSpotOnSolution
+	AdministrableDoseFormSpotOnEmulsion
+	AdministrableDoseFormTeatDipSuspension
+	AdministrableDoseFormTeatSpraySolution
+	AdministrableDoseFormSolutionForSkinPrickTest
+	AdministrableDoseFormPlasterForProvocationTest
+	AdministrableDoseFormEyeGel
+	AdministrableDoseFormEyeDropsSolution
+	AdministrableDoseFormEyeDropsSuspension
+	AdministrableDoseFormConcentrateForDipSolution
+	AdministrableDoseFormConcentrateForDipEmulsion
+	AdministrableDoseFormConcentrateForSolutionForFishTreatment
+	AdministrableDoseFormPourOnSolution
+	AdministrableDoseFormPourOnEmulsion
+	AdministrableDoseFormSpotOnSuspension
+	AdministrableDoseFormTeatDipSolution
+	AdministrableDoseFormTeatDipEmulsion
+	AdministrableDoseFormTransdermalSystem
+	AdministrableDoseFormSolutionForSkinScratchTest
+	AdministrableDoseFormEyeCream
+	AdministrableDoseFormEyeOintment
+	AdministrableDoseFormEyeDropsEmulsion
+	AdministrableDoseFormEyeDropsSolventForReconstitution
+	AdministrableDoseFormEyeLotion
+	AdministrableDoseFormOphthalmicInsert
+	AdministrableDoseFormEarCream
+	AdministrableDoseFormEarOintment
+	AdministrableDoseFormEarDropsSuspension
+	AdministrableDoseFormEyeDropsProlongedRelease
+	AdministrableDoseFormEyeLotionSolventForReconstitution
+	AdministrableDoseFormOphthalmicStrip
+	AdministrableDoseFormEarGel
+	AdministrableDoseFormEarDropsSolution
+	AdministrableDoseFormEarDropsEmulsion
+	AdministrableDoseFormEarPowder
+	AdministrableDoseFormEarSpraySuspension
+	AdministrableDoseFormEarWashSolution
+	AdministrableDoseFormEarTampon
+	AdministrableDoseFormNasalCream
+	AdministrableDoseFormNasalGel
+	AdministrableDoseFormNasalDropsSolution
+	AdministrableDoseFormNasalDropsEmulsion
+	AdministrableDoseFormNasalSpraySolution
+	AdministrableDoseFormNasalSprayEmulsion
+	AdministrableDoseFormNasalStick
+	AdministrableDoseFormVaginalGel
+	AdministrableDoseFormVaginalFoam
+	AdministrableDoseFormEarSpraySolution
+	AdministrableDoseFormEarSprayEmulsion
+	AdministrableDoseFormEarWashEmulsion
+	AdministrableDoseFormEarStick
+	AdministrableDoseFormNasalOintment
+	AdministrableDoseFormNasalDropsSuspension
+	AdministrableDoseFormNasalPowder
+	AdministrableDoseFormNasalSpraySuspension
+	AdministrableDoseFormNasalWash
+	AdministrableDoseFormVaginalCream
+	AdministrableDoseFormVaginalOintment
+	AdministrableDoseFormVaginalSolution
+	AdministrableDoseFormVaginalEmulsion
+	AdministrableDoseFormPessary
+	AdministrableDoseFormVaginalCapsuleSoft
+	AdministrableDoseFormEffervescentVaginalTablet
+	AdministrableDoseFormVaginalDeliverySystem
+	AdministrableDoseFormRectalCream
+	AdministrableDoseFormRectalFoam
+	AdministrableDoseFormVaginalSuspension
+	AdministrableDoseFormTabletForVaginalSolution
+	AdministrableDoseFormVaginalCapsuleHard
+	AdministrableDoseFormVaginalTablet
+	AdministrableDoseFormMedicatedVaginalTampon
+	AdministrableDoseFormVaginalSponge
+	AdministrableDoseFormRectalGel
+	AdministrableDoseFormSolutionForInjection
+)
+
+/*
+Oral suspension
+Oral gel
+Powder for oral solution
+Granules for oral solution
+Lyophilisate for suspension
+Powder for syrup
+Soluble tablet
+Herbal tea
+Instant herbal tea
+Granules
+Gastro-resistant granules
+Modified-release granules
+Capsule, hard
+Gastro-resistant capsule, hard
+Chewable capsule, soft
+Prolonged-release capsule, soft
+Modified-release capsule, soft
+Coated tablet
+Oral drops, solution
+Oral drops, suspension
+Oral drops, emulsion
+Oral liquid
+Oral solution
+Oral emulsion
+Oral paste
+Powder for oral suspension
+Granules for oral suspension
+Syrup
+Granules for syrup
+Dispersible tablet
+Oral powder
+Effervescent powder
+Effervescent granules
+Prolonged-release granules
+Cachet
+Capsule, soft
+Gastro-resistant capsule, soft
+Prolonged-release capsule, hard
+Modified-release capsule, hard
+Tablet
+Film-coated tablet
+Orodispersible tablet
+Gastro-resistant tablet
+Modified-release tablet
+Medicated chewing-gum
+Pillules
+Pulsatile-release intraruminal device
+Premix for medicated feeding stuff
+Gargle
+Gargle, powder for solution
+Oromucosal suspension
+Oromucosal spray
+Mouthwash
+Gingival solution
+Oromucosal paste
+Gingival gel
+Effervescent tablet
+Oral lyophilisate
+Prolonged-release tablet
+Chewable tablet
+Oral gum
+Continuous-release intraruminal device
+Lick block
+Medicated pellets
+Concentrate for gargle
+Gargle, tablet for solution
+Oromucosal solution
+Oromucosal drops
+Sublingual spray
+Mouthwash, tablet for solution
+Oromucosal gel
+Oromucosal cream
+Gingival paste
+Sublingual tablet
+Buccal tablet
+Compressed lozenge
+Oromucosal capsule
+Muco-adhesive buccal tablet
+Lozenge
+Pastille
+Dental gel
+Dental insert
+Dental powder
+Dental suspension
+Toothpaste
+Periodontal gel
+Bath additive
+Cream
+Ointment
+Medicated plaster
+Shampoo
+Cutaneous spray, suspension
+Cutaneous liquid
+Concentrate for cutaneous solution
+Cutaneous emulsion
+Cutaneous patch
+Periodontal powder
+Dental stick
+Dental solution
+Dental emulsion
+Periodontal insert
+Gel
+Cutaneous paste
+Cutaneous foam
+Cutaneous spray, solution
+Cutaneous spray, powder
+Cutaneous solution
+Cutaneous suspension
+Cutaneous powder
+Solution for iontophoresis
+Collodion
+Poultice
+Cutaneous sponge
+Collar
+Ear tag
+Dip suspension
+Transdermal patch
+Medicated nail lacquer
+Cutaneous stick
+Impregnated dressing
+Medicated pendant
+Dip solution
+Dip emulsion
+Concentrate for dip suspension
+Powder for dip solution
+Powder for suspension for fish treatment
+Pour-on suspension
+Spot-on solution
+Spot-on emulsion
+Teat dip suspension
+Teat spray solution
+Solution for skin-prick test
+Plaster for provocation test
+Eye gel
+Eye drops, solution
+Eye drops, suspension
+Concentrate for dip solution
+Concentrate for dip emulsion
+Concentrate for solution for fish treatment
+Pour-on solution
+Pour-on emulsion
+Spot-on suspension
+Teat dip solution
+Teat dip emulsion
+Transdermal system
+Solution for skin-scratch test
+Eye cream
+Eye ointment
+Eye drops, emulsion
+Eye drops, solvent for reconstitution
+Eye lotion
+Ophthalmic insert
+Ear cream
+Ear ointment
+Ear drops, suspension
+Eye drops, prolonged-release
+Eye lotion, solvent for reconstitution
+Ophthalmic strip
+Ear gel
+Ear drops, solution
+Ear drops, emulsion
+Ear powder
+Ear spray, suspension
+Ear wash, solution
+Ear tampon
+Nasal cream
+Nasal gel
+Nasal drops, solution
+Nasal drops, emulsion
+Nasal spray, solution
+Nasal spray, emulsion
+Nasal stick
+Vaginal gel
+Vaginal foam
+Ear spray, solution
+Ear spray, emulsion
+Ear wash, emulsion
+Ear stick
+Nasal ointment
+Nasal drops, suspension
+Nasal powder
+Nasal spray, suspension
+Nasal wash
+Vaginal cream
+Vaginal ointment
+Vaginal solution
+Vaginal emulsion
+Pessary
+Vaginal capsule, soft
+Effervescent vaginal tablet
+Vaginal delivery system
+Rectal cream
+Rectal foam
+Vaginal suspension
+Tablet for vaginal solution
+Vaginal capsule, hard
+Vaginal tablet
+Medicated vaginal tampon
+Vaginal sponge
+Rectal gel
+Solution for injection
+
+*/

@@ -1,0 +1,50 @@
+package code
+
+type AdministrationMethodCode int
+
+const (
+	AdministrationMethodCodeDoseFormAdministrationMethod AdministrationMethodCode = iota
+	AdministrationMethodCodeAdminister
+	AdministrationMethodCodeApply
+	AdministrationMethodCodeChew
+	AdministrationMethodCodeInsert
+	AdministrationMethodCodeInstill
+	AdministrationMethodCodeSwallow
+	AdministrationMethodCodeSpray
+	AdministrationMethodCodeInhale
+	AdministrationMethodCodeInject
+	AdministrationMethodCodeSuck
+	AdministrationMethodCodeInfuse
+	AdministrationMethodCodeRinse
+	AdministrationMethodCodeGargle
+	AdministrationMethodCodeRinseOrWash
+	AdministrationMethodCodeOrodisperse
+	AdministrationMethodCodeImplant
+	AdministrationMethodCodeInsufflate
+	AdministrationMethodCodeDialysis
+	AdministrationMethodCodeBathe
+)
+
+/**
+Dose form administration method
+Administer
+Apply
+Chew
+Insert
+Instill
+Swallow
+Spray
+Inhale
+Inject
+Suck
+Infuse
+Rinse
+Gargle
+Rinse or wash
+Orodisperse
+Implant
+Insufflate
+Dialysis
+Bathe
+
+*/
