@@ -1,5 +1,10 @@
 package code
 
+import (
+	"fmt"
+	"strings"
+)
+
 type AdditionalInstructionCodes int
 
 const (
@@ -47,6 +52,68 @@ const (
 	AdditionalInstructionCodes41
 	AdditionalInstructionCodes42
 )
+
+func AllAdditionalInstructionCodes() []AdditionalInstructionCodes {
+	return []AdditionalInstructionCodes{
+		AdditionalInstructionCodes00,
+		AdditionalInstructionCodes01,
+		AdditionalInstructionCodes02,
+		AdditionalInstructionCodes03,
+		AdditionalInstructionCodes04,
+		AdditionalInstructionCodes05,
+		AdditionalInstructionCodes06,
+		AdditionalInstructionCodes07,
+		AdditionalInstructionCodes08,
+		AdditionalInstructionCodes09,
+		AdditionalInstructionCodes10,
+		AdditionalInstructionCodes11,
+		AdditionalInstructionCodes12,
+		AdditionalInstructionCodes13,
+		AdditionalInstructionCodes14,
+		AdditionalInstructionCodes15,
+		AdditionalInstructionCodes16,
+		AdditionalInstructionCodes17,
+		AdditionalInstructionCodes18,
+		AdditionalInstructionCodes19,
+		AdditionalInstructionCodes20,
+		AdditionalInstructionCodes21,
+		AdditionalInstructionCodes22,
+		AdditionalInstructionCodes23,
+		AdditionalInstructionCodes24,
+		AdditionalInstructionCodes25,
+		AdditionalInstructionCodes26,
+		AdditionalInstructionCodes27,
+		AdditionalInstructionCodes28,
+		AdditionalInstructionCodes29,
+		AdditionalInstructionCodes30,
+		AdditionalInstructionCodes31,
+		AdditionalInstructionCodes32,
+		AdditionalInstructionCodes33,
+		AdditionalInstructionCodes34,
+		AdditionalInstructionCodes35,
+		AdditionalInstructionCodes36,
+		AdditionalInstructionCodes37,
+		AdditionalInstructionCodes38,
+		AdditionalInstructionCodes39,
+		AdditionalInstructionCodes40,
+		AdditionalInstructionCodes41,
+		AdditionalInstructionCodes42,
+	}
+}
+
+func FindAdditionalInstructionCodes(filter string) []AdditionalInstructionCodes {
+	ret := make([]AdditionalInstructionCodes, 0)
+	for _, at := range AllAdditionalInstructionCodes() {
+		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
+			ret = append(ret, at)
+		}
+	}
+	return ret
+}
+
+func (cpt AdditionalInstructionCodes) ToString() {
+	fmt.Println(cpt.String())
+}
 
 func (pq AdditionalInstructionCodes) String() string {
 	switch pq {

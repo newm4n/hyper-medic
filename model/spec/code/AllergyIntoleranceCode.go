@@ -1,5 +1,10 @@
 package code
 
+import (
+	"fmt"
+	"strings"
+)
+
 type AllergyIntoleranceCode int
 
 const (
@@ -2020,6 +2025,6078 @@ const (
 	AllergyIntoleranceCodeNoKnownHeveaBrasiliensisLatexAllergySituation
 )
 
+func AllAllergyIntoleranceCode() []AllergyIntoleranceCode {
+	return []AllergyIntoleranceCode{
+		AllergyIntoleranceCodeSubstance,
+		AllergyIntoleranceCodeHemoglobinOkaloosa,
+		AllergyIntoleranceCodeOrnithineRacemase,
+		AllergyIntoleranceCodeFerrous59FeSulfateSubstance,
+		AllergyIntoleranceCodeGalactosylNAcetylglucosaminylgalactosylglucosylceramideAlphaGalactosyltransferase,
+		AllergyIntoleranceCodeHemoglobinHopkinsIi,
+		AllergyIntoleranceCodeDolichylPhosphateMannosyltransferase,
+		AllergyIntoleranceCodeFerrocyanideSalt,
+		AllergyIntoleranceCodePhosphoenolpyruvateProteinPhosphotransferase,
+		AllergyIntoleranceCodeUridineDiphosphateGalactose,
+		AllergyIntoleranceCodeHlaCw9Antigen,
+		AllergyIntoleranceCodeCyanocobalamin57CoSubstance,
+		AllergyIntoleranceCodeBerberine,
+		AllergyIntoleranceCodeBloodGroupAntigenIh,
+		AllergyIntoleranceCode3HydroxyisobutyrateDehydrogenase,
+		AllergyIntoleranceCodeHeptachlor,
+		AllergyIntoleranceCodeCodeinePhosphate,
+		AllergyIntoleranceCodeCoumachlor,
+		AllergyIntoleranceCodeOctylphenoxyPHEthanol,
+		AllergyIntoleranceCodeArsenic76Substance,
+		AllergyIntoleranceCodeAntimony127Substance,
+		AllergyIntoleranceCodeFibrinogenTokyoIi,
+		AllergyIntoleranceCodeEnzymeVariant,
+		AllergyIntoleranceCodeFibrinogenSanJuan,
+		AllergyIntoleranceCodeBeta2SGlycoproteinSubstance,
+		AllergyIntoleranceCodeAcylcarnitineHydrolase,
+		AllergyIntoleranceCodeSparteine,
+		AllergyIntoleranceCodeGadolinium151Substance,
+		AllergyIntoleranceCodeImmunoglobulinPentamer,
+		AllergyIntoleranceCodeRibose5PhosphateIsomerase,
+		AllergyIntoleranceCodeCitramalylCoaLyase,
+		AllergyIntoleranceCodeHemoglobinNagoya,
+		AllergyIntoleranceCodeCarminicAcid,
+		AllergyIntoleranceCode2HydroxyglutarateDehydrogenaseSubstance,
+		AllergyIntoleranceCodeUreaseAtpHydrolysing,
+		AllergyIntoleranceCodeVegetableTextileFiber,
+		AllergyIntoleranceCodeLymphocyteAntigenCd1B,
+		AllergyIntoleranceCodeNitrilase,
+		AllergyIntoleranceCodeBloodGroupAntibodySfA,
+		AllergyIntoleranceCodeBloodGroupAntibodyM,
+		AllergyIntoleranceCode3OxosteroidDelta1DehydrogenaseSubstance,
+		AllergyIntoleranceCodeBloodGroupAntigenGiaigue,
+		AllergyIntoleranceCodeFreeProteinS,
+		AllergyIntoleranceCodeMercury197Substance,
+		AllergyIntoleranceCodeGuanosine,
+		AllergyIntoleranceCode23Dihydroxybenzoate34DioxygenaseSubstance,
+		AllergyIntoleranceCodeAcrosin,
+		AllergyIntoleranceCodeBloodGroupAntibodyDuck,
+		AllergyIntoleranceCodeHemoglobinJianghua,
+		AllergyIntoleranceCodeBloodGroupAntibodyWrB,
+		AllergyIntoleranceCodeSubstanceP,
+		AllergyIntoleranceCode2OxoisovalerateDehydrogenaseAcylatingSubstance,
+		AllergyIntoleranceCodeBloodGroupAntibodyHolmes,
+		AllergyIntoleranceCode2OxoglutarateSynthaseSubstance,
+		AllergyIntoleranceCodeCalifornium247Substance,
+		AllergyIntoleranceCodePlantSapogeninGlycoside,
+		AllergyIntoleranceCodeHippurateHydrolase,
+		AllergyIntoleranceCodeTrichlorophenol,
+		AllergyIntoleranceCodeOilOfCalamus,
+		AllergyIntoleranceCodeAeromonasProteolyticaAminopeptidase,
+		AllergyIntoleranceCodeOsmium185Substance,
+		AllergyIntoleranceCodeMercuricAcetate,
+		AllergyIntoleranceCodePlastoquinolPlastocyaninReductase,
+		AllergyIntoleranceCodeTrichothecenes,
+		AllergyIntoleranceCodeErythromycinLactobionate,
+		AllergyIntoleranceCodeCoalTarExtract,
+		AllergyIntoleranceCodeBloodGroupAntigenRx,
+		AllergyIntoleranceCodeNValeraldehyde,
+		AllergyIntoleranceCodeBloodGroupAntigenJobbins,
+		AllergyIntoleranceCodeOxamniquine,
+		AllergyIntoleranceCodeHemoglobinMIwate,
+		AllergyIntoleranceCodeDextranase,
+		AllergyIntoleranceCodeCreosoticAcid,
+		AllergyIntoleranceCodeLyticAntibody,
+		AllergyIntoleranceCodeStizolobateSynthase,
+		AllergyIntoleranceCodePeptideN4NAcetylBGlucosaminylAsparagineAmidase,
+		AllergyIntoleranceCodeImmunoglobulinAggregated,
+		AllergyIntoleranceCodeUrethan,
+		AllergyIntoleranceCodeBloodGroupAntigenD,
+		AllergyIntoleranceCodeCarboxypeptidaseA,
+		AllergyIntoleranceCodeAcetylCoenzymeACarboxylaseKinaseSubstance,
+		AllergyIntoleranceCodeIce,
+		AllergyIntoleranceCodeODihydroxycoumarinO7Glucosyltransferase,
+		AllergyIntoleranceCodeComplementComponentC2,
+		AllergyIntoleranceCodeSodiumIodipamide,
+		AllergyIntoleranceCodePyridoxine4Dehydrogenase,
+		AllergyIntoleranceCodeAdenosylmethionineDecarboxylase,
+		AllergyIntoleranceCodeCarbamateKinase,
+		AllergyIntoleranceCodePalladiumCompound,
+		AllergyIntoleranceCodeMannotetraose2AlphaNAcetylglucosaminyltransferase,
+		AllergyIntoleranceCodeNAcetylneuraminateMonooxygenase,
+		AllergyIntoleranceCodeNornicotine,
+		AllergyIntoleranceCodeMolybdenum93Substance,
+		AllergyIntoleranceCodeGuanineDeaminase,
+		AllergyIntoleranceCodeMelilotate3Monooxygenase,
+		AllergyIntoleranceCodeEColiPeriplasmicProteinase,
+		AllergyIntoleranceCodeThallium202Substance,
+		AllergyIntoleranceCodeCoagulationFactorInhibitor,
+		AllergyIntoleranceCodeBloodGroupAntigenMA,
+		AllergyIntoleranceCodeIsochorismateSynthase,
+		AllergyIntoleranceCodePancreaticRibonuclease,
+		AllergyIntoleranceCodeUranium240Substance,
+		AllergyIntoleranceCodeHemoglobinBarcelona,
+		AllergyIntoleranceCodeBloodGroupAntibodyLutheran,
+		AllergyIntoleranceCodeTitanium,
+		AllergyIntoleranceCodeHemoglobinGower2,
+		AllergyIntoleranceCodeFibrinogenKawaguchi,
+		AllergyIntoleranceCodeHemoglobinRoseauPointeÀPitre,
+		AllergyIntoleranceCodeHemoglobinFMOsaka,
+		AllergyIntoleranceCodeMephenoxalone,
+		AllergyIntoleranceCodeDiethylXanthogenDisulfide,
+		AllergyIntoleranceCodeBloodGroupAntigenMarks,
+		AllergyIntoleranceCodeFibrinogenMadridI,
+		AllergyIntoleranceCodeLeucostomaNeutralProteinase,
+		AllergyIntoleranceCodeAmikacinSulfate,
+		AllergyIntoleranceCodePteridineOxidase,
+		AllergyIntoleranceCodeBloodGroupAntibodyEvelyn,
+		AllergyIntoleranceCodeNitrateReductaseCytochrome,
+		AllergyIntoleranceCodeBloodGroupAntibodyK18,
+		AllergyIntoleranceCodeHemoglobinManitoba,
+		AllergyIntoleranceCodeMetocurineIodide,
+		AllergyIntoleranceCodeMethamidophos,
+		AllergyIntoleranceCodeDeoxycortone,
+		AllergyIntoleranceCodeHemoglobinTaLi,
+		AllergyIntoleranceCodeBlueShadeEosin,
+		AllergyIntoleranceCodeAntihemophilicFactorBOxford3Variant,
+		AllergyIntoleranceCodeIodine131Substance,
+		AllergyIntoleranceCodeBloodGroupAntigenBig,
+		AllergyIntoleranceCodeZirconium93Substance,
+		AllergyIntoleranceCodeIodine126Substance,
+		AllergyIntoleranceCodeIronPentacarbonyl,
+		AllergyIntoleranceCodeActinium,
+		AllergyIntoleranceCodeBloodGroupAntibodyME,
+		AllergyIntoleranceCodeBloodGroupAntibody1123K,
+		AllergyIntoleranceCodeRadiumCompound,
+		AllergyIntoleranceCodeMethylparafynol,
+		AllergyIntoleranceCodeCyclomaltodextrinase,
+		AllergyIntoleranceCodeElastin,
+		AllergyIntoleranceCodeAdenosinePhosphateDeaminase,
+		AllergyIntoleranceCodeCodeineSulfate,
+		AllergyIntoleranceCodeHemoglobinYatsushiro,
+		AllergyIntoleranceCodeProtoOncogene,
+		AllergyIntoleranceCodeBloodGroupAntigenChA,
+		AllergyIntoleranceCodeHlaB21Antigen,
+		AllergyIntoleranceCode6CarboxyhexanoateCoaLigase,
+		AllergyIntoleranceCodeNitrogenFluoride,
+		AllergyIntoleranceCodePargylineHydrochloride,
+		AllergyIntoleranceCodeTelluriumRadioisotope,
+		AllergyIntoleranceCodeUridinePhosphorylase,
+		AllergyIntoleranceCodeTalc,
+		AllergyIntoleranceCodeBloodGroupAntibodyBuckalew,
+		AllergyIntoleranceCodeMaltoseTetrapalmitate,
+		AllergyIntoleranceCodeCobaltIsotope,
+		AllergyIntoleranceCodeHomoserineKinase,
+		AllergyIntoleranceCodeNOctylIsosafroleSulfoxide,
+		AllergyIntoleranceCodeBloodGroupAntigenVen,
+		AllergyIntoleranceCodeBloodGroupAntigenSul,
+		AllergyIntoleranceCodeHemoglobinShaareZedek,
+		AllergyIntoleranceCodePlantSeeds,
+		AllergyIntoleranceCodeCeforanide,
+		AllergyIntoleranceCodeLigase,
+		AllergyIntoleranceCodeXylenol,
+		AllergyIntoleranceCodeRubidium86Substance,
+		AllergyIntoleranceCodeBloodGroupAntibodyLwAb,
+		AllergyIntoleranceCodeBloodGroupAntibodyBleB,
+		AllergyIntoleranceCode12Hpete,
+		AllergyIntoleranceCodeGold191Substance,
+		AllergyIntoleranceCodeUricAcid,
+		AllergyIntoleranceCodeDiamond,
+		AllergyIntoleranceCodeDeoxylimonateARingLactonase,
+		AllergyIntoleranceCodeDeoxyCytidineTriphosphate,
+		AllergyIntoleranceCodeSaccharopineDehydrogenaseNadpLGlutamateForming,
+		AllergyIntoleranceCodeSucrosePhosphorylase,
+		AllergyIntoleranceCodeLeucineTrnaLigase,
+		AllergyIntoleranceCodeSodiumTrichloroacetate,
+		AllergyIntoleranceCodeGlyodin,
+		AllergyIntoleranceCodeHemoglobinHammersmith,
+		AllergyIntoleranceCodeLLysineOxidase,
+		AllergyIntoleranceCodeHemoglobinTochigi,
+		AllergyIntoleranceCodeRibonucleaseT1,
+		AllergyIntoleranceCodeVerdohemoglobin,
+		AllergyIntoleranceCodeGalactoside3Fucosyltransferase,
+		AllergyIntoleranceCodeVonWillebrandFactorInhibitor,
+		AllergyIntoleranceCodeBoroglycerin,
+		AllergyIntoleranceCodeImmunoglobulinGm21Allotype,
+		AllergyIntoleranceCodeCoagulationFactorXPatientVariant,
+		AllergyIntoleranceCodeBuclizineHydrochloride,
+		AllergyIntoleranceCodeLoxapineHydrochloride,
+		AllergyIntoleranceCodeBloodGroupAntibodyNiemetz,
+		AllergyIntoleranceCodeSiteSpecificMethyltransferaseCytosineSpecific,
+		AllergyIntoleranceCodeVomitus,
+		AllergyIntoleranceCodeLignins,
+		AllergyIntoleranceCodeHeavyNitrogen,
+		AllergyIntoleranceCodeInosineDiphosphate,
+		AllergyIntoleranceCodeGallium67Substance,
+		AllergyIntoleranceCodeCobaltCarbonyl,
+		AllergyIntoleranceCodeDnaTopoisomerase,
+		AllergyIntoleranceCodeAlternariaSerineProteinase,
+		AllergyIntoleranceCodeFibrinogenOsloIi,
+		AllergyIntoleranceCodeBloodGroupAntibodyBgB,
+		AllergyIntoleranceCodeSymNorspermidineSynthase,
+		AllergyIntoleranceCodeCholoylglycineHydrolase,
+		AllergyIntoleranceCodeLXylulokinase,
+		AllergyIntoleranceCodeLymphocyteAntigenCd51,
+		AllergyIntoleranceCodeOncogeneProteinTcl,
+		AllergyIntoleranceCodePageBlueG90,
+		AllergyIntoleranceCodeNadAdpRibosyltransferase,
+		AllergyIntoleranceCodeSulfonethylmethane,
+
+		AllergyIntoleranceCodeYeastProteinaseB,
+		AllergyIntoleranceCodeBetazole,
+		AllergyIntoleranceCodeCyclohexane12DiolDehydrogenase,
+		AllergyIntoleranceCodeHydrogen,
+		AllergyIntoleranceCodeBloodGroupAntigenPaular,
+		AllergyIntoleranceCodePyridoxaminePyruvateAminotransferase,
+		AllergyIntoleranceCodeTagaturonateReductase,
+		AllergyIntoleranceCodeAzorubinS,
+		AllergyIntoleranceCodeDicofol,
+		AllergyIntoleranceCodeBisphosphoglycerateMutase,
+		AllergyIntoleranceCodeMalonateSemialdehydeDehydratase,
+		AllergyIntoleranceCodeHemoglobinFDammam,
+		AllergyIntoleranceCodeRhodium101Substance,
+		AllergyIntoleranceCodeTocainideHydrochloride,
+		AllergyIntoleranceCodeBacteriopurpurin,
+		AllergyIntoleranceCodePhenylserineAldolase,
+		AllergyIntoleranceCodeFibrinogenBethesdaIi,
+		AllergyIntoleranceCodeAzuresin,
+		AllergyIntoleranceCodeGuanidinobutyrase,
+		AllergyIntoleranceCodeGentamicinSulfate,
+		AllergyIntoleranceCodeOroticAcid,
+		AllergyIntoleranceCodeHlaDrw18Antigen,
+		AllergyIntoleranceCodeCellulosePolysulfatase,
+		AllergyIntoleranceCodeSeleniumIsotope,
+		AllergyIntoleranceCodeGold,
+		AllergyIntoleranceCodeProstacyclinSynthase,
+		AllergyIntoleranceCodeBloodGroupAntibodyVel,
+		AllergyIntoleranceCodeCarbohydrate,
+		AllergyIntoleranceCodePlantRoots,
+		AllergyIntoleranceCodeGuthion,
+		AllergyIntoleranceCodeVascormone,
+		AllergyIntoleranceCode3Nucleotidase,
+		AllergyIntoleranceCodeIndole3AcetateBetaGlucosyltransferase,
+		AllergyIntoleranceCodeUdpNAcetylmuramateAlanineLigase,
+		AllergyIntoleranceCodeMercuryCompound,
+		AllergyIntoleranceCodeUranium230Substance,
+		AllergyIntoleranceCodeBloodGroupAntibodyStA,
+		AllergyIntoleranceCodeOxetanone,
+		AllergyIntoleranceCodeProlactinReceptor,
+		AllergyIntoleranceCodeSiliconRadioisotope,
+		AllergyIntoleranceCodeBloodGroupAntibodyFriedberg,
+		AllergyIntoleranceCodeMercuryRadioisotope,
+		AllergyIntoleranceCodeHlaDw25Antigen,
+		AllergyIntoleranceCodeMannosamine,
+		AllergyIntoleranceCodeGlucoseDehydrogenaseNadp,
+		AllergyIntoleranceCodeChloridePeroxidase,
+		AllergyIntoleranceCodeLymphocyteAntigenCdw41B,
+		AllergyIntoleranceCodeDGlutamicAcidOxidase,
+		AllergyIntoleranceCodeExtravascularBlood,
+		AllergyIntoleranceCodeHemoglobinWood,
+		AllergyIntoleranceCodeAntituberculosisAgent,
+		AllergyIntoleranceCodeBloodGroupAntigenMcauley,
+		AllergyIntoleranceCodeImmunoglobulinGm13Allotype,
+		AllergyIntoleranceCodeZincAlpha2Glycoprotein,
+		AllergyIntoleranceCodeTellurium119MSubstance,
+		AllergyIntoleranceCodeAlpha1Globulin,
+		AllergyIntoleranceCodeBloodGroupAntibodyLaFave,
+		AllergyIntoleranceCodeIndiumIsotope,
+		AllergyIntoleranceCodeBileVomitus,
+		AllergyIntoleranceCodeAzoDye,
+		AllergyIntoleranceCodeSodiumDehydrocholate,
+		AllergyIntoleranceCodeDehydropantoateHydroxymethyltransferase,
+		AllergyIntoleranceCodeCesium128Substance,
+		AllergyIntoleranceCodeC3H20,
+		AllergyIntoleranceCodeHemoglobinNewMexico,
+		AllergyIntoleranceCodeAntiFactorXiii,
+		AllergyIntoleranceCodeNaturalGas,
+		AllergyIntoleranceCodeArsenic72Substance,
+		AllergyIntoleranceCodeBloodGroupAntigenVennera,
+		AllergyIntoleranceCodeTartrateDehydratase,
+		AllergyIntoleranceCodeBloodGroupAntigenMccF,
+		AllergyIntoleranceCodeAntigenInLewisLeBloodGroupSystem,
+		AllergyIntoleranceCodeBloodGroupAntibodyM1,
+		AllergyIntoleranceCodeHemoglobinFKennestone,
+		AllergyIntoleranceCodeBloodGroupAntigenSc3,
+		AllergyIntoleranceCodePleuralFluid,
+		AllergyIntoleranceCodeMethanthelineSubstance,
+		AllergyIntoleranceCodeMethylbenzethoniumChloride,
+		AllergyIntoleranceCodeHemoglobinBristol,
+		AllergyIntoleranceCodeMolybdenumCompound,
+		AllergyIntoleranceCodeHemoglobinSaitama,
+		AllergyIntoleranceCodeEthanoicAcid,
+		AllergyIntoleranceCodeIsonipecaineHydrochloride,
+		AllergyIntoleranceCodeCalciumSulfate,
+		AllergyIntoleranceCodeExopolygalacturonateLyase,
+		AllergyIntoleranceCodeImmunoglobulinEHChain,
+		AllergyIntoleranceCodeNeon22Substance,
+		AllergyIntoleranceCodeFluorometholone,
+		AllergyIntoleranceCodeRescinnamine,
+		AllergyIntoleranceCodePyrazole,
+		AllergyIntoleranceCodeCarbon14CXyloseSubstance,
+		AllergyIntoleranceCodeHemoglobinLPersianGulf,
+		AllergyIntoleranceCodeZincCaprylate,
+		AllergyIntoleranceCodeDimethoxyamphetamine,
+		AllergyIntoleranceCodeTrichophytonSchoenleiniiCollagenase,
+		AllergyIntoleranceCodeHlaAwAntigen,
+		AllergyIntoleranceCodeMecamylamineHydrochloride,
+		AllergyIntoleranceCodeArecoline,
+		AllergyIntoleranceCodeBarium133Substance,
+		AllergyIntoleranceCodeDihydroxyaluminumSodiumCarbonate,
+		AllergyIntoleranceCodeTechnetium99MTcDisofeninSubstance,
+		AllergyIntoleranceCodeNitrochlorobenzene,
+		AllergyIntoleranceCodeOrnithineOxoAcidAminotransferase,
+		AllergyIntoleranceCodeTriiodothyroaceticAcid,
+		AllergyIntoleranceCodeAspartateAmmoniaLigase,
+		AllergyIntoleranceCodeOilOfMaleFern,
+		AllergyIntoleranceCodeHemoglobinShuangfeng,
+		AllergyIntoleranceCodeAspergillusDeoxyribonucleaseK1,
+		AllergyIntoleranceCodeBloodGroupAntigenMiddel,
+		AllergyIntoleranceCodeCefoperazoneSodium,
+		AllergyIntoleranceCodeAzacyclonol,
+		AllergyIntoleranceCodePenicillicAcid,
+		AllergyIntoleranceCodeSialateOAcetylesterase,
+		AllergyIntoleranceCodeLeftUpperLobeMucus,
+		AllergyIntoleranceCode3PhosphoglyceroylPhosphatePolyphosphatePhosphotransferase,
+		AllergyIntoleranceCode3MethylHistidine,
+		AllergyIntoleranceCodeHardCoal,
+		AllergyIntoleranceCodeBloodGroupAntigenNielsen,
+		AllergyIntoleranceCodeAlpha14GlucanProteinSynthaseUridineDiphosphateForming,
+		AllergyIntoleranceCodeInosineMonophosphate,
+		AllergyIntoleranceCodePancuroniumSodium,
+		AllergyIntoleranceCodeManganeseSulfate,
+		AllergyIntoleranceCodeFibrinogenSeattleI,
+		AllergyIntoleranceCodeOBenzylParachlorophenolSubstance,
+		AllergyIntoleranceCodeHemoglobinSouthampton,
+		AllergyIntoleranceCodeTyrosineEsterSulfotransferase,
+		AllergyIntoleranceCodeEuphorbain,
+		AllergyIntoleranceCodeVaginalSecretion,
+		AllergyIntoleranceCodeLipopolysaccharide,
+		AllergyIntoleranceCodeR20HydroxysteroidDehydrogenase,
+		AllergyIntoleranceCodeAlphaAmylaseSubstance,
+		AllergyIntoleranceCodeCopperIsotope,
+		AllergyIntoleranceCodeHemoglobinBrest,
+		AllergyIntoleranceCodeImipramineHydrochloride,
+		AllergyIntoleranceCodeThimerosal,
+		AllergyIntoleranceCodeAldehydeDehydrogenaseAcceptor,
+		AllergyIntoleranceCode2Hydroxy3OxoadipateSynthase,
+		AllergyIntoleranceCodeBisDimethylthiocarbamylDisulfide,
+		AllergyIntoleranceCodeHydroxymethylglutarylCoaHydrolase,
+		AllergyIntoleranceCodeBiotinCarboxylase,
+		AllergyIntoleranceCodeDiscontinuedPesticide,
+		AllergyIntoleranceCodeLAminoAcidDehydrogenaseSubstance,
+		AllergyIntoleranceCodeDnaTopoisomeraseAtpHydrolysing,
+		AllergyIntoleranceCodeDimethylamine,
+		AllergyIntoleranceCodeGalactinolSucroseGalactosyltransferase,
+		AllergyIntoleranceCodeSmegmaClitoridis,
+		AllergyIntoleranceCodeCystylAminopeptidase,
+		AllergyIntoleranceCodeIsoxsuprineHydrochloride,
+		AllergyIntoleranceCodeHemoglobinQIndia,
+		AllergyIntoleranceCodeLaryngealMucus,
+		AllergyIntoleranceCodeBloodGroupAntigenMorrison,
+		AllergyIntoleranceCodeCesium129Substance,
+		AllergyIntoleranceCodeGlucose6Phosphatase,
+		AllergyIntoleranceCodeMalateDehydrogenaseDecarboxylating,
+		AllergyIntoleranceCodeComplementEnzyme,
+		AllergyIntoleranceCodeAcebutololHydrochloride,
+		AllergyIntoleranceCodeWarmAntibody,
+		AllergyIntoleranceCodeEpoxideHydrolase,
+		AllergyIntoleranceCodeSelenium79Substance,
+		AllergyIntoleranceCodeGlucocorticoidReceptor,
+		AllergyIntoleranceCodeHemoglobinConstantSprings,
+		AllergyIntoleranceCodeFibrinogenCaracas,
+		AllergyIntoleranceCodePhenylaceticAcid,
+		AllergyIntoleranceCodeHemoglobinMizushi,
+		AllergyIntoleranceCodeSodiumSulfite,
+		AllergyIntoleranceCodeFibrinogenDusard,
+		AllergyIntoleranceCodeCdpglycerolGlycerophosphotransferase,
+		AllergyIntoleranceCodeProstaglandinSynthase,
+		AllergyIntoleranceCodeCowSMilk,
+		AllergyIntoleranceCodeValineTrnaLigase,
+		AllergyIntoleranceCodeHemoglobinFPortRoyal,
+		AllergyIntoleranceCodeBloodGroupAntigenTrA,
+		AllergyIntoleranceCodeNitrateReductaseNadh,
+		AllergyIntoleranceCodeExtracellularCrystal,
+		AllergyIntoleranceCodeGossypol,
+		AllergyIntoleranceCodeNeuromelanin,
+		AllergyIntoleranceCodeCholineDehydrogenase,
+		AllergyIntoleranceCodeXanthineDehydrogenase,
+		AllergyIntoleranceCodeArachidonicAcid,
+		AllergyIntoleranceCodeAcetateKinase,
+		AllergyIntoleranceCodeBloodGroupAntigenC,
+		AllergyIntoleranceCodeMagnesiumProtoporphyrinMethyltransferase,
+		AllergyIntoleranceCodeBerylliumIsotope,
+		AllergyIntoleranceCodeVanadiumIsotope,
+		AllergyIntoleranceCodeProchlorperazineEdisylate,
+		AllergyIntoleranceCodeIron,
+		AllergyIntoleranceCodeCmpNAcetylneuraminateAlphaNAcetylNeuraminyl23BetaGalactosyl13NAcetylGalactosaminideAlpha26Sialyltransferase,
+		AllergyIntoleranceCodeGlutaminase,
+		AllergyIntoleranceCodeProtoaphinAgluconeDehydrataseCyclizing,
+		AllergyIntoleranceCodeNitrotoluene,
+		AllergyIntoleranceCodeCarbonBlack,
+		AllergyIntoleranceCodeBisChloroMethylEtherSubstance,
+		AllergyIntoleranceCodeHydrocodoneBitartrate,
+		AllergyIntoleranceCodeThymidine,
+		AllergyIntoleranceCodePHydroxybenzoateEster,
+		AllergyIntoleranceCodeBloodGroupAntigenN,
+		AllergyIntoleranceCodeRectifiedBirchTarOilSubstance,
+		AllergyIntoleranceCodeHemoglobinAtago,
+		AllergyIntoleranceCodeManufacturedGas,
+		AllergyIntoleranceCodeCopper64Substance,
+		AllergyIntoleranceCodeMetronidazoleHydrochloride,
+		AllergyIntoleranceCodeTinIsotope,
+		AllergyIntoleranceCodeCalifornium245Substance,
+		AllergyIntoleranceCodeBloodGroupAntigenRitherford,
+		AllergyIntoleranceCodeBloodGroupAntigenHempas,
+		AllergyIntoleranceCodeOxaloacetateDecarboxylase,
+		AllergyIntoleranceCodeNNDimethyltryptamine,
+		AllergyIntoleranceCodeAlkalinePhosphataseIsoenzymeBoneFraction,
+		AllergyIntoleranceCodeHemoglobinTampa,
+		AllergyIntoleranceCodeSulfisomidine,
+		AllergyIntoleranceCodeSoftMetal,
+		AllergyIntoleranceCodeCaptodiamine,
+		AllergyIntoleranceCodeEtidocaineHydrochloride,
+		AllergyIntoleranceCodeCis12Dihydrobenzene12DiolDehydrogenase,
+		AllergyIntoleranceCode1122Tetrachloro12DifluoroethaneSubstance,
+		AllergyIntoleranceCodeChorismateMutase,
+		AllergyIntoleranceCodeParathyroidHormone,
+		AllergyIntoleranceCodeDihydrolipoamideSuccinyltransferase,
+		AllergyIntoleranceCodeHemoglobinGradyDakar,
+		AllergyIntoleranceCodeEnteropeptidase,
+		AllergyIntoleranceCodeApoSaaComplex,
+		AllergyIntoleranceCodeChondroitinSulfate,
+		AllergyIntoleranceCodeAdenylateCyclase,
+		AllergyIntoleranceCodeBloodGroupAntibodyNorlander,
+		AllergyIntoleranceCodeSecButylAcetate,
+		AllergyIntoleranceCodeLongChainEnoylCoaHydratase,
+		AllergyIntoleranceCodeLymphocyteAntigenCd31,
+		AllergyIntoleranceCodeBloodGroupAntibodyLeBh,
+		AllergyIntoleranceCodeHemoglobinLongIslandMarseille,
+		AllergyIntoleranceCodeCdpdiacylglycerolSerineOPhosphatidylTransferase,
+		AllergyIntoleranceCodeFibrinogenSydneyIi,
+		AllergyIntoleranceCodeNeriifolin,
+		AllergyIntoleranceCode6AminohexanoateDimerHydrolase,
+		AllergyIntoleranceCodeImipraminePamoate,
+		AllergyIntoleranceCodeCortisoneBetaReductase,
+		AllergyIntoleranceCodeFluorosilicateSalt,
+		AllergyIntoleranceCodeImmunoglobulinGm23Allotype,
+		AllergyIntoleranceCodeGalliumIsotope,
+		AllergyIntoleranceCodeGlycerolDehydrogenase,
+		AllergyIntoleranceCodeAmericium241Substance,
+		AllergyIntoleranceCodeKeyholeLimpetHemocyanin,
+		AllergyIntoleranceCodeLinamarinSynthase,
+		AllergyIntoleranceCodeBloodGroupAntibodyAllchurch,
+		AllergyIntoleranceCodeTarOil,
+		AllergyIntoleranceCode2AminopyridineSubstance,
+		AllergyIntoleranceCodeDibutylPhthalate,
+		AllergyIntoleranceCodeCoagulationFactorIxSanDimasVariant,
+		AllergyIntoleranceCode4CoumarateCoaLigase,
+		AllergyIntoleranceCodeAcetone,
+		AllergyIntoleranceCodeBloodGroupAntigenFedor,
+		AllergyIntoleranceCodeBloodGroupAntibodyHT,
+		AllergyIntoleranceCodeBloodGroupAntigen,
+		AllergyIntoleranceCodeFibrinogenNewYorkIi,
+		AllergyIntoleranceCodeBloodGroupAntibodyBinge,
+		AllergyIntoleranceCodeSulfurylFluoride,
+		AllergyIntoleranceCodeCesium127Substance,
+		AllergyIntoleranceCodeCalifornium244Substance,
+		AllergyIntoleranceCodeHemoglobinBrockton,
+		AllergyIntoleranceCodeSulfaethidole,
+		AllergyIntoleranceCodePlantPhenanthreneToxin,
+		AllergyIntoleranceCodeBismuth208Substance,
+		AllergyIntoleranceCodeAdpDeaminase,
+		AllergyIntoleranceCodeAliphaticCarboxylicAcidC140,
+		AllergyIntoleranceCodeBloodGroupAntibodyRils,
+		AllergyIntoleranceCodeHemoglobinMizuho,
+		AllergyIntoleranceCodeArginineDecarboxylase,
+		AllergyIntoleranceCodeBloodGroupAntibodySisson,
+		AllergyIntoleranceCodeGalactose1PhosphateThymidylyltransferase,
+		AllergyIntoleranceCodeBloodGroupAntigenNA,
+		AllergyIntoleranceCodeBloodGroupAntigenKam,
+		AllergyIntoleranceCodeSenileCardiacProtein,
+		AllergyIntoleranceCodeTriclobisoniumChloride,
+		AllergyIntoleranceCodeHypoglycinB,
+		AllergyIntoleranceCodeArterialBlood,
+		AllergyIntoleranceCodeCalfThymusRibonucleaseH,
+		AllergyIntoleranceCodeAlcianBlue8Gx,
+		AllergyIntoleranceCode23DihydroxybenzoateSerineLigaseSubstance,
+		AllergyIntoleranceCodePotassiumPermanganate,
+		AllergyIntoleranceCodeChromium51CrAlbuminSubstance,
+		AllergyIntoleranceCodeBeefInsulin,
+		AllergyIntoleranceCodeChlorineMonoxide,
+		AllergyIntoleranceCodeOsmium183MSubstance,
+		AllergyIntoleranceCodeScopulariopsisProteinase,
+		AllergyIntoleranceCodeOncogeneProteinP55VMyc,
+		AllergyIntoleranceCodeHemoglobinMito,
+		AllergyIntoleranceCodeLymphocyteAntigenCd30,
+		AllergyIntoleranceCodePlateletAntigenHpa3B,
+		AllergyIntoleranceCodeFluroxene,
+		AllergyIntoleranceCodeSecbutabarbitalSodium,
+		AllergyIntoleranceCodeBeta14MannosylGlycoproteinBeta14NAcetylglucosaminyltransferaseSubstance,
+		AllergyIntoleranceCodeBloodGroupAntibodyBultar,
+		AllergyIntoleranceCodeAzobenzeneReductase,
+		AllergyIntoleranceCodeValethamate,
+		AllergyIntoleranceCodeAmineOxidaseFlavinContaining,
+		AllergyIntoleranceCodePeptidylGlycinamidase,
+		AllergyIntoleranceCodeArabinose5PhosphateIsomerase,
+		AllergyIntoleranceCodeTechnetium99MTcMebrofeninSubstance,
+		AllergyIntoleranceCodeGlucanEndo13AlphaGlucosidase,
+		AllergyIntoleranceCode33T2,
+		AllergyIntoleranceCodeAdenylicAcid,
+		AllergyIntoleranceCodeGlucosulfone,
+		AllergyIntoleranceCodeHlaDw3Antigen,
+		AllergyIntoleranceCodeIchthyoallyeinotoxin,
+		AllergyIntoleranceCodeXylulokinase,
+		AllergyIntoleranceCodePyruvateOxidaseCoaAcetylating,
+		AllergyIntoleranceCodeOncogeneProteinVAbc,
+		AllergyIntoleranceCodeLymphocyteAntigenCd15,
+		AllergyIntoleranceCodeTattooDye,
+		AllergyIntoleranceCodeNeoplasticStructuralGene,
+		AllergyIntoleranceCodeTreeBark,
+		AllergyIntoleranceCodeNeutralAminoAcid,
+		AllergyIntoleranceCodeGlutathioneReductaseNadPH,
+		AllergyIntoleranceCodeAcumentin,
+		AllergyIntoleranceCodeMagnesiumBorate,
+		AllergyIntoleranceCodeHemoglobinSwanRiver,
+		AllergyIntoleranceCodeBloodGroupAntibodyPanzar,
+		AllergyIntoleranceCodePapain,
+		AllergyIntoleranceCodeFreshWater,
+		AllergyIntoleranceCode33Dichlorobenzidine,
+		AllergyIntoleranceCodeCesium,
+		AllergyIntoleranceCodeErythrosinY,
+		AllergyIntoleranceCodeOncogeneProteinTcl4,
+		AllergyIntoleranceCodeTechnetium97Substance,
+		AllergyIntoleranceCodeCesium132Substance,
+		AllergyIntoleranceCodeProteinMethionineSOxideReductase,
+		AllergyIntoleranceCodeBloodGroupAntibodyD1276,
+		AllergyIntoleranceCodeBloodGroupAntigenHrB,
+		AllergyIntoleranceCodeGelsolin,
+		AllergyIntoleranceCodeBloodGroupAntigenRios,
+		AllergyIntoleranceCodeFennelOil,
+		AllergyIntoleranceCodeMethylatedDnaProteinCysteineMethyltransferase,
+		AllergyIntoleranceCodeCoagulationFactorIiHoustonVariant,
+		AllergyIntoleranceCodeMetallicCompound,
+		AllergyIntoleranceCodeScombrotoxin,
+		AllergyIntoleranceCodeZincChlorideFumes,
+		AllergyIntoleranceCodeCoagulationFactorXa,
+		AllergyIntoleranceCodeConnectiveTissueFiber,
+		AllergyIntoleranceCodeTransEpoxysuccinateHydrolase,
+		AllergyIntoleranceCodeCyanateCompound,
+		AllergyIntoleranceCodeBacitracin,
+		AllergyIntoleranceCodeFlavoneO7BetaGlucosyltransferase,
+		AllergyIntoleranceCodeThymusIndependentAntigen,
+		AllergyIntoleranceCodeHafniumRadioisotope,
+		AllergyIntoleranceCodeHemoglobinWoodville,
+		AllergyIntoleranceCodeBloodGroupAntigenBraden,
+		AllergyIntoleranceCodeScilliroside,
+		AllergyIntoleranceCodeHemoglobinHoshida,
+		AllergyIntoleranceCodePolynucleotide,
+		AllergyIntoleranceCodeBloodGroupAntigenHamet,
+		AllergyIntoleranceCodeZinc65Substance,
+		AllergyIntoleranceCodeUridineDiphosphateGlucuronicAcid,
+		AllergyIntoleranceCodeActinBindingProtein,
+		AllergyIntoleranceCodeLGlycolDehydrogenase,
+		AllergyIntoleranceCodeBloodGroupAntigenSwietlik,
+		AllergyIntoleranceCodePropyleneGlycolMonomethylEther,
+		AllergyIntoleranceCodePyridoxaminePhosphateOxidase,
+		AllergyIntoleranceCodeLymphocyteAntigenCd45Ra,
+		AllergyIntoleranceCodeCobalt60Substance,
+		AllergyIntoleranceCodeBetaLArabinosidaseSubstance,
+		AllergyIntoleranceCodeAccessorySinusMucus,
+		AllergyIntoleranceCodeBloodGroupAntibodyDoA,
+		AllergyIntoleranceCodePageBlue83,
+		AllergyIntoleranceCodeIridiumIsotope,
+		AllergyIntoleranceCodeHemoglobinGCoushatta,
+		AllergyIntoleranceCodePropionateCoaLigase,
+		AllergyIntoleranceCodeFerricSubsulfate,
+		AllergyIntoleranceCodeOxalateCoaTransferase,
+		AllergyIntoleranceCodeBloodGroupAntigenFuerhart,
+		AllergyIntoleranceCodeInosinateNucleosidase,
+		AllergyIntoleranceCodeImmunoglobulinAHChain,
+		AllergyIntoleranceCodeRhodiumFumes,
+		AllergyIntoleranceCodeBloodGroupAntibodyKpA,
+		AllergyIntoleranceCodeImmunoglobulinDHChainSubstance,
+		AllergyIntoleranceCodeCalcium,
+		AllergyIntoleranceCodePlutonium233Substance,
+		AllergyIntoleranceCode2Dehydro3DeoxyDPentonateAldolase,
+		AllergyIntoleranceCodeHemoglobinHijiyama,
+		AllergyIntoleranceCodeBloodGroupAntigenOca,
+		AllergyIntoleranceCodeLicodioneO2Methyltransferase,
+		AllergyIntoleranceCodeBerylliumRadioisotope,
+		AllergyIntoleranceCodeHemoglobinIHighWycombe,
+		AllergyIntoleranceCodeCytidylicAcid,
+		AllergyIntoleranceCodeHlaDqw6Antigen,
+		AllergyIntoleranceCodeValproateSemisodium,
+		AllergyIntoleranceCodeGriseofulvinUltramicrosize,
+		AllergyIntoleranceCodeAntimony116MSubstance,
+		AllergyIntoleranceCodeHemoglobinJTongariki,
+		AllergyIntoleranceCodeGoldIsotope,
+		AllergyIntoleranceCodeCeftizoximeSodium,
+		AllergyIntoleranceCodeAbsorbableGelatinSponge,
+		AllergyIntoleranceCodeCyanocobalamin58CoSubstance,
+		AllergyIntoleranceCodeSomatomedinC,
+		AllergyIntoleranceCodeBloodGroupAntibodyGomez,
+		AllergyIntoleranceCodeSilver106MSubstance,
+		AllergyIntoleranceCodeGalactokinase,
+		AllergyIntoleranceCode3HydroxypropionAldehydeReductase,
+		AllergyIntoleranceCodeStramonium,
+		AllergyIntoleranceCodeAntimony118MSubstance,
+		AllergyIntoleranceCodeHlaCw8Antigen,
+		AllergyIntoleranceCodeHeterogeneousNuclearRna,
+		AllergyIntoleranceCodePlutonium242Substance,
+		AllergyIntoleranceCodeSulfamerazine,
+		AllergyIntoleranceCodeWhitePetrolatum,
+		AllergyIntoleranceCodeTrna5Methylaminomethyl2ThiouridylateMethyltransferase,
+		AllergyIntoleranceCodeMalateDehydrogenase,
+		AllergyIntoleranceCodeEthyl4BisHydroxypropyl1Aminobenzoate,
+		AllergyIntoleranceCodeCrotonaldehyde,
+		AllergyIntoleranceCodeHemoglobinVaasa,
+		AllergyIntoleranceCodeHemoglobinBart,
+		AllergyIntoleranceCodeBloodGroupAntibodyWj,
+		AllergyIntoleranceCodeIndium110MSubstance,
+		AllergyIntoleranceCodeVitexinBetaGlucosyltransferase,
+		AllergyIntoleranceCodeHellebrin,
+		AllergyIntoleranceCodeBacterialStructuralGene,
+		AllergyIntoleranceCodeQuinidinePolygalacturonate,
+		AllergyIntoleranceCodeOncogeneProteinPp60VSrc,
+		AllergyIntoleranceCodeBloodGroupAntigenGladding,
+		AllergyIntoleranceCodeLactaldehydeDehydrogenase,
+		AllergyIntoleranceCodeTechnetium99MTcSulfurColloidSubstance,
+		AllergyIntoleranceCodeCysteine,
+		AllergyIntoleranceCode35CyclicNucleotidePhosphodiesterase,
+		AllergyIntoleranceCodeDiethyleneGlycol,
+		AllergyIntoleranceCodeBloodGroupAntigenBullock,
+		AllergyIntoleranceCodeImmunoglobulinGm17Allotype,
+		AllergyIntoleranceCodeDFuconateDehydratase,
+		AllergyIntoleranceCodeYttrium88Substance,
+		AllergyIntoleranceCodeOxygenRadioisotope,
+		AllergyIntoleranceCodeBoneCement,
+		AllergyIntoleranceCodeCarbonDisulfide,
+		AllergyIntoleranceCodeDoxylamineSuccinate,
+		AllergyIntoleranceCodeBloodGroupAntibodyWkA,
+		AllergyIntoleranceCodeBloodGroupAntigenMil,
+		AllergyIntoleranceCodeHydroxylysine,
+		AllergyIntoleranceCodeSynovialFluid,
+		AllergyIntoleranceCodeBenzfetamineHydrochloride,
+		AllergyIntoleranceCodeLochiaAlba,
+		AllergyIntoleranceCodeBloodGroupAntibodyLHarris,
+		AllergyIntoleranceCodeAsparagusateReductaseNadh,
+		AllergyIntoleranceCodeAromaticAminoAcidAminotransferase,
+		AllergyIntoleranceCodeBloodGroupAntibodyAnuszewska,
+		AllergyIntoleranceCodeBloodGroupAntigenDuck,
+		AllergyIntoleranceCodeBloodGroupAntigenLeProvost,
+		AllergyIntoleranceCodeMeclocycline,
+		AllergyIntoleranceCodeHeatLabileAntibody,
+		AllergyIntoleranceCodeFattyAcidMethyltransferase,
+		AllergyIntoleranceCodeLymphocyteAntigenCd63,
+		AllergyIntoleranceCodeOMethylBufotenine,
+		AllergyIntoleranceCodeChloroacetone,
+		AllergyIntoleranceCodeBloodGroupAntigenZd,
+		AllergyIntoleranceCodeBemegride,
+		AllergyIntoleranceCodePotassiumMetabisulfite,
+		AllergyIntoleranceCodeRiboseIsomerase,
+		AllergyIntoleranceCodeSodium22NaChlorideSubstance,
+		AllergyIntoleranceCodeProtokylol,
+		AllergyIntoleranceCodeIndoklon,
+		AllergyIntoleranceCodePlantResidue,
+		AllergyIntoleranceCodeDiazinon,
+		AllergyIntoleranceCodeMethidathion,
+		AllergyIntoleranceCodeLysosomalAlphaNAcetylglucosaminidase,
+		AllergyIntoleranceCodeTantalum178Substance,
+		AllergyIntoleranceCodeParticulateAntigen,
+		AllergyIntoleranceCodePhenolBetaGlucosyltransferase,
+		AllergyIntoleranceCodeSquillExtract,
+		AllergyIntoleranceCodeImidazolonepropionase,
+		AllergyIntoleranceCodeChlorodiallylacetamide,
+		AllergyIntoleranceCodeKallidinIi,
+		AllergyIntoleranceCodeTechnetium95MSubstance,
+		AllergyIntoleranceCodeNAcetylneuraminateO4Acetyltransferase,
+		AllergyIntoleranceCodePhentermineHydrochloride,
+		AllergyIntoleranceCodeLichenase,
+		AllergyIntoleranceCodeMorpholine,
+		AllergyIntoleranceCodeInterleukin12,
+		AllergyIntoleranceCodeHlaDrw14Antigen,
+		AllergyIntoleranceCodeChlorobenzilate,
+		AllergyIntoleranceCodeChloroprene,
+		AllergyIntoleranceCode12DidehydropipecolateReductase,
+		AllergyIntoleranceCodePhosphohexokinase,
+		AllergyIntoleranceCodeFibrinogenMontrealIi,
+		AllergyIntoleranceCodeBloodGroupAntigenMuch,
+		AllergyIntoleranceCodeFlumethiazide,
+		AllergyIntoleranceCodeIndium111InFerricHydroxideSubstance,
+		AllergyIntoleranceCodeDistilledSpirits,
+		AllergyIntoleranceCodeBloodGroupAntigenClA,
+		AllergyIntoleranceCodeMacrophageActivatingFactor,
+		AllergyIntoleranceCodeGalactosylceramidase,
+		AllergyIntoleranceCodeHlaDw12Antigen,
+		AllergyIntoleranceCodeAminoacridineSubstance,
+		AllergyIntoleranceCodeDiethylaminoethanol,
+		AllergyIntoleranceCodeChloramphenicolSodiumSuccinate,
+		AllergyIntoleranceCodeBilirubinYTransportProtein,
+		AllergyIntoleranceCodeOpsonin,
+		AllergyIntoleranceCodeHomoserineDehydrogenase,
+		AllergyIntoleranceCodeBloodGroupAntigenCaw,
+		AllergyIntoleranceCodePhosphoadenylate3Nucleotidase,
+		AllergyIntoleranceCodeTitaniumRadioisotope,
+		AllergyIntoleranceCodeLissamineFastRedB,
+		AllergyIntoleranceCodeEthylMercaptoethylDiethylThiophosphate,
+		AllergyIntoleranceCodeGentamicin2Nucleotidyltransferase,
+		AllergyIntoleranceCodeNitricOxide,
+		AllergyIntoleranceCodeYttrium91Substance,
+		AllergyIntoleranceCodeNifuroxime,
+		AllergyIntoleranceCodeMethylthioniniumChloride,
+		AllergyIntoleranceCodeUranium234Substance,
+		AllergyIntoleranceCodeAntiDnaAntibody,
+		AllergyIntoleranceCodeTlAntigen,
+		AllergyIntoleranceCodeSilverDifluoride,
+		AllergyIntoleranceCodeAminopterin,
+		AllergyIntoleranceCodeVeratrine,
+		AllergyIntoleranceCodeFerrousIronCompound,
+		AllergyIntoleranceCodePhomopsin,
+		AllergyIntoleranceCodeDiscadenineSynthase,
+		AllergyIntoleranceCodeOxidizedGlutathione,
+		AllergyIntoleranceCodeSterolHormone,
+		AllergyIntoleranceCodeDextropropoxypheneNapsylate,
+		AllergyIntoleranceCodePlatinum188Substance,
+		AllergyIntoleranceCodeTheophyllineCalciumSalicylate,
+		AllergyIntoleranceCodeCefapirinSodium,
+		AllergyIntoleranceCodeMeadAcid,
+		AllergyIntoleranceCodeMagnesiumFumes,
+		AllergyIntoleranceCodeS3Amino2MethylpropionateAminotransferase,
+		AllergyIntoleranceCode3DeoxyMannoOctulosonate8PhosphataseSubstance,
+		AllergyIntoleranceCodeThiopurineMethyltransferase,
+		AllergyIntoleranceCodeSodiumFluoride,
+		AllergyIntoleranceCodeDeoxycytidylateMethyltransferase,
+		AllergyIntoleranceCodeBowieine,
+		AllergyIntoleranceCodeExopolyphosphatase,
+		AllergyIntoleranceCodeLeucineAcetyltransferase,
+		AllergyIntoleranceCodeTin121Substance,
+		AllergyIntoleranceCodeThymidylateSynthase,
+		AllergyIntoleranceCodeBloodGroupAntigenLeBh,
+		AllergyIntoleranceCodeTin121MSubstance,
+		AllergyIntoleranceCodeBloodGroupAntibodyFrando,
+		AllergyIntoleranceCodeLysolecithinAcylmutase,
+		AllergyIntoleranceCode4HydroxyprolineEpimeraseSubstance,
+		AllergyIntoleranceCodeChromium51CrChlorideSubstance,
+		AllergyIntoleranceCodeAcrylamide,
+		AllergyIntoleranceCodeTriflupromazineHydrochloride,
+		AllergyIntoleranceCodeSeminalFluid,
+		AllergyIntoleranceCodeAmmoniumCompound,
+		AllergyIntoleranceCodeBetaCarotene1515Dioxygenase,
+		AllergyIntoleranceCodeMalateCoaLigase,
+		AllergyIntoleranceCodeBloodGroupAntigenGreenlee,
+		AllergyIntoleranceCodeGloboside,
+		AllergyIntoleranceCodeDiclofenac,
+		AllergyIntoleranceCodeLycorine,
+		AllergyIntoleranceCodeAsphyxiantAtmosphere,
+		AllergyIntoleranceCodePyruvateCarboxylase,
+		AllergyIntoleranceCodeHemoglobinPoissy,
+		AllergyIntoleranceCode3PropylmalateSynthase,
+		AllergyIntoleranceCodeNAcylneuraminate9Phosphatase,
+		AllergyIntoleranceCodeAnthocyanidinO3Glucosyltransferase,
+		AllergyIntoleranceCodeConvallamarin,
+		AllergyIntoleranceCodeFibrinogenBuenosAiresIi,
+		AllergyIntoleranceCodeGermanium69Substance,
+		AllergyIntoleranceCodeAntigen,
+		AllergyIntoleranceCodeGallium73Substance,
+		AllergyIntoleranceCodeAcidCoaLigaseGdpForming,
+		AllergyIntoleranceCodeCyclohexeneOxide,
+		AllergyIntoleranceCodeChlorthion,
+		AllergyIntoleranceCodePhosphorusIsotope,
+		AllergyIntoleranceCodeHlaDw19Antigen,
+		AllergyIntoleranceCodeComplementComponentC2A,
+		AllergyIntoleranceCodePrekallikrein,
+		AllergyIntoleranceCodeMethenyltetrahydrofolateCyclohydrolase,
+		AllergyIntoleranceCodeThiolOxidase,
+		AllergyIntoleranceCodeBloodGroupAntibodyHaakestad,
+		AllergyIntoleranceCodeGalactonateDehydratase,
+		AllergyIntoleranceCodeMethylIsocyanate,
+		AllergyIntoleranceCodeThorium,
+		AllergyIntoleranceCodeMixedDust,
+		AllergyIntoleranceCodeDtdp4DehydrorhamnoseReductase,
+		AllergyIntoleranceCodeTechnetium99MTcLidofeninSubstance,
+		AllergyIntoleranceCodeMercaptanCompound,
+		AllergyIntoleranceCodeAceticAcidTertButylEster,
+		AllergyIntoleranceCodeAmbuphylline,
+		AllergyIntoleranceCodeBacteriochlorophyll,
+		AllergyIntoleranceCodePyrimidine,
+		AllergyIntoleranceCodeCalciumHydroxide,
+		AllergyIntoleranceCodeSulfurousAcid,
+		AllergyIntoleranceCodeRedPetrolatum,
+		AllergyIntoleranceCodeShellac,
+		AllergyIntoleranceCodeBloodGroupAntibodyTrA,
+		AllergyIntoleranceCodeCoagulationFactorIi,
+		AllergyIntoleranceCodeAminoalcoholEster,
+		AllergyIntoleranceCodeHemeHemopexinComplex,
+		AllergyIntoleranceCodeBloodGroupAntibodyHlaB8,
+		AllergyIntoleranceCodeSepiapterinReductase,
+		AllergyIntoleranceCodeErythrosinB,
+		AllergyIntoleranceCodeRuthenium,
+		AllergyIntoleranceCodeTellurium127Substance,
+		AllergyIntoleranceCodePTertButyltolueneSubstance,
+		AllergyIntoleranceCodeHomocytotropicAntibody,
+		AllergyIntoleranceCodeGallium72Substance,
+		AllergyIntoleranceCodeMannitolHexanitrate,
+		AllergyIntoleranceCodeHepatotoxicMycotoxin,
+		AllergyIntoleranceCodeStizolobinateSynthase,
+		AllergyIntoleranceCodeHemoglobinLincolnPark,
+		AllergyIntoleranceCodeFibrinogenBethesdaI,
+		AllergyIntoleranceCodeBloodGroupAntibodySkA,
+		AllergyIntoleranceCodeTriethyleneGlycol,
+		AllergyIntoleranceCodeBloodGroupAntibodyPruitt,
+		AllergyIntoleranceCodeHlaBw70Antigen,
+		AllergyIntoleranceCodeFishBone,
+		AllergyIntoleranceCodeAminobutyraldehydeDehydrogenase,
+		AllergyIntoleranceCodeBloodGroupAntigenTowey,
+		AllergyIntoleranceCodeBloodGroupAntibodyBgC,
+		AllergyIntoleranceCodeFerrovanadiumDust,
+		AllergyIntoleranceCodeIsovalerylCoaDehydrogenase,
+		AllergyIntoleranceCodeChlortetracyclineHydrochloride,
+		AllergyIntoleranceCodeHlaB49Antigen,
+		AllergyIntoleranceCodeSilver111Substance,
+		AllergyIntoleranceCodeStrontium89Substance,
+		AllergyIntoleranceCodeNeoBVitaminA1Substance,
+		AllergyIntoleranceCodeRuthenium103Substance,
+		AllergyIntoleranceCodeSphingomyelinPhosphodiesteraseD,
+		AllergyIntoleranceCode1Monoacylglycerol,
+		AllergyIntoleranceCodeSoyaProtein,
+		AllergyIntoleranceCodeOxalateOxidase,
+		AllergyIntoleranceCodeTetrahydroxypteridineCycloisomerase,
+		AllergyIntoleranceCodeAntazolineHydrochloride,
+		AllergyIntoleranceCodeAcetylDigitoxin,
+		AllergyIntoleranceCodeSphingomyelinPhosphodiesterase,
+		AllergyIntoleranceCodeMonophosphatidylinositolPhosphodiesterase,
+		AllergyIntoleranceCodeBetaCyclopiazonateDehydrogenaseSubstance,
+		AllergyIntoleranceCodeRadon218Substance,
+		AllergyIntoleranceCodeHemoglobinPresbyterian,
+		AllergyIntoleranceCodeDeanol,
+		AllergyIntoleranceCodeArginineCarboxypeptidase,
+		AllergyIntoleranceCodeDiflorasone,
+		AllergyIntoleranceCodeDArabitolDehydrogenase,
+		AllergyIntoleranceCodeOrsellinateDepsideHydrolase,
+		AllergyIntoleranceCodeReedSternbergAntibody,
+		AllergyIntoleranceCodeThioneb,
+		AllergyIntoleranceCodePhosphatidateCytidylyltransferase,
+		AllergyIntoleranceCodeHemoglobinFShanghai,
+		AllergyIntoleranceCodeAllograft,
+		AllergyIntoleranceCodeBloodGroupAntibodyDalman,
+		AllergyIntoleranceCodeAmiphenazole,
+		AllergyIntoleranceCode3Phosphoadenylylsulfate3PhosphataseSubstance,
+		AllergyIntoleranceCodeSodiumRhodanide,
+		AllergyIntoleranceCodeSulfurIsotope,
+		AllergyIntoleranceCodeButylMercaptan,
+		AllergyIntoleranceCodeCucurbitacinDelta23Reductase,
+		AllergyIntoleranceCodeBloodGroupAntibodyFleming,
+		AllergyIntoleranceCodeBloodGroupAntibodyGibson,
+		AllergyIntoleranceCodeAllylGlycidylEther,
+		AllergyIntoleranceCodePolyethyleneGlycol,
+		AllergyIntoleranceCodeCholestenolDeltaIsomerase,
+		AllergyIntoleranceCodeBloodGroupAntigenTh,
+		AllergyIntoleranceCodeOrotateReductaseNadph,
+		AllergyIntoleranceCodeGalactosideAcetyltransferase,
+		AllergyIntoleranceCodeHemoglobinLeiden,
+		AllergyIntoleranceCodeUndecaprenylDiphosphatase,
+		AllergyIntoleranceCodeBloodGroupAntibodySchuppenhauer,
+		AllergyIntoleranceCodeMagnesiumAcetylsalicylate,
+		AllergyIntoleranceCodeDiosmin,
+		AllergyIntoleranceCodeHomoproline,
+		AllergyIntoleranceCodeImmunoglobulinFdFragment,
+		AllergyIntoleranceCodeLymphocyteAntigenCd67,
+		AllergyIntoleranceCodeUracil5CarboxylateDecarboxylase,
+		AllergyIntoleranceCodeCevadilline,
+		AllergyIntoleranceCodeConvallamarogenin,
+		AllergyIntoleranceCodeDiaminopimelateEpimerase,
+		AllergyIntoleranceCodePotassium43Substance,
+		AllergyIntoleranceCodeHumanMenopausalGonadotropin,
+		AllergyIntoleranceCodePolyester,
+		AllergyIntoleranceCodeCoagulationFactorIiPaduaVariant,
+		AllergyIntoleranceCodeRuthenium106Substance,
+		AllergyIntoleranceCodeStreptococcalCysteineProteinase,
+		AllergyIntoleranceCodeStrobane,
+		AllergyIntoleranceCodeChlorothiazideSodium,
+		AllergyIntoleranceCodeAbnormalHemoglobin,
+		AllergyIntoleranceCodePotassiumThiosulfate,
+		AllergyIntoleranceCodeBloodGroupAntibodyHildebrandt,
+		AllergyIntoleranceCodeTrnaAdenylyltransferase,
+		AllergyIntoleranceCodeMethionineSOxideReductase,
+		AllergyIntoleranceCodeUromucoidProtein,
+		AllergyIntoleranceCodeCyclohexanol,
+		AllergyIntoleranceCodeHemoglobinMadrid,
+		AllergyIntoleranceCodeRnaDirectedDnaPolymerase,
+		AllergyIntoleranceCodeProcollagenLysine2Oxoglutarate5Dioxygenase,
+		AllergyIntoleranceCodeBrilliantCresylBlue,
+		AllergyIntoleranceCodeBloodGroupAntibodyReA,
+		AllergyIntoleranceCodeManganeseEthyleneBisDithiocarbamate,
+		AllergyIntoleranceCodeHafniumIsotope,
+		AllergyIntoleranceCodeBloodGroupAntibodyC,
+		AllergyIntoleranceCodeOilOfPennyroyalEuropean,
+		AllergyIntoleranceCodeXylobiase,
+		AllergyIntoleranceCodeDuffyBloodGroupAntibody,
+		AllergyIntoleranceCodeGlucan14AlphaGlucosidase,
+		AllergyIntoleranceCodeNicotineResinComplex,
+		AllergyIntoleranceCodeNitroethaneOxidase,
+		AllergyIntoleranceCodeBrilliantOrange,
+		AllergyIntoleranceCodeOilOfLemonGrass,
+		AllergyIntoleranceCodeBloodGroupAntigenSisson,
+		AllergyIntoleranceCodeMethylEthylKetonePeroxide,
+		AllergyIntoleranceCodeBloodGroupAntibodyVgA,
+		AllergyIntoleranceCodeHomocysteineMethyltransferase,
+		AllergyIntoleranceCodeLeadOleate,
+		AllergyIntoleranceCodeBloodGroupAntigenMur,
+		AllergyIntoleranceCodeOncogeneProteinP210BcrAbl,
+		AllergyIntoleranceCodeHlaDrw15Antigen,
+		AllergyIntoleranceCodeVanadium48Substance,
+		AllergyIntoleranceCodeComplementInhibitor,
+		AllergyIntoleranceCodeAllantoicase,
+		AllergyIntoleranceCodeShortNeurotoxinVenom,
+		AllergyIntoleranceCodeCyclohexane,
+		AllergyIntoleranceCodeOrnithine,
+		AllergyIntoleranceCodeHemoglobinMachida,
+		AllergyIntoleranceCodeOsmium183Substance,
+		AllergyIntoleranceCodeUrinaryProteinOfLowMolecularWeight,
+		AllergyIntoleranceCodeTin110Substance,
+		AllergyIntoleranceCodeSolution,
+		AllergyIntoleranceCodePotassiumCyanate,
+		AllergyIntoleranceCodeDichlorodifluoromethane,
+		AllergyIntoleranceCodeTumorNecrosisFactor,
+		AllergyIntoleranceCodeOncogeneProteinTcl6,
+		AllergyIntoleranceCodePotassiumChloride,
+		AllergyIntoleranceCodeRubijervine,
+		AllergyIntoleranceCodeComplementComponentC3C,
+		AllergyIntoleranceCodeGumArabic,
+		AllergyIntoleranceCodeKanamycinSulfate,
+		AllergyIntoleranceCodeSulfachlorpyridazine,
+		AllergyIntoleranceCode4HydroxybenzoateDecarboxylaseSubstance,
+		AllergyIntoleranceCodeBloodGroupAntibodyAustin,
+		AllergyIntoleranceCodeC3H20Bb,
+		AllergyIntoleranceCodeAdenylylsulfateKinase,
+		AllergyIntoleranceCodeSantonin,
+		AllergyIntoleranceCodeChlorineDioxide,
+		AllergyIntoleranceCodeBloodGroupAntigenWdA,
+		AllergyIntoleranceCodeHemoglobinF,
+		AllergyIntoleranceCodeLhReceptorSite,
+		AllergyIntoleranceCodeBloodGroupAntibodyTriW,
+		AllergyIntoleranceCodeLinoleicAcid,
+		AllergyIntoleranceCodeNitrateReductaseNadPH,
+		AllergyIntoleranceCodeGallocyanine,
+		AllergyIntoleranceCodeHydroxybutyrateDimerHydrolase,
+		AllergyIntoleranceCodeStrontium85SrNitrateSubstance,
+		AllergyIntoleranceCodeNaturalGraphite,
+		AllergyIntoleranceCodeBloodGroupAntigenEvelyn,
+		AllergyIntoleranceCode3Hydroxybenzoate6Hydroxylase,
+		AllergyIntoleranceCodeFlecainideAcetate,
+		AllergyIntoleranceCodeBloodGroupAntibodyIT,
+		AllergyIntoleranceCodeEndolymph,
+		AllergyIntoleranceCodeBiotin,
+		AllergyIntoleranceCodeAzurB,
+		AllergyIntoleranceCodePhosphopantothenateCysteineLigase,
+		AllergyIntoleranceCode23Dihydroxyindole23DioxygenaseSubstance,
+		AllergyIntoleranceCodeNAcetylmuramoylLAlanineAmidase,
+		AllergyIntoleranceCodeBulbourethralSecretions,
+		AllergyIntoleranceCodeBloodGroupAntibodyTarplee,
+		AllergyIntoleranceCodeOleateHydratase,
+		AllergyIntoleranceCodeCyclePhaseSpecificAgent,
+		AllergyIntoleranceCodeRibulokinase,
+		AllergyIntoleranceCodeMethylBlue,
+		AllergyIntoleranceCodeDephosphoCoaKinase,
+		AllergyIntoleranceCodeCarbaryl,
+		AllergyIntoleranceCodeGlucose6PhosphateDehydrogenase,
+		AllergyIntoleranceCodeRadonRadioisotope,
+		AllergyIntoleranceCodeAllspiceOil,
+		AllergyIntoleranceCodeBloodGroupAntigenHlaB15,
+		AllergyIntoleranceCodeRetinolFattyAcyltransferase,
+		AllergyIntoleranceCodeMercuricCompound,
+		AllergyIntoleranceCodeSempervirine,
+		AllergyIntoleranceCodeTriacetateLactonase,
+		AllergyIntoleranceCodeBloodGroupAntibodyAlda,
+		AllergyIntoleranceCodeFibrinogenPoitiers,
+		AllergyIntoleranceCodeBetaNAcetylgalactosaminidase,
+		AllergyIntoleranceCodeCmpNAcetylneuraminateLactosylceramideAlpha23Sialyltransferase,
+		AllergyIntoleranceCodeImmunoglobulinGeneInvAllotype,
+		AllergyIntoleranceCodeApioseReductase,
+		AllergyIntoleranceCodeHemoglobinTarrant,
+		AllergyIntoleranceCodePlantPhenolOil,
+		AllergyIntoleranceCodeBorneolDehydrogenase,
+		AllergyIntoleranceCodeChlorobutanol,
+		AllergyIntoleranceCodeTellurium118Substance,
+		AllergyIntoleranceCodeHlaDrw16Antigen,
+		AllergyIntoleranceCodeCatecholamineReceptor,
+		AllergyIntoleranceCodeFibrinogenPontoise,
+		AllergyIntoleranceCodeLensNeutralProteinase,
+		AllergyIntoleranceCodeGentisateDecarboxylase,
+		AllergyIntoleranceCodeSpearmintOil,
+		AllergyIntoleranceCodeBloodGroupAntibodyVennera,
+		AllergyIntoleranceCodeIsopropylGlycidylEther,
+		AllergyIntoleranceCodeNitrobenzene,
+		AllergyIntoleranceCodePalladium103Substance,
+		AllergyIntoleranceCodeHemoglobinFAlexandra,
+		AllergyIntoleranceCodeBloodGroupAntibodyPollio,
+		AllergyIntoleranceCodeIron60Substance,
+		AllergyIntoleranceCodeBloodGroupAntigenPillsbury,
+		AllergyIntoleranceCodeBromoform,
+		AllergyIntoleranceCodeHighDensityLipoprotein,
+		AllergyIntoleranceCodePropensityToAdverseReactionsToSubstance,
+		AllergyIntoleranceCodeHereditaryGastrogenicLactoseIntolerance,
+		AllergyIntoleranceCodeLactoseIntoleranceInChildrenWithoutLactaseDeficiency,
+		AllergyIntoleranceCodeDrugIntolerance,
+		AllergyIntoleranceCodeTransientGlutenSensitivity,
+		AllergyIntoleranceCodeOralContraceptiveIntolerance,
+		AllergyIntoleranceCodeAllergyToErythromycin,
+		AllergyIntoleranceCodeAllergyToFruit,
+		AllergyIntoleranceCodeNutAllergy,
+		AllergyIntoleranceCodeAllergyToPeanuts,
+		AllergyIntoleranceCodeAllergyToPenicillin,
+		AllergyIntoleranceCodeAllergyToSeafood,
+		AllergyIntoleranceCodeAllergyToStrawberries,
+		AllergyIntoleranceCodeAllergyToSulfonamides,
+		AllergyIntoleranceCodeAllergyToWalnut,
+		AllergyIntoleranceCodePrimaryLactoseIntolerance,
+		AllergyIntoleranceCodeEggProteinAllergy,
+		AllergyIntoleranceCodeHouseDustAllergy,
+		AllergyIntoleranceCodeHouseDustMiteAllergy,
+		AllergyIntoleranceCodeFoodIntolerance,
+		AllergyIntoleranceCodeAcetaminophenAllergy,
+		AllergyIntoleranceCodeSalicylateAllergy,
+		AllergyIntoleranceCodeAspirinAllergy,
+		AllergyIntoleranceCodePentazocineAllergy,
+		AllergyIntoleranceCodePhenazocineAllergy,
+		AllergyIntoleranceCodeMethadoneAnalogAllergy,
+		AllergyIntoleranceCodeDextromoramideAllergy,
+		AllergyIntoleranceCodeDextropropoxypheneAllergy,
+		AllergyIntoleranceCodeDipipanoneAllergy,
+		AllergyIntoleranceCodeMethadoneAllergy,
+		AllergyIntoleranceCodeMorphinanOpioidAllergy,
+		AllergyIntoleranceCodeBuprenorphineAllergy,
+		AllergyIntoleranceCodeCodeineAllergy,
+		AllergyIntoleranceCodeDiamorphineAllergy,
+		AllergyIntoleranceCodeDihydrocodeineAllergy,
+		AllergyIntoleranceCodeNalbuphineAllergy,
+		AllergyIntoleranceCodeMorphineAllergy,
+		AllergyIntoleranceCodeOpiumAlkaloidAllergy,
+		AllergyIntoleranceCodePethidineAnalogAllergy,
+		AllergyIntoleranceCodeAlfentanilAllergy,
+		AllergyIntoleranceCodeFentanylAllergy,
+		AllergyIntoleranceCodePethidineAllergy,
+		AllergyIntoleranceCodePhenoperidineAllergy,
+		AllergyIntoleranceCodeMeptazinolAllergy,
+		AllergyIntoleranceCodeLevorphanolAllergy,
+		AllergyIntoleranceCodeNonSteroidalAntiInflammatoryDrugAllergy,
+		AllergyIntoleranceCodeAcemetacinAllergy,
+		AllergyIntoleranceCodeAzapropazoneAllergy,
+		AllergyIntoleranceCodeDiclofenacAllergy,
+		AllergyIntoleranceCodeEtodolacAllergy,
+		AllergyIntoleranceCodeFelbinacAllergy,
+		AllergyIntoleranceCodeFenbufenAllergy,
+		AllergyIntoleranceCodeFenoprofenAllergy,
+		AllergyIntoleranceCodeFlurbiprofenAllergy,
+		AllergyIntoleranceCodeIbuprofenAllergy,
+		AllergyIntoleranceCodeIndomethacinAllergy,
+		AllergyIntoleranceCodeKetoprofenAllergy,
+		AllergyIntoleranceCodeKetorolacAllergy,
+		AllergyIntoleranceCodeMefenamicAcidAllergy,
+		AllergyIntoleranceCodeNabumetoneAllergy,
+		AllergyIntoleranceCodeNaproxenAllergy,
+		AllergyIntoleranceCodeNefopamAllergy,
+		AllergyIntoleranceCodeOxyphenbutazoneAllergy,
+		AllergyIntoleranceCodePhenylbutazoneAllergy,
+		AllergyIntoleranceCodePiroxicamAllergy,
+		AllergyIntoleranceCodeSulindacAllergy,
+		AllergyIntoleranceCodeTenoxicamAllergy,
+		AllergyIntoleranceCodeTiaprofenicAcidAllergy,
+		AllergyIntoleranceCodeTolmetinAllergy,
+		AllergyIntoleranceCodeTuberculinAllergy,
+		AllergyIntoleranceCodeRadiopharmaceuticalAllergy,
+		AllergyIntoleranceCodeContrastMediaAllergy,
+		AllergyIntoleranceCodeBismuthChelateAllergy,
+		AllergyIntoleranceCodeSucralfateAllergy,
+		AllergyIntoleranceCodeLiquoriceAllergy,
+		AllergyIntoleranceCodeMisoprostolAllergy,
+		AllergyIntoleranceCodeH2ReceptorAntagonistAllergy,
+		AllergyIntoleranceCodeCimetidineAllergy,
+		AllergyIntoleranceCodeFamotidineAllergy,
+		AllergyIntoleranceCodeNizatidineAllergy,
+		AllergyIntoleranceCodeRanitidineAllergy,
+		AllergyIntoleranceCodeProtonPumpInhibitorAllergy,
+		AllergyIntoleranceCodeOmeprazoleAllergy,
+		AllergyIntoleranceCodeLansoprazoleAllergy,
+		AllergyIntoleranceCodeCarbenoxoloneAllergy,
+		AllergyIntoleranceCodePirenzepineAllergy,
+		AllergyIntoleranceCodePancreatinAllergy,
+		AllergyIntoleranceCode5AminosalicylicAcidAllergy,
+		AllergyIntoleranceCodeOlsalazineAllergy,
+		AllergyIntoleranceCodeSulfasalazineAllergy,
+		AllergyIntoleranceCodeMagnesiumTrisilicateAllergy,
+		AllergyIntoleranceCodeAluminumHydroxideAllergy,
+		AllergyIntoleranceCodeLoperamideAllergy,
+		AllergyIntoleranceCodeKaolinAllergy,
+		AllergyIntoleranceCodeCisaprideAllergy,
+		AllergyIntoleranceCodeNabiloneAllergy,
+		AllergyIntoleranceCodeDomperidoneAllergy,
+		AllergyIntoleranceCodeMetoclopramideAllergy,
+		AllergyIntoleranceCode5Ht3ReceptorAntagonistAllergy,
+		AllergyIntoleranceCodeBisacodylAllergy,
+		AllergyIntoleranceCodeDanthronAllergy,
+		AllergyIntoleranceCodeSodiumPicosulfateAllergy,
+		AllergyIntoleranceCodeLactuloseAllergy,
+		AllergyIntoleranceCodeMagnesiumSulfateAllergy,
+		AllergyIntoleranceCodeCascaraAllergy,
+		AllergyIntoleranceCodeSennaAllergy,
+		AllergyIntoleranceCodeDocusateAllergy,
+		AllergyIntoleranceCodePeppermintOilAllergy,
+		AllergyIntoleranceCodeAlverineAllergy,
+		AllergyIntoleranceCodeMebeverineAllergy,
+		AllergyIntoleranceCodeDicyclomineAllergy,
+		AllergyIntoleranceCodeMepenzolateAllergy,
+		AllergyIntoleranceCodePipenzolateAllergy,
+		AllergyIntoleranceCodePoldineAllergy,
+		AllergyIntoleranceCodePropanthelineAllergy,
+		AllergyIntoleranceCodeChenodeoxycholicAcidAllergy,
+		AllergyIntoleranceCodeDehydrocholicAcidAllergy,
+		AllergyIntoleranceCodeUrsodeoxycholicAcidAllergy,
+		AllergyIntoleranceCodeEtomidateAllergy,
+		AllergyIntoleranceCodeKetamineAllergy,
+		AllergyIntoleranceCodePropofolAllergy,
+		AllergyIntoleranceCodeThiopentoneAllergy,
+		AllergyIntoleranceCodeMethohexitoneAllergy,
+		AllergyIntoleranceCodeEnfluraneAllergy,
+		AllergyIntoleranceCodeHalothaneAllergy,
+		AllergyIntoleranceCodeIsofluraneAllergy,
+		AllergyIntoleranceCodeTrichloroethyleneAllergy,
+		AllergyIntoleranceCodeDesfluraneAllergy,
+		AllergyIntoleranceCodeLocalAnestheticDrugAllergy,
+		AllergyIntoleranceCodeBupivacaineAllergy,
+		AllergyIntoleranceCodeCinchocaineAllergy,
+		AllergyIntoleranceCodePrilocaineAllergy,
+		AllergyIntoleranceCodeLignocaineAllergy,
+		AllergyIntoleranceCodeCocaineAllergy,
+		AllergyIntoleranceCodeBenzocaineAllergy,
+		AllergyIntoleranceCodeAmethocaineAllergy,
+		AllergyIntoleranceCodeOxybuprocaineAllergy,
+		AllergyIntoleranceCodeProcaineAllergy,
+		AllergyIntoleranceCodeProxymetacaineAllergy,
+		AllergyIntoleranceCodeAmifostineAllergy,
+		AllergyIntoleranceCodeAldesleukinAllergy,
+		AllergyIntoleranceCodeMolgramostimAllergy,
+		AllergyIntoleranceCodeLenograstimAllergy,
+		AllergyIntoleranceCodeFilgrastimAllergy,
+		AllergyIntoleranceCodeLevamisoleAllergy,
+		AllergyIntoleranceCodeAlkylatingDrugAllergy,
+		AllergyIntoleranceCodeMitobronitolAllergy,
+		AllergyIntoleranceCodeBusulfanAllergy,
+		AllergyIntoleranceCodeTreosulfanAllergy,
+		AllergyIntoleranceCodeThiotepaAllergy,
+		AllergyIntoleranceCodeNitrogenMustardDerivativeAllergy,
+		AllergyIntoleranceCodeChlorambucilAllergy,
+		AllergyIntoleranceCodeCyclophosphamideAllergy,
+		AllergyIntoleranceCodeEthoglucidAllergy,
+		AllergyIntoleranceCodeIfosfamideAllergy,
+		AllergyIntoleranceCodeMelphalanAllergy,
+		AllergyIntoleranceCodeEstramustineAllergy,
+		AllergyIntoleranceCodeMustineAllergy,
+		AllergyIntoleranceCodeNitrosureaAllergy,
+		AllergyIntoleranceCodeCarmustineAllergy,
+		AllergyIntoleranceCodeLomustineAllergy,
+		AllergyIntoleranceCodeDacarbazineAllergy,
+		AllergyIntoleranceCodeDactinomycinAllergy,
+		AllergyIntoleranceCodeBleomycinAllergy,
+		AllergyIntoleranceCodeMitomycinAllergy,
+		AllergyIntoleranceCodePlicamycinAllergy,
+		AllergyIntoleranceCodeAclarubicinAllergy,
+		AllergyIntoleranceCodeMitozantroneAllergy,
+		AllergyIntoleranceCodeDoxorubicinAllergy,
+		AllergyIntoleranceCodeEpirubicinAllergy,
+		AllergyIntoleranceCodeIdarubicinAllergy,
+		AllergyIntoleranceCodeMercuricOxideAllergy,
+		AllergyIntoleranceCodeMethotrexateAllergy,
+		AllergyIntoleranceCodeMercaptopurineAllergy,
+		AllergyIntoleranceCodeThioguanineAllergy,
+		AllergyIntoleranceCodePentostatinAllergy,
+		AllergyIntoleranceCodeCytarabineAllergy,
+		AllergyIntoleranceCodeFluorouracilAllergy,
+		AllergyIntoleranceCodeEtoposideAllergy,
+		AllergyIntoleranceCodeAmsacrineAllergy,
+		AllergyIntoleranceCodeCarboplatinAllergy,
+		AllergyIntoleranceCodeCisplatinAllergy,
+		AllergyIntoleranceCodeHydroxyureaAllergy,
+		AllergyIntoleranceCodeProcarbazineAllergy,
+		AllergyIntoleranceCodeRazoxaneAllergy,
+		AllergyIntoleranceCodeCrisantaspaseAllergy,
+		AllergyIntoleranceCodePaclitaxelAllergy,
+		AllergyIntoleranceCodeFludarabineAllergy,
+		AllergyIntoleranceCodeAminoglutethimideAllergy,
+		AllergyIntoleranceCodeEstrogenAntagonistAllergy,
+		AllergyIntoleranceCodeTrilostaneAllergy,
+		AllergyIntoleranceCodeTamoxifenAllergy,
+		AllergyIntoleranceCodeFormestaneAllergy,
+		AllergyIntoleranceCodeVincaAlkaloidAllergy,
+		AllergyIntoleranceCodeVinblastineAllergy,
+		AllergyIntoleranceCodeVincristineAllergy,
+		AllergyIntoleranceCodeVindesineAllergy,
+		AllergyIntoleranceCodeDimethylSulfoxideAllergy,
+		AllergyIntoleranceCodeCyclosporinAllergy,
+		AllergyIntoleranceCodeAzathioprineAllergy,
+		AllergyIntoleranceCodeMazindolAllergy,
+		AllergyIntoleranceCodePhentermineAllergy,
+		AllergyIntoleranceCodeDexfenfluramineAllergy,
+		AllergyIntoleranceCodeDiethylpropionAllergy,
+		AllergyIntoleranceCodeFenfluramineAllergy,
+		AllergyIntoleranceCodeLevodopaAllergy,
+		AllergyIntoleranceCodeAmantadineAllergy,
+		AllergyIntoleranceCodeApomorphineAllergy,
+		AllergyIntoleranceCodeLysurideAllergy,
+		AllergyIntoleranceCodePergolideAllergy,
+		AllergyIntoleranceCodeBromocriptineAllergy,
+		AllergyIntoleranceCodeLithiumCarbonateAllergy,
+		AllergyIntoleranceCodeLithiumCitrateAllergy,
+		AllergyIntoleranceCodeButriptylineAllergy,
+		AllergyIntoleranceCodeDoxepinAllergy,
+		AllergyIntoleranceCodeIprindoleAllergy,
+		AllergyIntoleranceCodeLofepramineAllergy,
+		AllergyIntoleranceCodeNortriptylineAllergy,
+		AllergyIntoleranceCodeTrimipramineAllergy,
+		AllergyIntoleranceCodeAmoxapineAllergy,
+		AllergyIntoleranceCodeAmitriptylineAllergy,
+		AllergyIntoleranceCodeClomipramineAllergy,
+		AllergyIntoleranceCodeDesipramineAllergy,
+		AllergyIntoleranceCodeDothiepinAllergy,
+		AllergyIntoleranceCodeImipramineAllergy,
+		AllergyIntoleranceCodeProtriptylineAllergy,
+		AllergyIntoleranceCodeMonoamineOxidaseInhibitorAllergy,
+		AllergyIntoleranceCodePhenelzineAllergy,
+		AllergyIntoleranceCodeIproniazidAllergy,
+		AllergyIntoleranceCodeIsocarboxazidAllergy,
+		AllergyIntoleranceCodeTranylcypromineAllergy,
+		AllergyIntoleranceCodeMoclobemideAllergy,
+		AllergyIntoleranceCodeTryptophanAllergy,
+		AllergyIntoleranceCodeVenlafaxineAllergy,
+		AllergyIntoleranceCodeSelectiveSerotoninReUptakeInhibitorAllergy,
+		AllergyIntoleranceCodeSertralineAllergy,
+		AllergyIntoleranceCodeParoxetineAllergy,
+		AllergyIntoleranceCodeNefazodoneAllergy,
+		AllergyIntoleranceCodeCitalopramAllergy,
+		AllergyIntoleranceCodeFluoxetineAllergy,
+		AllergyIntoleranceCodeFluvoxamineAllergy,
+		AllergyIntoleranceCodeMaprotilineAllergy,
+		AllergyIntoleranceCodeMianserinAllergy,
+		AllergyIntoleranceCodeTrazodoneAllergy,
+		AllergyIntoleranceCodeViloxazineAllergy,
+		AllergyIntoleranceCodeBeclamideAllergy,
+		AllergyIntoleranceCodeLamotrigineAllergy,
+		AllergyIntoleranceCodePiracetamAllergy,
+		AllergyIntoleranceCodeGabapentinAllergy,
+		AllergyIntoleranceCodeMethylphenobarbitoneAllergy,
+		AllergyIntoleranceCodePhenobarbitoneAllergy,
+		AllergyIntoleranceCodePrimidoneAllergy,
+		AllergyIntoleranceCodeCarbamazepineAllergy,
+		AllergyIntoleranceCodeVigabatrinAllergy,
+		AllergyIntoleranceCodePhenytoinAllergy,
+		AllergyIntoleranceCodeEthosuximideAllergy,
+		AllergyIntoleranceCodeClonazepamAllergy,
+		AllergyIntoleranceCodeZopicloneAllergy,
+		AllergyIntoleranceCodeZolpidemAllergy,
+		AllergyIntoleranceCodeChlormezanoneAllergy,
+		AllergyIntoleranceCodeMethypryloneAllergy,
+		AllergyIntoleranceCodeParaldehydeAllergy,
+		AllergyIntoleranceCodeAmylobarbitoneAllergy,
+		AllergyIntoleranceCodeButobarbitoneAllergy,
+		AllergyIntoleranceCodeCyclobarbitoneAllergy,
+		AllergyIntoleranceCodeQuinalbarbitoneAllergy,
+		AllergyIntoleranceCodeFlunitrazepamAllergy,
+		AllergyIntoleranceCodeFlurazepamAllergy,
+		AllergyIntoleranceCodeLoprazolamAllergy,
+		AllergyIntoleranceCodeLormetazepamAllergy,
+		AllergyIntoleranceCodeNitrazepamAllergy,
+		AllergyIntoleranceCodeTriazolamAllergy,
+		AllergyIntoleranceCodeAlprazolamAllergy,
+		AllergyIntoleranceCodeBromazepamAllergy,
+		AllergyIntoleranceCodeChlordiazepoxideAllergy,
+		AllergyIntoleranceCodeClobazamAllergy,
+		AllergyIntoleranceCodeKetazolamAllergy,
+		AllergyIntoleranceCodeMedazepamAllergy,
+		AllergyIntoleranceCodeOxazepamAllergy,
+		AllergyIntoleranceCodePrazepamAllergy,
+		AllergyIntoleranceCodeMidazolamAllergy,
+		AllergyIntoleranceCodeDiazepamAllergy,
+		AllergyIntoleranceCodeLorazepamAllergy,
+		AllergyIntoleranceCodeTemazepamAllergy,
+		AllergyIntoleranceCodeMeprobamateAllergy,
+		AllergyIntoleranceCodeChloralHydrateAllergy,
+		AllergyIntoleranceCodeDichloralphenazoneAllergy,
+		AllergyIntoleranceCodeBuspironeAllergy,
+		AllergyIntoleranceCodeChlormethiazoleAllergy,
+		AllergyIntoleranceCodeSulpirideAllergy,
+		AllergyIntoleranceCodeLoxapineAllergy,
+		AllergyIntoleranceCodeClozapineAllergy,
+		AllergyIntoleranceCodeRisperidoneAllergy,
+		AllergyIntoleranceCodeTetrabenazineAllergy,
+		AllergyIntoleranceCodeButyrophenoneAllergy,
+		AllergyIntoleranceCodeBenperidolAllergy,
+		AllergyIntoleranceCodeTrifluperidolAllergy,
+		AllergyIntoleranceCodeDroperidolAllergy,
+		AllergyIntoleranceCodeHaloperidolAllergy,
+		AllergyIntoleranceCodeDiphenylbutylpiperidineAllergy,
+		AllergyIntoleranceCodePimozideAllergy,
+		AllergyIntoleranceCodeFluspirileneAllergy,
+		AllergyIntoleranceCodePhenothiazineAllergy,
+		AllergyIntoleranceCodeMethotrimeprazineAllergy,
+		AllergyIntoleranceCodePericyazineAllergy,
+		AllergyIntoleranceCodeThiethylperazineAllergy,
+		AllergyIntoleranceCodeFluphenazineAllergy,
+		AllergyIntoleranceCodeChlorpromazineAllergy,
+		AllergyIntoleranceCodePipothiazineAllergy,
+		AllergyIntoleranceCodePromazineAllergy,
+		AllergyIntoleranceCodeThioridazineAllergy,
+		AllergyIntoleranceCodePerphenazineAllergy,
+		AllergyIntoleranceCodeProchlorperazineAllergy,
+		AllergyIntoleranceCodeTrifluoperazineAllergy,
+		AllergyIntoleranceCodeThioxantheneAllergy,
+		AllergyIntoleranceCodeChlorprothixeneAllergy,
+		AllergyIntoleranceCodeZuclopenthixolAllergy,
+		AllergyIntoleranceCodeFlupenthixolAllergy,
+		AllergyIntoleranceCodeOxypertineAllergy,
+		AllergyIntoleranceCodeRemoxiprideAllergy,
+		AllergyIntoleranceCodeSelegilineAllergy,
+		AllergyIntoleranceCodePemolineAllergy,
+		AllergyIntoleranceCodeMethylphenidateAllergy,
+		AllergyIntoleranceCodeProlintaneAllergy,
+		AllergyIntoleranceCodeAmphetamineGroupAllergy,
+		AllergyIntoleranceCodeDexamphetamineAllergy,
+		AllergyIntoleranceCodeDisulfiramAllergy,
+		AllergyIntoleranceCodeBetaAdrenoceptorBlockingDrugAllergy,
+		AllergyIntoleranceCodeCardioselectiveBetaBlockerAllergy,
+		AllergyIntoleranceCodeAcebutololAllergy,
+		AllergyIntoleranceCodeAtenololAllergy,
+		AllergyIntoleranceCodeBetaxololAllergy,
+		AllergyIntoleranceCodeBisoprololAllergy,
+		AllergyIntoleranceCodeCeliprololAllergy,
+		AllergyIntoleranceCodeEsmololAllergy,
+		AllergyIntoleranceCodeMetoprololAllergy,
+		AllergyIntoleranceCodeNadololAllergy,
+		AllergyIntoleranceCodePindololAllergy,
+		AllergyIntoleranceCodeCarvedilolAllergy,
+		AllergyIntoleranceCodeMetipranololAllergy,
+		AllergyIntoleranceCodeCarteololAllergy,
+		AllergyIntoleranceCodeLabetalolAllergy,
+		AllergyIntoleranceCodeLevobunololAllergy,
+		AllergyIntoleranceCodeOxprenololAllergy,
+		AllergyIntoleranceCodePenbutololAllergy,
+		AllergyIntoleranceCodePractololAllergy,
+		AllergyIntoleranceCodePropranololAllergy,
+		AllergyIntoleranceCodeSotalolAllergy,
+		AllergyIntoleranceCodeTimololAllergy,
+		AllergyIntoleranceCodeAlphaAdrenoceptorBlockingDrugAllergy,
+		AllergyIntoleranceCodeAlfuzosinAllergy,
+		AllergyIntoleranceCodeDoxazosinAllergy,
+		AllergyIntoleranceCodeIndoraminAllergy,
+		AllergyIntoleranceCodePhenoxybenzamineAllergy,
+		AllergyIntoleranceCodePhentolamineAllergy,
+		AllergyIntoleranceCodePrazosinAllergy,
+		AllergyIntoleranceCodeTerazosinAllergy,
+		AllergyIntoleranceCodeNicotineAllergy,
+		AllergyIntoleranceCodeCalciumChannelBlockerAllergy,
+		AllergyIntoleranceCodeLidoflazineAllergy,
+		AllergyIntoleranceCodeNifedipineAllergy,
+		AllergyIntoleranceCodePrenylamineAllergy,
+		AllergyIntoleranceCodeIsradipineAllergy,
+		AllergyIntoleranceCodeFelodipineAllergy,
+		AllergyIntoleranceCodeLacidipineAllergy,
+		AllergyIntoleranceCodeNimodipineAllergy,
+		AllergyIntoleranceCodeAmlodipineAllergy,
+		AllergyIntoleranceCodeDiltiazemAllergy,
+		AllergyIntoleranceCodeNicardipineAllergy,
+		AllergyIntoleranceCodeVerapamilAllergy,
+		AllergyIntoleranceCodePilocarpineAllergy,
+		AllergyIntoleranceCodeMethacholineAllergy,
+		AllergyIntoleranceCodePhysostigmineAllergy,
+		AllergyIntoleranceCodeDemecariumAllergy,
+		AllergyIntoleranceCodeDistigmineAllergy,
+		AllergyIntoleranceCodeEcothiopateAllergy,
+		AllergyIntoleranceCodeEdrophoniumAllergy,
+		AllergyIntoleranceCodePyridostigmineAllergy,
+		AllergyIntoleranceCodeNeostigmineAllergy,
+		AllergyIntoleranceCodeBethanecholAllergy,
+		AllergyIntoleranceCodeCarbacholAllergy,
+		AllergyIntoleranceCodePseudoephedrineAllergy,
+		AllergyIntoleranceCodeAlphaAdrenoceptorAgonistAllergy,
+		AllergyIntoleranceCodeMetaraminolAllergy,
+		AllergyIntoleranceCodeMethoxamineAllergy,
+		AllergyIntoleranceCodeNaphazolineAllergy,
+		AllergyIntoleranceCodeNorepinephrineAllergy,
+		AllergyIntoleranceCodePhenylephrineAllergy,
+		AllergyIntoleranceCodeXylometazolineAllergy,
+		AllergyIntoleranceCodeSelectiveBeta2AdrenoceptorStimulantsAllergy,
+		AllergyIntoleranceCodePirbuterolAllergy,
+		AllergyIntoleranceCodeSalmeterolAllergy,
+		AllergyIntoleranceCodeSalbutamolAllergy,
+		AllergyIntoleranceCodeBambuterolAllergy,
+		AllergyIntoleranceCodeFenoterolAllergy,
+		AllergyIntoleranceCodeOrciprenalineAllergy,
+		AllergyIntoleranceCodeReproterolAllergy,
+		AllergyIntoleranceCodeRimiterolAllergy,
+		AllergyIntoleranceCodeRitodrineAllergy,
+		AllergyIntoleranceCodeTerbutalineAllergy,
+		AllergyIntoleranceCodeTulobuterolAllergy,
+		AllergyIntoleranceCodeDobutamineAllergy,
+		AllergyIntoleranceCodeDopexamineAllergy,
+		AllergyIntoleranceCodeIsoprenalineAllergy,
+		AllergyIntoleranceCodeMethyldopaAllergy,
+		AllergyIntoleranceCodeApraclonidineAllergy,
+		AllergyIntoleranceCodeClonidineAllergy,
+		AllergyIntoleranceCodeLofexidineAllergy,
+		AllergyIntoleranceCodeDipivefrineAllergy,
+		AllergyIntoleranceCodeDopamineAllergy,
+		AllergyIntoleranceCodeEphedrineAllergy,
+		AllergyIntoleranceCodeOxymetazolineAllergy,
+		AllergyIntoleranceCodeXamoterolAllergy,
+		AllergyIntoleranceCodeBelladonnaAlkaloidsAllergy,
+		AllergyIntoleranceCodeBiperidenAllergy,
+		AllergyIntoleranceCodeTropicamideAllergy,
+		AllergyIntoleranceCodeHyoscineAllergy,
+		AllergyIntoleranceCodeAtropineAllergy,
+		AllergyIntoleranceCodeBenzhexolAllergy,
+		AllergyIntoleranceCodeBenztropineAllergy,
+		AllergyIntoleranceCodeCyclopentolateAllergy,
+		AllergyIntoleranceCodeGlycopyrroniumAllergy,
+		AllergyIntoleranceCodeHomatropineAllergy,
+		AllergyIntoleranceCodeIpratropiumAllergy,
+		AllergyIntoleranceCodeMethixeneAllergy,
+		AllergyIntoleranceCodeOrphenadrineAllergy,
+		AllergyIntoleranceCodeOxitropiumAllergy,
+		AllergyIntoleranceCodeOxybutyninAllergy,
+		AllergyIntoleranceCodeProcyclidineAllergy,
+		AllergyIntoleranceCodeDornaseAlfaAllergy,
+		AllergyIntoleranceCodeTyloxapolAllergy,
+		AllergyIntoleranceCodeCarbocisteineAllergy,
+		AllergyIntoleranceCodeMethylcysteineAllergy,
+		AllergyIntoleranceCodeAcetylcysteineAllergy,
+		AllergyIntoleranceCodeNikethamideAllergy,
+		AllergyIntoleranceCodeEthamivanAllergy,
+		AllergyIntoleranceCodeDoxapramAllergy,
+		AllergyIntoleranceCodeBeractantAllergy,
+		AllergyIntoleranceCodePumactantAllergy,
+		AllergyIntoleranceCodeColfoscerilAllergy,
+		AllergyIntoleranceCodeH1AntihistamineAllergy,
+		AllergyIntoleranceCodeAstemizoleAllergy,
+		AllergyIntoleranceCodeTerfenadineAllergy,
+		AllergyIntoleranceCodeAcrivastineAllergy,
+		AllergyIntoleranceCodeLoratadineAllergy,
+		AllergyIntoleranceCodeAzelastineAllergy,
+		AllergyIntoleranceCodeCetirizineAllergy,
+		AllergyIntoleranceCodeClemastineAllergy,
+		AllergyIntoleranceCodeMebhydrolinAllergy,
+		AllergyIntoleranceCodeMequitazineAllergy,
+		AllergyIntoleranceCodeOxatomideAllergy,
+		AllergyIntoleranceCodeCyclizineAllergy,
+		AllergyIntoleranceCodeDimenhydrinateAllergy,
+		AllergyIntoleranceCodeAntazolineAllergy,
+		AllergyIntoleranceCodePromethazineAllergy,
+		AllergyIntoleranceCodeAzatadineAllergy,
+		AllergyIntoleranceCodeBrompheniramineAllergy,
+		AllergyIntoleranceCodeChlorpheniramineAllergy,
+		AllergyIntoleranceCodeCinnarizineAllergy,
+		AllergyIntoleranceCodeCyproheptadineAllergy,
+		AllergyIntoleranceCodeDimethindeneAllergy,
+		AllergyIntoleranceCodeDiphenhydramineAllergy,
+		AllergyIntoleranceCodeDiphenylpyralineAllergy,
+		AllergyIntoleranceCodeHydroxyzineAllergy,
+		AllergyIntoleranceCodeMepyramineAllergy,
+		AllergyIntoleranceCodePhenindamineAllergy,
+		AllergyIntoleranceCodePheniramineAllergy,
+		AllergyIntoleranceCodeTriprolidineAllergy,
+		AllergyIntoleranceCodeTrimeprazineAllergy,
+		AllergyIntoleranceCodeNedocromilAllergy,
+		AllergyIntoleranceCodeKetotifenAllergy,
+		AllergyIntoleranceCodeLodoxamideAllergy,
+		AllergyIntoleranceCodeIsoaminileAllergy,
+		AllergyIntoleranceCodeNoscapineAllergy,
+		AllergyIntoleranceCodePholcodineAllergy,
+		AllergyIntoleranceCodeXanthineAllergy,
+		AllergyIntoleranceCodeAminophyllineAllergy,
+		AllergyIntoleranceCodeTheophyllineAllergy,
+		AllergyIntoleranceCodeCalamineAllergy,
+		AllergyIntoleranceCodeCoalTarAllergy,
+		AllergyIntoleranceCodeBufexamacAllergy,
+		AllergyIntoleranceCodeDithranolAllergy,
+		AllergyIntoleranceCodeIchthammolAllergy,
+		AllergyIntoleranceCodeCalcipotriolAllergy,
+		AllergyIntoleranceCodeAzelaicAcidAllergy,
+		AllergyIntoleranceCodePodophyllumResinAllergy,
+		AllergyIntoleranceCodePodophyllotoxinAllergy,
+		AllergyIntoleranceCodeSurgicalTissueAdhesiveAllergy,
+		AllergyIntoleranceCodeEnbucrilateAllergy,
+		AllergyIntoleranceCodeCollodionAllergy,
+		AllergyIntoleranceCodeCrotamitonAllergy,
+		AllergyIntoleranceCodeBenzoylPeroxideAllergy,
+		AllergyIntoleranceCodeSilverNitrateAllergy,
+		AllergyIntoleranceCodeGamolenicAcidAllergy,
+		AllergyIntoleranceCodeRetinoidAllergy,
+		AllergyIntoleranceCodeEtretinateAllergy,
+		AllergyIntoleranceCodeAcitretinAllergy,
+		AllergyIntoleranceCodeTretinoinAllergy,
+		AllergyIntoleranceCodeIsotretinoinAllergy,
+		AllergyIntoleranceCodeColchicumAlkaloidAllergy,
+		AllergyIntoleranceCodeColchicineAllergy,
+		AllergyIntoleranceCodeProbenecidAllergy,
+		AllergyIntoleranceCodeSulfinpyrazoneAllergy,
+		AllergyIntoleranceCodeXanthineOxidaseInhibitorAllergy,
+		AllergyIntoleranceCodeAllopurinolAllergy,
+		AllergyIntoleranceCodeSuxamethoniumAllergy,
+		AllergyIntoleranceCodeNonDepolarizingMuscleRelaxantAllergy,
+		AllergyIntoleranceCodeMivacuriumAllergy,
+		AllergyIntoleranceCodeAlcuroniumAllergy,
+		AllergyIntoleranceCodeAtracuriumAllergy,
+		AllergyIntoleranceCodeGallamineAllergy,
+		AllergyIntoleranceCodePancuroniumAllergy,
+		AllergyIntoleranceCodeTubocurarineAllergy,
+		AllergyIntoleranceCodeVecuroniumAllergy,
+		AllergyIntoleranceCodeRocuroniumAllergy,
+		AllergyIntoleranceCodeBaclofenAllergy,
+		AllergyIntoleranceCodeCarisoprodolAllergy,
+		AllergyIntoleranceCodeMethocarbamolAllergy,
+		AllergyIntoleranceCodeDantroleneAllergy,
+		AllergyIntoleranceCodeGoldAllergy,
+		AllergyIntoleranceCodeSodiumAurothiomalateAllergy,
+		AllergyIntoleranceCodeAuranofinAllergy,
+		AllergyIntoleranceCodePapaverineAllergy,
+		AllergyIntoleranceCodeFlavoxateAllergy,
+		AllergyIntoleranceCodeMifepristoneAllergy,
+		AllergyIntoleranceCodeNonIonicSurfactantAllergy,
+		AllergyIntoleranceCodeNonoxinolAllergy,
+		AllergyIntoleranceCodeOctoxinolAllergy,
+		AllergyIntoleranceCodeProstaglandinAllergy,
+		AllergyIntoleranceCodeASeriesProstaglandinAllergy,
+		AllergyIntoleranceCodeESeriesProstaglandinAllergy,
+		AllergyIntoleranceCodeDinoprostoneAllergy,
+		AllergyIntoleranceCodeGemeprostAllergy,
+		AllergyIntoleranceCodeAlprostadilAllergy,
+		AllergyIntoleranceCodeFSeriesProstaglandinAllergy,
+		AllergyIntoleranceCodeDinoprostAllergy,
+		AllergyIntoleranceCodeCarboprostAllergy,
+		AllergyIntoleranceCodeISeriesProstaglandinAllergy,
+		AllergyIntoleranceCodeEpoprostenolAllergy,
+		AllergyIntoleranceCodeTerpenesAllergy,
+		AllergyIntoleranceCodeIpecacuanhaAllergy,
+		AllergyIntoleranceCodeCharcoalActivatedAllergy,
+		AllergyIntoleranceCodeSodiumNitriteAllergy,
+		AllergyIntoleranceCodeDigoxinSpecificAntibodyAllergy,
+		AllergyIntoleranceCodeMesnaAllergy,
+		AllergyIntoleranceCodeBenzodiazepineAntagonistAllergy,
+		AllergyIntoleranceCodeFlumazenilAllergy,
+		AllergyIntoleranceCodePralidoximeAllergy,
+		AllergyIntoleranceCodeOpioidAntagonistAllergy,
+		AllergyIntoleranceCodeNaltrexoneAllergy,
+		AllergyIntoleranceCodeNaloxoneAllergy,
+		AllergyIntoleranceCodeProtamineAllergy,
+		AllergyIntoleranceCodeAllergyToFullersEarth,
+		AllergyIntoleranceCodeAllergyToBentonite,
+		AllergyIntoleranceCodeDimercaprolAllergy,
+		AllergyIntoleranceCodeDesferrioxamineAllergy,
+		AllergyIntoleranceCodeEdetateAllergy,
+		AllergyIntoleranceCodeTrientineAllergy,
+		AllergyIntoleranceCodePenicillamineAllergy,
+		AllergyIntoleranceCodeGlycineAllergy,
+		AllergyIntoleranceCodeDialysisFluidAllergy,
+		AllergyIntoleranceCodeDimethylEtherPropaneAllergy,
+		AllergyIntoleranceCodeOliveOilAllergy,
+		AllergyIntoleranceCodeArachisOilAllergy,
+		AllergyIntoleranceCodeCastorOilAllergy,
+		AllergyIntoleranceCodeGlycerolAllergy,
+		AllergyIntoleranceCodeParaffinAllergy,
+		AllergyIntoleranceCodeLiquidParaffinAllergy,
+		AllergyIntoleranceCodeSiliconeAllergy,
+		AllergyIntoleranceCodeDimethiconeAllergy,
+		AllergyIntoleranceCodeWoolAlcoholAllergy,
+		AllergyIntoleranceCodePolyvinylAlcoholAllergy,
+		AllergyIntoleranceCodeCarbomer940Allergy,
+		AllergyIntoleranceCodeHypromelloseAllergy,
+		AllergyIntoleranceCodeHydroxyethylcelluloseAllergy,
+		AllergyIntoleranceCodeCarmelloseAllergy,
+		AllergyIntoleranceCodeFlucytosineAllergy,
+		AllergyIntoleranceCodeTerbinafineAllergy,
+		AllergyIntoleranceCodeNitrophenolAllergy,
+		AllergyIntoleranceCodeTolnaftateAllergy,
+		AllergyIntoleranceCodeAmorolfineAllergy,
+		AllergyIntoleranceCodeGriseofulvinAllergy,
+		AllergyIntoleranceCodeAmphotericinAllergy,
+		AllergyIntoleranceCodeNatamycinAllergy,
+		AllergyIntoleranceCodeNystatinAllergy,
+		AllergyIntoleranceCodeAllergyToUndecenoate,
+		AllergyIntoleranceCodeClotrimazoleAllergy,
+		AllergyIntoleranceCodeFenticonazoleAllergy,
+		AllergyIntoleranceCodeTioconazoleAllergy,
+		AllergyIntoleranceCodeEconazoleAllergy,
+		AllergyIntoleranceCodeIsoconazoleAllergy,
+		AllergyIntoleranceCodeSulconazoleAllergy,
+		AllergyIntoleranceCodeKetoconazoleAllergy,
+		AllergyIntoleranceCodeMiconazoleAllergy,
+		AllergyIntoleranceCodeFluconazoleAllergy,
+		AllergyIntoleranceCodeItraconazoleAllergy,
+		AllergyIntoleranceCodeInosinePranobexAllergy,
+		AllergyIntoleranceCodeZidovudineAllergy,
+		AllergyIntoleranceCodeGanciclovirAllergy,
+		AllergyIntoleranceCodeFamciclovirAllergy,
+		AllergyIntoleranceCodeDidanosineAllergy,
+		AllergyIntoleranceCodeZalcitabineAllergy,
+		AllergyIntoleranceCodeValaciclovirAllergy,
+		AllergyIntoleranceCodeInterferonsAllergy,
+		AllergyIntoleranceCodeHumanInterferonGamma1BAllergy,
+		AllergyIntoleranceCodeInterferonA2AAllergy,
+		AllergyIntoleranceCodeInterferonA2BAllergy,
+		AllergyIntoleranceCodeInterferonAN1Allergy,
+		AllergyIntoleranceCodeTribavirinAllergy,
+		AllergyIntoleranceCodeTrifluorothymidineAllergy,
+		AllergyIntoleranceCodeFoscarnetAllergy,
+		AllergyIntoleranceCodeVidarabineAllergy,
+		AllergyIntoleranceCodeAciclovirAllergy,
+		AllergyIntoleranceCodeIdoxuridineAllergy,
+		AllergyIntoleranceCodePyrimethamineAllergy,
+		AllergyIntoleranceCodeAmodiaquineAllergy,
+		AllergyIntoleranceCodePrimaquineAllergy,
+		AllergyIntoleranceCodeMefloquineAllergy,
+		AllergyIntoleranceCodeHydroxychloroquineAllergy,
+		AllergyIntoleranceCodeChloroquineAllergy,
+		AllergyIntoleranceCodeProguanilAllergy,
+		AllergyIntoleranceCodeQuinineAllergy,
+		AllergyIntoleranceCodeHalofantrineAllergy,
+		AllergyIntoleranceCodeMepacrineAllergy,
+		AllergyIntoleranceCodeAceticAcidAllergy,
+		AllergyIntoleranceCodeHydrargaphenAllergy,
+		AllergyIntoleranceCodePolynoxylinAllergy,
+		AllergyIntoleranceCodeHexetidineAllergy,
+		AllergyIntoleranceCodeSodiumPerborateAllergy,
+		AllergyIntoleranceCodeThymolAllergy,
+		AllergyIntoleranceCodeChloroxylenolAllergy,
+		AllergyIntoleranceCodeHexachlorophaneAllergy,
+		AllergyIntoleranceCodeTriclosanAllergy,
+		AllergyIntoleranceCodePhenolAllergy,
+		AllergyIntoleranceCodeIndustrialMethylatedSpiritAllergy,
+		AllergyIntoleranceCodeGlutaraldehydeAllergy,
+		AllergyIntoleranceCodeNoxythiolinAllergy,
+		AllergyIntoleranceCodeFormaldehydeAllergy,
+		AllergyIntoleranceCodeChlorhexidineAllergy,
+		AllergyIntoleranceCodeBorateAllergy,
+		AllergyIntoleranceCodeBoricAcidAllergy,
+		AllergyIntoleranceCodeQuaternaryAmmoniumSurfactantAllergy,
+		AllergyIntoleranceCodeCetrimideAllergy,
+		AllergyIntoleranceCodeBenzalkoniumAllergy,
+		AllergyIntoleranceCodeDomiphenAllergy,
+		AllergyIntoleranceCodeQuaternaryPyridiniumSurfactantAllergy,
+		AllergyIntoleranceCodeCetylpyridiniumAllergy,
+		AllergyIntoleranceCodeQuaternaryQuinoliniumSurfactantAllergy,
+		AllergyIntoleranceCodeDequaliniumAllergy,
+		AllergyIntoleranceCodeCrystalVioletAllergy,
+		AllergyIntoleranceCodeBrilliantGreenAllergy,
+		AllergyIntoleranceCodeHydrogenPeroxideAllergy,
+		AllergyIntoleranceCodePiperazineAllergy,
+		AllergyIntoleranceCodePyrantelAllergy,
+		AllergyIntoleranceCodeNiclosamideAllergy,
+		AllergyIntoleranceCodeBepheniumAllergy,
+		AllergyIntoleranceCodeDiethylcarbamazineAllergy,
+		AllergyIntoleranceCodeMebendazoleAllergy,
+		AllergyIntoleranceCodeAlbendazoleAllergy,
+		AllergyIntoleranceCodeThiabendazoleAllergy,
+		AllergyIntoleranceCodeAminoglycosideAllergy,
+		AllergyIntoleranceCodeAmikacinAllergy,
+		AllergyIntoleranceCodeKanamycinAllergy,
+		AllergyIntoleranceCodeNetilmicinAllergy,
+		AllergyIntoleranceCodeStreptomycinAllergy,
+		AllergyIntoleranceCodeFramycetinAllergy,
+		AllergyIntoleranceCodeNeomycinAllergy,
+		AllergyIntoleranceCodeGentamicinAllergy,
+		AllergyIntoleranceCodeTobramycinAllergy,
+		AllergyIntoleranceCodeClarithromycinAllergy,
+		AllergyIntoleranceCodeAzithromycinAllergy,
+		AllergyIntoleranceCodeSpectinomycinAllergy,
+		AllergyIntoleranceCodeVancomycinAllergy,
+		AllergyIntoleranceCodeTeicoplaninAllergy,
+		AllergyIntoleranceCodeTrimethoprimAllergy,
+		AllergyIntoleranceCodeNitrofurantoinAllergy,
+		AllergyIntoleranceCodeMupirocinAllergy,
+		AllergyIntoleranceCodeNitrofurazoneAllergy,
+		AllergyIntoleranceCodeFusidicAcidAllergy,
+		AllergyIntoleranceCodeAcrosoxacinAllergy,
+		AllergyIntoleranceCodeCinoxacinAllergy,
+		AllergyIntoleranceCodeNalidixicAcidAllergy,
+		AllergyIntoleranceCodeCiprofloxacinAllergy,
+		AllergyIntoleranceCodeEnoxacinAllergy,
+		AllergyIntoleranceCodeOfloxacinAllergy,
+		AllergyIntoleranceCodeNorfloxacinAllergy,
+		AllergyIntoleranceCodeTemafloxacinAllergy,
+		AllergyIntoleranceCodeBenethaminePenicillinAllergy,
+		AllergyIntoleranceCodePhenethicillinAllergy,
+		AllergyIntoleranceCodePhenoxymethylpenicillinAllergy,
+		AllergyIntoleranceCodeBenzylpenicillinAllergy,
+		AllergyIntoleranceCodeCloxacillinAllergy,
+		AllergyIntoleranceCodeFlucloxacillinAllergy,
+		AllergyIntoleranceCodeMethicillinAllergy,
+		AllergyIntoleranceCodeAmoxycillinAllergy,
+		AllergyIntoleranceCodeAmpicillinAllergy,
+		AllergyIntoleranceCodeCiclacillinAllergy,
+		AllergyIntoleranceCodeMezlocillinAllergy,
+		AllergyIntoleranceCodePivampicillinAllergy,
+		AllergyIntoleranceCodeCarbenicillinAllergy,
+		AllergyIntoleranceCodeBacampicillinAllergy,
+		AllergyIntoleranceCodeTalampicillinAllergy,
+		AllergyIntoleranceCodeTemocillinAllergy,
+		AllergyIntoleranceCodePiperacillinAllergy,
+		AllergyIntoleranceCodeAzlocillinAllergy,
+		AllergyIntoleranceCodeTicarcillinAllergy,
+		AllergyIntoleranceCodeCarfecillinAllergy,
+		AllergyIntoleranceCodeMecillinamAllergy,
+		AllergyIntoleranceCodePivmecillinamAllergy,
+		AllergyIntoleranceCodePolymyxinsAllergy,
+		AllergyIntoleranceCodeColistinAllergy,
+		AllergyIntoleranceCodePolymyxinBAllergy,
+		AllergyIntoleranceCodeCarbapenemAllergy,
+		AllergyIntoleranceCodeCephalosporinAllergy,
+		AllergyIntoleranceCodeCefadroxilAllergy,
+		AllergyIntoleranceCodeCephalexinAllergy,
+		AllergyIntoleranceCodeCephalothinAllergy,
+		AllergyIntoleranceCodeCephazolinAllergy,
+		AllergyIntoleranceCodeCephradineAllergy,
+		AllergyIntoleranceCodeLatamoxefAllergy,
+		AllergyIntoleranceCodeCefaclorAllergy,
+		AllergyIntoleranceCodeCefuroximeAllergy,
+		AllergyIntoleranceCodeCephamandoleAllergy,
+		AllergyIntoleranceCodeCefotaximeAllergy,
+		AllergyIntoleranceCodeCeftazidimeAllergy,
+		AllergyIntoleranceCodeCeftizoximeAllergy,
+		AllergyIntoleranceCodeCefiximeAllergy,
+		AllergyIntoleranceCodeCefodizimeAllergy,
+		AllergyIntoleranceCodeCefpodoximeAllergy,
+		AllergyIntoleranceCodeCeftriaxoneAllergy,
+		AllergyIntoleranceCodeCeftibutenAllergy,
+		AllergyIntoleranceCodeCefsulodinAllergy,
+		AllergyIntoleranceCodeCefpiromeAllergy,
+		AllergyIntoleranceCodeCephamycinAllergy,
+		AllergyIntoleranceCodeCefoxitinAllergy,
+		AllergyIntoleranceCodeFosfomycinAllergy,
+		AllergyIntoleranceCodeClindamycinAllergy,
+		AllergyIntoleranceCodeLincomycinAllergy,
+		AllergyIntoleranceCodeMandelicAcidAllergy,
+		AllergyIntoleranceCodeMonobactamAllergy,
+		AllergyIntoleranceCodeAztreonamAllergy,
+		AllergyIntoleranceCodeNitroimidazoleAllergy,
+		AllergyIntoleranceCodeMetronidazoleAllergy,
+		AllergyIntoleranceCodeTinidazoleAllergy,
+		AllergyIntoleranceCodeNimorazoleAllergy,
+		AllergyIntoleranceCodeCalciumSulfaloxateAllergy,
+		AllergyIntoleranceCodePhthalylsulfathiazoleAllergy,
+		AllergyIntoleranceCodeSulfametopyrazineAllergy,
+		AllergyIntoleranceCodeSulfadiazineAllergy,
+		AllergyIntoleranceCodeSulfadimethoxineAllergy,
+		AllergyIntoleranceCodeSulfadimidineAllergy,
+		AllergyIntoleranceCodeSulfafurazoleAllergy,
+		AllergyIntoleranceCodeSulfaguanidineAllergy,
+		AllergyIntoleranceCodeSulfaureaAllergy,
+		AllergyIntoleranceCodeMafenideAllergy,
+		AllergyIntoleranceCodeSulfacetamideAllergy,
+		AllergyIntoleranceCodeClomocyclineSodiumAllergy,
+		AllergyIntoleranceCodeDoxycyclineAllergy,
+		AllergyIntoleranceCodeLymecyclineAllergy,
+		AllergyIntoleranceCodeMinocyclineAllergy,
+		AllergyIntoleranceCodeOxytetracyclineAllergy,
+		AllergyIntoleranceCodeChlortetracyclineAllergy,
+		AllergyIntoleranceCodeDemeclocyclineAllergy,
+		AllergyIntoleranceCodeTetracyclineAllergy,
+		AllergyIntoleranceCodeChloramphenicolAllergy,
+		AllergyIntoleranceCodeAtovaquoneAllergy,
+		AllergyIntoleranceCodeSodiumStibogluconateAllergy,
+		AllergyIntoleranceCodePentamidineAllergy,
+		AllergyIntoleranceCodeDiloxanideAllergy,
+		AllergyIntoleranceCodeClioquinolAllergy,
+		AllergyIntoleranceCodePyrazinamideAllergy,
+		AllergyIntoleranceCodeCapreomycinAllergy,
+		AllergyIntoleranceCodeCycloserineAllergy,
+		AllergyIntoleranceCodeRifampicinAllergy,
+		AllergyIntoleranceCodeRifabutinAllergy,
+		AllergyIntoleranceCodeIsoniazidAllergy,
+		AllergyIntoleranceCodeEthambutololAllergy,
+		AllergyIntoleranceCodeDapsoneAllergy,
+		AllergyIntoleranceCodeClofazimineAllergy,
+		AllergyIntoleranceCodeBenzylBenzoateAllergy,
+		AllergyIntoleranceCodeMonosulfiramAllergy,
+		AllergyIntoleranceCodeCarbarylAllergy,
+		AllergyIntoleranceCodeLindaneAllergy,
+		AllergyIntoleranceCodeMalathionAllergy,
+		AllergyIntoleranceCodePhenothrinAllergy,
+		AllergyIntoleranceCodePermethrinAllergy,
+		AllergyIntoleranceCodeHumanImmunoglobulinAllergy,
+		AllergyIntoleranceCodeTetanusImmunoglobulinAllergy,
+		AllergyIntoleranceCodeVaricellaZosterImmunoglobulinAllergy,
+		AllergyIntoleranceCodeClostridiumBotulinumToxinAllergy,
+		AllergyIntoleranceCodeBotulismAntitoxinAllergy,
+		AllergyIntoleranceCodeDiphtheriaAntitoxinAllergy,
+		AllergyIntoleranceCodeGlucagonAllergy,
+		AllergyIntoleranceCodeCarbimazoleAllergy,
+		AllergyIntoleranceCodePropylthiouracilAllergy,
+		AllergyIntoleranceCodeCorticosteroidsAllergy,
+		AllergyIntoleranceCodeBetamethasoneAllergy,
+		AllergyIntoleranceCodeHydrocortisoneAllergy,
+		AllergyIntoleranceCodePrednisoneAllergy,
+		AllergyIntoleranceCodeFluorometholoneAllergy,
+		AllergyIntoleranceCodeFlunisolideAllergy,
+		AllergyIntoleranceCodeDesonideAllergy,
+		AllergyIntoleranceCodeDesoxymethasoneAllergy,
+		AllergyIntoleranceCodeFluocinonideAllergy,
+		AllergyIntoleranceCodeFluocortoloneAllergy,
+		AllergyIntoleranceCodeFlurandrenoloneAllergy,
+		AllergyIntoleranceCodeHalcinonideAllergy,
+		AllergyIntoleranceCodeAlclometasoneAllergy,
+		AllergyIntoleranceCodeBeclomethasoneAllergy,
+		AllergyIntoleranceCodeClobetasolAllergy,
+		AllergyIntoleranceCodeClobetasoneAllergy,
+		AllergyIntoleranceCodeCortisoneAllergy,
+		AllergyIntoleranceCodeDiflucortoloneAllergy,
+		AllergyIntoleranceCodeFlucloroloneAllergy,
+		AllergyIntoleranceCodeFludrocortisoneAllergy,
+		AllergyIntoleranceCodeFluocinoloneAllergy,
+		AllergyIntoleranceCodeFluticasoneAllergy,
+		AllergyIntoleranceCodeMometasoneAllergy,
+		AllergyIntoleranceCodeDexamethasoneAllergy,
+		AllergyIntoleranceCodeMethylprednisoloneAllergy,
+		AllergyIntoleranceCodePrednisoloneAllergy,
+		AllergyIntoleranceCodeTriamcinoloneAllergy,
+		AllergyIntoleranceCodeBudesonideAllergy,
+		AllergyIntoleranceCodeInsulinAllergy,
+		AllergyIntoleranceCodeInsulinZincSuspensionAllergy,
+		AllergyIntoleranceCodeIsophaneInsulinAllergy,
+		AllergyIntoleranceCodeProtamineZincInsulinAllergy,
+		AllergyIntoleranceCodeAllergyToHumanInsulin,
+		AllergyIntoleranceCodeSulfonylureaAllergy,
+		AllergyIntoleranceCodeAcetohexamideAllergy,
+		AllergyIntoleranceCodeChlorpropamideAllergy,
+		AllergyIntoleranceCodeGlibenclamideAllergy,
+		AllergyIntoleranceCodeGlibornurideAllergy,
+		AllergyIntoleranceCodeGliclazideAllergy,
+		AllergyIntoleranceCodeGlipizideAllergy,
+		AllergyIntoleranceCodeGliquidoneAllergy,
+		AllergyIntoleranceCodeGlymidineAllergy,
+		AllergyIntoleranceCodeTolazamideAllergy,
+		AllergyIntoleranceCodeTolbutamideAllergy,
+		AllergyIntoleranceCodeBiguanideAllergy,
+		AllergyIntoleranceCodeMetforminAllergy,
+		AllergyIntoleranceCodeGuarGumAllergy,
+		AllergyIntoleranceCodeAcarboseAllergy,
+		AllergyIntoleranceCodeProgestogenAllergy,
+		AllergyIntoleranceCodeAllylestrenolAllergy,
+		AllergyIntoleranceCodeDydrogesteroneAllergy,
+		AllergyIntoleranceCodeProgesteroneAllergy,
+		AllergyIntoleranceCodeGestronolAllergy,
+		AllergyIntoleranceCodeHydroxyprogesteroneAllergy,
+		AllergyIntoleranceCodeMegestrolAllergy,
+		AllergyIntoleranceCodeNorethisteroneAllergy,
+		AllergyIntoleranceCodeLevonorgestrelAllergy,
+		AllergyIntoleranceCodeMedroxyprogesteroneAllergy,
+		AllergyIntoleranceCodeAnabolicSteroidsAllergy,
+		AllergyIntoleranceCodeTiboloneAllergy,
+		AllergyIntoleranceCodeOxymetholoneAllergy,
+		AllergyIntoleranceCodeNandroloneAllergy,
+		AllergyIntoleranceCodeStanozololAllergy,
+		AllergyIntoleranceCodeCyclofenilAllergy,
+		AllergyIntoleranceCodeDanazolAllergy,
+		AllergyIntoleranceCodeGestrinoneAllergy,
+		AllergyIntoleranceCodeFinasterideAllergy,
+		AllergyIntoleranceCodeFlutamideAllergy,
+		AllergyIntoleranceCodeBicalutamideAllergy,
+		AllergyIntoleranceCodeCyproteroneAllergy,
+		AllergyIntoleranceCodeAndrogenAllergy,
+		AllergyIntoleranceCodeMesteroloneAllergy,
+		AllergyIntoleranceCodeMethyltestosteroneAllergy,
+		AllergyIntoleranceCodeTestosteroneAllergy,
+		AllergyIntoleranceCodeEstrogenAllergy,
+		AllergyIntoleranceCodeEstradiolAllergy,
+		AllergyIntoleranceCodeQuinestradolAllergy,
+		AllergyIntoleranceCodeQuinestrolAllergy,
+		AllergyIntoleranceCodeDienestrolAllergy,
+		AllergyIntoleranceCodeMestranolAllergy,
+		AllergyIntoleranceCodeEthinylestradiolAllergy,
+		AllergyIntoleranceCodeEstriolAllergy,
+		AllergyIntoleranceCodeConjugatedEstrogenAllergy,
+		AllergyIntoleranceCodeStilbestrolAllergy,
+		AllergyIntoleranceCodeClomipheneAllergy,
+		AllergyIntoleranceCodeErgolineDrugAllergy,
+		AllergyIntoleranceCodeCabergolineAllergy,
+		AllergyIntoleranceCodeQuinagolideAllergy,
+		AllergyIntoleranceCodeLiothyronineAllergy,
+		AllergyIntoleranceCodeThyroxineAllergy,
+		AllergyIntoleranceCodeDesmopressinAllergy,
+		AllergyIntoleranceCodeTerlipressinAllergy,
+		AllergyIntoleranceCodeVasopressinAllergy,
+		AllergyIntoleranceCodeCorticotrophicHormoneAllergy,
+		AllergyIntoleranceCodeTetracosactrinAllergy,
+		AllergyIntoleranceCodeGonadRegulatingHormoneAllergy,
+		AllergyIntoleranceCodeGonadorelinAllergy,
+		AllergyIntoleranceCodeNafarelinAllergy,
+		AllergyIntoleranceCodeBuserelinAllergy,
+		AllergyIntoleranceCodeGoserelinAllergy,
+		AllergyIntoleranceCodeTriptorelinAllergy,
+		AllergyIntoleranceCodeGonadotrophicHormoneAllergy,
+		AllergyIntoleranceCodeLeuprorelinAllergy,
+		AllergyIntoleranceCodeOxytocinAllergy,
+		AllergyIntoleranceCodeSomatrophicHormoneAllergy,
+		AllergyIntoleranceCodeOctreotideAllergy,
+		AllergyIntoleranceCodeThyrotrophicHormoneAllergy,
+		AllergyIntoleranceCodeProtirelinAllergy,
+		AllergyIntoleranceCodeThyrotrophinAllergy,
+		AllergyIntoleranceCodeBiphosphonatesAllergy,
+		AllergyIntoleranceCodeCalciumRegulatingHormoneAllergy,
+		AllergyIntoleranceCodeCalcitoninAllergy,
+		AllergyIntoleranceCodeSalcatoninAllergy,
+		AllergyIntoleranceCodeCalcitoninPorkAllergy,
+		AllergyIntoleranceCodeEpoetinAlfaAllergy,
+		AllergyIntoleranceCodeEpoetinBetaAllergy,
+		AllergyIntoleranceCodeGelatinAllergy,
+		AllergyIntoleranceCodePerfluorochemicalAllergy,
+		AllergyIntoleranceCodeAntithrombinIiiAllergy,
+		AllergyIntoleranceCodeFactorViiiByPassingFractionProductsAllergy,
+		AllergyIntoleranceCodeAncrodAllergy,
+		AllergyIntoleranceCodeHeparinAllergy,
+		AllergyIntoleranceCodeEnoxaparinAllergy,
+		AllergyIntoleranceCodeDalteparinAllergy,
+		AllergyIntoleranceCodeTinzaparinAllergy,
+		AllergyIntoleranceCodeHeparinoidAllergy,
+		AllergyIntoleranceCodeNicoumaloneAllergy,
+		AllergyIntoleranceCodeWarfarinAllergy,
+		AllergyIntoleranceCodePhenindioneAllergy,
+		AllergyIntoleranceCodeEthamsylateAllergy,
+		AllergyIntoleranceCodeThromboplastinAllergy,
+		AllergyIntoleranceCodeTranexamicAcidAllergy,
+		AllergyIntoleranceCodeCollagenAllergy,
+		AllergyIntoleranceCodeAprotininAllergy,
+		AllergyIntoleranceCodePolysaccharideIronComplexAllergy,
+		AllergyIntoleranceCodeSodiumIronedetateAllergy,
+		AllergyIntoleranceCodeIronSorbitolAllergy,
+		AllergyIntoleranceCodeFerrousSaltAllergy,
+		AllergyIntoleranceCodeFerrousFumarateAllergy,
+		AllergyIntoleranceCodeFerrousGluconateAllergy,
+		AllergyIntoleranceCodeFerrousGlycineSulfateAllergy,
+		AllergyIntoleranceCodeFerrousSuccinateAllergy,
+		AllergyIntoleranceCodeFerrousSulfateAllergy,
+		AllergyIntoleranceCodeFerrousPhosphateAllergy,
+		AllergyIntoleranceCodeLCarnitineAllergy,
+		AllergyIntoleranceCodeIodineCompoundsAllergy,
+		AllergyIntoleranceCodeIodophoreAllergy,
+		AllergyIntoleranceCodePovidoneIodineAllergy,
+		AllergyIntoleranceCodeVitaminAAllergy,
+		AllergyIntoleranceCodeAllergyToVitaminDAndOrVitaminDDerivative,
+		AllergyIntoleranceCodeAllergyToVitaminKAndOrVitaminKDerivativeFinding,
+		AllergyIntoleranceCodeAlphaTocopherylAllergy,
+		AllergyIntoleranceCodeNicotinicAcidAllergy,
+		AllergyIntoleranceCodeFolicAcidAllergy,
+		AllergyIntoleranceCodeFolinicAcidAllergy,
+		AllergyIntoleranceCodeHydroxocobalaminAllergy,
+		AllergyIntoleranceCodeCyanocobalaminAllergy,
+		AllergyIntoleranceCodeInositolAllergy,
+		AllergyIntoleranceCodeAscorbicAcidAllergy,
+		AllergyIntoleranceCodeSodiumPolystyreneSulfonateAllergy,
+		AllergyIntoleranceCodeFluorideAllergy,
+		AllergyIntoleranceCodeGemfibrozilAllergy,
+		AllergyIntoleranceCodeProbucolAllergy,
+		AllergyIntoleranceCodeAcipimoxAllergy,
+		AllergyIntoleranceCodeColestipolAllergy,
+		AllergyIntoleranceCodeCholestyramineAllergy,
+		AllergyIntoleranceCodeBezafibrateAllergy,
+		AllergyIntoleranceCodeClofibrateAllergy,
+		AllergyIntoleranceCodeFenofibrateAllergy,
+		AllergyIntoleranceCodeCiprofibrateAllergy,
+		AllergyIntoleranceCodeFishOilsAllergy,
+		AllergyIntoleranceCodeOmega3MarineTriglyceridesAllergy,
+		AllergyIntoleranceCodeHmgCoaReductaseInhibitorAllergy,
+		AllergyIntoleranceCodeSimvastatinAllergy,
+		AllergyIntoleranceCodeFluvastatinAllergy,
+		AllergyIntoleranceCodePravastatinAllergy,
+		AllergyIntoleranceCodeAdenosineAllergy,
+		AllergyIntoleranceCodeDisopyramideAllergy,
+		AllergyIntoleranceCodeQuinidineAllergy,
+		AllergyIntoleranceCodeFlecainideAllergy,
+		AllergyIntoleranceCodeMexiletineAllergy,
+		AllergyIntoleranceCodeMoracizineAllergy,
+		AllergyIntoleranceCodeProcainamideAllergy,
+		AllergyIntoleranceCodePropafenoneAllergy,
+		AllergyIntoleranceCodeTocainideAllergy,
+		AllergyIntoleranceCodeBretyliumAllergy,
+		AllergyIntoleranceCodeAmiodaroneAllergy,
+		AllergyIntoleranceCodeBendrofluazideAllergy,
+		AllergyIntoleranceCodeChlorothiazideAllergy,
+		AllergyIntoleranceCodeCyclopenthiazideAllergy,
+		AllergyIntoleranceCodeHydrochlorothiazideAllergy,
+		AllergyIntoleranceCodeHydroflumethiazideAllergy,
+		AllergyIntoleranceCodeMethyclothiazideAllergy,
+		AllergyIntoleranceCodePolythiazideAllergy,
+		AllergyIntoleranceCodeFrusemideAllergy,
+		AllergyIntoleranceCodeBumetanideAllergy,
+		AllergyIntoleranceCodeEthacrynicAcidAllergy,
+		AllergyIntoleranceCodePiretanideAllergy,
+		AllergyIntoleranceCodeTorasemideAllergy,
+		AllergyIntoleranceCodeTriamtereneAllergy,
+		AllergyIntoleranceCodeAldosteroneAntagonistsAllergy,
+		AllergyIntoleranceCodePotassiumCanrenoateAllergy,
+		AllergyIntoleranceCodeSpironolactoneAllergy,
+		AllergyIntoleranceCodeAmilorideAllergy,
+		AllergyIntoleranceCodeMannitolAllergy,
+		AllergyIntoleranceCodeLactoseIntolerance,
+		AllergyIntoleranceCodeSyndromeOfCarbohydrateIntolerance,
+		AllergyIntoleranceCodeLactaseDeficiencyInDiseasesOtherThanOfTheSmallIntestine,
+		AllergyIntoleranceCodeAcquiredMonosaccharideMalabsorption,
+		AllergyIntoleranceCodeGlycerolIntoleranceSyndrome,
+		AllergyIntoleranceCodeLysineIntolerance,
+		AllergyIntoleranceCodeSucroseIntolerance,
+		AllergyIntoleranceCodeAcquiredFructoseIntoleranceDisorder,
+		AllergyIntoleranceCodeNoKnownAllergySituation,
+		AllergyIntoleranceCodeNoKnownHistoryOfDrugAllergy,
+		AllergyIntoleranceCodeNoKnownInsectAllergySituation,
+		AllergyIntoleranceCodeNoKnownEnvironmentalAllergySituation,
+		AllergyIntoleranceCodeNoKnownFoodAllergySituation,
+		AllergyIntoleranceCodeNoKnownAnimalAllergySituation,
+		AllergyIntoleranceCodeNoKnownHeveaBrasiliensisLatexAllergySituation,
+	}
+}
+func FindAllergyIntoleranceCode(filter string) []AllergyIntoleranceCode {
+	ret := make([]AllergyIntoleranceCode, 0)
+	for _, at := range AllAllergyIntoleranceCode() {
+		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
+			ret = append(ret, at)
+		}
+	}
+	return ret
+}
+
+func (cpt AllergyIntoleranceCode) ToString() {
+	fmt.Println(cpt.String())
+}
+
+func (cpt AllergyIntoleranceCode) String() string {
+	switch cpt {
+	case AllergyIntoleranceCodeSubstance:
+		return "Substance"
+	case AllergyIntoleranceCodeHemoglobinOkaloosa:
+		return "Hemoglobin Okaloosa"
+	case AllergyIntoleranceCodeOrnithineRacemase:
+		return "Ornithine racemase"
+	case AllergyIntoleranceCodeFerrous59FeSulfateSubstance:
+		return "Ferrous (59-Fe) sulfate (substance)"
+	case AllergyIntoleranceCodeGalactosylNAcetylglucosaminylgalactosylglucosylceramideAlphaGalactosyltransferase:
+		return "Galactosyl-N-acetylglucosaminylgalactosylglucosylceramide alpha-galactosyltransferase"
+	case AllergyIntoleranceCodeHemoglobinHopkinsIi:
+		return "Hemoglobin Hopkins-II"
+	case AllergyIntoleranceCodeDolichylPhosphateMannosyltransferase:
+		return "Dolichyl-phosphate mannosyltransferase"
+	case AllergyIntoleranceCodeFerrocyanideSalt:
+		return "Ferrocyanide salt"
+	case AllergyIntoleranceCodePhosphoenolpyruvateProteinPhosphotransferase:
+		return "Phosphoenolpyruvate-protein phosphotransferase"
+	case AllergyIntoleranceCodeUridineDiphosphateGalactose:
+		return "Uridine diphosphate galactose"
+	case AllergyIntoleranceCodeHlaCw9Antigen:
+		return "HLA-Cw9 antigen"
+	case AllergyIntoleranceCodeCyanocobalamin57CoSubstance:
+		return "Cyanocobalamin (57-Co) (substance)"
+	case AllergyIntoleranceCodeBerberine:
+		return "Berberine"
+	case AllergyIntoleranceCodeBloodGroupAntigenIh:
+		return "Blood group antigen IH"
+	case AllergyIntoleranceCode3HydroxyisobutyrateDehydrogenase:
+		return "3-hydroxyisobutyrate dehydrogenase"
+	case AllergyIntoleranceCodeHeptachlor:
+		return "Heptachlor"
+	case AllergyIntoleranceCodeCodeinePhosphate:
+		return "Codeine phosphate"
+	case AllergyIntoleranceCodeCoumachlor:
+		return "Coumachlor"
+	case AllergyIntoleranceCodeOctylphenoxyPHEthanol:
+		return "Octylphenoxy P.H. ethanol"
+	case AllergyIntoleranceCodeArsenic76Substance:
+		return "Arsenic-76 (substance)"
+	case AllergyIntoleranceCodeAntimony127Substance:
+		return "Antimony-127 (substance)"
+	case AllergyIntoleranceCodeFibrinogenTokyoIi:
+		return "Fibrinogen Tokyo II"
+	case AllergyIntoleranceCodeEnzymeVariant:
+		return "Enzyme variant"
+	case AllergyIntoleranceCodeFibrinogenSanJuan:
+		return "Fibrinogen San Juan"
+	case AllergyIntoleranceCodeBeta2SGlycoproteinSubstance:
+		return "Beta2S glycoprotein (substance)"
+	case AllergyIntoleranceCodeAcylcarnitineHydrolase:
+		return "Acylcarnitine hydrolase"
+	case AllergyIntoleranceCodeSparteine:
+		return "Sparteine"
+	case AllergyIntoleranceCodeGadolinium151Substance:
+		return "Gadolinium-151 (substance)"
+	case AllergyIntoleranceCodeImmunoglobulinPentamer:
+		return "Immunoglobulin pentamer"
+	case AllergyIntoleranceCodeRibose5PhosphateIsomerase:
+		return "Ribose-5-phosphate isomerase"
+	case AllergyIntoleranceCodeCitramalylCoaLyase:
+		return "Citramalyl-CoA lyase"
+	case AllergyIntoleranceCodeHemoglobinNagoya:
+		return "Hemoglobin Nagoya"
+	case AllergyIntoleranceCodeCarminicAcid:
+		return "Carminic acid"
+	case AllergyIntoleranceCode2HydroxyglutarateDehydrogenaseSubstance:
+		return "2-hydroxyglutarate dehydrogenase (substance)"
+	case AllergyIntoleranceCodeUreaseAtpHydrolysing:
+		return "Urease (ATP-hydrolysing)"
+	case AllergyIntoleranceCodeVegetableTextileFiber:
+		return "Vegetable textile fiber"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd1B:
+		return "Lymphocyte antigen CD1b"
+	case AllergyIntoleranceCodeNitrilase:
+		return "Nitrilase"
+	case AllergyIntoleranceCodeBloodGroupAntibodySfA:
+		return "Blood group antibody Sf^a^"
+	case AllergyIntoleranceCodeBloodGroupAntibodyM:
+		return "Blood group antibody M'"
+	case AllergyIntoleranceCode3OxosteroidDelta1DehydrogenaseSubstance:
+		return "3-oxosteroid delta^1^-dehydrogenase (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntigenGiaigue:
+		return "Blood group antigen Giaigue"
+	case AllergyIntoleranceCodeFreeProteinS:
+		return "Free protein S"
+	case AllergyIntoleranceCodeMercury197Substance:
+		return "Mercury-197 (substance)"
+	case AllergyIntoleranceCodeGuanosine:
+		return "Guanosine"
+	case AllergyIntoleranceCode23Dihydroxybenzoate34DioxygenaseSubstance:
+		return "2,3-dihydroxybenzoate 3,4-dioxygenase (substance)"
+	case AllergyIntoleranceCodeAcrosin:
+		return "Acrosin"
+	case AllergyIntoleranceCodeBloodGroupAntibodyDuck:
+		return "Blood group antibody Duck"
+	case AllergyIntoleranceCodeHemoglobinJianghua:
+		return "Hemoglobin Jianghua"
+	case AllergyIntoleranceCodeBloodGroupAntibodyWrB:
+		return "Blood group antibody Wr^b^"
+	case AllergyIntoleranceCodeSubstanceP:
+		return "Substance P"
+	case AllergyIntoleranceCode2OxoisovalerateDehydrogenaseAcylatingSubstance:
+		return "2-oxoisovalerate dehydrogenase (acylating) (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyHolmes:
+		return "Blood group antibody Holmes"
+	case AllergyIntoleranceCode2OxoglutarateSynthaseSubstance:
+		return "2-oxoglutarate synthase (substance)"
+	case AllergyIntoleranceCodeCalifornium247Substance:
+		return "Californium-247 (substance)"
+	case AllergyIntoleranceCodePlantSapogeninGlycoside:
+		return "Plant sapogenin glycoside"
+	case AllergyIntoleranceCodeHippurateHydrolase:
+		return "Hippurate hydrolase"
+	case AllergyIntoleranceCodeTrichlorophenol:
+		return "Trichlorophenol"
+	case AllergyIntoleranceCodeOilOfCalamus:
+		return "Oil of calamus"
+	case AllergyIntoleranceCodeAeromonasProteolyticaAminopeptidase:
+		return "Aeromonas proteolytica aminopeptidase"
+	case AllergyIntoleranceCodeOsmium185Substance:
+		return "Osmium-185 (substance)"
+	case AllergyIntoleranceCodeMercuricAcetate:
+		return "Mercuric acetate"
+	case AllergyIntoleranceCodePlastoquinolPlastocyaninReductase:
+		return "Plastoquinol-plastocyanin reductase"
+	case AllergyIntoleranceCodeTrichothecenes:
+		return "Trichothecenes"
+	case AllergyIntoleranceCodeErythromycinLactobionate:
+		return "Erythromycin lactobionate"
+	case AllergyIntoleranceCodeCoalTarExtract:
+		return "Coal tar extract"
+	case AllergyIntoleranceCodeBloodGroupAntigenRx:
+		return "Blood group antigen Rx"
+	case AllergyIntoleranceCodeNValeraldehyde:
+		return "N-valeraldehyde"
+	case AllergyIntoleranceCodeBloodGroupAntigenJobbins:
+		return "Blood group antigen Jobbins"
+	case AllergyIntoleranceCodeOxamniquine:
+		return "Oxamniquine"
+	case AllergyIntoleranceCodeHemoglobinMIwate:
+		return "Hemoglobin M-Iwate"
+	case AllergyIntoleranceCodeDextranase:
+		return "Dextranase"
+	case AllergyIntoleranceCodeCreosoticAcid:
+		return "Creosotic acid"
+	case AllergyIntoleranceCodeLyticAntibody:
+		return "Lytic antibody"
+	case AllergyIntoleranceCodeStizolobateSynthase:
+		return "Stizolobate synthase"
+	case AllergyIntoleranceCodePeptideN4NAcetylBGlucosaminylAsparagineAmidase:
+		return "Peptide-N^4^-(N-acetyl-b-glucosaminyl) asparagine amidase"
+	case AllergyIntoleranceCodeImmunoglobulinAggregated:
+		return "Immunoglobulin, aggregated"
+	case AllergyIntoleranceCodeUrethan:
+		return "Urethan"
+	case AllergyIntoleranceCodeBloodGroupAntigenD:
+		return "Blood group antigen D"
+	case AllergyIntoleranceCodeCarboxypeptidaseA:
+		return "Carboxypeptidase A"
+	case AllergyIntoleranceCodeAcetylCoenzymeACarboxylaseKinaseSubstance:
+		return "(acetyl-coenzyme A carboxylase) kinase (substance)"
+	case AllergyIntoleranceCodeIce:
+		return "Ice"
+	case AllergyIntoleranceCodeODihydroxycoumarinO7Glucosyltransferase:
+		return "o-Dihydroxycoumarin O^7^-glucosyltransferase"
+	case AllergyIntoleranceCodeComplementComponentC2:
+		return "Complement component C2"
+	case AllergyIntoleranceCodeSodiumIodipamide:
+		return "Sodium iodipamide"
+	case AllergyIntoleranceCodePyridoxine4Dehydrogenase:
+		return "Pyridoxine 4-dehydrogenase"
+	case AllergyIntoleranceCodeAdenosylmethionineDecarboxylase:
+		return "Adenosylmethionine decarboxylase"
+	case AllergyIntoleranceCodeCarbamateKinase:
+		return "Carbamate kinase"
+	case AllergyIntoleranceCodePalladiumCompound:
+		return "Palladium compound"
+	case AllergyIntoleranceCodeMannotetraose2AlphaNAcetylglucosaminyltransferase:
+		return "Mannotetraose 2-alpha-N-acetylglucosaminyltransferase"
+	case AllergyIntoleranceCodeNAcetylneuraminateMonooxygenase:
+		return "N-Acetylneuraminate monooxygenase"
+	case AllergyIntoleranceCodeNornicotine:
+		return "Nornicotine"
+	case AllergyIntoleranceCodeMolybdenum93Substance:
+		return "Molybdenum-93 (substance)"
+	case AllergyIntoleranceCodeGuanineDeaminase:
+		return "Guanine deaminase"
+	case AllergyIntoleranceCodeMelilotate3Monooxygenase:
+		return "Melilotate 3-monooxygenase"
+	case AllergyIntoleranceCodeEColiPeriplasmicProteinase:
+		return "E. coli periplasmic proteinase"
+	case AllergyIntoleranceCodeThallium202Substance:
+		return "Thallium-202 (substance)"
+	case AllergyIntoleranceCodeCoagulationFactorInhibitor:
+		return "Coagulation factor inhibitor"
+	case AllergyIntoleranceCodeBloodGroupAntigenMA:
+		return "Blood group antigen M^A^"
+	case AllergyIntoleranceCodeIsochorismateSynthase:
+		return "Isochorismate synthase"
+	case AllergyIntoleranceCodePancreaticRibonuclease:
+		return "Pancreatic ribonuclease"
+	case AllergyIntoleranceCodeUranium240Substance:
+		return "Uranium-240 (substance)"
+	case AllergyIntoleranceCodeHemoglobinBarcelona:
+		return "Hemoglobin Barcelona"
+	case AllergyIntoleranceCodeBloodGroupAntibodyLutheran:
+		return "Blood group antibody Lutheran"
+	case AllergyIntoleranceCodeTitanium:
+		return "Titanium"
+	case AllergyIntoleranceCodeHemoglobinGower2:
+		return "Hemoglobin Gower-2"
+	case AllergyIntoleranceCodeFibrinogenKawaguchi:
+		return "Fibrinogen Kawaguchi"
+	case AllergyIntoleranceCodeHemoglobinRoseauPointeÀPitre:
+		return "Hemoglobin Roseau-Pointe à Pitre"
+	case AllergyIntoleranceCodeHemoglobinFMOsaka:
+		return "Hemoglobin F-M-Osaka"
+	case AllergyIntoleranceCodeMephenoxalone:
+		return "Mephenoxalone"
+	case AllergyIntoleranceCodeDiethylXanthogenDisulfide:
+		return "Diethyl xanthogen disulfide"
+	case AllergyIntoleranceCodeBloodGroupAntigenMarks:
+		return "Blood group antigen Marks"
+	case AllergyIntoleranceCodeFibrinogenMadridI:
+		return "Fibrinogen Madrid I"
+	case AllergyIntoleranceCodeLeucostomaNeutralProteinase:
+		return "Leucostoma neutral proteinase"
+	case AllergyIntoleranceCodeAmikacinSulfate:
+		return "Amikacin sulfate"
+	case AllergyIntoleranceCodePteridineOxidase:
+		return "Pteridine oxidase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyEvelyn:
+		return "Blood group antibody Evelyn"
+	case AllergyIntoleranceCodeNitrateReductaseCytochrome:
+		return "Nitrate reductase (cytochrome)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyK18:
+		return "Blood group antibody K18"
+	case AllergyIntoleranceCodeHemoglobinManitoba:
+		return "Hemoglobin Manitoba"
+	case AllergyIntoleranceCodeMetocurineIodide:
+		return "Metocurine iodide"
+	case AllergyIntoleranceCodeMethamidophos:
+		return "Methamidophos"
+	case AllergyIntoleranceCodeDeoxycortone:
+		return "Deoxycortone"
+	case AllergyIntoleranceCodeHemoglobinTaLi:
+		return "Hemoglobin Ta-li"
+	case AllergyIntoleranceCodeBlueShadeEosin:
+		return "Blue shade eosin"
+	case AllergyIntoleranceCodeAntihemophilicFactorBOxford3Variant:
+		return "Antihemophilic factor B Oxford 3 variant"
+	case AllergyIntoleranceCodeIodine131Substance:
+		return "Iodine-131 (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntigenBig:
+		return "Blood group antigen Big"
+	case AllergyIntoleranceCodeZirconium93Substance:
+		return "Zirconium-93 (substance)"
+	case AllergyIntoleranceCodeIodine126Substance:
+		return "Iodine-126 (substance)"
+	case AllergyIntoleranceCodeIronPentacarbonyl:
+		return "Iron pentacarbonyl"
+	case AllergyIntoleranceCodeActinium:
+		return "Actinium"
+	case AllergyIntoleranceCodeBloodGroupAntibodyME:
+		return "Blood group antibody M^e^"
+	case AllergyIntoleranceCodeBloodGroupAntibody1123K:
+		return "Blood group antibody 1123K"
+	case AllergyIntoleranceCodeRadiumCompound:
+		return "Radium compound"
+	case AllergyIntoleranceCodeMethylparafynol:
+		return "Methylparafynol"
+	case AllergyIntoleranceCodeCyclomaltodextrinase:
+		return "Cyclomaltodextrinase"
+	case AllergyIntoleranceCodeElastin:
+		return "Elastin"
+	case AllergyIntoleranceCodeAdenosinePhosphateDeaminase:
+		return "Adenosine-phosphate deaminase"
+	case AllergyIntoleranceCodeCodeineSulfate:
+		return "Codeine sulfate"
+	case AllergyIntoleranceCodeHemoglobinYatsushiro:
+		return "Hemoglobin Yatsushiro"
+	case AllergyIntoleranceCodeProtoOncogene:
+		return "Proto-oncogene"
+	case AllergyIntoleranceCodeBloodGroupAntigenChA:
+		return "Blood group antigen Ch^a^"
+	case AllergyIntoleranceCodeHlaB21Antigen:
+		return "HLA-B21 antigen"
+	case AllergyIntoleranceCode6CarboxyhexanoateCoaLigase:
+		return "6-carboxyhexanoate-CoA ligase"
+	case AllergyIntoleranceCodeNitrogenFluoride:
+		return "Nitrogen fluoride"
+	case AllergyIntoleranceCodePargylineHydrochloride:
+		return "Pargyline hydrochloride"
+	case AllergyIntoleranceCodeTelluriumRadioisotope:
+		return "Tellurium radioisotope"
+	case AllergyIntoleranceCodeUridinePhosphorylase:
+		return "Uridine phosphorylase"
+	case AllergyIntoleranceCodeTalc:
+		return "Talc"
+	case AllergyIntoleranceCodeBloodGroupAntibodyBuckalew:
+		return "Blood group antibody Buckalew"
+	case AllergyIntoleranceCodeMaltoseTetrapalmitate:
+		return "Maltose tetrapalmitate"
+	case AllergyIntoleranceCodeCobaltIsotope:
+		return "Cobalt isotope"
+	case AllergyIntoleranceCodeHomoserineKinase:
+		return "Homoserine kinase"
+	case AllergyIntoleranceCodeNOctylIsosafroleSulfoxide:
+		return "N-octyl isosafrole sulfoxide"
+	case AllergyIntoleranceCodeBloodGroupAntigenVen:
+		return "Blood group antigen Ven"
+	case AllergyIntoleranceCodeBloodGroupAntigenSul:
+		return "Blood group antigen Sul"
+	case AllergyIntoleranceCodeHemoglobinShaareZedek:
+		return "Hemoglobin Shaare Zedek"
+	case AllergyIntoleranceCodePlantSeeds:
+		return "Plant seeds"
+	case AllergyIntoleranceCodeCeforanide:
+		return "Ceforanide"
+	case AllergyIntoleranceCodeLigase:
+		return "Ligase"
+	case AllergyIntoleranceCodeXylenol:
+		return "Xylenol"
+	case AllergyIntoleranceCodeRubidium86Substance:
+		return "Rubidium-86 (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyLwAb:
+		return "Blood group antibody LW^ab^"
+	case AllergyIntoleranceCodeBloodGroupAntibodyBleB:
+		return "Blood group antibody BLe^b^"
+	case AllergyIntoleranceCode12Hpete:
+		return "12-HPETE"
+	case AllergyIntoleranceCodeGold191Substance:
+		return "Gold-191 (substance)"
+	case AllergyIntoleranceCodeUricAcid:
+		return "Uric acid"
+	case AllergyIntoleranceCodeDiamond:
+		return "Diamond"
+	case AllergyIntoleranceCodeDeoxylimonateARingLactonase:
+		return "Deoxylimonate A-ring-lactonase"
+	case AllergyIntoleranceCodeDeoxyCytidineTriphosphate:
+		return "Deoxy cytidine triphosphate"
+	case AllergyIntoleranceCodeSaccharopineDehydrogenaseNadpLGlutamateForming:
+		return "Saccharopine dehydrogenase (NADP^+^,L-glutamate-forming)"
+	case AllergyIntoleranceCodeSucrosePhosphorylase:
+		return "Sucrose phosphorylase"
+	case AllergyIntoleranceCodeLeucineTrnaLigase:
+		return "Leucine-tRNA ligase"
+	case AllergyIntoleranceCodeSodiumTrichloroacetate:
+		return "Sodium trichloroacetate"
+	case AllergyIntoleranceCodeGlyodin:
+		return "Glyodin"
+	case AllergyIntoleranceCodeHemoglobinHammersmith:
+		return "Hemoglobin Hammersmith"
+	case AllergyIntoleranceCodeLLysineOxidase:
+		return "L-Lysine oxidase"
+	case AllergyIntoleranceCodeHemoglobinTochigi:
+		return "Hemoglobin Tochigi"
+	case AllergyIntoleranceCodeRibonucleaseT1:
+		return "Ribonuclease T1"
+	case AllergyIntoleranceCodeVerdohemoglobin:
+		return "Verdohemoglobin"
+	case AllergyIntoleranceCodeGalactoside3Fucosyltransferase:
+		return "Galactoside 3-fucosyltransferase"
+	case AllergyIntoleranceCodeVonWillebrandFactorInhibitor:
+		return "von Willebrand factor inhibitor"
+	case AllergyIntoleranceCodeBoroglycerin:
+		return "Boroglycerin"
+	case AllergyIntoleranceCodeImmunoglobulinGm21Allotype:
+		return "Immunoglobulin, GM21 allotype"
+	case AllergyIntoleranceCodeCoagulationFactorXPatientVariant:
+		return "Coagulation factor X Patient variant"
+	case AllergyIntoleranceCodeBuclizineHydrochloride:
+		return "Buclizine hydrochloride"
+	case AllergyIntoleranceCodeLoxapineHydrochloride:
+		return "Loxapine hydrochloride"
+	case AllergyIntoleranceCodeBloodGroupAntibodyNiemetz:
+		return "Blood group antibody Niemetz"
+	case AllergyIntoleranceCodeSiteSpecificMethyltransferaseCytosineSpecific:
+		return "Site-specific methyltransferase (cytosine-specific)"
+	case AllergyIntoleranceCodeVomitus:
+		return "Vomitus"
+	case AllergyIntoleranceCodeLignins:
+		return "Lignins"
+	case AllergyIntoleranceCodeHeavyNitrogen:
+		return "Heavy nitrogen"
+	case AllergyIntoleranceCodeInosineDiphosphate:
+		return "Inosine diphosphate"
+	case AllergyIntoleranceCodeGallium67Substance:
+		return "Gallium-67 (substance)"
+	case AllergyIntoleranceCodeCobaltCarbonyl:
+		return "Cobalt carbonyl"
+	case AllergyIntoleranceCodeDnaTopoisomerase:
+		return "DNA topoisomerase"
+	case AllergyIntoleranceCodeAlternariaSerineProteinase:
+		return "Alternaria serine proteinase"
+	case AllergyIntoleranceCodeFibrinogenOsloIi:
+		return "Fibrinogen Oslo II"
+	case AllergyIntoleranceCodeBloodGroupAntibodyBgB:
+		return "Blood group antibody Bg^b^"
+	case AllergyIntoleranceCodeSymNorspermidineSynthase:
+		return "sym-Norspermidine synthase"
+	case AllergyIntoleranceCodeCholoylglycineHydrolase:
+		return "Choloylglycine hydrolase"
+	case AllergyIntoleranceCodeLXylulokinase:
+		return "L-Xylulokinase"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd51:
+		return "Lymphocyte antigen CD51"
+	case AllergyIntoleranceCodeOncogeneProteinTcl:
+		return "Oncogene protein TCL"
+	case AllergyIntoleranceCodePageBlueG90:
+		return "Page blue G-90"
+	case AllergyIntoleranceCodeNadAdpRibosyltransferase:
+		return "NAD^+^ ADP-ribosyltransferase"
+	case AllergyIntoleranceCodeSulfonethylmethane:
+		return "Sulfonethylmethane"
+	case AllergyIntoleranceCodeYeastProteinaseB:
+		return "Yeast proteinase B"
+	case AllergyIntoleranceCodeBetazole:
+		return "Betazole"
+	case AllergyIntoleranceCodeCyclohexane12DiolDehydrogenase:
+		return "Cyclohexane-1,2-diol dehydrogenase"
+	case AllergyIntoleranceCodeHydrogen:
+		return "Hydrogen"
+	case AllergyIntoleranceCodeBloodGroupAntigenPaular:
+		return "Blood group antigen Paular"
+	case AllergyIntoleranceCodePyridoxaminePyruvateAminotransferase:
+		return "Pyridoxamine-pyruvate aminotransferase"
+	case AllergyIntoleranceCodeTagaturonateReductase:
+		return "Tagaturonate reductase"
+	case AllergyIntoleranceCodeAzorubinS:
+		return "Azorubin S"
+	case AllergyIntoleranceCodeDicofol:
+		return "Dicofol"
+	case AllergyIntoleranceCodeBisphosphoglycerateMutase:
+		return "Bisphosphoglycerate mutase"
+	case AllergyIntoleranceCodeMalonateSemialdehydeDehydratase:
+		return "Malonate-semialdehyde dehydratase"
+	case AllergyIntoleranceCodeHemoglobinFDammam:
+		return "Hemoglobin F-Dammam"
+	case AllergyIntoleranceCodeRhodium101Substance:
+		return "Rhodium-101 (substance)"
+	case AllergyIntoleranceCodeTocainideHydrochloride:
+		return "Tocainide hydrochloride"
+	case AllergyIntoleranceCodeBacteriopurpurin:
+		return "Bacteriopurpurin"
+	case AllergyIntoleranceCodePhenylserineAldolase:
+		return "Phenylserine aldolase"
+	case AllergyIntoleranceCodeFibrinogenBethesdaIi:
+		return "Fibrinogen Bethesda II"
+	case AllergyIntoleranceCodeAzuresin:
+		return "Azuresin"
+	case AllergyIntoleranceCodeGuanidinobutyrase:
+		return "Guanidinobutyrase"
+	case AllergyIntoleranceCodeGentamicinSulfate:
+		return "Gentamicin sulfate"
+	case AllergyIntoleranceCodeOroticAcid:
+		return "Orotic acid"
+	case AllergyIntoleranceCodeHlaDrw18Antigen:
+		return "HLA-DRw18 antigen"
+	case AllergyIntoleranceCodeCellulosePolysulfatase:
+		return "Cellulose polysulfatase"
+	case AllergyIntoleranceCodeSeleniumIsotope:
+		return "Selenium isotope"
+	case AllergyIntoleranceCodeGold:
+		return "Gold"
+	case AllergyIntoleranceCodeProstacyclinSynthase:
+		return "Prostacyclin synthase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyVel:
+		return "Blood group antibody Vel"
+	case AllergyIntoleranceCodeCarbohydrate:
+		return "Carbohydrate"
+	case AllergyIntoleranceCodePlantRoots:
+		return "Plant roots"
+	case AllergyIntoleranceCodeGuthion:
+		return "Guthion"
+	case AllergyIntoleranceCodeVascormone:
+		return "Vascormone"
+	case AllergyIntoleranceCode3Nucleotidase:
+		return "3'-nucleotidase"
+	case AllergyIntoleranceCodeIndole3AcetateBetaGlucosyltransferase:
+		return "Indole-3-acetate beta-glucosyltransferase"
+	case AllergyIntoleranceCodeUdpNAcetylmuramateAlanineLigase:
+		return "UDP-N-acetylmuramate-alanine ligase"
+	case AllergyIntoleranceCodeMercuryCompound:
+		return "Mercury compound"
+	case AllergyIntoleranceCodeUranium230Substance:
+		return "Uranium-230 (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyStA:
+		return "Blood group antibody St^a^"
+	case AllergyIntoleranceCodeOxetanone:
+		return "Oxetanone"
+	case AllergyIntoleranceCodeProlactinReceptor:
+		return "Prolactin receptor"
+	case AllergyIntoleranceCodeSiliconRadioisotope:
+		return "Silicon radioisotope"
+	case AllergyIntoleranceCodeBloodGroupAntibodyFriedberg:
+		return "Blood group antibody Friedberg"
+	case AllergyIntoleranceCodeMercuryRadioisotope:
+		return "Mercury radioisotope"
+	case AllergyIntoleranceCodeHlaDw25Antigen:
+		return "HLA-Dw25 antigen"
+	case AllergyIntoleranceCodeMannosamine:
+		return "Mannosamine"
+	case AllergyIntoleranceCodeGlucoseDehydrogenaseNadp:
+		return "Glucose dehydrogenase (NADP^+^)"
+	case AllergyIntoleranceCodeChloridePeroxidase:
+		return "Chloride peroxidase"
+	case AllergyIntoleranceCodeLymphocyteAntigenCdw41B:
+		return "Lymphocyte antigen CDw41b"
+	case AllergyIntoleranceCodeDGlutamicAcidOxidase:
+		return "D-glutamic acid oxidase"
+	case AllergyIntoleranceCodeExtravascularBlood:
+		return "Extravascular blood"
+	case AllergyIntoleranceCodeHemoglobinWood:
+		return "Hemoglobin Wood"
+	case AllergyIntoleranceCodeAntituberculosisAgent:
+		return "Antituberculosis agent"
+	case AllergyIntoleranceCodeBloodGroupAntigenMcauley:
+		return "Blood group antigen McAuley"
+	case AllergyIntoleranceCodeImmunoglobulinGm13Allotype:
+		return "Immunoglobulin, GM13 allotype"
+	case AllergyIntoleranceCodeZincAlpha2Glycoprotein:
+		return "Zinc alpha2 glycoprotein"
+	case AllergyIntoleranceCodeTellurium119MSubstance:
+		return "Tellurium-119m (substance)"
+	case AllergyIntoleranceCodeAlpha1Globulin:
+		return "Alpha-1 globulin"
+	case AllergyIntoleranceCodeBloodGroupAntibodyLaFave:
+		return "Blood group antibody La Fave"
+	case AllergyIntoleranceCodeIndiumIsotope:
+		return "Indium isotope"
+	case AllergyIntoleranceCodeBileVomitus:
+		return "Bile vomitus"
+	case AllergyIntoleranceCodeAzoDye:
+		return "Azo dye"
+	case AllergyIntoleranceCodeSodiumDehydrocholate:
+		return "Sodium dehydrocholate"
+	case AllergyIntoleranceCodeDehydropantoateHydroxymethyltransferase:
+		return "Dehydropantoate hydroxymethyltransferase"
+	case AllergyIntoleranceCodeCesium128Substance:
+		return "Cesium-128 (substance)"
+	case AllergyIntoleranceCodeC3H20:
+		return "C3(H20)"
+	case AllergyIntoleranceCodeHemoglobinNewMexico:
+		return "Hemoglobin New Mexico"
+	case AllergyIntoleranceCodeAntiFactorXiii:
+		return "Anti-factor XIII"
+	case AllergyIntoleranceCodeNaturalGas:
+		return "Natural gas"
+	case AllergyIntoleranceCodeArsenic72Substance:
+		return "Arsenic-72 (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntigenVennera:
+		return "Blood group antigen Vennera"
+	case AllergyIntoleranceCodeTartrateDehydratase:
+		return "Tartrate dehydratase"
+	case AllergyIntoleranceCodeBloodGroupAntigenMccF:
+		return "Blood group antigen McC^f^"
+	case AllergyIntoleranceCodeAntigenInLewisLeBloodGroupSystem:
+		return "Antigen in Lewis (Le) blood group system"
+	case AllergyIntoleranceCodeBloodGroupAntibodyM1:
+		return "Blood group antibody M1"
+	case AllergyIntoleranceCodeHemoglobinFKennestone:
+		return "Hemoglobin F-Kennestone"
+	case AllergyIntoleranceCodeBloodGroupAntigenSc3:
+		return "Blood group antigen Sc3"
+	case AllergyIntoleranceCodePleuralFluid:
+		return "Pleural fluid"
+	case AllergyIntoleranceCodeMethanthelineSubstance:
+		return "Methantheline (substance)"
+	case AllergyIntoleranceCodeMethylbenzethoniumChloride:
+		return "Methylbenzethonium chloride"
+	case AllergyIntoleranceCodeHemoglobinBristol:
+		return "Hemoglobin Bristol"
+	case AllergyIntoleranceCodeMolybdenumCompound:
+		return "Molybdenum compound"
+	case AllergyIntoleranceCodeHemoglobinSaitama:
+		return "Hemoglobin Saitama"
+	case AllergyIntoleranceCodeEthanoicAcid:
+		return "Ethanoic acid"
+	case AllergyIntoleranceCodeIsonipecaineHydrochloride:
+		return "Isonipecaine hydrochloride"
+	case AllergyIntoleranceCodeCalciumSulfate:
+		return "Calcium sulfate"
+	case AllergyIntoleranceCodeExopolygalacturonateLyase:
+		return "Exopolygalacturonate lyase"
+	case AllergyIntoleranceCodeImmunoglobulinEHChain:
+		return "Immunoglobulin E, H chain"
+	case AllergyIntoleranceCodeNeon22Substance:
+		return "Neon-22 (substance)"
+	case AllergyIntoleranceCodeFluorometholone:
+		return "Fluorometholone"
+	case AllergyIntoleranceCodeRescinnamine:
+		return "Rescinnamine"
+	case AllergyIntoleranceCodePyrazole:
+		return "Pyrazole"
+	case AllergyIntoleranceCodeCarbon14CXyloseSubstance:
+		return "Carbon (14-C) xylose (substance)"
+	case AllergyIntoleranceCodeHemoglobinLPersianGulf:
+		return "Hemoglobin L-Persian Gulf"
+	case AllergyIntoleranceCodeZincCaprylate:
+		return "Zinc caprylate"
+	case AllergyIntoleranceCodeDimethoxyamphetamine:
+		return "Dimethoxyamphetamine"
+	case AllergyIntoleranceCodeTrichophytonSchoenleiniiCollagenase:
+		return "Trichophyton schoenleinii collagenase"
+	case AllergyIntoleranceCodeHlaAwAntigen:
+		return "HLA-Aw antigen"
+	case AllergyIntoleranceCodeMecamylamineHydrochloride:
+		return "Mecamylamine hydrochloride"
+	case AllergyIntoleranceCodeArecoline:
+		return "Arecoline"
+	case AllergyIntoleranceCodeBarium133Substance:
+		return "Barium-133 (substance)"
+	case AllergyIntoleranceCodeDihydroxyaluminumSodiumCarbonate:
+		return "Dihydroxyaluminum sodium carbonate"
+	case AllergyIntoleranceCodeTechnetium99MTcDisofeninSubstance:
+		return "Technetium (99m-Tc) disofenin (substance)"
+	case AllergyIntoleranceCodeNitrochlorobenzene:
+		return "Nitrochlorobenzene"
+	case AllergyIntoleranceCodeOrnithineOxoAcidAminotransferase:
+		return "Ornithine-oxo-acid aminotransferase"
+	case AllergyIntoleranceCodeTriiodothyroaceticAcid:
+		return "Triiodothyroacetic acid"
+	case AllergyIntoleranceCodeAspartateAmmoniaLigase:
+		return "Aspartate-ammonia ligase"
+	case AllergyIntoleranceCodeOilOfMaleFern:
+		return "Oil of male fern"
+	case AllergyIntoleranceCodeHemoglobinShuangfeng:
+		return "Hemoglobin Shuangfeng"
+	case AllergyIntoleranceCodeAspergillusDeoxyribonucleaseK1:
+		return "Aspergillus deoxyribonuclease K1"
+	case AllergyIntoleranceCodeBloodGroupAntigenMiddel:
+		return "Blood group antigen Middel"
+	case AllergyIntoleranceCodeCefoperazoneSodium:
+		return "Cefoperazone sodium"
+	case AllergyIntoleranceCodeAzacyclonol:
+		return "Azacyclonol"
+	case AllergyIntoleranceCodePenicillicAcid:
+		return "Penicillic acid"
+	case AllergyIntoleranceCodeSialateOAcetylesterase:
+		return "Sialate O-acetylesterase"
+	case AllergyIntoleranceCodeLeftUpperLobeMucus:
+		return "Left upper lobe mucus"
+	case AllergyIntoleranceCode3PhosphoglyceroylPhosphatePolyphosphatePhosphotransferase:
+		return "3-phosphoglyceroyl-phosphate-polyphosphate phosphotransferase"
+	case AllergyIntoleranceCode3MethylHistidine:
+		return "3-methyl histidine"
+	case AllergyIntoleranceCodeHardCoal:
+		return "Hard coal"
+	case AllergyIntoleranceCodeBloodGroupAntigenNielsen:
+		return "Blood group antigen Nielsen"
+	case AllergyIntoleranceCodeAlpha14GlucanProteinSynthaseUridineDiphosphateForming:
+		return "Alpha-1,4-glucan-protein synthase (uridine diphosphate-forming)"
+	case AllergyIntoleranceCodeInosineMonophosphate:
+		return "Inosine monophosphate"
+	case AllergyIntoleranceCodePancuroniumSodium:
+		return "Pancuronium sodium"
+	case AllergyIntoleranceCodeManganeseSulfate:
+		return "Manganese sulfate"
+	case AllergyIntoleranceCodeFibrinogenSeattleI:
+		return "Fibrinogen Seattle I"
+	case AllergyIntoleranceCodeOBenzylParachlorophenolSubstance:
+		return "O-benzyl-parachlorophenol (substance)"
+	case AllergyIntoleranceCodeHemoglobinSouthampton:
+		return "Hemoglobin Southampton"
+	case AllergyIntoleranceCodeTyrosineEsterSulfotransferase:
+		return "Tyrosine-ester sulfotransferase"
+	case AllergyIntoleranceCodeEuphorbain:
+		return "Euphorbain"
+	case AllergyIntoleranceCodeVaginalSecretion:
+		return "Vaginal secretion"
+	case AllergyIntoleranceCodeLipopolysaccharide:
+		return "Lipopolysaccharide"
+	case AllergyIntoleranceCodeR20HydroxysteroidDehydrogenase:
+		return "(R)-20-Hydroxysteroid dehydrogenase"
+	case AllergyIntoleranceCodeAlphaAmylaseSubstance:
+		return "Alpha-amylase (substance)"
+	case AllergyIntoleranceCodeCopperIsotope:
+		return "Copper isotope"
+	case AllergyIntoleranceCodeHemoglobinBrest:
+		return "Hemoglobin Brest"
+	case AllergyIntoleranceCodeImipramineHydrochloride:
+		return "Imipramine hydrochloride"
+	case AllergyIntoleranceCodeThimerosal:
+		return "Thimerosal"
+	case AllergyIntoleranceCodeAldehydeDehydrogenaseAcceptor:
+		return "Aldehyde dehydrogenase (acceptor)"
+	case AllergyIntoleranceCode2Hydroxy3OxoadipateSynthase:
+		return "2-hydroxy-3-oxoadipate synthase"
+	case AllergyIntoleranceCodeBisDimethylthiocarbamylDisulfide:
+		return "bis-(Dimethylthiocarbamyl) disulfide"
+	case AllergyIntoleranceCodeHydroxymethylglutarylCoaHydrolase:
+		return "Hydroxymethylglutaryl-CoA hydrolase"
+	case AllergyIntoleranceCodeBiotinCarboxylase:
+		return "Biotin carboxylase"
+	case AllergyIntoleranceCodeDiscontinuedPesticide:
+		return "Discontinued pesticide"
+	case AllergyIntoleranceCodeLAminoAcidDehydrogenaseSubstance:
+		return "L-amino-acid dehydrogenase (substance)"
+	case AllergyIntoleranceCodeDnaTopoisomeraseAtpHydrolysing:
+		return "DNA topoisomerase (ATP-hydrolysing)"
+	case AllergyIntoleranceCodeDimethylamine:
+		return "Dimethylamine"
+	case AllergyIntoleranceCodeGalactinolSucroseGalactosyltransferase:
+		return "Galactinol-sucrose galactosyltransferase"
+	case AllergyIntoleranceCodeSmegmaClitoridis:
+		return "Smegma clitoridis"
+	case AllergyIntoleranceCodeCystylAminopeptidase:
+		return "Cystyl-aminopeptidase"
+	case AllergyIntoleranceCodeIsoxsuprineHydrochloride:
+		return "Isoxsuprine hydrochloride"
+	case AllergyIntoleranceCodeHemoglobinQIndia:
+		return "Hemoglobin Q-India"
+	case AllergyIntoleranceCodeLaryngealMucus:
+		return "Laryngeal mucus"
+	case AllergyIntoleranceCodeBloodGroupAntigenMorrison:
+		return "Blood group antigen Morrison"
+	case AllergyIntoleranceCodeCesium129Substance:
+		return "Cesium-129 (substance)"
+	case AllergyIntoleranceCodeGlucose6Phosphatase:
+		return "Glucose-6-phosphatase"
+	case AllergyIntoleranceCodeMalateDehydrogenaseDecarboxylating:
+		return "Malate dehydrogenase (decarboxylating)"
+	case AllergyIntoleranceCodeComplementEnzyme:
+		return "Complement enzyme"
+	case AllergyIntoleranceCodeAcebutololHydrochloride:
+		return "Acebutolol hydrochloride"
+	case AllergyIntoleranceCodeWarmAntibody:
+		return "Warm antibody"
+	case AllergyIntoleranceCodeEpoxideHydrolase:
+		return "Epoxide hydrolase"
+	case AllergyIntoleranceCodeSelenium79Substance:
+		return "Selenium-79 (substance)"
+	case AllergyIntoleranceCodeGlucocorticoidReceptor:
+		return "Glucocorticoid receptor"
+	case AllergyIntoleranceCodeHemoglobinConstantSprings:
+		return "Hemoglobin Constant Springs"
+	case AllergyIntoleranceCodeFibrinogenCaracas:
+		return "Fibrinogen Caracas"
+	case AllergyIntoleranceCodePhenylaceticAcid:
+		return "Phenylacetic acid"
+	case AllergyIntoleranceCodeHemoglobinMizushi:
+		return "Hemoglobin Mizushi"
+	case AllergyIntoleranceCodeSodiumSulfite:
+		return "Sodium sulfite"
+	case AllergyIntoleranceCodeFibrinogenDusard:
+		return "Fibrinogen Dusard"
+	case AllergyIntoleranceCodeCdpglycerolGlycerophosphotransferase:
+		return "CDPglycerol glycerophosphotransferase"
+	case AllergyIntoleranceCodeProstaglandinSynthase:
+		return "Prostaglandin synthase"
+	case AllergyIntoleranceCodeCowSMilk:
+		return "Cow's milk"
+	case AllergyIntoleranceCodeValineTrnaLigase:
+		return "Valine-tRNA ligase"
+	case AllergyIntoleranceCodeHemoglobinFPortRoyal:
+		return "Hemoglobin F-Port Royal"
+	case AllergyIntoleranceCodeBloodGroupAntigenTrA:
+		return "Blood group antigen Tr^a^"
+	case AllergyIntoleranceCodeNitrateReductaseNadh:
+		return "Nitrate reductase (NADH)"
+	case AllergyIntoleranceCodeExtracellularCrystal:
+		return "Extracellular crystal"
+	case AllergyIntoleranceCodeGossypol:
+		return "Gossypol"
+	case AllergyIntoleranceCodeNeuromelanin:
+		return "Neuromelanin"
+	case AllergyIntoleranceCodeCholineDehydrogenase:
+		return "Choline dehydrogenase"
+	case AllergyIntoleranceCodeXanthineDehydrogenase:
+		return "Xanthine dehydrogenase"
+	case AllergyIntoleranceCodeArachidonicAcid:
+		return "Arachidonic acid"
+	case AllergyIntoleranceCodeAcetateKinase:
+		return "Acetate kinase"
+	case AllergyIntoleranceCodeBloodGroupAntigenC:
+		return "Blood group antigen c"
+	case AllergyIntoleranceCodeMagnesiumProtoporphyrinMethyltransferase:
+		return "Magnesium-protoporphyrin methyltransferase"
+	case AllergyIntoleranceCodeBerylliumIsotope:
+		return "Beryllium isotope"
+	case AllergyIntoleranceCodeVanadiumIsotope:
+		return "Vanadium isotope"
+	case AllergyIntoleranceCodeProchlorperazineEdisylate:
+		return "Prochlorperazine edisylate"
+	case AllergyIntoleranceCodeIron:
+		return "Iron"
+	case AllergyIntoleranceCodeCmpNAcetylneuraminateAlphaNAcetylNeuraminyl23BetaGalactosyl13NAcetylGalactosaminideAlpha26Sialyltransferase:
+		return "CMP-N-acetylneuraminate-(alpha-N-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-N-acetyl-galactosaminide alpha-2,6-sialyltransferase"
+	case AllergyIntoleranceCodeGlutaminase:
+		return "Glutaminase"
+	case AllergyIntoleranceCodeProtoaphinAgluconeDehydrataseCyclizing:
+		return "Protoaphin-aglucone dehydratase (cyclizing)"
+	case AllergyIntoleranceCodeNitrotoluene:
+		return "Nitrotoluene"
+	case AllergyIntoleranceCodeCarbonBlack:
+		return "Carbon black"
+	case AllergyIntoleranceCodeBisChloroMethylEtherSubstance:
+		return "Bis-chloro methyl ether (substance)"
+	case AllergyIntoleranceCodeHydrocodoneBitartrate:
+		return "Hydrocodone bitartrate"
+	case AllergyIntoleranceCodeThymidine:
+		return "Thymidine"
+	case AllergyIntoleranceCodePHydroxybenzoateEster:
+		return "p-Hydroxybenzoate ester"
+	case AllergyIntoleranceCodeBloodGroupAntigenN:
+		return "Blood group antigen 'N'"
+	case AllergyIntoleranceCodeRectifiedBirchTarOilSubstance:
+		return "Rectified birch tar oil (substance)"
+	case AllergyIntoleranceCodeHemoglobinAtago:
+		return "Hemoglobin Atago"
+	case AllergyIntoleranceCodeManufacturedGas:
+		return "Manufactured gas"
+	case AllergyIntoleranceCodeCopper64Substance:
+		return "Copper-64 (substance)"
+	case AllergyIntoleranceCodeMetronidazoleHydrochloride:
+		return "Metronidazole hydrochloride"
+	case AllergyIntoleranceCodeTinIsotope:
+		return "Tin isotope"
+	case AllergyIntoleranceCodeCalifornium245Substance:
+		return "Californium-245 (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntigenRitherford:
+		return "Blood group antigen Ritherford"
+	case AllergyIntoleranceCodeBloodGroupAntigenHempas:
+		return "Blood group antigen HEMPAS"
+	case AllergyIntoleranceCodeOxaloacetateDecarboxylase:
+		return "Oxaloacetate decarboxylase"
+	case AllergyIntoleranceCodeNNDimethyltryptamine:
+		return "N,-N-dimethyltryptamine"
+	case AllergyIntoleranceCodeAlkalinePhosphataseIsoenzymeBoneFraction:
+		return "Alkaline phosphatase isoenzyme, bone fraction"
+	case AllergyIntoleranceCodeHemoglobinTampa:
+		return "Hemoglobin Tampa"
+	case AllergyIntoleranceCodeSulfisomidine:
+		return "Sulfisomidine"
+	case AllergyIntoleranceCodeSoftMetal:
+		return "Soft metal"
+	case AllergyIntoleranceCodeCaptodiamine:
+		return "Captodiamine"
+	case AllergyIntoleranceCodeEtidocaineHydrochloride:
+		return "Etidocaine hydrochloride"
+	case AllergyIntoleranceCodeCis12Dihydrobenzene12DiolDehydrogenase:
+		return "cis-1,2-Dihydrobenzene-1,2-diol dehydrogenase"
+	case AllergyIntoleranceCode1122Tetrachloro12DifluoroethaneSubstance:
+		return "1,1,2,2-tetrachloro-1,2- difluoroethane (substance)"
+	case AllergyIntoleranceCodeChorismateMutase:
+		return "Chorismate mutase"
+	case AllergyIntoleranceCodeParathyroidHormone:
+		return "Parathyroid hormone"
+	case AllergyIntoleranceCodeDihydrolipoamideSuccinyltransferase:
+		return "Dihydrolipoamide succinyltransferase"
+	case AllergyIntoleranceCodeHemoglobinGradyDakar:
+		return "Hemoglobin Grady, Dakar"
+	case AllergyIntoleranceCodeEnteropeptidase:
+		return "Enteropeptidase"
+	case AllergyIntoleranceCodeApoSaaComplex:
+		return "Apo-SAA complex"
+	case AllergyIntoleranceCodeChondroitinSulfate:
+		return "Chondroitin sulfate"
+	case AllergyIntoleranceCodeAdenylateCyclase:
+		return "Adenylate cyclase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyNorlander:
+		return "Blood group antibody Norlander"
+	case AllergyIntoleranceCodeSecButylAcetate:
+		return "sec-Butyl acetate"
+	case AllergyIntoleranceCodeLongChainEnoylCoaHydratase:
+		return "Long-chain-enoyl-CoA hydratase"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd31:
+		return "Lymphocyte antigen CD31"
+	case AllergyIntoleranceCodeBloodGroupAntibodyLeBh:
+		return "Blood group antibody Le^bH^"
+	case AllergyIntoleranceCodeHemoglobinLongIslandMarseille:
+		return "Hemoglobin Long Island-Marseille"
+	case AllergyIntoleranceCodeCdpdiacylglycerolSerineOPhosphatidylTransferase:
+		return "CDPdiacylglycerol-serine O-phosphatidyl-transferase"
+	case AllergyIntoleranceCodeFibrinogenSydneyIi:
+		return "Fibrinogen Sydney II"
+	case AllergyIntoleranceCodeNeriifolin:
+		return "Neriifolin"
+	case AllergyIntoleranceCode6AminohexanoateDimerHydrolase:
+		return "6-aminohexanoate-dimer hydrolase"
+	case AllergyIntoleranceCodeImipraminePamoate:
+		return "Imipramine pamoate"
+	case AllergyIntoleranceCodeCortisoneBetaReductase:
+		return "Cortisone beta-reductase"
+	case AllergyIntoleranceCodeFluorosilicateSalt:
+		return "Fluorosilicate salt"
+	case AllergyIntoleranceCodeImmunoglobulinGm23Allotype:
+		return "Immunoglobulin, GM23 allotype"
+	case AllergyIntoleranceCodeGalliumIsotope:
+		return "Gallium isotope"
+	case AllergyIntoleranceCodeGlycerolDehydrogenase:
+		return "Glycerol dehydrogenase"
+	case AllergyIntoleranceCodeAmericium241Substance:
+		return "Americium-241 (substance)"
+	case AllergyIntoleranceCodeKeyholeLimpetHemocyanin:
+		return "Keyhole-limpet hemocyanin"
+	case AllergyIntoleranceCodeLinamarinSynthase:
+		return "Linamarin synthase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyAllchurch:
+		return "Blood group antibody Allchurch"
+	case AllergyIntoleranceCodeTarOil:
+		return "Tar oil"
+	case AllergyIntoleranceCode2AminopyridineSubstance:
+		return "2-aminopyridine (substance)"
+	case AllergyIntoleranceCodeDibutylPhthalate:
+		return "Dibutyl phthalate"
+	case AllergyIntoleranceCodeCoagulationFactorIxSanDimasVariant:
+		return "Coagulation factor IX San Dimas variant"
+	case AllergyIntoleranceCode4CoumarateCoaLigase:
+		return "4-coumarate-CoA ligase"
+	case AllergyIntoleranceCodeAcetone:
+		return "Acetone"
+	case AllergyIntoleranceCodeBloodGroupAntigenFedor:
+		return "Blood group antigen Fedor"
+	case AllergyIntoleranceCodeBloodGroupAntibodyHT:
+		return "Blood group antibody HT"
+	case AllergyIntoleranceCodeBloodGroupAntigen:
+		return "Blood group antigen"
+	case AllergyIntoleranceCodeFibrinogenNewYorkIi:
+		return "Fibrinogen New York II"
+	case AllergyIntoleranceCodeBloodGroupAntibodyBinge:
+		return "Blood group antibody Binge"
+	case AllergyIntoleranceCodeSulfurylFluoride:
+		return "Sulfuryl fluoride"
+	case AllergyIntoleranceCodeCesium127Substance:
+		return "Cesium-127 (substance)"
+	case AllergyIntoleranceCodeCalifornium244Substance:
+		return "Californium-244 (substance)"
+	case AllergyIntoleranceCodeHemoglobinBrockton:
+		return "Hemoglobin Brockton"
+	case AllergyIntoleranceCodeSulfaethidole:
+		return "Sulfaethidole"
+	case AllergyIntoleranceCodePlantPhenanthreneToxin:
+		return "Plant phenanthrene toxin"
+	case AllergyIntoleranceCodeBismuth208Substance:
+		return "Bismuth-208 (substance)"
+	case AllergyIntoleranceCodeAdpDeaminase:
+		return "ADP deaminase"
+	case AllergyIntoleranceCodeAliphaticCarboxylicAcidC140:
+		return "Aliphatic carboxylic acid, C14:0"
+	case AllergyIntoleranceCodeBloodGroupAntibodyRils:
+		return "Blood group antibody Rils"
+	case AllergyIntoleranceCodeHemoglobinMizuho:
+		return "Hemoglobin Mizuho"
+	case AllergyIntoleranceCodeArginineDecarboxylase:
+		return "Arginine decarboxylase"
+	case AllergyIntoleranceCodeBloodGroupAntibodySisson:
+		return "Blood group antibody Sisson"
+	case AllergyIntoleranceCodeGalactose1PhosphateThymidylyltransferase:
+		return "Galactose-1-phosphate thymidylyltransferase"
+	case AllergyIntoleranceCodeBloodGroupAntigenNA:
+		return "Blood group antigen N^A^"
+	case AllergyIntoleranceCodeBloodGroupAntigenKam:
+		return "Blood group antigen Kam"
+	case AllergyIntoleranceCodeSenileCardiacProtein:
+		return "Senile cardiac protein"
+	case AllergyIntoleranceCodeTriclobisoniumChloride:
+		return "Triclobisonium chloride"
+	case AllergyIntoleranceCodeHypoglycinB:
+		return "Hypoglycin B"
+	case AllergyIntoleranceCodeArterialBlood:
+		return "Arterial blood"
+	case AllergyIntoleranceCodeCalfThymusRibonucleaseH:
+		return "Calf thymus ribonuclease H"
+	case AllergyIntoleranceCodeAlcianBlue8Gx:
+		return "Alcian blue 8GX"
+	case AllergyIntoleranceCode23DihydroxybenzoateSerineLigaseSubstance:
+		return "2,3-dihydroxybenzoate serine ligase (substance)"
+	case AllergyIntoleranceCodePotassiumPermanganate:
+		return "Potassium permanganate"
+	case AllergyIntoleranceCodeChromium51CrAlbuminSubstance:
+		return "Chromium (51-Cr) albumin (substance)------"
+	case AllergyIntoleranceCodeBeefInsulin:
+		return "Beef insulin"
+	case AllergyIntoleranceCodeChlorineMonoxide:
+		return "Chlorine monoxide"
+	case AllergyIntoleranceCodeOsmium183MSubstance:
+		return "Osmium-183m (substance)"
+	case AllergyIntoleranceCodeScopulariopsisProteinase:
+		return "Scopulariopsis proteinase"
+	case AllergyIntoleranceCodeOncogeneProteinP55VMyc:
+		return "Oncogene protein P55, V-MYC"
+	case AllergyIntoleranceCodeHemoglobinMito:
+		return "Hemoglobin Mito"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd30:
+		return "Lymphocyte antigen CD30"
+	case AllergyIntoleranceCodePlateletAntigenHpa3B:
+		return "Platelet antigen HPA-3b"
+	case AllergyIntoleranceCodeFluroxene:
+		return "Fluroxene"
+	case AllergyIntoleranceCodeSecbutabarbitalSodium:
+		return "Secbutabarbital sodium"
+	case AllergyIntoleranceCodeBeta14MannosylGlycoproteinBeta14NAcetylglucosaminyltransferaseSubstance:
+		return "Beta-1,4-mannosyl-glycoprotein beta-1,4-N-acetylglucosaminyltransferase (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyBultar:
+		return "Blood group antibody Bultar"
+	case AllergyIntoleranceCodeAzobenzeneReductase:
+		return "Azobenzene reductase"
+	case AllergyIntoleranceCodeValethamate:
+		return "Valethamate"
+	case AllergyIntoleranceCodeAmineOxidaseFlavinContaining:
+		return "Amine oxidase (flavin-containing)"
+	case AllergyIntoleranceCodePeptidylGlycinamidase:
+		return "Peptidyl-glycinamidase"
+	case AllergyIntoleranceCodeArabinose5PhosphateIsomerase:
+		return "Arabinose-5-phosphate isomerase"
+	case AllergyIntoleranceCodeTechnetium99MTcMebrofeninSubstance:
+		return "Technetium (99m-Tc) mebrofenin (substance)"
+	case AllergyIntoleranceCodeGlucanEndo13AlphaGlucosidase:
+		return "Glucan endo-1,3-alpha-glucosidase"
+	case AllergyIntoleranceCode33T2:
+		return "3,3' T2"
+	case AllergyIntoleranceCodeAdenylicAcid:
+		return "Adenylic acid"
+	case AllergyIntoleranceCodeGlucosulfone:
+		return "Glucosulfone"
+	case AllergyIntoleranceCodeHlaDw3Antigen:
+		return "HLA-Dw3 antigen"
+	case AllergyIntoleranceCodeIchthyoallyeinotoxin:
+		return "Ichthyoallyeinotoxin"
+	case AllergyIntoleranceCodeXylulokinase:
+		return "Xylulokinase"
+	case AllergyIntoleranceCodePyruvateOxidaseCoaAcetylating:
+		return "Pyruvate oxidase (CoA-acetylating)"
+	case AllergyIntoleranceCodeOncogeneProteinVAbc:
+		return "Oncogene protein V-ABC"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd15:
+		return "Lymphocyte antigen CD15"
+	case AllergyIntoleranceCodeTattooDye:
+		return "Tattoo dye"
+	case AllergyIntoleranceCodeNeoplasticStructuralGene:
+		return "Neoplastic structural gene"
+	case AllergyIntoleranceCodeTreeBark:
+		return "Tree bark"
+	case AllergyIntoleranceCodeNeutralAminoAcid:
+		return "Neutral amino acid"
+	case AllergyIntoleranceCodeGlutathioneReductaseNadPH:
+		return "Glutathione reductase (NAD(P)H)"
+	case AllergyIntoleranceCodeAcumentin:
+		return "Acumentin"
+	case AllergyIntoleranceCodeMagnesiumBorate:
+		return "Magnesium borate"
+	case AllergyIntoleranceCodeHemoglobinSwanRiver:
+		return "Hemoglobin Swan River"
+	case AllergyIntoleranceCodeBloodGroupAntibodyPanzar:
+		return "Blood group antibody Panzar"
+	case AllergyIntoleranceCodePapain:
+		return "Papain"
+	case AllergyIntoleranceCodeFreshWater:
+		return "Fresh water"
+	case AllergyIntoleranceCode33Dichlorobenzidine:
+		return "3-3'dichlorobenzidine"
+	case AllergyIntoleranceCodeCesium:
+		return "Cesium"
+	case AllergyIntoleranceCodeErythrosinY:
+		return "Erythrosin Y"
+	case AllergyIntoleranceCodeOncogeneProteinTcl4:
+		return "Oncogene protein TCL4"
+	case AllergyIntoleranceCodeTechnetium97Substance:
+		return "Technetium-97 (substance)"
+	case AllergyIntoleranceCodeCesium132Substance:
+		return "Cesium-132 (substance)"
+	case AllergyIntoleranceCodeProteinMethionineSOxideReductase:
+		return "Protein-methionine-S-oxide reductase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyD1276:
+		return "Blood group antibody D 1276"
+	case AllergyIntoleranceCodeBloodGroupAntigenHrB:
+		return "Blood group antigen hr^B^"
+	case AllergyIntoleranceCodeGelsolin:
+		return "Gelsolin"
+	case AllergyIntoleranceCodeBloodGroupAntigenRios:
+		return "Blood group antigen Rios"
+	case AllergyIntoleranceCodeFennelOil:
+		return "Fennel oil"
+	case AllergyIntoleranceCodeMethylatedDnaProteinCysteineMethyltransferase:
+		return "Methylated-DNA-protein-cysteine methyltransferase"
+	case AllergyIntoleranceCodeCoagulationFactorIiHoustonVariant:
+		return "Coagulation factor II Houston variant"
+	case AllergyIntoleranceCodeMetallicCompound:
+		return "Metallic compound"
+	case AllergyIntoleranceCodeScombrotoxin:
+		return "Scombrotoxin"
+	case AllergyIntoleranceCodeZincChlorideFumes:
+		return "Zinc chloride fumes"
+	case AllergyIntoleranceCodeCoagulationFactorXa:
+		return "Coagulation factor Xa"
+	case AllergyIntoleranceCodeConnectiveTissueFiber:
+		return "Connective tissue fiber"
+	case AllergyIntoleranceCodeTransEpoxysuccinateHydrolase:
+		return "trans-Epoxysuccinate hydrolase"
+	case AllergyIntoleranceCodeCyanateCompound:
+		return "Cyanate compound"
+	case AllergyIntoleranceCodeBacitracin:
+		return "Bacitracin"
+	case AllergyIntoleranceCodeFlavoneO7BetaGlucosyltransferase:
+		return "Flavone O^7^-beta-glucosyltransferase"
+	case AllergyIntoleranceCodeThymusIndependentAntigen:
+		return "Thymus-independent antigen"
+	case AllergyIntoleranceCodeHafniumRadioisotope:
+		return "Hafnium radioisotope"
+	case AllergyIntoleranceCodeHemoglobinWoodville:
+		return "Hemoglobin Woodville"
+	case AllergyIntoleranceCodeBloodGroupAntigenBraden:
+		return "Blood group antigen Braden"
+	case AllergyIntoleranceCodeScilliroside:
+		return "Scilliroside"
+	case AllergyIntoleranceCodeHemoglobinHoshida:
+		return "Hemoglobin Hoshida"
+	case AllergyIntoleranceCodePolynucleotide:
+		return "Polynucleotide"
+	case AllergyIntoleranceCodeBloodGroupAntigenHamet:
+		return "Blood group antigen Hamet"
+	case AllergyIntoleranceCodeZinc65Substance:
+		return "Zinc-65 (substance)"
+	case AllergyIntoleranceCodeUridineDiphosphateGlucuronicAcid:
+		return "Uridine diphosphate glucuronic acid"
+	case AllergyIntoleranceCodeActinBindingProtein:
+		return "Actin-binding protein"
+	case AllergyIntoleranceCodeLGlycolDehydrogenase:
+		return "L-glycol dehydrogenase"
+	case AllergyIntoleranceCodeBloodGroupAntigenSwietlik:
+		return "Blood group antigen Swietlik"
+	case AllergyIntoleranceCodePropyleneGlycolMonomethylEther:
+		return "Propylene glycol monomethyl ether"
+	case AllergyIntoleranceCodePyridoxaminePhosphateOxidase:
+		return "Pyridoxamine-phosphate oxidase"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd45Ra:
+		return "Lymphocyte antigen CD45RA"
+	case AllergyIntoleranceCodeCobalt60Substance:
+		return "Cobalt-60 (substance)"
+	case AllergyIntoleranceCodeBetaLArabinosidaseSubstance:
+		return "Beta-L-arabinosidase (substance)"
+	case AllergyIntoleranceCodeAccessorySinusMucus:
+		return "Accessory sinus mucus"
+	case AllergyIntoleranceCodeBloodGroupAntibodyDoA:
+		return "Blood group antibody Do^a^"
+	case AllergyIntoleranceCodePageBlue83:
+		return "Page blue 83"
+	case AllergyIntoleranceCodeIridiumIsotope:
+		return "Iridium isotope"
+	case AllergyIntoleranceCodeHemoglobinGCoushatta:
+		return "Hemoglobin G-Coushatta"
+	case AllergyIntoleranceCodePropionateCoaLigase:
+		return "Propionate-CoA ligase"
+	case AllergyIntoleranceCodeFerricSubsulfate:
+		return "Ferric subsulfate"
+	case AllergyIntoleranceCodeOxalateCoaTransferase:
+		return "Oxalate CoA-transferase"
+	case AllergyIntoleranceCodeBloodGroupAntigenFuerhart:
+		return "Blood group antigen Fuerhart"
+	case AllergyIntoleranceCodeInosinateNucleosidase:
+		return "Inosinate nucleosidase"
+	case AllergyIntoleranceCodeImmunoglobulinAHChain:
+		return "Immunoglobulin A, H chain"
+	case AllergyIntoleranceCodeRhodiumFumes:
+		return "Rhodium fumes"
+	case AllergyIntoleranceCodeBloodGroupAntibodyKpA:
+		return "Blood group antibody Kp^a^"
+	case AllergyIntoleranceCodeImmunoglobulinDHChainSubstance:
+		return "Immunoglobulin D, H chain (substance)"
+	case AllergyIntoleranceCodeCalcium:
+		return "Calcium"
+	case AllergyIntoleranceCodePlutonium233Substance:
+		return "Plutonium-233 (substance)"
+	case AllergyIntoleranceCode2Dehydro3DeoxyDPentonateAldolase:
+		return "2-dehydro-3-deoxy-D-pentonate aldolase"
+	case AllergyIntoleranceCodeHemoglobinHijiyama:
+		return "Hemoglobin Hijiyama"
+	case AllergyIntoleranceCodeBloodGroupAntigenOca:
+		return "Blood group antigen Oca"
+	case AllergyIntoleranceCodeLicodioneO2Methyltransferase:
+		return "Licodione O^2'^-methyltransferase"
+	case AllergyIntoleranceCodeBerylliumRadioisotope:
+		return "Beryllium radioisotope"
+	case AllergyIntoleranceCodeHemoglobinIHighWycombe:
+		return "Hemoglobin I-High Wycombe"
+	case AllergyIntoleranceCodeCytidylicAcid:
+		return "Cytidylic acid"
+	case AllergyIntoleranceCodeHlaDqw6Antigen:
+		return "HLA-DQw6 antigen"
+	case AllergyIntoleranceCodeValproateSemisodium:
+		return "Valproate semisodium"
+	case AllergyIntoleranceCodeGriseofulvinUltramicrosize:
+		return "Griseofulvin ultramicrosize"
+	case AllergyIntoleranceCodeAntimony116MSubstance:
+		return "Antimony-116m (substance)"
+	case AllergyIntoleranceCodeHemoglobinJTongariki:
+		return "Hemoglobin J-Tongariki"
+	case AllergyIntoleranceCodeGoldIsotope:
+		return "Gold isotope"
+	case AllergyIntoleranceCodeCeftizoximeSodium:
+		return "Ceftizoxime sodium"
+	case AllergyIntoleranceCodeAbsorbableGelatinSponge:
+		return "Absorbable gelatin sponge"
+	case AllergyIntoleranceCodeCyanocobalamin58CoSubstance:
+		return "Cyanocobalamin (58-Co) (substance)"
+	case AllergyIntoleranceCodeSomatomedinC:
+		return "Somatomedin C"
+	case AllergyIntoleranceCodeBloodGroupAntibodyGomez:
+		return "Blood group antibody Gomez"
+	case AllergyIntoleranceCodeSilver106MSubstance:
+		return "Silver-106m (substance)"
+	case AllergyIntoleranceCodeGalactokinase:
+		return "Galactokinase"
+	case AllergyIntoleranceCode3HydroxypropionAldehydeReductase:
+		return "3-hydroxypropion-aldehyde reductase"
+	case AllergyIntoleranceCodeStramonium:
+		return "Stramonium"
+	case AllergyIntoleranceCodeAntimony118MSubstance:
+		return "Antimony-118m (substance)"
+	case AllergyIntoleranceCodeHlaCw8Antigen:
+		return "HLA-Cw8 antigen"
+	case AllergyIntoleranceCodeHeterogeneousNuclearRna:
+		return "Heterogeneous nuclear RNA"
+	case AllergyIntoleranceCodePlutonium242Substance:
+		return "Plutonium-242 (substance)"
+	case AllergyIntoleranceCodeSulfamerazine:
+		return "Sulfamerazine"
+	case AllergyIntoleranceCodeWhitePetrolatum:
+		return "White petrolatum"
+	case AllergyIntoleranceCodeTrna5Methylaminomethyl2ThiouridylateMethyltransferase:
+		return "tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase"
+	case AllergyIntoleranceCodeMalateDehydrogenase:
+		return "Malate dehydrogenase"
+	case AllergyIntoleranceCodeEthyl4BisHydroxypropyl1Aminobenzoate:
+		return "Ethyl-4-bis-(hydroxypropyl)-1-aminobenzoate"
+	case AllergyIntoleranceCodeCrotonaldehyde:
+		return "Crotonaldehyde"
+	case AllergyIntoleranceCodeHemoglobinVaasa:
+		return "Hemoglobin Vaasa"
+	case AllergyIntoleranceCodeHemoglobinBart:
+		return "Hemoglobin Bart"
+	case AllergyIntoleranceCodeBloodGroupAntibodyWj:
+		return "Blood group antibody Wj"
+	case AllergyIntoleranceCodeIndium110MSubstance:
+		return "Indium-110m (substance)"
+	case AllergyIntoleranceCodeVitexinBetaGlucosyltransferase:
+		return "Vitexin beta-glucosyltransferase"
+	case AllergyIntoleranceCodeHellebrin:
+		return "Hellebrin"
+	case AllergyIntoleranceCodeBacterialStructuralGene:
+		return "Bacterial structural gene"
+	case AllergyIntoleranceCodeQuinidinePolygalacturonate:
+		return "Quinidine polygalacturonate"
+	case AllergyIntoleranceCodeOncogeneProteinPp60VSrc:
+		return "Oncogene protein PP60, V-SRC"
+	case AllergyIntoleranceCodeBloodGroupAntigenGladding:
+		return "Blood group antigen Gladding"
+	case AllergyIntoleranceCodeLactaldehydeDehydrogenase:
+		return "Lactaldehyde dehydrogenase"
+	case AllergyIntoleranceCodeTechnetium99MTcSulfurColloidSubstance:
+		return "Technetium (99m-Tc) sulfur colloid (substance)"
+	case AllergyIntoleranceCodeCysteine:
+		return "Cysteine"
+	case AllergyIntoleranceCode35CyclicNucleotidePhosphodiesterase:
+		return "3',5'-cyclic-nucleotide phosphodiesterase"
+	case AllergyIntoleranceCodeDiethyleneGlycol:
+		return "Diethylene glycol"
+	case AllergyIntoleranceCodeBloodGroupAntigenBullock:
+		return "Blood group antigen Bullock"
+	case AllergyIntoleranceCodeImmunoglobulinGm17Allotype:
+		return "Immunoglobulin, GM17 allotype"
+	case AllergyIntoleranceCodeDFuconateDehydratase:
+		return "D-fuconate dehydratase"
+	case AllergyIntoleranceCodeYttrium88Substance:
+		return "Yttrium-88 (substance)"
+	case AllergyIntoleranceCodeOxygenRadioisotope:
+		return "Oxygen radioisotope"
+	case AllergyIntoleranceCodeBoneCement:
+		return "Bone cement"
+	case AllergyIntoleranceCodeCarbonDisulfide:
+		return "Carbon disulfide"
+	case AllergyIntoleranceCodeDoxylamineSuccinate:
+		return "Doxylamine succinate"
+	case AllergyIntoleranceCodeBloodGroupAntibodyWkA:
+		return "Blood group antibody Wk^a^"
+	case AllergyIntoleranceCodeBloodGroupAntigenMil:
+		return "Blood group antigen Mil"
+	case AllergyIntoleranceCodeHydroxylysine:
+		return "Hydroxylysine"
+	case AllergyIntoleranceCodeSynovialFluid:
+		return "Synovial fluid"
+	case AllergyIntoleranceCodeBenzfetamineHydrochloride:
+		return "Benzfetamine hydrochloride"
+	case AllergyIntoleranceCodeLochiaAlba:
+		return "Lochia alba"
+	case AllergyIntoleranceCodeBloodGroupAntibodyLHarris:
+		return "Blood group antibody L Harris"
+	case AllergyIntoleranceCodeAsparagusateReductaseNadh:
+		return "Asparagusate reductase (NADH)"
+	case AllergyIntoleranceCodeAromaticAminoAcidAminotransferase:
+		return "Aromatic-amino-acid aminotransferase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyAnuszewska:
+		return "Blood group antibody Anuszewska"
+	case AllergyIntoleranceCodeBloodGroupAntigenDuck:
+		return "Blood group antigen Duck"
+	case AllergyIntoleranceCodeBloodGroupAntigenLeProvost:
+		return "Blood group antigen Le Provost"
+	case AllergyIntoleranceCodeMeclocycline:
+		return "Meclocycline"
+	case AllergyIntoleranceCodeHeatLabileAntibody:
+		return "Heat labile antibody"
+	case AllergyIntoleranceCodeFattyAcidMethyltransferase:
+		return "Fatty-acid methyltransferase"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd63:
+		return "Lymphocyte antigen CD63"
+	case AllergyIntoleranceCodeOMethylBufotenine:
+		return "O-methyl-bufotenine"
+	case AllergyIntoleranceCodeChloroacetone:
+		return "Chloroacetone"
+	case AllergyIntoleranceCodeBloodGroupAntigenZd:
+		return "Blood group antigen Zd"
+	case AllergyIntoleranceCodeBemegride:
+		return "Bemegride"
+	case AllergyIntoleranceCodePotassiumMetabisulfite:
+		return "Potassium metabisulfite"
+	case AllergyIntoleranceCodeRiboseIsomerase:
+		return "Ribose isomerase"
+	case AllergyIntoleranceCodeSodium22NaChlorideSubstance:
+		return "Sodium (22-Na) chloride (substance)"
+	case AllergyIntoleranceCodeProtokylol:
+		return "Protokylol"
+	case AllergyIntoleranceCodeIndoklon:
+		return "Indoklon"
+	case AllergyIntoleranceCodePlantResidue:
+		return "Plant residue"
+	case AllergyIntoleranceCodeDiazinon:
+		return "Diazinon"
+	case AllergyIntoleranceCodeMethidathion:
+		return "Methidathion"
+	case AllergyIntoleranceCodeLysosomalAlphaNAcetylglucosaminidase:
+		return "Lysosomal alpha-N-acetylglucosaminidase"
+	case AllergyIntoleranceCodeTantalum178Substance:
+		return "Tantalum-178 (substance)"
+	case AllergyIntoleranceCodeParticulateAntigen:
+		return "Particulate antigen"
+	case AllergyIntoleranceCodePhenolBetaGlucosyltransferase:
+		return "Phenol beta-glucosyltransferase"
+	case AllergyIntoleranceCodeSquillExtract:
+		return "Squill extract"
+	case AllergyIntoleranceCodeImidazolonepropionase:
+		return "Imidazolonepropionase"
+	case AllergyIntoleranceCodeChlorodiallylacetamide:
+		return "Chlorodiallylacetamide"
+	case AllergyIntoleranceCodeKallidinIi:
+		return "Kallidin II"
+	case AllergyIntoleranceCodeTechnetium95MSubstance:
+		return "Technetium-95m (substance)"
+	case AllergyIntoleranceCodeNAcetylneuraminateO4Acetyltransferase:
+		return "N-Acetylneuraminate O^4^-acetyltransferase"
+	case AllergyIntoleranceCodePhentermineHydrochloride:
+		return "Phentermine hydrochloride"
+	case AllergyIntoleranceCodeLichenase:
+		return "Lichenase"
+	case AllergyIntoleranceCodeMorpholine:
+		return "Morpholine"
+	case AllergyIntoleranceCodeInterleukin12:
+		return "Interleukin-12"
+	case AllergyIntoleranceCodeHlaDrw14Antigen:
+		return "HLA-DRw14 antigen"
+	case AllergyIntoleranceCodeChlorobenzilate:
+		return "Chlorobenzilate"
+	case AllergyIntoleranceCodeChloroprene:
+		return "Chloroprene"
+	case AllergyIntoleranceCode12DidehydropipecolateReductase:
+		return "1,2-didehydropipecolate reductase"
+	case AllergyIntoleranceCodePhosphohexokinase:
+		return "Phosphohexokinase"
+	case AllergyIntoleranceCodeFibrinogenMontrealIi:
+		return "Fibrinogen Montreal II"
+	case AllergyIntoleranceCodeBloodGroupAntigenMuch:
+		return "Blood group antigen Much"
+	case AllergyIntoleranceCodeFlumethiazide:
+		return "Flumethiazide"
+	case AllergyIntoleranceCodeIndium111InFerricHydroxideSubstance:
+		return "Indium (111-In) ferric hydroxide (substance)"
+	case AllergyIntoleranceCodeDistilledSpirits:
+		return "Distilled spirits"
+	case AllergyIntoleranceCodeBloodGroupAntigenClA:
+		return "Blood group antigen Cl^a^"
+	case AllergyIntoleranceCodeMacrophageActivatingFactor:
+		return "Macrophage activating factor"
+	case AllergyIntoleranceCodeGalactosylceramidase:
+		return "Galactosylceramidase"
+	case AllergyIntoleranceCodeHlaDw12Antigen:
+		return "HLA-Dw12 antigen"
+	case AllergyIntoleranceCodeAminoacridineSubstance:
+		return "Aminoacridine (substance)"
+	case AllergyIntoleranceCodeDiethylaminoethanol:
+		return "Diethylaminoethanol"
+	case AllergyIntoleranceCodeChloramphenicolSodiumSuccinate:
+		return "Chloramphenicol sodium succinate"
+	case AllergyIntoleranceCodeBilirubinYTransportProtein:
+		return "Bilirubin Y transport protein"
+	case AllergyIntoleranceCodeOpsonin:
+		return "Opsonin"
+	case AllergyIntoleranceCodeHomoserineDehydrogenase:
+		return "Homoserine dehydrogenase"
+	case AllergyIntoleranceCodeBloodGroupAntigenCaw:
+		return "Blood group antigen Caw"
+	case AllergyIntoleranceCodePhosphoadenylate3Nucleotidase:
+		return "Phosphoadenylate 3'-nucleotidase"
+	case AllergyIntoleranceCodeTitaniumRadioisotope:
+		return "Titanium radioisotope"
+	case AllergyIntoleranceCodeLissamineFastRedB:
+		return "Lissamine fast red B"
+	case AllergyIntoleranceCodeEthylMercaptoethylDiethylThiophosphate:
+		return "Ethyl mercaptoethyl diethyl thiophosphate"
+	case AllergyIntoleranceCodeGentamicin2Nucleotidyltransferase:
+		return "Gentamicin 2-nucleotidyltransferase"
+	case AllergyIntoleranceCodeNitricOxide:
+		return "Nitric oxide"
+	case AllergyIntoleranceCodeYttrium91Substance:
+		return "Yttrium-91 (substance)"
+	case AllergyIntoleranceCodeNifuroxime:
+		return "Nifuroxime"
+	case AllergyIntoleranceCodeMethylthioniniumChloride:
+		return "Methylthioninium chloride"
+	case AllergyIntoleranceCodeUranium234Substance:
+		return "Uranium-234 (substance)"
+	case AllergyIntoleranceCodeAntiDnaAntibody:
+		return "Anti DNA antibody"
+	case AllergyIntoleranceCodeTlAntigen:
+		return "TL antigen"
+	case AllergyIntoleranceCodeSilverDifluoride:
+		return "Silver difluoride"
+	case AllergyIntoleranceCodeAminopterin:
+		return "Aminopterin"
+	case AllergyIntoleranceCodeVeratrine:
+		return "Veratrine"
+	case AllergyIntoleranceCodeFerrousIronCompound:
+		return "Ferrous iron compound"
+	case AllergyIntoleranceCodePhomopsin:
+		return "Phomopsin"
+	case AllergyIntoleranceCodeDiscadenineSynthase:
+		return "Discadenine synthase"
+	case AllergyIntoleranceCodeOxidizedGlutathione:
+		return "Oxidized glutathione"
+	case AllergyIntoleranceCodeSterolHormone:
+		return "Sterol hormone"
+	case AllergyIntoleranceCodeDextropropoxypheneNapsylate:
+		return "Dextropropoxyphene napsylate"
+	case AllergyIntoleranceCodePlatinum188Substance:
+		return "Platinum-188 (substance)"
+	case AllergyIntoleranceCodeTheophyllineCalciumSalicylate:
+		return "Theophylline calcium salicylate"
+	case AllergyIntoleranceCodeCefapirinSodium:
+		return "Cefapirin sodium"
+	case AllergyIntoleranceCodeMeadAcid:
+		return "Mead acid"
+	case AllergyIntoleranceCodeMagnesiumFumes:
+		return "Magnesium fumes"
+	case AllergyIntoleranceCodeS3Amino2MethylpropionateAminotransferase:
+		return "(S)-3-Amino-2-methylpropionate aminotransferase"
+	case AllergyIntoleranceCode3DeoxyMannoOctulosonate8PhosphataseSubstance:
+		return "3-deoxy-manno-octulosonate-8-phosphatase (substance)"
+	case AllergyIntoleranceCodeThiopurineMethyltransferase:
+		return "Thiopurine methyltransferase"
+	case AllergyIntoleranceCodeSodiumFluoride:
+		return "Sodium fluoride"
+	case AllergyIntoleranceCodeDeoxycytidylateMethyltransferase:
+		return "Deoxycytidylate methyltransferase"
+	case AllergyIntoleranceCodeBowieine:
+		return "Bowieine"
+	case AllergyIntoleranceCodeExopolyphosphatase:
+		return "Exopolyphosphatase"
+	case AllergyIntoleranceCodeLeucineAcetyltransferase:
+		return "Leucine acetyltransferase"
+	case AllergyIntoleranceCodeTin121Substance:
+		return "Tin-121 (substance)"
+	case AllergyIntoleranceCodeThymidylateSynthase:
+		return "Thymidylate synthase"
+	case AllergyIntoleranceCodeBloodGroupAntigenLeBh:
+		return "Blood group antigen Le^bH^"
+	case AllergyIntoleranceCodeTin121MSubstance:
+		return "Tin-121m (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyFrando:
+		return "Blood group antibody Frando"
+	case AllergyIntoleranceCodeLysolecithinAcylmutase:
+		return "Lysolecithin acylmutase"
+	case AllergyIntoleranceCode4HydroxyprolineEpimeraseSubstance:
+		return "4-hydroxyproline epimerase (substance)"
+	case AllergyIntoleranceCodeChromium51CrChlorideSubstance:
+		return "Chromium (51-Cr) chloride (substance)"
+	case AllergyIntoleranceCodeAcrylamide:
+		return "Acrylamide"
+	case AllergyIntoleranceCodeTriflupromazineHydrochloride:
+		return "Triflupromazine hydrochloride"
+	case AllergyIntoleranceCodeSeminalFluid:
+		return "Seminal fluid"
+	case AllergyIntoleranceCodeAmmoniumCompound:
+		return "Ammonium compound"
+	case AllergyIntoleranceCodeBetaCarotene1515Dioxygenase:
+		return "Beta-carotene 15,15'-dioxygenase"
+	case AllergyIntoleranceCodeMalateCoaLigase:
+		return "Malate-CoA ligase"
+	case AllergyIntoleranceCodeBloodGroupAntigenGreenlee:
+		return "Blood group antigen Greenlee"
+	case AllergyIntoleranceCodeGloboside:
+		return "Globoside"
+	case AllergyIntoleranceCodeDiclofenac:
+		return "Diclofenac"
+	case AllergyIntoleranceCodeLycorine:
+		return "Lycorine"
+	case AllergyIntoleranceCodeAsphyxiantAtmosphere:
+		return "Asphyxiant atmosphere"
+	case AllergyIntoleranceCodePyruvateCarboxylase:
+		return "Pyruvate carboxylase"
+	case AllergyIntoleranceCodeHemoglobinPoissy:
+		return "Hemoglobin Poissy"
+	case AllergyIntoleranceCode3PropylmalateSynthase:
+		return "3-propylmalate synthase"
+	case AllergyIntoleranceCodeNAcylneuraminate9Phosphatase:
+		return "N-Acylneuraminate-9-phosphatase"
+	case AllergyIntoleranceCodeAnthocyanidinO3Glucosyltransferase:
+		return "Anthocyanidin O^3^-glucosyltransferase"
+	case AllergyIntoleranceCodeConvallamarin:
+		return "Convallamarin"
+	case AllergyIntoleranceCodeFibrinogenBuenosAiresIi:
+		return "Fibrinogen Buenos Aires II"
+	case AllergyIntoleranceCodeGermanium69Substance:
+		return "Germanium-69 (substance)"
+	case AllergyIntoleranceCodeAntigen:
+		return "Antigen"
+	case AllergyIntoleranceCodeGallium73Substance:
+		return "Gallium-73 (substance)"
+	case AllergyIntoleranceCodeAcidCoaLigaseGdpForming:
+		return "Acid-CoA ligase (GDP-forming)"
+	case AllergyIntoleranceCodeCyclohexeneOxide:
+		return "Cyclohexene oxide"
+	case AllergyIntoleranceCodeChlorthion:
+		return "Chlorthion"
+	case AllergyIntoleranceCodePhosphorusIsotope:
+		return "Phosphorus isotope"
+	case AllergyIntoleranceCodeHlaDw19Antigen:
+		return "HLA-Dw19 antigen"
+	case AllergyIntoleranceCodeComplementComponentC2A:
+		return "Complement component C2a"
+	case AllergyIntoleranceCodePrekallikrein:
+		return "Prekallikrein"
+	case AllergyIntoleranceCodeMethenyltetrahydrofolateCyclohydrolase:
+		return "Methenyltetrahydrofolate cyclohydrolase"
+	case AllergyIntoleranceCodeThiolOxidase:
+		return "Thiol oxidase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyHaakestad:
+		return "Blood group antibody Haakestad"
+	case AllergyIntoleranceCodeGalactonateDehydratase:
+		return "Galactonate dehydratase"
+	case AllergyIntoleranceCodeMethylIsocyanate:
+		return "Methyl isocyanate"
+	case AllergyIntoleranceCodeThorium:
+		return "Thorium"
+	case AllergyIntoleranceCodeMixedDust:
+		return "Mixed dust"
+	case AllergyIntoleranceCodeDtdp4DehydrorhamnoseReductase:
+		return "dTDP4-dehydrorhamnose reductase"
+	case AllergyIntoleranceCodeTechnetium99MTcLidofeninSubstance:
+		return "Technetium (99m-Tc) lidofenin (substance)"
+	case AllergyIntoleranceCodeMercaptanCompound:
+		return "Mercaptan compound"
+	case AllergyIntoleranceCodeAceticAcidTertButylEster:
+		return "Acetic acid tert-butyl ester"
+	case AllergyIntoleranceCodeAmbuphylline:
+		return "Ambuphylline"
+	case AllergyIntoleranceCodeBacteriochlorophyll:
+		return "Bacteriochlorophyll"
+	case AllergyIntoleranceCodePyrimidine:
+		return "Pyrimidine"
+	case AllergyIntoleranceCodeCalciumHydroxide:
+		return "Calcium hydroxide"
+	case AllergyIntoleranceCodeSulfurousAcid:
+		return "Sulfurous acid"
+	case AllergyIntoleranceCodeRedPetrolatum:
+		return "Red petrolatum"
+	case AllergyIntoleranceCodeShellac:
+		return "Shellac"
+	case AllergyIntoleranceCodeBloodGroupAntibodyTrA:
+		return "Blood group antibody Tr^a^"
+	case AllergyIntoleranceCodeCoagulationFactorIi:
+		return "Coagulation factor II"
+	case AllergyIntoleranceCodeAminoalcoholEster:
+		return "Aminoalcohol ester"
+	case AllergyIntoleranceCodeHemeHemopexinComplex:
+		return "Heme-hemopexin complex"
+	case AllergyIntoleranceCodeBloodGroupAntibodyHlaB8:
+		return "Blood group antibody HLA-B8"
+	case AllergyIntoleranceCodeSepiapterinReductase:
+		return "Sepiapterin reductase"
+	case AllergyIntoleranceCodeErythrosinB:
+		return "Erythrosin B"
+	case AllergyIntoleranceCodeRuthenium:
+		return "Ruthenium"
+	case AllergyIntoleranceCodeTellurium127Substance:
+		return "Tellurium-127 (substance)"
+	case AllergyIntoleranceCodePTertButyltolueneSubstance:
+		return "p-tert-butyltoluene (substance)"
+	case AllergyIntoleranceCodeHomocytotropicAntibody:
+		return "Homocytotropic antibody"
+	case AllergyIntoleranceCodeGallium72Substance:
+		return "Gallium-72 (substance)"
+	case AllergyIntoleranceCodeMannitolHexanitrate:
+		return "Mannitol hexanitrate"
+	case AllergyIntoleranceCodeHepatotoxicMycotoxin:
+		return "Hepatotoxic mycotoxin"
+	case AllergyIntoleranceCodeStizolobinateSynthase:
+		return "Stizolobinate synthase"
+	case AllergyIntoleranceCodeHemoglobinLincolnPark:
+		return "Hemoglobin Lincoln Park"
+	case AllergyIntoleranceCodeFibrinogenBethesdaI:
+		return "Fibrinogen Bethesda I"
+	case AllergyIntoleranceCodeBloodGroupAntibodySkA:
+		return "Blood group antibody Sk^a^"
+	case AllergyIntoleranceCodeTriethyleneGlycol:
+		return "Triethylene glycol"
+	case AllergyIntoleranceCodeBloodGroupAntibodyPruitt:
+		return "Blood group antibody Pruitt"
+	case AllergyIntoleranceCodeHlaBw70Antigen:
+		return "HLA-Bw70 antigen"
+	case AllergyIntoleranceCodeFishBone:
+		return "Fish bone"
+	case AllergyIntoleranceCodeAminobutyraldehydeDehydrogenase:
+		return "Aminobutyraldehyde dehydrogenase"
+	case AllergyIntoleranceCodeBloodGroupAntigenTowey:
+		return "Blood group antigen Towey"
+	case AllergyIntoleranceCodeBloodGroupAntibodyBgC:
+		return "Blood group antibody Bg^c^"
+	case AllergyIntoleranceCodeFerrovanadiumDust:
+		return "Ferrovanadium dust"
+	case AllergyIntoleranceCodeIsovalerylCoaDehydrogenase:
+		return "Isovaleryl-CoA dehydrogenase"
+	case AllergyIntoleranceCodeChlortetracyclineHydrochloride:
+		return "Chlortetracycline hydrochloride"
+	case AllergyIntoleranceCodeHlaB49Antigen:
+		return "HLA-B49 antigen"
+	case AllergyIntoleranceCodeSilver111Substance:
+		return "Silver-111 (substance)"
+	case AllergyIntoleranceCodeStrontium89Substance:
+		return "Strontium-89 (substance)"
+	case AllergyIntoleranceCodeNeoBVitaminA1Substance:
+		return "Neo-b-vitamin A1 (substance)"
+	case AllergyIntoleranceCodeRuthenium103Substance:
+		return "Ruthenium-103 (substance)"
+	case AllergyIntoleranceCodeSphingomyelinPhosphodiesteraseD:
+		return "Sphingomyelin phosphodiesterase D"
+	case AllergyIntoleranceCode1Monoacylglycerol:
+		return "1-Monoacylglycerol"
+	case AllergyIntoleranceCodeSoyaProtein:
+		return "Soya protein"
+	case AllergyIntoleranceCodeOxalateOxidase:
+		return "Oxalate oxidase"
+	case AllergyIntoleranceCodeTetrahydroxypteridineCycloisomerase:
+		return "Tetrahydroxypteridine cycloisomerase"
+	case AllergyIntoleranceCodeAntazolineHydrochloride:
+		return "Antazoline hydrochloride"
+	case AllergyIntoleranceCodeAcetylDigitoxin:
+		return "Acetyl digitoxin"
+	case AllergyIntoleranceCodeSphingomyelinPhosphodiesterase:
+		return "Sphingomyelin phosphodiesterase"
+	case AllergyIntoleranceCodeMonophosphatidylinositolPhosphodiesterase:
+		return "Monophosphatidylinositol phosphodiesterase"
+	case AllergyIntoleranceCodeBetaCyclopiazonateDehydrogenaseSubstance:
+		return "Beta-cyclopiazonate dehydrogenase (substance)"
+	case AllergyIntoleranceCodeRadon218Substance:
+		return "Radon-218 (substance)"
+	case AllergyIntoleranceCodeHemoglobinPresbyterian:
+		return "Hemoglobin Presbyterian"
+	case AllergyIntoleranceCodeDeanol:
+		return "Deanol"
+	case AllergyIntoleranceCodeArginineCarboxypeptidase:
+		return "Arginine carboxypeptidase"
+	case AllergyIntoleranceCodeDiflorasone:
+		return "Diflorasone"
+	case AllergyIntoleranceCodeDArabitolDehydrogenase:
+		return "D-arabitol dehydrogenase"
+	case AllergyIntoleranceCodeOrsellinateDepsideHydrolase:
+		return "Orsellinate-depside hydrolase"
+	case AllergyIntoleranceCodeReedSternbergAntibody:
+		return "Reed-Sternberg antibody"
+	case AllergyIntoleranceCodeThioneb:
+		return "Thioneb"
+	case AllergyIntoleranceCodePhosphatidateCytidylyltransferase:
+		return "Phosphatidate cytidylyltransferase"
+	case AllergyIntoleranceCodeHemoglobinFShanghai:
+		return "Hemoglobin F-Shanghai"
+	case AllergyIntoleranceCodeAllograft:
+		return "Allograft"
+	case AllergyIntoleranceCodeBloodGroupAntibodyDalman:
+		return "Blood group antibody Dalman"
+	case AllergyIntoleranceCodeAmiphenazole:
+		return "Amiphenazole"
+	case AllergyIntoleranceCode3Phosphoadenylylsulfate3PhosphataseSubstance:
+		return "3'-phosphoadenylylsulfate 3'-phosphatase (substance)"
+	case AllergyIntoleranceCodeSodiumRhodanide:
+		return "Sodium rhodanide"
+	case AllergyIntoleranceCodeSulfurIsotope:
+		return "Sulfur isotope"
+	case AllergyIntoleranceCodeButylMercaptan:
+		return "Butyl mercaptan"
+	case AllergyIntoleranceCodeCucurbitacinDelta23Reductase:
+		return "Cucurbitacin delta^23^-reductase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyFleming:
+		return "Blood group antibody Fleming"
+	case AllergyIntoleranceCodeBloodGroupAntibodyGibson:
+		return "Blood group antibody Gibson"
+	case AllergyIntoleranceCodeAllylGlycidylEther:
+		return "Allyl glycidyl ether"
+	case AllergyIntoleranceCodePolyethyleneGlycol:
+		return "Polyethylene glycol"
+	case AllergyIntoleranceCodeCholestenolDeltaIsomerase:
+		return "Cholestenol delta-isomerase"
+	case AllergyIntoleranceCodeBloodGroupAntigenTh:
+		return "Blood group antigen Th"
+	case AllergyIntoleranceCodeOrotateReductaseNadph:
+		return "Orotate reductase (NADPH)"
+	case AllergyIntoleranceCodeGalactosideAcetyltransferase:
+		return "Galactoside acetyltransferase"
+	case AllergyIntoleranceCodeHemoglobinLeiden:
+		return "Hemoglobin Leiden"
+	case AllergyIntoleranceCodeUndecaprenylDiphosphatase:
+		return "Undecaprenyl-diphosphatase"
+	case AllergyIntoleranceCodeBloodGroupAntibodySchuppenhauer:
+		return "Blood group antibody Schuppenhauer"
+	case AllergyIntoleranceCodeMagnesiumAcetylsalicylate:
+		return "Magnesium acetylsalicylate"
+	case AllergyIntoleranceCodeDiosmin:
+		return "Diosmin"
+	case AllergyIntoleranceCodeHomoproline:
+		return "Homoproline"
+	case AllergyIntoleranceCodeImmunoglobulinFdFragment:
+		return "Immunoglobulin, Fd fragment"
+	case AllergyIntoleranceCodeLymphocyteAntigenCd67:
+		return "Lymphocyte antigen CD67"
+	case AllergyIntoleranceCodeUracil5CarboxylateDecarboxylase:
+		return "Uracil-5-carboxylate decarboxylase"
+	case AllergyIntoleranceCodeCevadilline:
+		return "Cevadilline"
+	case AllergyIntoleranceCodeConvallamarogenin:
+		return "Convallamarogenin"
+	case AllergyIntoleranceCodeDiaminopimelateEpimerase:
+		return "Diaminopimelate epimerase"
+	case AllergyIntoleranceCodePotassium43Substance:
+		return "Potassium-43 (substance)"
+	case AllergyIntoleranceCodeHumanMenopausalGonadotropin:
+		return "Human menopausal gonadotropin"
+	case AllergyIntoleranceCodePolyester:
+		return "Polyester"
+	case AllergyIntoleranceCodeCoagulationFactorIiPaduaVariant:
+		return "Coagulation factor II Padua variant"
+	case AllergyIntoleranceCodeRuthenium106Substance:
+		return "Ruthenium-106 (substance)"
+	case AllergyIntoleranceCodeStreptococcalCysteineProteinase:
+		return "Streptococcal cysteine proteinase"
+	case AllergyIntoleranceCodeStrobane:
+		return "Strobane"
+	case AllergyIntoleranceCodeChlorothiazideSodium:
+		return "Chlorothiazide sodium"
+	case AllergyIntoleranceCodeAbnormalHemoglobin:
+		return "Abnormal hemoglobin"
+	case AllergyIntoleranceCodePotassiumThiosulfate:
+		return "Potassium thiosulfate"
+	case AllergyIntoleranceCodeBloodGroupAntibodyHildebrandt:
+		return "Blood group antibody Hildebrandt"
+	case AllergyIntoleranceCodeTrnaAdenylyltransferase:
+		return "tRNA adenylyltransferase"
+	case AllergyIntoleranceCodeMethionineSOxideReductase:
+		return "Methionine-S-oxide reductase"
+	case AllergyIntoleranceCodeUromucoidProtein:
+		return "Uromucoid protein"
+	case AllergyIntoleranceCodeCyclohexanol:
+		return "Cyclohexanol"
+	case AllergyIntoleranceCodeHemoglobinMadrid:
+		return "Hemoglobin Madrid"
+	case AllergyIntoleranceCodeRnaDirectedDnaPolymerase:
+		return "RNA-directed DNA polymerase"
+	case AllergyIntoleranceCodeProcollagenLysine2Oxoglutarate5Dioxygenase:
+		return "Procollagen-lysine,2-oxoglutarate 5-dioxygenase"
+	case AllergyIntoleranceCodeBrilliantCresylBlue:
+		return "Brilliant cresyl blue"
+	case AllergyIntoleranceCodeBloodGroupAntibodyReA:
+		return "Blood group antibody Re^a^"
+	case AllergyIntoleranceCodeManganeseEthyleneBisDithiocarbamate:
+		return "Manganese ethylene bis-dithiocarbamate"
+	case AllergyIntoleranceCodeHafniumIsotope:
+		return "Hafnium isotope"
+	case AllergyIntoleranceCodeBloodGroupAntibodyC:
+		return "Blood group antibody c"
+	case AllergyIntoleranceCodeOilOfPennyroyalEuropean:
+		return "Oil of pennyroyal-European"
+	case AllergyIntoleranceCodeXylobiase:
+		return "Xylobiase"
+	case AllergyIntoleranceCodeDuffyBloodGroupAntibody:
+		return "Duffy blood group antibody"
+	case AllergyIntoleranceCodeGlucan14AlphaGlucosidase:
+		return "Glucan 1,4-alpha-glucosidase"
+	case AllergyIntoleranceCodeNicotineResinComplex:
+		return "Nicotine resin complex"
+	case AllergyIntoleranceCodeNitroethaneOxidase:
+		return "Nitroethane oxidase"
+	case AllergyIntoleranceCodeBrilliantOrange:
+		return "Brilliant orange"
+	case AllergyIntoleranceCodeOilOfLemonGrass:
+		return "Oil of lemon grass"
+	case AllergyIntoleranceCodeBloodGroupAntigenSisson:
+		return "Blood group antigen Sisson"
+	case AllergyIntoleranceCodeMethylEthylKetonePeroxide:
+		return "Methyl ethyl ketone peroxide"
+	case AllergyIntoleranceCodeBloodGroupAntibodyVgA:
+		return "Blood group antibody Vg^a^"
+	case AllergyIntoleranceCodeHomocysteineMethyltransferase:
+		return "Homocysteine methyltransferase"
+	case AllergyIntoleranceCodeLeadOleate:
+		return "Lead oleate"
+	case AllergyIntoleranceCodeBloodGroupAntigenMur:
+		return "Blood group antigen Mur"
+	case AllergyIntoleranceCodeOncogeneProteinP210BcrAbl:
+		return "Oncogene protein P210, BCR-ABL"
+	case AllergyIntoleranceCodeHlaDrw15Antigen:
+		return "HLA-DRw15 antigen"
+	case AllergyIntoleranceCodeVanadium48Substance:
+		return "Vanadium-48 (substance)"
+	case AllergyIntoleranceCodeComplementInhibitor:
+		return "Complement inhibitor"
+	case AllergyIntoleranceCodeAllantoicase:
+		return "Allantoicase"
+	case AllergyIntoleranceCodeShortNeurotoxinVenom:
+		return "Short neurotoxin venom"
+	case AllergyIntoleranceCodeCyclohexane:
+		return "Cyclohexane"
+	case AllergyIntoleranceCodeOrnithine:
+		return "Ornithine"
+	case AllergyIntoleranceCodeHemoglobinMachida:
+		return "Hemoglobin Machida"
+	case AllergyIntoleranceCodeOsmium183Substance:
+		return "Osmium-183 (substance)"
+	case AllergyIntoleranceCodeUrinaryProteinOfLowMolecularWeight:
+		return "Urinary protein of low molecular weight"
+	case AllergyIntoleranceCodeTin110Substance:
+		return "Tin-110 (substance)"
+	case AllergyIntoleranceCodeSolution:
+		return "Solution"
+	case AllergyIntoleranceCodePotassiumCyanate:
+		return "Potassium cyanate"
+	case AllergyIntoleranceCodeDichlorodifluoromethane:
+		return "Dichlorodifluoromethane"
+	case AllergyIntoleranceCodeTumorNecrosisFactor:
+		return "Tumor necrosis factor"
+	case AllergyIntoleranceCodeOncogeneProteinTcl6:
+		return "Oncogene protein TCL6"
+	case AllergyIntoleranceCodePotassiumChloride:
+		return "Potassium chloride"
+	case AllergyIntoleranceCodeRubijervine:
+		return "Rubijervine"
+	case AllergyIntoleranceCodeComplementComponentC3C:
+		return "Complement component C3c"
+	case AllergyIntoleranceCodeGumArabic:
+		return "Gum arabic"
+	case AllergyIntoleranceCodeKanamycinSulfate:
+		return "Kanamycin sulfate"
+	case AllergyIntoleranceCodeSulfachlorpyridazine:
+		return "Sulfachlorpyridazine"
+	case AllergyIntoleranceCode4HydroxybenzoateDecarboxylaseSubstance:
+		return "4-hydroxybenzoate decarboxylase (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntibodyAustin:
+		return "Blood group antibody Austin"
+	case AllergyIntoleranceCodeC3H20Bb:
+		return "C3(H20)Bb"
+	case AllergyIntoleranceCodeAdenylylsulfateKinase:
+		return "Adenylylsulfate kinase"
+	case AllergyIntoleranceCodeSantonin:
+		return "Santonin"
+	case AllergyIntoleranceCodeChlorineDioxide:
+		return "Chlorine dioxide"
+	case AllergyIntoleranceCodeBloodGroupAntigenWdA:
+		return "Blood group antigen Wd^a^"
+	case AllergyIntoleranceCodeHemoglobinF:
+		return "Hemoglobin F"
+	case AllergyIntoleranceCodeLhReceptorSite:
+		return "LH receptor site"
+	case AllergyIntoleranceCodeBloodGroupAntibodyTriW:
+		return "Blood group antibody Tri W"
+	case AllergyIntoleranceCodeLinoleicAcid:
+		return "Linoleic acid"
+	case AllergyIntoleranceCodeNitrateReductaseNadPH:
+		return "Nitrate reductase (NAD(P)H)"
+	case AllergyIntoleranceCodeGallocyanine:
+		return "Gallocyanine"
+	case AllergyIntoleranceCodeHydroxybutyrateDimerHydrolase:
+		return "Hydroxybutyrate-dimer hydrolase"
+	case AllergyIntoleranceCodeStrontium85SrNitrateSubstance:
+		return "Strontium (85-Sr) nitrate (substance)"
+	case AllergyIntoleranceCodeNaturalGraphite:
+		return "Natural graphite"
+	case AllergyIntoleranceCodeBloodGroupAntigenEvelyn:
+		return "Blood group antigen Evelyn"
+	case AllergyIntoleranceCode3Hydroxybenzoate6Hydroxylase:
+		return "3-hydroxybenzoate 6-hydroxylase"
+	case AllergyIntoleranceCodeFlecainideAcetate:
+		return "Flecainide acetate"
+	case AllergyIntoleranceCodeBloodGroupAntibodyIT:
+		return "Blood group antibody I^T^"
+	case AllergyIntoleranceCodeEndolymph:
+		return "Endolymph"
+	case AllergyIntoleranceCodeBiotin:
+		return "Biotin"
+	case AllergyIntoleranceCodeAzurB:
+		return "Azur B"
+	case AllergyIntoleranceCodePhosphopantothenateCysteineLigase:
+		return "Phosphopantothenate-cysteine ligase"
+	case AllergyIntoleranceCode23Dihydroxyindole23DioxygenaseSubstance:
+		return "2,3-dihydroxyindole 2,3-dioxygenase (substance)"
+	case AllergyIntoleranceCodeNAcetylmuramoylLAlanineAmidase:
+		return "N-Acetylmuramoyl-L-alanine amidase"
+	case AllergyIntoleranceCodeBulbourethralSecretions:
+		return "Bulbourethral secretions"
+	case AllergyIntoleranceCodeBloodGroupAntibodyTarplee:
+		return "Blood group antibody Tarplee"
+	case AllergyIntoleranceCodeOleateHydratase:
+		return "Oleate hydratase"
+	case AllergyIntoleranceCodeCyclePhaseSpecificAgent:
+		return "Cycle-phase specific agent"
+	case AllergyIntoleranceCodeRibulokinase:
+		return "Ribulokinase"
+	case AllergyIntoleranceCodeMethylBlue:
+		return "Methyl blue"
+	case AllergyIntoleranceCodeDephosphoCoaKinase:
+		return "Dephospho-CoA kinase"
+	case AllergyIntoleranceCodeCarbaryl:
+		return "Carbaryl"
+	case AllergyIntoleranceCodeGlucose6PhosphateDehydrogenase:
+		return "Glucose-6-phosphate dehydrogenase"
+	case AllergyIntoleranceCodeRadonRadioisotope:
+		return "Radon radioisotope"
+	case AllergyIntoleranceCodeAllspiceOil:
+		return "Allspice oil"
+	case AllergyIntoleranceCodeBloodGroupAntigenHlaB15:
+		return "Blood group antigen HLA-B15"
+	case AllergyIntoleranceCodeRetinolFattyAcyltransferase:
+		return "Retinol fatty-acyltransferase"
+	case AllergyIntoleranceCodeMercuricCompound:
+		return "Mercuric compound"
+	case AllergyIntoleranceCodeSempervirine:
+		return "Sempervirine"
+	case AllergyIntoleranceCodeTriacetateLactonase:
+		return "Triacetate-lactonase"
+	case AllergyIntoleranceCodeBloodGroupAntibodyAlda:
+		return "Blood group antibody Alda"
+	case AllergyIntoleranceCodeFibrinogenPoitiers:
+		return "Fibrinogen Poitiers"
+	case AllergyIntoleranceCodeBetaNAcetylgalactosaminidase:
+		return "Beta-N-acetylgalactosaminidase"
+	case AllergyIntoleranceCodeCmpNAcetylneuraminateLactosylceramideAlpha23Sialyltransferase:
+		return "CMP-N-acetylneuraminate-lactosylceramide alpha-2,3-sialyltransferase"
+	case AllergyIntoleranceCodeImmunoglobulinGeneInvAllotype:
+		return "Immunoglobulin gene INV allotype"
+	case AllergyIntoleranceCodeApioseReductase:
+		return "Apiose reductase"
+	case AllergyIntoleranceCodeHemoglobinTarrant:
+		return "Hemoglobin Tarrant"
+	case AllergyIntoleranceCodePlantPhenolOil:
+		return "Plant phenol oil"
+	case AllergyIntoleranceCodeBorneolDehydrogenase:
+		return "Borneol dehydrogenase"
+	case AllergyIntoleranceCodeChlorobutanol:
+		return "Chlorobutanol"
+	case AllergyIntoleranceCodeTellurium118Substance:
+		return "Tellurium-118 (substance)"
+	case AllergyIntoleranceCodeHlaDrw16Antigen:
+		return "HLA-DRw16 antigen"
+	case AllergyIntoleranceCodeCatecholamineReceptor:
+		return "Catecholamine receptor"
+	case AllergyIntoleranceCodeFibrinogenPontoise:
+		return "Fibrinogen Pontoise"
+	case AllergyIntoleranceCodeLensNeutralProteinase:
+		return "Lens neutral proteinase"
+	case AllergyIntoleranceCodeGentisateDecarboxylase:
+		return "Gentisate decarboxylase"
+	case AllergyIntoleranceCodeSpearmintOil:
+		return "Spearmint oil"
+	case AllergyIntoleranceCodeBloodGroupAntibodyVennera:
+		return "Blood group antibody Vennera"
+	case AllergyIntoleranceCodeIsopropylGlycidylEther:
+		return "Isopropyl glycidyl ether"
+	case AllergyIntoleranceCodeNitrobenzene:
+		return "Nitrobenzene"
+	case AllergyIntoleranceCodePalladium103Substance:
+		return "Palladium-103 (substance)"
+	case AllergyIntoleranceCodeHemoglobinFAlexandra:
+		return "Hemoglobin F-Alexandra"
+	case AllergyIntoleranceCodeBloodGroupAntibodyPollio:
+		return "Blood group antibody Pollio"
+	case AllergyIntoleranceCodeIron60Substance:
+		return "Iron-60 (substance)"
+	case AllergyIntoleranceCodeBloodGroupAntigenPillsbury:
+		return "Blood group antigen Pillsbury"
+	case AllergyIntoleranceCodeBromoform:
+		return "Bromoform"
+	case AllergyIntoleranceCodeHighDensityLipoprotein:
+		return "High density lipoprotein"
+	case AllergyIntoleranceCodePropensityToAdverseReactionsToSubstance:
+		return "Propensity to adverse reactions to substance"
+	case AllergyIntoleranceCodeHereditaryGastrogenicLactoseIntolerance:
+		return "Hereditary gastrogenic lactose intolerance"
+	case AllergyIntoleranceCodeLactoseIntoleranceInChildrenWithoutLactaseDeficiency:
+		return "Lactose intolerance in children without lactase deficiency"
+	case AllergyIntoleranceCodeDrugIntolerance:
+		return "Drug intolerance"
+	case AllergyIntoleranceCodeTransientGlutenSensitivity:
+		return "Transient gluten sensitivity"
+	case AllergyIntoleranceCodeOralContraceptiveIntolerance:
+		return "Oral contraceptive intolerance"
+	case AllergyIntoleranceCodeAllergyToErythromycin:
+		return "Allergy to erythromycin"
+	case AllergyIntoleranceCodeAllergyToFruit:
+		return "Allergy to fruit"
+	case AllergyIntoleranceCodeNutAllergy:
+		return "Nut allergy"
+	case AllergyIntoleranceCodeAllergyToPeanuts:
+		return "Allergy to peanuts"
+	case AllergyIntoleranceCodeAllergyToPenicillin:
+		return "Allergy to penicillin"
+	case AllergyIntoleranceCodeAllergyToSeafood:
+		return "Allergy to seafood"
+	case AllergyIntoleranceCodeAllergyToStrawberries:
+		return "Allergy to strawberries"
+	case AllergyIntoleranceCodeAllergyToSulfonamides:
+		return "Allergy to sulfonamides"
+	case AllergyIntoleranceCodeAllergyToWalnut:
+		return "Allergy to walnut"
+	case AllergyIntoleranceCodePrimaryLactoseIntolerance:
+		return "Primary lactose intolerance"
+	case AllergyIntoleranceCodeEggProteinAllergy:
+		return "Egg protein allergy"
+	case AllergyIntoleranceCodeHouseDustAllergy:
+		return "House dust allergy"
+	case AllergyIntoleranceCodeHouseDustMiteAllergy:
+		return "House dust mite allergy"
+	case AllergyIntoleranceCodeFoodIntolerance:
+		return "Food intolerance"
+	case AllergyIntoleranceCodeAcetaminophenAllergy:
+		return "Acetaminophen allergy"
+	case AllergyIntoleranceCodeSalicylateAllergy:
+		return "Salicylate allergy"
+	case AllergyIntoleranceCodeAspirinAllergy:
+		return "Aspirin allergy"
+	case AllergyIntoleranceCodePentazocineAllergy:
+		return "Pentazocine allergy"
+	case AllergyIntoleranceCodePhenazocineAllergy:
+		return "Phenazocine allergy"
+	case AllergyIntoleranceCodeMethadoneAnalogAllergy:
+		return "Methadone analog allergy"
+	case AllergyIntoleranceCodeDextromoramideAllergy:
+		return "Dextromoramide allergy"
+	case AllergyIntoleranceCodeDextropropoxypheneAllergy:
+		return "Dextropropoxyphene allergy"
+	case AllergyIntoleranceCodeDipipanoneAllergy:
+		return "Dipipanone allergy"
+	case AllergyIntoleranceCodeMethadoneAllergy:
+		return "Methadone allergy"
+	case AllergyIntoleranceCodeMorphinanOpioidAllergy:
+		return "Morphinan opioid allergy"
+	case AllergyIntoleranceCodeBuprenorphineAllergy:
+		return "Buprenorphine allergy"
+	case AllergyIntoleranceCodeCodeineAllergy:
+		return "Codeine allergy"
+	case AllergyIntoleranceCodeDiamorphineAllergy:
+		return "Diamorphine allergy"
+	case AllergyIntoleranceCodeDihydrocodeineAllergy:
+		return "Dihydrocodeine allergy"
+	case AllergyIntoleranceCodeNalbuphineAllergy:
+		return "Nalbuphine allergy"
+	case AllergyIntoleranceCodeMorphineAllergy:
+		return "Morphine allergy"
+	case AllergyIntoleranceCodeOpiumAlkaloidAllergy:
+		return "Opium alkaloid allergy"
+	case AllergyIntoleranceCodePethidineAnalogAllergy:
+		return "Pethidine analog allergy"
+	case AllergyIntoleranceCodeAlfentanilAllergy:
+		return "Alfentanil allergy"
+	case AllergyIntoleranceCodeFentanylAllergy:
+		return "Fentanyl allergy"
+	case AllergyIntoleranceCodePethidineAllergy:
+		return "Pethidine allergy"
+	case AllergyIntoleranceCodePhenoperidineAllergy:
+		return "Phenoperidine allergy"
+	case AllergyIntoleranceCodeMeptazinolAllergy:
+		return "Meptazinol allergy"
+	case AllergyIntoleranceCodeLevorphanolAllergy:
+		return "Levorphanol allergy"
+	case AllergyIntoleranceCodeNonSteroidalAntiInflammatoryDrugAllergy:
+		return "Non-steroidal anti-inflammatory drug allergy"
+	case AllergyIntoleranceCodeAcemetacinAllergy:
+		return "Acemetacin allergy"
+	case AllergyIntoleranceCodeAzapropazoneAllergy:
+		return "Azapropazone allergy"
+	case AllergyIntoleranceCodeDiclofenacAllergy:
+		return "Diclofenac allergy"
+	case AllergyIntoleranceCodeEtodolacAllergy:
+		return "Etodolac allergy"
+	case AllergyIntoleranceCodeFelbinacAllergy:
+		return "Felbinac allergy"
+	case AllergyIntoleranceCodeFenbufenAllergy:
+		return "Fenbufen allergy"
+	case AllergyIntoleranceCodeFenoprofenAllergy:
+		return "Fenoprofen allergy"
+	case AllergyIntoleranceCodeFlurbiprofenAllergy:
+		return "Flurbiprofen allergy"
+	case AllergyIntoleranceCodeIbuprofenAllergy:
+		return "Ibuprofen allergy"
+	case AllergyIntoleranceCodeIndomethacinAllergy:
+		return "Indomethacin allergy"
+	case AllergyIntoleranceCodeKetoprofenAllergy:
+		return "Ketoprofen allergy"
+	case AllergyIntoleranceCodeKetorolacAllergy:
+		return "Ketorolac allergy"
+	case AllergyIntoleranceCodeMefenamicAcidAllergy:
+		return "Mefenamic acid allergy"
+	case AllergyIntoleranceCodeNabumetoneAllergy:
+		return "Nabumetone allergy"
+	case AllergyIntoleranceCodeNaproxenAllergy:
+		return "Naproxen allergy"
+	case AllergyIntoleranceCodeNefopamAllergy:
+		return "Nefopam allergy"
+	case AllergyIntoleranceCodeOxyphenbutazoneAllergy:
+		return "Oxyphenbutazone allergy"
+	case AllergyIntoleranceCodePhenylbutazoneAllergy:
+		return "Phenylbutazone allergy"
+	case AllergyIntoleranceCodePiroxicamAllergy:
+		return "Piroxicam allergy"
+	case AllergyIntoleranceCodeSulindacAllergy:
+		return "Sulindac allergy"
+	case AllergyIntoleranceCodeTenoxicamAllergy:
+		return "Tenoxicam allergy"
+	case AllergyIntoleranceCodeTiaprofenicAcidAllergy:
+		return "Tiaprofenic acid allergy"
+	case AllergyIntoleranceCodeTolmetinAllergy:
+		return "Tolmetin allergy"
+	case AllergyIntoleranceCodeTuberculinAllergy:
+		return "Tuberculin allergy"
+	case AllergyIntoleranceCodeRadiopharmaceuticalAllergy:
+		return "Radiopharmaceutical allergy"
+	case AllergyIntoleranceCodeContrastMediaAllergy:
+		return "Contrast media allergy"
+	case AllergyIntoleranceCodeBismuthChelateAllergy:
+		return "Bismuth chelate allergy"
+	case AllergyIntoleranceCodeSucralfateAllergy:
+		return "Sucralfate allergy"
+	case AllergyIntoleranceCodeLiquoriceAllergy:
+		return "Liquorice allergy"
+	case AllergyIntoleranceCodeMisoprostolAllergy:
+		return "Misoprostol allergy"
+	case AllergyIntoleranceCodeH2ReceptorAntagonistAllergy:
+		return "H2 receptor antagonist allergy"
+	case AllergyIntoleranceCodeCimetidineAllergy:
+		return "Cimetidine allergy"
+	case AllergyIntoleranceCodeFamotidineAllergy:
+		return "Famotidine allergy"
+	case AllergyIntoleranceCodeNizatidineAllergy:
+		return "Nizatidine allergy"
+	case AllergyIntoleranceCodeRanitidineAllergy:
+		return "Ranitidine allergy"
+	case AllergyIntoleranceCodeProtonPumpInhibitorAllergy:
+		return "Proton pump inhibitor allergy"
+	case AllergyIntoleranceCodeOmeprazoleAllergy:
+		return "Omeprazole allergy"
+	case AllergyIntoleranceCodeLansoprazoleAllergy:
+		return "Lansoprazole allergy"
+	case AllergyIntoleranceCodeCarbenoxoloneAllergy:
+		return "Carbenoxolone allergy"
+	case AllergyIntoleranceCodePirenzepineAllergy:
+		return "Pirenzepine allergy"
+	case AllergyIntoleranceCodePancreatinAllergy:
+		return "Pancreatin allergy"
+	case AllergyIntoleranceCode5AminosalicylicAcidAllergy:
+		return "5-aminosalicylic acid allergy"
+	case AllergyIntoleranceCodeOlsalazineAllergy:
+		return "Olsalazine allergy"
+	case AllergyIntoleranceCodeSulfasalazineAllergy:
+		return "Sulfasalazine allergy"
+	case AllergyIntoleranceCodeMagnesiumTrisilicateAllergy:
+		return "Magnesium trisilicate allergy"
+	case AllergyIntoleranceCodeAluminumHydroxideAllergy:
+		return "Aluminum hydroxide allergy"
+	case AllergyIntoleranceCodeLoperamideAllergy:
+		return "Loperamide allergy"
+	case AllergyIntoleranceCodeKaolinAllergy:
+		return "Kaolin allergy"
+	case AllergyIntoleranceCodeCisaprideAllergy:
+		return "Cisapride allergy"
+	case AllergyIntoleranceCodeNabiloneAllergy:
+		return "Nabilone allergy"
+	case AllergyIntoleranceCodeDomperidoneAllergy:
+		return "Domperidone allergy"
+	case AllergyIntoleranceCodeMetoclopramideAllergy:
+		return "Metoclopramide allergy"
+	case AllergyIntoleranceCode5Ht3ReceptorAntagonistAllergy:
+		return "5-HT3-receptor antagonist allergy"
+	case AllergyIntoleranceCodeBisacodylAllergy:
+		return "Bisacodyl allergy"
+	case AllergyIntoleranceCodeDanthronAllergy:
+		return "Danthron allergy"
+	case AllergyIntoleranceCodeSodiumPicosulfateAllergy:
+		return "Sodium picosulfate allergy"
+	case AllergyIntoleranceCodeLactuloseAllergy:
+		return "Lactulose allergy"
+	case AllergyIntoleranceCodeMagnesiumSulfateAllergy:
+		return "Magnesium sulfate allergy"
+	case AllergyIntoleranceCodeCascaraAllergy:
+		return "Cascara allergy"
+	case AllergyIntoleranceCodeSennaAllergy:
+		return "Senna allergy"
+	case AllergyIntoleranceCodeDocusateAllergy:
+		return "Docusate allergy"
+	case AllergyIntoleranceCodePeppermintOilAllergy:
+		return "Peppermint oil allergy"
+	case AllergyIntoleranceCodeAlverineAllergy:
+		return "Alverine allergy"
+	case AllergyIntoleranceCodeMebeverineAllergy:
+		return "Mebeverine allergy"
+	case AllergyIntoleranceCodeDicyclomineAllergy:
+		return "Dicyclomine allergy"
+	case AllergyIntoleranceCodeMepenzolateAllergy:
+		return "Mepenzolate allergy"
+	case AllergyIntoleranceCodePipenzolateAllergy:
+		return "Pipenzolate allergy"
+	case AllergyIntoleranceCodePoldineAllergy:
+		return "Poldine allergy"
+	case AllergyIntoleranceCodePropanthelineAllergy:
+		return "Propantheline allergy"
+	case AllergyIntoleranceCodeChenodeoxycholicAcidAllergy:
+		return "Chenodeoxycholic acid allergy"
+	case AllergyIntoleranceCodeDehydrocholicAcidAllergy:
+		return "Dehydrocholic acid allergy"
+	case AllergyIntoleranceCodeUrsodeoxycholicAcidAllergy:
+		return "Ursodeoxycholic acid allergy"
+	case AllergyIntoleranceCodeEtomidateAllergy:
+		return "Etomidate allergy"
+	case AllergyIntoleranceCodeKetamineAllergy:
+		return "Ketamine allergy"
+	case AllergyIntoleranceCodePropofolAllergy:
+		return "Propofol allergy"
+	case AllergyIntoleranceCodeThiopentoneAllergy:
+		return "Thiopentone allergy"
+	case AllergyIntoleranceCodeMethohexitoneAllergy:
+		return "Methohexitone allergy"
+	case AllergyIntoleranceCodeEnfluraneAllergy:
+		return "Enflurane allergy"
+	case AllergyIntoleranceCodeHalothaneAllergy:
+		return "Halothane allergy"
+	case AllergyIntoleranceCodeIsofluraneAllergy:
+		return "Isoflurane allergy"
+	case AllergyIntoleranceCodeTrichloroethyleneAllergy:
+		return "Trichloroethylene allergy"
+	case AllergyIntoleranceCodeDesfluraneAllergy:
+		return "Desflurane allergy"
+	case AllergyIntoleranceCodeLocalAnestheticDrugAllergy:
+		return "Local anesthetic drug allergy"
+	case AllergyIntoleranceCodeBupivacaineAllergy:
+		return "Bupivacaine allergy"
+	case AllergyIntoleranceCodeCinchocaineAllergy:
+		return "Cinchocaine allergy"
+	case AllergyIntoleranceCodePrilocaineAllergy:
+		return "Prilocaine allergy"
+	case AllergyIntoleranceCodeLignocaineAllergy:
+		return "Lignocaine allergy"
+	case AllergyIntoleranceCodeCocaineAllergy:
+		return "Cocaine allergy"
+	case AllergyIntoleranceCodeBenzocaineAllergy:
+		return "Benzocaine allergy"
+	case AllergyIntoleranceCodeAmethocaineAllergy:
+		return "Amethocaine allergy"
+	case AllergyIntoleranceCodeOxybuprocaineAllergy:
+		return "Oxybuprocaine allergy"
+	case AllergyIntoleranceCodeProcaineAllergy:
+		return "Procaine allergy"
+	case AllergyIntoleranceCodeProxymetacaineAllergy:
+		return "Proxymetacaine allergy"
+	case AllergyIntoleranceCodeAmifostineAllergy:
+		return "Amifostine allergy"
+	case AllergyIntoleranceCodeAldesleukinAllergy:
+		return "Aldesleukin allergy"
+	case AllergyIntoleranceCodeMolgramostimAllergy:
+		return "Molgramostim allergy"
+	case AllergyIntoleranceCodeLenograstimAllergy:
+		return "Lenograstim allergy"
+	case AllergyIntoleranceCodeFilgrastimAllergy:
+		return "Filgrastim allergy"
+	case AllergyIntoleranceCodeLevamisoleAllergy:
+		return "Levamisole allergy"
+	case AllergyIntoleranceCodeAlkylatingDrugAllergy:
+		return "Alkylating drug allergy"
+	case AllergyIntoleranceCodeMitobronitolAllergy:
+		return "Mitobronitol allergy"
+	case AllergyIntoleranceCodeBusulfanAllergy:
+		return "Busulfan allergy"
+	case AllergyIntoleranceCodeTreosulfanAllergy:
+		return "Treosulfan allergy"
+	case AllergyIntoleranceCodeThiotepaAllergy:
+		return "Thiotepa allergy"
+	case AllergyIntoleranceCodeNitrogenMustardDerivativeAllergy:
+		return "Nitrogen mustard derivative allergy"
+	case AllergyIntoleranceCodeChlorambucilAllergy:
+		return "Chlorambucil allergy"
+	case AllergyIntoleranceCodeCyclophosphamideAllergy:
+		return "Cyclophosphamide allergy"
+	case AllergyIntoleranceCodeEthoglucidAllergy:
+		return "Ethoglucid allergy"
+	case AllergyIntoleranceCodeIfosfamideAllergy:
+		return "Ifosfamide allergy"
+	case AllergyIntoleranceCodeMelphalanAllergy:
+		return "Melphalan allergy"
+	case AllergyIntoleranceCodeEstramustineAllergy:
+		return "Estramustine allergy"
+	case AllergyIntoleranceCodeMustineAllergy:
+		return "Mustine allergy"
+	case AllergyIntoleranceCodeNitrosureaAllergy:
+		return "Nitrosurea allergy"
+	case AllergyIntoleranceCodeCarmustineAllergy:
+		return "Carmustine allergy"
+	case AllergyIntoleranceCodeLomustineAllergy:
+		return "Lomustine allergy"
+	case AllergyIntoleranceCodeDacarbazineAllergy:
+		return "Dacarbazine allergy"
+	case AllergyIntoleranceCodeDactinomycinAllergy:
+		return "Dactinomycin allergy"
+	case AllergyIntoleranceCodeBleomycinAllergy:
+		return "Bleomycin allergy"
+	case AllergyIntoleranceCodeMitomycinAllergy:
+		return "Mitomycin allergy"
+	case AllergyIntoleranceCodePlicamycinAllergy:
+		return "Plicamycin allergy"
+	case AllergyIntoleranceCodeAclarubicinAllergy:
+		return "Aclarubicin allergy"
+	case AllergyIntoleranceCodeMitozantroneAllergy:
+		return "Mitozantrone allergy"
+	case AllergyIntoleranceCodeDoxorubicinAllergy:
+		return "Doxorubicin allergy"
+	case AllergyIntoleranceCodeEpirubicinAllergy:
+		return "Epirubicin allergy"
+	case AllergyIntoleranceCodeIdarubicinAllergy:
+		return "Idarubicin allergy"
+	case AllergyIntoleranceCodeMercuricOxideAllergy:
+		return "Mercuric oxide allergy"
+	case AllergyIntoleranceCodeMethotrexateAllergy:
+		return "Methotrexate allergy"
+	case AllergyIntoleranceCodeMercaptopurineAllergy:
+		return "Mercaptopurine allergy"
+	case AllergyIntoleranceCodeThioguanineAllergy:
+		return "Thioguanine allergy"
+	case AllergyIntoleranceCodePentostatinAllergy:
+		return "Pentostatin allergy"
+	case AllergyIntoleranceCodeCytarabineAllergy:
+		return "Cytarabine allergy"
+	case AllergyIntoleranceCodeFluorouracilAllergy:
+		return "Fluorouracil allergy"
+	case AllergyIntoleranceCodeEtoposideAllergy:
+		return "Etoposide allergy"
+	case AllergyIntoleranceCodeAmsacrineAllergy:
+		return "Amsacrine allergy"
+	case AllergyIntoleranceCodeCarboplatinAllergy:
+		return "Carboplatin allergy"
+	case AllergyIntoleranceCodeCisplatinAllergy:
+		return "Cisplatin allergy"
+	case AllergyIntoleranceCodeHydroxyureaAllergy:
+		return "Hydroxyurea allergy"
+	case AllergyIntoleranceCodeProcarbazineAllergy:
+		return "Procarbazine allergy"
+	case AllergyIntoleranceCodeRazoxaneAllergy:
+		return "Razoxane allergy"
+	case AllergyIntoleranceCodeCrisantaspaseAllergy:
+		return "Crisantaspase allergy"
+	case AllergyIntoleranceCodePaclitaxelAllergy:
+		return "Paclitaxel allergy"
+	case AllergyIntoleranceCodeFludarabineAllergy:
+		return "Fludarabine allergy"
+	case AllergyIntoleranceCodeAminoglutethimideAllergy:
+		return "Aminoglutethimide allergy"
+	case AllergyIntoleranceCodeEstrogenAntagonistAllergy:
+		return "Estrogen antagonist allergy"
+	case AllergyIntoleranceCodeTrilostaneAllergy:
+		return "Trilostane allergy"
+	case AllergyIntoleranceCodeTamoxifenAllergy:
+		return "Tamoxifen allergy"
+	case AllergyIntoleranceCodeFormestaneAllergy:
+		return "Formestane allergy"
+	case AllergyIntoleranceCodeVincaAlkaloidAllergy:
+		return "Vinca alkaloid allergy"
+	case AllergyIntoleranceCodeVinblastineAllergy:
+		return "Vinblastine allergy"
+	case AllergyIntoleranceCodeVincristineAllergy:
+		return "Vincristine allergy"
+	case AllergyIntoleranceCodeVindesineAllergy:
+		return "Vindesine allergy"
+	case AllergyIntoleranceCodeDimethylSulfoxideAllergy:
+		return "Dimethyl sulfoxide allergy"
+	case AllergyIntoleranceCodeCyclosporinAllergy:
+		return "Cyclosporin allergy"
+	case AllergyIntoleranceCodeAzathioprineAllergy:
+		return "Azathioprine allergy"
+	case AllergyIntoleranceCodeMazindolAllergy:
+		return "Mazindol allergy"
+	case AllergyIntoleranceCodePhentermineAllergy:
+		return "Phentermine allergy"
+	case AllergyIntoleranceCodeDexfenfluramineAllergy:
+		return "Dexfenfluramine allergy"
+	case AllergyIntoleranceCodeDiethylpropionAllergy:
+		return "Diethylpropion allergy"
+	case AllergyIntoleranceCodeFenfluramineAllergy:
+		return "Fenfluramine allergy"
+	case AllergyIntoleranceCodeLevodopaAllergy:
+		return "Levodopa allergy"
+	case AllergyIntoleranceCodeAmantadineAllergy:
+		return "Amantadine allergy"
+	case AllergyIntoleranceCodeApomorphineAllergy:
+		return "Apomorphine allergy"
+	case AllergyIntoleranceCodeLysurideAllergy:
+		return "Lysuride allergy"
+	case AllergyIntoleranceCodePergolideAllergy:
+		return "Pergolide allergy"
+	case AllergyIntoleranceCodeBromocriptineAllergy:
+		return "Bromocriptine allergy"
+	case AllergyIntoleranceCodeLithiumCarbonateAllergy:
+		return "Lithium carbonate allergy"
+	case AllergyIntoleranceCodeLithiumCitrateAllergy:
+		return "Lithium citrate allergy"
+	case AllergyIntoleranceCodeButriptylineAllergy:
+		return "Butriptyline allergy"
+	case AllergyIntoleranceCodeDoxepinAllergy:
+		return "Doxepin allergy"
+	case AllergyIntoleranceCodeIprindoleAllergy:
+		return "Iprindole allergy"
+	case AllergyIntoleranceCodeLofepramineAllergy:
+		return "Lofepramine allergy"
+	case AllergyIntoleranceCodeNortriptylineAllergy:
+		return "Nortriptyline allergy"
+	case AllergyIntoleranceCodeTrimipramineAllergy:
+		return "Trimipramine allergy"
+	case AllergyIntoleranceCodeAmoxapineAllergy:
+		return "Amoxapine allergy"
+	case AllergyIntoleranceCodeAmitriptylineAllergy:
+		return "Amitriptyline allergy"
+	case AllergyIntoleranceCodeClomipramineAllergy:
+		return "Clomipramine allergy"
+	case AllergyIntoleranceCodeDesipramineAllergy:
+		return "Desipramine allergy"
+	case AllergyIntoleranceCodeDothiepinAllergy:
+		return "Dothiepin allergy"
+	case AllergyIntoleranceCodeImipramineAllergy:
+		return "Imipramine allergy"
+	case AllergyIntoleranceCodeProtriptylineAllergy:
+		return "Protriptyline allergy"
+	case AllergyIntoleranceCodeMonoamineOxidaseInhibitorAllergy:
+		return "Monoamine oxidase inhibitor allergy"
+	case AllergyIntoleranceCodePhenelzineAllergy:
+		return "Phenelzine allergy"
+	case AllergyIntoleranceCodeIproniazidAllergy:
+		return "Iproniazid allergy"
+	case AllergyIntoleranceCodeIsocarboxazidAllergy:
+		return "Isocarboxazid allergy"
+	case AllergyIntoleranceCodeTranylcypromineAllergy:
+		return "Tranylcypromine allergy"
+	case AllergyIntoleranceCodeMoclobemideAllergy:
+		return "Moclobemide allergy"
+	case AllergyIntoleranceCodeTryptophanAllergy:
+		return "Tryptophan allergy"
+	case AllergyIntoleranceCodeVenlafaxineAllergy:
+		return "Venlafaxine allergy"
+	case AllergyIntoleranceCodeSelectiveSerotoninReUptakeInhibitorAllergy:
+		return "Selective serotonin re-uptake inhibitor allergy"
+	case AllergyIntoleranceCodeSertralineAllergy:
+		return "Sertraline allergy"
+	case AllergyIntoleranceCodeParoxetineAllergy:
+		return "Paroxetine allergy"
+	case AllergyIntoleranceCodeNefazodoneAllergy:
+		return "Nefazodone allergy"
+	case AllergyIntoleranceCodeCitalopramAllergy:
+		return "Citalopram allergy"
+	case AllergyIntoleranceCodeFluoxetineAllergy:
+		return "Fluoxetine allergy"
+	case AllergyIntoleranceCodeFluvoxamineAllergy:
+		return "Fluvoxamine allergy"
+	case AllergyIntoleranceCodeMaprotilineAllergy:
+		return "Maprotiline allergy"
+	case AllergyIntoleranceCodeMianserinAllergy:
+		return "Mianserin allergy"
+	case AllergyIntoleranceCodeTrazodoneAllergy:
+		return "Trazodone allergy"
+	case AllergyIntoleranceCodeViloxazineAllergy:
+		return "Viloxazine allergy"
+	case AllergyIntoleranceCodeBeclamideAllergy:
+		return "Beclamide allergy"
+	case AllergyIntoleranceCodeLamotrigineAllergy:
+		return "Lamotrigine allergy"
+	case AllergyIntoleranceCodePiracetamAllergy:
+		return "Piracetam allergy"
+	case AllergyIntoleranceCodeGabapentinAllergy:
+		return "Gabapentin allergy"
+	case AllergyIntoleranceCodeMethylphenobarbitoneAllergy:
+		return "Methylphenobarbitone allergy"
+	case AllergyIntoleranceCodePhenobarbitoneAllergy:
+		return "Phenobarbitone allergy"
+	case AllergyIntoleranceCodePrimidoneAllergy:
+		return "Primidone allergy"
+	case AllergyIntoleranceCodeCarbamazepineAllergy:
+		return "Carbamazepine allergy"
+	case AllergyIntoleranceCodeVigabatrinAllergy:
+		return "Vigabatrin allergy"
+	case AllergyIntoleranceCodePhenytoinAllergy:
+		return "Phenytoin allergy"
+	case AllergyIntoleranceCodeEthosuximideAllergy:
+		return "Ethosuximide allergy"
+	case AllergyIntoleranceCodeClonazepamAllergy:
+		return "Clonazepam allergy"
+	case AllergyIntoleranceCodeZopicloneAllergy:
+		return "Zopiclone allergy"
+	case AllergyIntoleranceCodeZolpidemAllergy:
+		return "Zolpidem allergy"
+	case AllergyIntoleranceCodeChlormezanoneAllergy:
+		return "Chlormezanone allergy"
+	case AllergyIntoleranceCodeMethypryloneAllergy:
+		return "Methyprylone allergy"
+	case AllergyIntoleranceCodeParaldehydeAllergy:
+		return "Paraldehyde allergy"
+	case AllergyIntoleranceCodeAmylobarbitoneAllergy:
+		return "Amylobarbitone allergy"
+	case AllergyIntoleranceCodeButobarbitoneAllergy:
+		return "Butobarbitone allergy"
+	case AllergyIntoleranceCodeCyclobarbitoneAllergy:
+		return "Cyclobarbitone allergy"
+	case AllergyIntoleranceCodeQuinalbarbitoneAllergy:
+		return "Quinalbarbitone allergy"
+	case AllergyIntoleranceCodeFlunitrazepamAllergy:
+		return "Flunitrazepam allergy"
+	case AllergyIntoleranceCodeFlurazepamAllergy:
+		return "Flurazepam allergy"
+	case AllergyIntoleranceCodeLoprazolamAllergy:
+		return "Loprazolam allergy"
+	case AllergyIntoleranceCodeLormetazepamAllergy:
+		return "Lormetazepam allergy"
+	case AllergyIntoleranceCodeNitrazepamAllergy:
+		return "Nitrazepam allergy"
+	case AllergyIntoleranceCodeTriazolamAllergy:
+		return "Triazolam allergy"
+	case AllergyIntoleranceCodeAlprazolamAllergy:
+		return "Alprazolam allergy"
+	case AllergyIntoleranceCodeBromazepamAllergy:
+		return "Bromazepam allergy"
+	case AllergyIntoleranceCodeChlordiazepoxideAllergy:
+		return "Chlordiazepoxide allergy"
+	case AllergyIntoleranceCodeClobazamAllergy:
+		return "Clobazam allergy"
+	case AllergyIntoleranceCodeKetazolamAllergy:
+		return "Ketazolam allergy"
+	case AllergyIntoleranceCodeMedazepamAllergy:
+		return "Medazepam allergy"
+	case AllergyIntoleranceCodeOxazepamAllergy:
+		return "Oxazepam allergy"
+	case AllergyIntoleranceCodePrazepamAllergy:
+		return "Prazepam allergy"
+	case AllergyIntoleranceCodeMidazolamAllergy:
+		return "Midazolam allergy"
+	case AllergyIntoleranceCodeDiazepamAllergy:
+		return "Diazepam allergy"
+	case AllergyIntoleranceCodeLorazepamAllergy:
+		return "Lorazepam allergy"
+	case AllergyIntoleranceCodeTemazepamAllergy:
+		return "Temazepam allergy"
+	case AllergyIntoleranceCodeMeprobamateAllergy:
+		return "Meprobamate allergy"
+	case AllergyIntoleranceCodeChloralHydrateAllergy:
+		return "Chloral hydrate allergy"
+	case AllergyIntoleranceCodeDichloralphenazoneAllergy:
+		return "Dichloralphenazone allergy"
+	case AllergyIntoleranceCodeBuspironeAllergy:
+		return "Buspirone allergy"
+	case AllergyIntoleranceCodeChlormethiazoleAllergy:
+		return "Chlormethiazole allergy"
+	case AllergyIntoleranceCodeSulpirideAllergy:
+		return "Sulpiride allergy"
+	case AllergyIntoleranceCodeLoxapineAllergy:
+		return "Loxapine allergy"
+	case AllergyIntoleranceCodeClozapineAllergy:
+		return "Clozapine allergy"
+	case AllergyIntoleranceCodeRisperidoneAllergy:
+		return "Risperidone allergy"
+	case AllergyIntoleranceCodeTetrabenazineAllergy:
+		return "Tetrabenazine allergy"
+	case AllergyIntoleranceCodeButyrophenoneAllergy:
+		return "Butyrophenone allergy"
+	case AllergyIntoleranceCodeBenperidolAllergy:
+		return "Benperidol allergy"
+	case AllergyIntoleranceCodeTrifluperidolAllergy:
+		return "Trifluperidol allergy"
+	case AllergyIntoleranceCodeDroperidolAllergy:
+		return "Droperidol allergy"
+	case AllergyIntoleranceCodeHaloperidolAllergy:
+		return "Haloperidol allergy"
+	case AllergyIntoleranceCodeDiphenylbutylpiperidineAllergy:
+		return "Diphenylbutylpiperidine allergy"
+	case AllergyIntoleranceCodePimozideAllergy:
+		return "Pimozide allergy"
+	case AllergyIntoleranceCodeFluspirileneAllergy:
+		return "Fluspirilene allergy"
+	case AllergyIntoleranceCodePhenothiazineAllergy:
+		return "Phenothiazine allergy"
+	case AllergyIntoleranceCodeMethotrimeprazineAllergy:
+		return "Methotrimeprazine allergy"
+	case AllergyIntoleranceCodePericyazineAllergy:
+		return "Pericyazine allergy"
+	case AllergyIntoleranceCodeThiethylperazineAllergy:
+		return "Thiethylperazine allergy"
+	case AllergyIntoleranceCodeFluphenazineAllergy:
+		return "Fluphenazine allergy"
+	case AllergyIntoleranceCodeChlorpromazineAllergy:
+		return "Chlorpromazine allergy"
+	case AllergyIntoleranceCodePipothiazineAllergy:
+		return "Pipothiazine allergy"
+	case AllergyIntoleranceCodePromazineAllergy:
+		return "Promazine allergy"
+	case AllergyIntoleranceCodeThioridazineAllergy:
+		return "Thioridazine allergy"
+	case AllergyIntoleranceCodePerphenazineAllergy:
+		return "Perphenazine allergy"
+	case AllergyIntoleranceCodeProchlorperazineAllergy:
+		return "Prochlorperazine allergy"
+	case AllergyIntoleranceCodeTrifluoperazineAllergy:
+		return "Trifluoperazine allergy"
+	case AllergyIntoleranceCodeThioxantheneAllergy:
+		return "Thioxanthene allergy"
+	case AllergyIntoleranceCodeChlorprothixeneAllergy:
+		return "Chlorprothixene allergy"
+	case AllergyIntoleranceCodeZuclopenthixolAllergy:
+		return "Zuclopenthixol allergy"
+	case AllergyIntoleranceCodeFlupenthixolAllergy:
+		return "Flupenthixol allergy"
+	case AllergyIntoleranceCodeOxypertineAllergy:
+		return "Oxypertine allergy"
+	case AllergyIntoleranceCodeRemoxiprideAllergy:
+		return "Remoxipride allergy"
+	case AllergyIntoleranceCodeSelegilineAllergy:
+		return "Selegiline allergy"
+	case AllergyIntoleranceCodePemolineAllergy:
+		return "Pemoline allergy"
+	case AllergyIntoleranceCodeMethylphenidateAllergy:
+		return "Methylphenidate allergy"
+	case AllergyIntoleranceCodeProlintaneAllergy:
+		return "Prolintane allergy"
+	case AllergyIntoleranceCodeAmphetamineGroupAllergy:
+		return "Amphetamine group allergy"
+	case AllergyIntoleranceCodeDexamphetamineAllergy:
+		return "Dexamphetamine allergy"
+	case AllergyIntoleranceCodeDisulfiramAllergy:
+		return "Disulfiram allergy"
+	case AllergyIntoleranceCodeBetaAdrenoceptorBlockingDrugAllergy:
+		return "Beta-adrenoceptor blocking drug allergy"
+	case AllergyIntoleranceCodeCardioselectiveBetaBlockerAllergy:
+		return "Cardioselective beta-blocker allergy"
+	case AllergyIntoleranceCodeAcebutololAllergy:
+		return "Acebutolol allergy"
+	case AllergyIntoleranceCodeAtenololAllergy:
+		return "Atenolol allergy"
+	case AllergyIntoleranceCodeBetaxololAllergy:
+		return "Betaxolol allergy"
+	case AllergyIntoleranceCodeBisoprololAllergy:
+		return "Bisoprolol allergy"
+	case AllergyIntoleranceCodeCeliprololAllergy:
+		return "Celiprolol allergy"
+	case AllergyIntoleranceCodeEsmololAllergy:
+		return "Esmolol allergy"
+	case AllergyIntoleranceCodeMetoprololAllergy:
+		return "Metoprolol allergy"
+	case AllergyIntoleranceCodeNadololAllergy:
+		return "Nadolol allergy"
+	case AllergyIntoleranceCodePindololAllergy:
+		return "Pindolol allergy"
+	case AllergyIntoleranceCodeCarvedilolAllergy:
+		return "Carvedilol allergy"
+	case AllergyIntoleranceCodeMetipranololAllergy:
+		return "Metipranolol allergy"
+	case AllergyIntoleranceCodeCarteololAllergy:
+		return "Carteolol allergy"
+	case AllergyIntoleranceCodeLabetalolAllergy:
+		return "Labetalol allergy"
+	case AllergyIntoleranceCodeLevobunololAllergy:
+		return "Levobunolol allergy"
+	case AllergyIntoleranceCodeOxprenololAllergy:
+		return "Oxprenolol allergy"
+	case AllergyIntoleranceCodePenbutololAllergy:
+		return "Penbutolol allergy"
+	case AllergyIntoleranceCodePractololAllergy:
+		return "Practolol allergy"
+	case AllergyIntoleranceCodePropranololAllergy:
+		return "Propranolol allergy"
+	case AllergyIntoleranceCodeSotalolAllergy:
+		return "Sotalol allergy"
+	case AllergyIntoleranceCodeTimololAllergy:
+		return "Timolol allergy"
+	case AllergyIntoleranceCodeAlphaAdrenoceptorBlockingDrugAllergy:
+		return "Alpha-adrenoceptor blocking drug allergy"
+	case AllergyIntoleranceCodeAlfuzosinAllergy:
+		return "Alfuzosin allergy"
+	case AllergyIntoleranceCodeDoxazosinAllergy:
+		return "Doxazosin allergy"
+	case AllergyIntoleranceCodeIndoraminAllergy:
+		return "Indoramin allergy"
+	case AllergyIntoleranceCodePhenoxybenzamineAllergy:
+		return "Phenoxybenzamine allergy"
+	case AllergyIntoleranceCodePhentolamineAllergy:
+		return "Phentolamine allergy"
+	case AllergyIntoleranceCodePrazosinAllergy:
+		return "Prazosin allergy"
+	case AllergyIntoleranceCodeTerazosinAllergy:
+		return "Terazosin allergy"
+	case AllergyIntoleranceCodeNicotineAllergy:
+		return "Nicotine allergy"
+	case AllergyIntoleranceCodeCalciumChannelBlockerAllergy:
+		return "Calcium-channel blocker allergy"
+	case AllergyIntoleranceCodeLidoflazineAllergy:
+		return "Lidoflazine allergy"
+	case AllergyIntoleranceCodeNifedipineAllergy:
+		return "Nifedipine allergy"
+	case AllergyIntoleranceCodePrenylamineAllergy:
+		return "Prenylamine allergy"
+	case AllergyIntoleranceCodeIsradipineAllergy:
+		return "Isradipine allergy"
+	case AllergyIntoleranceCodeFelodipineAllergy:
+		return "Felodipine allergy"
+	case AllergyIntoleranceCodeLacidipineAllergy:
+		return "Lacidipine allergy"
+	case AllergyIntoleranceCodeNimodipineAllergy:
+		return "Nimodipine allergy"
+	case AllergyIntoleranceCodeAmlodipineAllergy:
+		return "Amlodipine allergy"
+	case AllergyIntoleranceCodeDiltiazemAllergy:
+		return "Diltiazem allergy"
+	case AllergyIntoleranceCodeNicardipineAllergy:
+		return "Nicardipine allergy"
+	case AllergyIntoleranceCodeVerapamilAllergy:
+		return "Verapamil allergy"
+	case AllergyIntoleranceCodePilocarpineAllergy:
+		return "Pilocarpine allergy"
+	case AllergyIntoleranceCodeMethacholineAllergy:
+		return "Methacholine allergy"
+	case AllergyIntoleranceCodePhysostigmineAllergy:
+		return "Physostigmine allergy"
+	case AllergyIntoleranceCodeDemecariumAllergy:
+		return "Demecarium allergy"
+	case AllergyIntoleranceCodeDistigmineAllergy:
+		return "Distigmine allergy"
+	case AllergyIntoleranceCodeEcothiopateAllergy:
+		return "Ecothiopate allergy"
+	case AllergyIntoleranceCodeEdrophoniumAllergy:
+		return "Edrophonium allergy"
+	case AllergyIntoleranceCodePyridostigmineAllergy:
+		return "Pyridostigmine allergy"
+	case AllergyIntoleranceCodeNeostigmineAllergy:
+		return "Neostigmine allergy"
+	case AllergyIntoleranceCodeBethanecholAllergy:
+		return "Bethanechol allergy"
+	case AllergyIntoleranceCodeCarbacholAllergy:
+		return "Carbachol allergy"
+	case AllergyIntoleranceCodePseudoephedrineAllergy:
+		return "Pseudoephedrine allergy"
+	case AllergyIntoleranceCodeAlphaAdrenoceptorAgonistAllergy:
+		return "Alpha-adrenoceptor agonist allergy"
+	case AllergyIntoleranceCodeMetaraminolAllergy:
+		return "Metaraminol allergy"
+	case AllergyIntoleranceCodeMethoxamineAllergy:
+		return "Methoxamine allergy"
+	case AllergyIntoleranceCodeNaphazolineAllergy:
+		return "Naphazoline allergy"
+	case AllergyIntoleranceCodeNorepinephrineAllergy:
+		return "Norepinephrine allergy"
+	case AllergyIntoleranceCodePhenylephrineAllergy:
+		return "Phenylephrine allergy"
+	case AllergyIntoleranceCodeXylometazolineAllergy:
+		return "Xylometazoline allergy"
+	case AllergyIntoleranceCodeSelectiveBeta2AdrenoceptorStimulantsAllergy:
+		return "Selective beta-2 adrenoceptor stimulants allergy"
+	case AllergyIntoleranceCodePirbuterolAllergy:
+		return "Pirbuterol allergy"
+	case AllergyIntoleranceCodeSalmeterolAllergy:
+		return "Salmeterol allergy"
+	case AllergyIntoleranceCodeSalbutamolAllergy:
+		return "Salbutamol allergy"
+	case AllergyIntoleranceCodeBambuterolAllergy:
+		return "Bambuterol allergy"
+	case AllergyIntoleranceCodeFenoterolAllergy:
+		return "Fenoterol allergy"
+	case AllergyIntoleranceCodeOrciprenalineAllergy:
+		return "Orciprenaline allergy"
+	case AllergyIntoleranceCodeReproterolAllergy:
+		return "Reproterol allergy"
+	case AllergyIntoleranceCodeRimiterolAllergy:
+		return "Rimiterol allergy"
+	case AllergyIntoleranceCodeRitodrineAllergy:
+		return "Ritodrine allergy"
+	case AllergyIntoleranceCodeTerbutalineAllergy:
+		return "Terbutaline allergy"
+	case AllergyIntoleranceCodeTulobuterolAllergy:
+		return "Tulobuterol allergy"
+	case AllergyIntoleranceCodeDobutamineAllergy:
+		return "Dobutamine allergy"
+	case AllergyIntoleranceCodeDopexamineAllergy:
+		return "Dopexamine allergy"
+	case AllergyIntoleranceCodeIsoprenalineAllergy:
+		return "Isoprenaline allergy"
+	case AllergyIntoleranceCodeMethyldopaAllergy:
+		return "Methyldopa allergy"
+	case AllergyIntoleranceCodeApraclonidineAllergy:
+		return "Apraclonidine allergy"
+	case AllergyIntoleranceCodeClonidineAllergy:
+		return "Clonidine allergy"
+	case AllergyIntoleranceCodeLofexidineAllergy:
+		return "Lofexidine allergy"
+	case AllergyIntoleranceCodeDipivefrineAllergy:
+		return "Dipivefrine allergy"
+	case AllergyIntoleranceCodeDopamineAllergy:
+		return "Dopamine allergy"
+	case AllergyIntoleranceCodeEphedrineAllergy:
+		return "Ephedrine allergy"
+	case AllergyIntoleranceCodeOxymetazolineAllergy:
+		return "Oxymetazoline allergy"
+	case AllergyIntoleranceCodeXamoterolAllergy:
+		return "Xamoterol allergy"
+	case AllergyIntoleranceCodeBelladonnaAlkaloidsAllergy:
+		return "Belladonna alkaloids allergy"
+	case AllergyIntoleranceCodeBiperidenAllergy:
+		return "Biperiden allergy"
+	case AllergyIntoleranceCodeTropicamideAllergy:
+		return "Tropicamide allergy"
+	case AllergyIntoleranceCodeHyoscineAllergy:
+		return "Hyoscine allergy"
+	case AllergyIntoleranceCodeAtropineAllergy:
+		return "Atropine allergy"
+	case AllergyIntoleranceCodeBenzhexolAllergy:
+		return "Benzhexol allergy"
+	case AllergyIntoleranceCodeBenztropineAllergy:
+		return "Benztropine allergy"
+	case AllergyIntoleranceCodeCyclopentolateAllergy:
+		return "Cyclopentolate allergy"
+	case AllergyIntoleranceCodeGlycopyrroniumAllergy:
+		return "Glycopyrronium allergy"
+	case AllergyIntoleranceCodeHomatropineAllergy:
+		return "Homatropine allergy"
+	case AllergyIntoleranceCodeIpratropiumAllergy:
+		return "Ipratropium allergy"
+	case AllergyIntoleranceCodeMethixeneAllergy:
+		return "Methixene allergy"
+	case AllergyIntoleranceCodeOrphenadrineAllergy:
+		return "Orphenadrine allergy"
+	case AllergyIntoleranceCodeOxitropiumAllergy:
+		return "Oxitropium allergy"
+	case AllergyIntoleranceCodeOxybutyninAllergy:
+		return "Oxybutynin allergy"
+	case AllergyIntoleranceCodeProcyclidineAllergy:
+		return "Procyclidine allergy"
+	case AllergyIntoleranceCodeDornaseAlfaAllergy:
+		return "Dornase alfa allergy"
+	case AllergyIntoleranceCodeTyloxapolAllergy:
+		return "Tyloxapol allergy"
+	case AllergyIntoleranceCodeCarbocisteineAllergy:
+		return "Carbocisteine allergy"
+	case AllergyIntoleranceCodeMethylcysteineAllergy:
+		return "Methylcysteine allergy"
+	case AllergyIntoleranceCodeAcetylcysteineAllergy:
+		return "Acetylcysteine allergy"
+	case AllergyIntoleranceCodeNikethamideAllergy:
+		return "Nikethamide allergy"
+	case AllergyIntoleranceCodeEthamivanAllergy:
+		return "Ethamivan allergy"
+	case AllergyIntoleranceCodeDoxapramAllergy:
+		return "Doxapram allergy"
+	case AllergyIntoleranceCodeBeractantAllergy:
+		return "Beractant allergy"
+	case AllergyIntoleranceCodePumactantAllergy:
+		return "Pumactant allergy"
+	case AllergyIntoleranceCodeColfoscerilAllergy:
+		return "Colfosceril allergy"
+	case AllergyIntoleranceCodeH1AntihistamineAllergy:
+		return "H1 antihistamine allergy"
+	case AllergyIntoleranceCodeAstemizoleAllergy:
+		return "Astemizole allergy"
+	case AllergyIntoleranceCodeTerfenadineAllergy:
+		return "Terfenadine allergy"
+	case AllergyIntoleranceCodeAcrivastineAllergy:
+		return "Acrivastine allergy"
+	case AllergyIntoleranceCodeLoratadineAllergy:
+		return "Loratadine allergy"
+	case AllergyIntoleranceCodeAzelastineAllergy:
+		return "Azelastine allergy"
+	case AllergyIntoleranceCodeCetirizineAllergy:
+		return "Cetirizine allergy"
+	case AllergyIntoleranceCodeClemastineAllergy:
+		return "Clemastine allergy"
+	case AllergyIntoleranceCodeMebhydrolinAllergy:
+		return "Mebhydrolin allergy"
+	case AllergyIntoleranceCodeMequitazineAllergy:
+		return "Mequitazine allergy"
+	case AllergyIntoleranceCodeOxatomideAllergy:
+		return "Oxatomide allergy"
+	case AllergyIntoleranceCodeCyclizineAllergy:
+		return "Cyclizine allergy"
+	case AllergyIntoleranceCodeDimenhydrinateAllergy:
+		return "Dimenhydrinate allergy"
+	case AllergyIntoleranceCodeAntazolineAllergy:
+		return "Antazoline allergy"
+	case AllergyIntoleranceCodePromethazineAllergy:
+		return "Promethazine allergy"
+	case AllergyIntoleranceCodeAzatadineAllergy:
+		return "Azatadine allergy"
+	case AllergyIntoleranceCodeBrompheniramineAllergy:
+		return "Brompheniramine allergy"
+	case AllergyIntoleranceCodeChlorpheniramineAllergy:
+		return "Chlorpheniramine allergy"
+	case AllergyIntoleranceCodeCinnarizineAllergy:
+		return "Cinnarizine allergy"
+	case AllergyIntoleranceCodeCyproheptadineAllergy:
+		return "Cyproheptadine allergy"
+	case AllergyIntoleranceCodeDimethindeneAllergy:
+		return "Dimethindene allergy"
+	case AllergyIntoleranceCodeDiphenhydramineAllergy:
+		return "Diphenhydramine allergy"
+	case AllergyIntoleranceCodeDiphenylpyralineAllergy:
+		return "Diphenylpyraline allergy"
+	case AllergyIntoleranceCodeHydroxyzineAllergy:
+		return "Hydroxyzine allergy"
+	case AllergyIntoleranceCodeMepyramineAllergy:
+		return "Mepyramine allergy"
+	case AllergyIntoleranceCodePhenindamineAllergy:
+		return "Phenindamine allergy"
+	case AllergyIntoleranceCodePheniramineAllergy:
+		return "Pheniramine allergy"
+	case AllergyIntoleranceCodeTriprolidineAllergy:
+		return "Triprolidine allergy"
+	case AllergyIntoleranceCodeTrimeprazineAllergy:
+		return "Trimeprazine allergy"
+	case AllergyIntoleranceCodeNedocromilAllergy:
+		return "Nedocromil allergy"
+	case AllergyIntoleranceCodeKetotifenAllergy:
+		return "Ketotifen allergy"
+	case AllergyIntoleranceCodeLodoxamideAllergy:
+		return "Lodoxamide allergy"
+	case AllergyIntoleranceCodeIsoaminileAllergy:
+		return "Isoaminile allergy"
+	case AllergyIntoleranceCodeNoscapineAllergy:
+		return "Noscapine allergy"
+	case AllergyIntoleranceCodePholcodineAllergy:
+		return "Pholcodine allergy"
+	case AllergyIntoleranceCodeXanthineAllergy:
+		return "Xanthine allergy"
+	case AllergyIntoleranceCodeAminophyllineAllergy:
+		return "Aminophylline allergy"
+	case AllergyIntoleranceCodeTheophyllineAllergy:
+		return "Theophylline allergy"
+	case AllergyIntoleranceCodeCalamineAllergy:
+		return "Calamine allergy"
+	case AllergyIntoleranceCodeCoalTarAllergy:
+		return "Coal tar allergy"
+	case AllergyIntoleranceCodeBufexamacAllergy:
+		return "Bufexamac allergy"
+	case AllergyIntoleranceCodeDithranolAllergy:
+		return "Dithranol allergy"
+	case AllergyIntoleranceCodeIchthammolAllergy:
+		return "Ichthammol allergy"
+	case AllergyIntoleranceCodeCalcipotriolAllergy:
+		return "Calcipotriol allergy"
+	case AllergyIntoleranceCodeAzelaicAcidAllergy:
+		return "Azelaic acid allergy"
+	case AllergyIntoleranceCodePodophyllumResinAllergy:
+		return "Podophyllum resin allergy"
+	case AllergyIntoleranceCodePodophyllotoxinAllergy:
+		return "Podophyllotoxin allergy"
+	case AllergyIntoleranceCodeSurgicalTissueAdhesiveAllergy:
+		return "Surgical tissue adhesive allergy"
+	case AllergyIntoleranceCodeEnbucrilateAllergy:
+		return "Enbucrilate allergy"
+	case AllergyIntoleranceCodeCollodionAllergy:
+		return "Collodion allergy"
+	case AllergyIntoleranceCodeCrotamitonAllergy:
+		return "Crotamiton allergy"
+	case AllergyIntoleranceCodeBenzoylPeroxideAllergy:
+		return "Benzoyl peroxide allergy"
+	case AllergyIntoleranceCodeSilverNitrateAllergy:
+		return "Silver nitrate allergy"
+	case AllergyIntoleranceCodeGamolenicAcidAllergy:
+		return "Gamolenic acid allergy"
+	case AllergyIntoleranceCodeRetinoidAllergy:
+		return "Retinoid allergy"
+	case AllergyIntoleranceCodeEtretinateAllergy:
+		return "Etretinate allergy"
+	case AllergyIntoleranceCodeAcitretinAllergy:
+		return "Acitretin allergy"
+	case AllergyIntoleranceCodeTretinoinAllergy:
+		return "Tretinoin allergy"
+	case AllergyIntoleranceCodeIsotretinoinAllergy:
+		return "Isotretinoin allergy"
+	case AllergyIntoleranceCodeColchicumAlkaloidAllergy:
+		return "Colchicum alkaloid allergy"
+	case AllergyIntoleranceCodeColchicineAllergy:
+		return "Colchicine allergy"
+	case AllergyIntoleranceCodeProbenecidAllergy:
+		return "Probenecid allergy"
+	case AllergyIntoleranceCodeSulfinpyrazoneAllergy:
+		return "Sulfinpyrazone allergy"
+	case AllergyIntoleranceCodeXanthineOxidaseInhibitorAllergy:
+		return "Xanthine oxidase inhibitor allergy"
+	case AllergyIntoleranceCodeAllopurinolAllergy:
+		return "Allopurinol allergy"
+	case AllergyIntoleranceCodeSuxamethoniumAllergy:
+		return "Suxamethonium allergy"
+	case AllergyIntoleranceCodeNonDepolarizingMuscleRelaxantAllergy:
+		return "Non-depolarizing muscle relaxant allergy"
+	case AllergyIntoleranceCodeMivacuriumAllergy:
+		return "Mivacurium allergy"
+	case AllergyIntoleranceCodeAlcuroniumAllergy:
+		return "Alcuronium allergy"
+	case AllergyIntoleranceCodeAtracuriumAllergy:
+		return "Atracurium allergy"
+	case AllergyIntoleranceCodeGallamineAllergy:
+		return "Gallamine allergy"
+	case AllergyIntoleranceCodePancuroniumAllergy:
+		return "Pancuronium allergy"
+	case AllergyIntoleranceCodeTubocurarineAllergy:
+		return "Tubocurarine allergy"
+	case AllergyIntoleranceCodeVecuroniumAllergy:
+		return "Vecuronium allergy"
+	case AllergyIntoleranceCodeRocuroniumAllergy:
+		return "Rocuronium allergy"
+	case AllergyIntoleranceCodeBaclofenAllergy:
+		return "Baclofen allergy"
+	case AllergyIntoleranceCodeCarisoprodolAllergy:
+		return "Carisoprodol allergy"
+	case AllergyIntoleranceCodeMethocarbamolAllergy:
+		return "Methocarbamol allergy"
+	case AllergyIntoleranceCodeDantroleneAllergy:
+		return "Dantrolene allergy"
+	case AllergyIntoleranceCodeGoldAllergy:
+		return "Gold allergy"
+	case AllergyIntoleranceCodeSodiumAurothiomalateAllergy:
+		return "Sodium aurothiomalate allergy"
+	case AllergyIntoleranceCodeAuranofinAllergy:
+		return "Auranofin allergy"
+	case AllergyIntoleranceCodePapaverineAllergy:
+		return "Papaverine allergy"
+	case AllergyIntoleranceCodeFlavoxateAllergy:
+		return "Flavoxate allergy"
+	case AllergyIntoleranceCodeMifepristoneAllergy:
+		return "Mifepristone allergy"
+	case AllergyIntoleranceCodeNonIonicSurfactantAllergy:
+		return "Non-ionic surfactant allergy"
+	case AllergyIntoleranceCodeNonoxinolAllergy:
+		return "Nonoxinol allergy"
+	case AllergyIntoleranceCodeOctoxinolAllergy:
+		return "Octoxinol allergy"
+	case AllergyIntoleranceCodeProstaglandinAllergy:
+		return "Prostaglandin allergy"
+	case AllergyIntoleranceCodeASeriesProstaglandinAllergy:
+		return "A series prostaglandin allergy"
+	case AllergyIntoleranceCodeESeriesProstaglandinAllergy:
+		return "E series prostaglandin allergy"
+	case AllergyIntoleranceCodeDinoprostoneAllergy:
+		return "Dinoprostone allergy"
+	case AllergyIntoleranceCodeGemeprostAllergy:
+		return "Gemeprost allergy"
+	case AllergyIntoleranceCodeAlprostadilAllergy:
+		return "Alprostadil allergy"
+	case AllergyIntoleranceCodeFSeriesProstaglandinAllergy:
+		return "F series prostaglandin allergy"
+	case AllergyIntoleranceCodeDinoprostAllergy:
+		return "Dinoprost allergy"
+	case AllergyIntoleranceCodeCarboprostAllergy:
+		return "Carboprost allergy"
+	case AllergyIntoleranceCodeISeriesProstaglandinAllergy:
+		return "I series prostaglandin allergy"
+	case AllergyIntoleranceCodeEpoprostenolAllergy:
+		return "Epoprostenol allergy"
+	case AllergyIntoleranceCodeTerpenesAllergy:
+		return "Terpenes allergy"
+	case AllergyIntoleranceCodeIpecacuanhaAllergy:
+		return "Ipecacuanha allergy"
+	case AllergyIntoleranceCodeCharcoalActivatedAllergy:
+		return "Charcoal-activated allergy"
+	case AllergyIntoleranceCodeSodiumNitriteAllergy:
+		return "Sodium nitrite allergy"
+	case AllergyIntoleranceCodeDigoxinSpecificAntibodyAllergy:
+		return "Digoxin-specific-antibody allergy"
+	case AllergyIntoleranceCodeMesnaAllergy:
+		return "Mesna allergy"
+	case AllergyIntoleranceCodeBenzodiazepineAntagonistAllergy:
+		return "Benzodiazepine antagonist allergy"
+	case AllergyIntoleranceCodeFlumazenilAllergy:
+		return "Flumazenil allergy"
+	case AllergyIntoleranceCodePralidoximeAllergy:
+		return "Pralidoxime allergy"
+	case AllergyIntoleranceCodeOpioidAntagonistAllergy:
+		return "Opioid antagonist allergy"
+	case AllergyIntoleranceCodeNaltrexoneAllergy:
+		return "Naltrexone allergy"
+	case AllergyIntoleranceCodeNaloxoneAllergy:
+		return "Naloxone allergy"
+	case AllergyIntoleranceCodeProtamineAllergy:
+		return "Protamine allergy"
+	case AllergyIntoleranceCodeAllergyToFullersEarth:
+		return "Allergy to Fullers earth"
+	case AllergyIntoleranceCodeAllergyToBentonite:
+		return "Allergy to bentonite"
+	case AllergyIntoleranceCodeDimercaprolAllergy:
+		return "Dimercaprol allergy"
+	case AllergyIntoleranceCodeDesferrioxamineAllergy:
+		return "Desferrioxamine allergy"
+	case AllergyIntoleranceCodeEdetateAllergy:
+		return "Edetate allergy"
+	case AllergyIntoleranceCodeTrientineAllergy:
+		return "Trientine allergy"
+	case AllergyIntoleranceCodePenicillamineAllergy:
+		return "Penicillamine allergy"
+	case AllergyIntoleranceCodeGlycineAllergy:
+		return "Glycine allergy"
+	case AllergyIntoleranceCodeDialysisFluidAllergy:
+		return "Dialysis fluid allergy"
+	case AllergyIntoleranceCodeDimethylEtherPropaneAllergy:
+		return "Dimethyl-ether propane allergy"
+	case AllergyIntoleranceCodeOliveOilAllergy:
+		return "Olive oil allergy"
+	case AllergyIntoleranceCodeArachisOilAllergy:
+		return "Arachis oil allergy"
+	case AllergyIntoleranceCodeCastorOilAllergy:
+		return "Castor oil allergy"
+	case AllergyIntoleranceCodeGlycerolAllergy:
+		return "Glycerol allergy"
+	case AllergyIntoleranceCodeParaffinAllergy:
+		return "Paraffin allergy"
+	case AllergyIntoleranceCodeLiquidParaffinAllergy:
+		return "Liquid paraffin allergy"
+	case AllergyIntoleranceCodeSiliconeAllergy:
+		return "Silicone allergy"
+	case AllergyIntoleranceCodeDimethiconeAllergy:
+		return "Dimethicone allergy"
+	case AllergyIntoleranceCodeWoolAlcoholAllergy:
+		return "Wool alcohol allergy"
+	case AllergyIntoleranceCodePolyvinylAlcoholAllergy:
+		return "Polyvinyl alcohol allergy"
+	case AllergyIntoleranceCodeCarbomer940Allergy:
+		return "Carbomer-940 allergy"
+	case AllergyIntoleranceCodeHypromelloseAllergy:
+		return "Hypromellose allergy"
+	case AllergyIntoleranceCodeHydroxyethylcelluloseAllergy:
+		return "Hydroxyethylcellulose allergy"
+	case AllergyIntoleranceCodeCarmelloseAllergy:
+		return "Carmellose allergy"
+	case AllergyIntoleranceCodeFlucytosineAllergy:
+		return "Flucytosine allergy"
+	case AllergyIntoleranceCodeTerbinafineAllergy:
+		return "Terbinafine allergy"
+	case AllergyIntoleranceCodeNitrophenolAllergy:
+		return "Nitrophenol allergy"
+	case AllergyIntoleranceCodeTolnaftateAllergy:
+		return "Tolnaftate allergy"
+	case AllergyIntoleranceCodeAmorolfineAllergy:
+		return "Amorolfine allergy"
+	case AllergyIntoleranceCodeGriseofulvinAllergy:
+		return "Griseofulvin allergy"
+	case AllergyIntoleranceCodeAmphotericinAllergy:
+		return "Amphotericin allergy"
+	case AllergyIntoleranceCodeNatamycinAllergy:
+		return "Natamycin allergy"
+	case AllergyIntoleranceCodeNystatinAllergy:
+		return "Nystatin allergy"
+	case AllergyIntoleranceCodeAllergyToUndecenoate:
+		return "Allergy to undecenoate"
+	case AllergyIntoleranceCodeClotrimazoleAllergy:
+		return "Clotrimazole allergy"
+	case AllergyIntoleranceCodeFenticonazoleAllergy:
+		return "Fenticonazole allergy"
+	case AllergyIntoleranceCodeTioconazoleAllergy:
+		return "Tioconazole allergy"
+	case AllergyIntoleranceCodeEconazoleAllergy:
+		return "Econazole allergy"
+	case AllergyIntoleranceCodeIsoconazoleAllergy:
+		return "Isoconazole allergy"
+	case AllergyIntoleranceCodeSulconazoleAllergy:
+		return "Sulconazole allergy"
+	case AllergyIntoleranceCodeKetoconazoleAllergy:
+		return "Ketoconazole allergy"
+	case AllergyIntoleranceCodeMiconazoleAllergy:
+		return "Miconazole allergy"
+	case AllergyIntoleranceCodeFluconazoleAllergy:
+		return "Fluconazole allergy"
+	case AllergyIntoleranceCodeItraconazoleAllergy:
+		return "Itraconazole allergy"
+	case AllergyIntoleranceCodeInosinePranobexAllergy:
+		return "Inosine pranobex allergy"
+	case AllergyIntoleranceCodeZidovudineAllergy:
+		return "Zidovudine allergy"
+	case AllergyIntoleranceCodeGanciclovirAllergy:
+		return "Ganciclovir allergy"
+	case AllergyIntoleranceCodeFamciclovirAllergy:
+		return "Famciclovir allergy"
+	case AllergyIntoleranceCodeDidanosineAllergy:
+		return "Didanosine allergy"
+	case AllergyIntoleranceCodeZalcitabineAllergy:
+		return "Zalcitabine allergy"
+	case AllergyIntoleranceCodeValaciclovirAllergy:
+		return "Valaciclovir allergy"
+	case AllergyIntoleranceCodeInterferonsAllergy:
+		return "Interferons allergy"
+	case AllergyIntoleranceCodeHumanInterferonGamma1BAllergy:
+		return "Human interferon gamma-1b allergy"
+	case AllergyIntoleranceCodeInterferonA2AAllergy:
+		return "Interferon-A-2a allergy"
+	case AllergyIntoleranceCodeInterferonA2BAllergy:
+		return "Interferon-A-2b allergy"
+	case AllergyIntoleranceCodeInterferonAN1Allergy:
+		return "Interferon-A-N1 allergy"
+	case AllergyIntoleranceCodeTribavirinAllergy:
+		return "Tribavirin allergy"
+	case AllergyIntoleranceCodeTrifluorothymidineAllergy:
+		return "Trifluorothymidine allergy"
+	case AllergyIntoleranceCodeFoscarnetAllergy:
+		return "Foscarnet allergy"
+	case AllergyIntoleranceCodeVidarabineAllergy:
+		return "Vidarabine allergy"
+	case AllergyIntoleranceCodeAciclovirAllergy:
+		return "Aciclovir allergy"
+	case AllergyIntoleranceCodeIdoxuridineAllergy:
+		return "Idoxuridine allergy"
+	case AllergyIntoleranceCodePyrimethamineAllergy:
+		return "Pyrimethamine allergy"
+	case AllergyIntoleranceCodeAmodiaquineAllergy:
+		return "Amodiaquine allergy"
+	case AllergyIntoleranceCodePrimaquineAllergy:
+		return "Primaquine allergy"
+	case AllergyIntoleranceCodeMefloquineAllergy:
+		return "Mefloquine allergy"
+	case AllergyIntoleranceCodeHydroxychloroquineAllergy:
+		return "Hydroxychloroquine allergy"
+	case AllergyIntoleranceCodeChloroquineAllergy:
+		return "Chloroquine allergy"
+	case AllergyIntoleranceCodeProguanilAllergy:
+		return "Proguanil allergy"
+	case AllergyIntoleranceCodeQuinineAllergy:
+		return "Quinine allergy"
+	case AllergyIntoleranceCodeHalofantrineAllergy:
+		return "Halofantrine allergy"
+	case AllergyIntoleranceCodeMepacrineAllergy:
+		return "Mepacrine allergy"
+	case AllergyIntoleranceCodeAceticAcidAllergy:
+		return "Acetic acid allergy"
+	case AllergyIntoleranceCodeHydrargaphenAllergy:
+		return "Hydrargaphen allergy"
+	case AllergyIntoleranceCodePolynoxylinAllergy:
+		return "Polynoxylin allergy"
+	case AllergyIntoleranceCodeHexetidineAllergy:
+		return "Hexetidine allergy"
+	case AllergyIntoleranceCodeSodiumPerborateAllergy:
+		return "Sodium perborate allergy"
+	case AllergyIntoleranceCodeThymolAllergy:
+		return "Thymol allergy"
+	case AllergyIntoleranceCodeChloroxylenolAllergy:
+		return "Chloroxylenol allergy"
+	case AllergyIntoleranceCodeHexachlorophaneAllergy:
+		return "Hexachlorophane allergy"
+	case AllergyIntoleranceCodeTriclosanAllergy:
+		return "Triclosan allergy"
+	case AllergyIntoleranceCodePhenolAllergy:
+		return "Phenol allergy"
+	case AllergyIntoleranceCodeIndustrialMethylatedSpiritAllergy:
+		return "Industrial methylated spirit allergy"
+	case AllergyIntoleranceCodeGlutaraldehydeAllergy:
+		return "Glutaraldehyde allergy"
+	case AllergyIntoleranceCodeNoxythiolinAllergy:
+		return "Noxythiolin allergy"
+	case AllergyIntoleranceCodeFormaldehydeAllergy:
+		return "Formaldehyde allergy"
+	case AllergyIntoleranceCodeChlorhexidineAllergy:
+		return "Chlorhexidine allergy"
+	case AllergyIntoleranceCodeBorateAllergy:
+		return "Borate allergy"
+	case AllergyIntoleranceCodeBoricAcidAllergy:
+		return "Boric acid allergy"
+	case AllergyIntoleranceCodeQuaternaryAmmoniumSurfactantAllergy:
+		return "Quaternary ammonium surfactant allergy"
+	case AllergyIntoleranceCodeCetrimideAllergy:
+		return "Cetrimide allergy"
+	case AllergyIntoleranceCodeBenzalkoniumAllergy:
+		return "Benzalkonium allergy"
+	case AllergyIntoleranceCodeDomiphenAllergy:
+		return "Domiphen allergy"
+	case AllergyIntoleranceCodeQuaternaryPyridiniumSurfactantAllergy:
+		return "Quaternary pyridinium surfactant allergy"
+	case AllergyIntoleranceCodeCetylpyridiniumAllergy:
+		return "Cetylpyridinium allergy"
+	case AllergyIntoleranceCodeQuaternaryQuinoliniumSurfactantAllergy:
+		return "Quaternary quinolinium surfactant allergy"
+	case AllergyIntoleranceCodeDequaliniumAllergy:
+		return "Dequalinium allergy"
+	case AllergyIntoleranceCodeCrystalVioletAllergy:
+		return "Crystal violet allergy"
+	case AllergyIntoleranceCodeBrilliantGreenAllergy:
+		return "Brilliant green allergy"
+	case AllergyIntoleranceCodeHydrogenPeroxideAllergy:
+		return "Hydrogen peroxide allergy"
+	case AllergyIntoleranceCodePiperazineAllergy:
+		return "Piperazine allergy"
+	case AllergyIntoleranceCodePyrantelAllergy:
+		return "Pyrantel allergy"
+	case AllergyIntoleranceCodeNiclosamideAllergy:
+		return "Niclosamide allergy"
+	case AllergyIntoleranceCodeBepheniumAllergy:
+		return "Bephenium allergy"
+	case AllergyIntoleranceCodeDiethylcarbamazineAllergy:
+		return "Diethylcarbamazine allergy"
+	case AllergyIntoleranceCodeMebendazoleAllergy:
+		return "Mebendazole allergy"
+	case AllergyIntoleranceCodeAlbendazoleAllergy:
+		return "Albendazole allergy"
+	case AllergyIntoleranceCodeThiabendazoleAllergy:
+		return "Thiabendazole allergy"
+	case AllergyIntoleranceCodeAminoglycosideAllergy:
+		return "Aminoglycoside allergy"
+	case AllergyIntoleranceCodeAmikacinAllergy:
+		return "Amikacin allergy"
+	case AllergyIntoleranceCodeKanamycinAllergy:
+		return "Kanamycin allergy"
+	case AllergyIntoleranceCodeNetilmicinAllergy:
+		return "Netilmicin allergy"
+	case AllergyIntoleranceCodeStreptomycinAllergy:
+		return "Streptomycin allergy"
+	case AllergyIntoleranceCodeFramycetinAllergy:
+		return "Framycetin allergy"
+	case AllergyIntoleranceCodeNeomycinAllergy:
+		return "Neomycin allergy"
+	case AllergyIntoleranceCodeGentamicinAllergy:
+		return "Gentamicin allergy"
+	case AllergyIntoleranceCodeTobramycinAllergy:
+		return "Tobramycin allergy"
+	case AllergyIntoleranceCodeClarithromycinAllergy:
+		return "Clarithromycin allergy"
+	case AllergyIntoleranceCodeAzithromycinAllergy:
+		return "Azithromycin allergy"
+	case AllergyIntoleranceCodeSpectinomycinAllergy:
+		return "Spectinomycin allergy"
+	case AllergyIntoleranceCodeVancomycinAllergy:
+		return "Vancomycin allergy"
+	case AllergyIntoleranceCodeTeicoplaninAllergy:
+		return "Teicoplanin allergy"
+	case AllergyIntoleranceCodeTrimethoprimAllergy:
+		return "Trimethoprim allergy"
+	case AllergyIntoleranceCodeNitrofurantoinAllergy:
+		return "Nitrofurantoin allergy"
+	case AllergyIntoleranceCodeMupirocinAllergy:
+		return "Mupirocin allergy"
+	case AllergyIntoleranceCodeNitrofurazoneAllergy:
+		return "Nitrofurazone allergy"
+	case AllergyIntoleranceCodeFusidicAcidAllergy:
+		return "Fusidic acid allergy"
+	case AllergyIntoleranceCodeAcrosoxacinAllergy:
+		return "Acrosoxacin allergy"
+	case AllergyIntoleranceCodeCinoxacinAllergy:
+		return "Cinoxacin allergy"
+	case AllergyIntoleranceCodeNalidixicAcidAllergy:
+		return "Nalidixic acid allergy"
+	case AllergyIntoleranceCodeCiprofloxacinAllergy:
+		return "Ciprofloxacin allergy"
+	case AllergyIntoleranceCodeEnoxacinAllergy:
+		return "Enoxacin allergy"
+	case AllergyIntoleranceCodeOfloxacinAllergy:
+		return "Ofloxacin allergy"
+	case AllergyIntoleranceCodeNorfloxacinAllergy:
+		return "Norfloxacin allergy"
+	case AllergyIntoleranceCodeTemafloxacinAllergy:
+		return "Temafloxacin allergy"
+	case AllergyIntoleranceCodeBenethaminePenicillinAllergy:
+		return "Benethamine penicillin allergy"
+	case AllergyIntoleranceCodePhenethicillinAllergy:
+		return "Phenethicillin allergy"
+	case AllergyIntoleranceCodePhenoxymethylpenicillinAllergy:
+		return "Phenoxymethylpenicillin allergy"
+	case AllergyIntoleranceCodeBenzylpenicillinAllergy:
+		return "Benzylpenicillin allergy"
+	case AllergyIntoleranceCodeCloxacillinAllergy:
+		return "Cloxacillin allergy"
+	case AllergyIntoleranceCodeFlucloxacillinAllergy:
+		return "Flucloxacillin allergy"
+	case AllergyIntoleranceCodeMethicillinAllergy:
+		return "Methicillin allergy"
+	case AllergyIntoleranceCodeAmoxycillinAllergy:
+		return "Amoxycillin allergy"
+	case AllergyIntoleranceCodeAmpicillinAllergy:
+		return "Ampicillin allergy"
+	case AllergyIntoleranceCodeCiclacillinAllergy:
+		return "Ciclacillin allergy"
+	case AllergyIntoleranceCodeMezlocillinAllergy:
+		return "Mezlocillin allergy"
+	case AllergyIntoleranceCodePivampicillinAllergy:
+		return "Pivampicillin allergy"
+	case AllergyIntoleranceCodeCarbenicillinAllergy:
+		return "Carbenicillin allergy"
+	case AllergyIntoleranceCodeBacampicillinAllergy:
+		return "Bacampicillin allergy"
+	case AllergyIntoleranceCodeTalampicillinAllergy:
+		return "Talampicillin allergy"
+	case AllergyIntoleranceCodeTemocillinAllergy:
+		return "Temocillin allergy"
+	case AllergyIntoleranceCodePiperacillinAllergy:
+		return "Piperacillin allergy"
+	case AllergyIntoleranceCodeAzlocillinAllergy:
+		return "Azlocillin allergy"
+	case AllergyIntoleranceCodeTicarcillinAllergy:
+		return "Ticarcillin allergy"
+	case AllergyIntoleranceCodeCarfecillinAllergy:
+		return "Carfecillin allergy"
+	case AllergyIntoleranceCodeMecillinamAllergy:
+		return "Mecillinam allergy"
+	case AllergyIntoleranceCodePivmecillinamAllergy:
+		return "Pivmecillinam allergy"
+	case AllergyIntoleranceCodePolymyxinsAllergy:
+		return "Polymyxins allergy"
+	case AllergyIntoleranceCodeColistinAllergy:
+		return "Colistin allergy"
+	case AllergyIntoleranceCodePolymyxinBAllergy:
+		return "Polymyxin B allergy"
+	case AllergyIntoleranceCodeCarbapenemAllergy:
+		return "Carbapenem allergy"
+	case AllergyIntoleranceCodeCephalosporinAllergy:
+		return "Cephalosporin allergy"
+	case AllergyIntoleranceCodeCefadroxilAllergy:
+		return "Cefadroxil allergy"
+	case AllergyIntoleranceCodeCephalexinAllergy:
+		return "Cephalexin allergy"
+	case AllergyIntoleranceCodeCephalothinAllergy:
+		return "Cephalothin allergy"
+	case AllergyIntoleranceCodeCephazolinAllergy:
+		return "Cephazolin allergy"
+	case AllergyIntoleranceCodeCephradineAllergy:
+		return "Cephradine allergy"
+	case AllergyIntoleranceCodeLatamoxefAllergy:
+		return "Latamoxef allergy"
+	case AllergyIntoleranceCodeCefaclorAllergy:
+		return "Cefaclor allergy"
+	case AllergyIntoleranceCodeCefuroximeAllergy:
+		return "Cefuroxime allergy"
+	case AllergyIntoleranceCodeCephamandoleAllergy:
+		return "Cephamandole allergy"
+	case AllergyIntoleranceCodeCefotaximeAllergy:
+		return "Cefotaxime allergy"
+	case AllergyIntoleranceCodeCeftazidimeAllergy:
+		return "Ceftazidime allergy"
+	case AllergyIntoleranceCodeCeftizoximeAllergy:
+		return "Ceftizoxime allergy"
+	case AllergyIntoleranceCodeCefiximeAllergy:
+		return "Cefixime allergy"
+	case AllergyIntoleranceCodeCefodizimeAllergy:
+		return "Cefodizime allergy"
+	case AllergyIntoleranceCodeCefpodoximeAllergy:
+		return "Cefpodoxime allergy"
+	case AllergyIntoleranceCodeCeftriaxoneAllergy:
+		return "Ceftriaxone allergy"
+	case AllergyIntoleranceCodeCeftibutenAllergy:
+		return "Ceftibuten allergy"
+	case AllergyIntoleranceCodeCefsulodinAllergy:
+		return "Cefsulodin allergy"
+	case AllergyIntoleranceCodeCefpiromeAllergy:
+		return "Cefpirome allergy"
+	case AllergyIntoleranceCodeCephamycinAllergy:
+		return "Cephamycin allergy"
+	case AllergyIntoleranceCodeCefoxitinAllergy:
+		return "Cefoxitin allergy"
+	case AllergyIntoleranceCodeFosfomycinAllergy:
+		return "Fosfomycin allergy"
+	case AllergyIntoleranceCodeClindamycinAllergy:
+		return "Clindamycin allergy"
+	case AllergyIntoleranceCodeLincomycinAllergy:
+		return "Lincomycin allergy"
+	case AllergyIntoleranceCodeMandelicAcidAllergy:
+		return "Mandelic acid allergy"
+	case AllergyIntoleranceCodeMonobactamAllergy:
+		return "Monobactam allergy"
+	case AllergyIntoleranceCodeAztreonamAllergy:
+		return "Aztreonam allergy"
+	case AllergyIntoleranceCodeNitroimidazoleAllergy:
+		return "Nitroimidazole allergy"
+	case AllergyIntoleranceCodeMetronidazoleAllergy:
+		return "Metronidazole allergy"
+	case AllergyIntoleranceCodeTinidazoleAllergy:
+		return "Tinidazole allergy"
+	case AllergyIntoleranceCodeNimorazoleAllergy:
+		return "Nimorazole allergy"
+	case AllergyIntoleranceCodeCalciumSulfaloxateAllergy:
+		return "Calcium sulfaloxate allergy"
+	case AllergyIntoleranceCodePhthalylsulfathiazoleAllergy:
+		return "Phthalylsulfathiazole allergy"
+	case AllergyIntoleranceCodeSulfametopyrazineAllergy:
+		return "Sulfametopyrazine allergy"
+	case AllergyIntoleranceCodeSulfadiazineAllergy:
+		return "Sulfadiazine allergy"
+	case AllergyIntoleranceCodeSulfadimethoxineAllergy:
+		return "Sulfadimethoxine allergy"
+	case AllergyIntoleranceCodeSulfadimidineAllergy:
+		return "Sulfadimidine allergy"
+	case AllergyIntoleranceCodeSulfafurazoleAllergy:
+		return "Sulfafurazole allergy"
+	case AllergyIntoleranceCodeSulfaguanidineAllergy:
+		return "Sulfaguanidine allergy"
+	case AllergyIntoleranceCodeSulfaureaAllergy:
+		return "Sulfaurea allergy"
+	case AllergyIntoleranceCodeMafenideAllergy:
+		return "Mafenide allergy"
+	case AllergyIntoleranceCodeSulfacetamideAllergy:
+		return "Sulfacetamide allergy"
+	case AllergyIntoleranceCodeClomocyclineSodiumAllergy:
+		return "Clomocycline sodium allergy"
+	case AllergyIntoleranceCodeDoxycyclineAllergy:
+		return "Doxycycline allergy"
+	case AllergyIntoleranceCodeLymecyclineAllergy:
+		return "Lymecycline allergy"
+	case AllergyIntoleranceCodeMinocyclineAllergy:
+		return "Minocycline allergy"
+	case AllergyIntoleranceCodeOxytetracyclineAllergy:
+		return "Oxytetracycline allergy"
+	case AllergyIntoleranceCodeChlortetracyclineAllergy:
+		return "Chlortetracycline allergy"
+	case AllergyIntoleranceCodeDemeclocyclineAllergy:
+		return "Demeclocycline allergy"
+	case AllergyIntoleranceCodeTetracyclineAllergy:
+		return "Tetracycline allergy"
+	case AllergyIntoleranceCodeChloramphenicolAllergy:
+		return "Chloramphenicol allergy"
+	case AllergyIntoleranceCodeAtovaquoneAllergy:
+		return "Atovaquone allergy"
+	case AllergyIntoleranceCodeSodiumStibogluconateAllergy:
+		return "Sodium stibogluconate allergy"
+	case AllergyIntoleranceCodePentamidineAllergy:
+		return "Pentamidine allergy"
+	case AllergyIntoleranceCodeDiloxanideAllergy:
+		return "Diloxanide allergy"
+	case AllergyIntoleranceCodeClioquinolAllergy:
+		return "Clioquinol allergy"
+	case AllergyIntoleranceCodePyrazinamideAllergy:
+		return "Pyrazinamide allergy"
+	case AllergyIntoleranceCodeCapreomycinAllergy:
+		return "Capreomycin allergy"
+	case AllergyIntoleranceCodeCycloserineAllergy:
+		return "Cycloserine allergy"
+	case AllergyIntoleranceCodeRifampicinAllergy:
+		return "Rifampicin allergy"
+	case AllergyIntoleranceCodeRifabutinAllergy:
+		return "Rifabutin allergy"
+	case AllergyIntoleranceCodeIsoniazidAllergy:
+		return "Isoniazid allergy"
+	case AllergyIntoleranceCodeEthambutololAllergy:
+		return "Ethambutolol allergy"
+	case AllergyIntoleranceCodeDapsoneAllergy:
+		return "Dapsone allergy"
+	case AllergyIntoleranceCodeClofazimineAllergy:
+		return "Clofazimine allergy"
+	case AllergyIntoleranceCodeBenzylBenzoateAllergy:
+		return "Benzyl benzoate allergy"
+	case AllergyIntoleranceCodeMonosulfiramAllergy:
+		return "Monosulfiram allergy"
+	case AllergyIntoleranceCodeCarbarylAllergy:
+		return "Carbaryl allergy"
+	case AllergyIntoleranceCodeLindaneAllergy:
+		return "Lindane allergy"
+	case AllergyIntoleranceCodeMalathionAllergy:
+		return "Malathion allergy"
+	case AllergyIntoleranceCodePhenothrinAllergy:
+		return "Phenothrin allergy"
+	case AllergyIntoleranceCodePermethrinAllergy:
+		return "Permethrin allergy"
+	case AllergyIntoleranceCodeHumanImmunoglobulinAllergy:
+		return "Human immunoglobulin allergy"
+	case AllergyIntoleranceCodeTetanusImmunoglobulinAllergy:
+		return "Tetanus immunoglobulin allergy"
+	case AllergyIntoleranceCodeVaricellaZosterImmunoglobulinAllergy:
+		return "Varicella-zoster immunoglobulin allergy"
+	case AllergyIntoleranceCodeClostridiumBotulinumToxinAllergy:
+		return "Clostridium botulinum toxin allergy"
+	case AllergyIntoleranceCodeBotulismAntitoxinAllergy:
+		return "Botulism antitoxin allergy"
+	case AllergyIntoleranceCodeDiphtheriaAntitoxinAllergy:
+		return "Diphtheria antitoxin allergy"
+	case AllergyIntoleranceCodeGlucagonAllergy:
+		return "Glucagon allergy"
+	case AllergyIntoleranceCodeCarbimazoleAllergy:
+		return "Carbimazole allergy"
+	case AllergyIntoleranceCodePropylthiouracilAllergy:
+		return "Propylthiouracil allergy"
+	case AllergyIntoleranceCodeCorticosteroidsAllergy:
+		return "Corticosteroids allergy"
+	case AllergyIntoleranceCodeBetamethasoneAllergy:
+		return "Betamethasone allergy"
+	case AllergyIntoleranceCodeHydrocortisoneAllergy:
+		return "Hydrocortisone allergy"
+	case AllergyIntoleranceCodePrednisoneAllergy:
+		return "Prednisone allergy"
+	case AllergyIntoleranceCodeFluorometholoneAllergy:
+		return "Fluorometholone allergy"
+	case AllergyIntoleranceCodeFlunisolideAllergy:
+		return "Flunisolide allergy"
+	case AllergyIntoleranceCodeDesonideAllergy:
+		return "Desonide allergy"
+	case AllergyIntoleranceCodeDesoxymethasoneAllergy:
+		return "Desoxymethasone allergy"
+	case AllergyIntoleranceCodeFluocinonideAllergy:
+		return "Fluocinonide allergy"
+	case AllergyIntoleranceCodeFluocortoloneAllergy:
+		return "Fluocortolone allergy"
+	case AllergyIntoleranceCodeFlurandrenoloneAllergy:
+		return "Flurandrenolone allergy"
+	case AllergyIntoleranceCodeHalcinonideAllergy:
+		return "Halcinonide allergy"
+	case AllergyIntoleranceCodeAlclometasoneAllergy:
+		return "Alclometasone allergy"
+	case AllergyIntoleranceCodeBeclomethasoneAllergy:
+		return "Beclomethasone allergy"
+	case AllergyIntoleranceCodeClobetasolAllergy:
+		return "Clobetasol allergy"
+	case AllergyIntoleranceCodeClobetasoneAllergy:
+		return "Clobetasone allergy"
+	case AllergyIntoleranceCodeCortisoneAllergy:
+		return "Cortisone allergy"
+	case AllergyIntoleranceCodeDiflucortoloneAllergy:
+		return "Diflucortolone allergy"
+	case AllergyIntoleranceCodeFlucloroloneAllergy:
+		return "Fluclorolone allergy"
+	case AllergyIntoleranceCodeFludrocortisoneAllergy:
+		return "Fludrocortisone allergy"
+	case AllergyIntoleranceCodeFluocinoloneAllergy:
+		return "Fluocinolone allergy"
+	case AllergyIntoleranceCodeFluticasoneAllergy:
+		return "Fluticasone allergy"
+	case AllergyIntoleranceCodeMometasoneAllergy:
+		return "Mometasone allergy"
+	case AllergyIntoleranceCodeDexamethasoneAllergy:
+		return "Dexamethasone allergy"
+	case AllergyIntoleranceCodeMethylprednisoloneAllergy:
+		return "Methylprednisolone allergy"
+	case AllergyIntoleranceCodePrednisoloneAllergy:
+		return "Prednisolone allergy"
+	case AllergyIntoleranceCodeTriamcinoloneAllergy:
+		return "Triamcinolone allergy"
+	case AllergyIntoleranceCodeBudesonideAllergy:
+		return "Budesonide allergy"
+	case AllergyIntoleranceCodeInsulinAllergy:
+		return "Insulin allergy"
+	case AllergyIntoleranceCodeInsulinZincSuspensionAllergy:
+		return "Insulin zinc suspension allergy"
+	case AllergyIntoleranceCodeIsophaneInsulinAllergy:
+		return "Isophane insulin allergy"
+	case AllergyIntoleranceCodeProtamineZincInsulinAllergy:
+		return "Protamine zinc insulin allergy"
+	case AllergyIntoleranceCodeAllergyToHumanInsulin:
+		return "Allergy to human insulin"
+	case AllergyIntoleranceCodeSulfonylureaAllergy:
+		return "Sulfonylurea allergy"
+	case AllergyIntoleranceCodeAcetohexamideAllergy:
+		return "Acetohexamide allergy"
+	case AllergyIntoleranceCodeChlorpropamideAllergy:
+		return "Chlorpropamide allergy"
+	case AllergyIntoleranceCodeGlibenclamideAllergy:
+		return "Glibenclamide allergy"
+	case AllergyIntoleranceCodeGlibornurideAllergy:
+		return "Glibornuride allergy"
+	case AllergyIntoleranceCodeGliclazideAllergy:
+		return "Gliclazide allergy"
+	case AllergyIntoleranceCodeGlipizideAllergy:
+		return "Glipizide allergy"
+	case AllergyIntoleranceCodeGliquidoneAllergy:
+		return "Gliquidone allergy"
+	case AllergyIntoleranceCodeGlymidineAllergy:
+		return "Glymidine allergy"
+	case AllergyIntoleranceCodeTolazamideAllergy:
+		return "Tolazamide allergy"
+	case AllergyIntoleranceCodeTolbutamideAllergy:
+		return "Tolbutamide allergy"
+	case AllergyIntoleranceCodeBiguanideAllergy:
+		return "Biguanide allergy"
+	case AllergyIntoleranceCodeMetforminAllergy:
+		return "Metformin allergy"
+	case AllergyIntoleranceCodeGuarGumAllergy:
+		return "Guar gum allergy"
+	case AllergyIntoleranceCodeAcarboseAllergy:
+		return "Acarbose allergy"
+	case AllergyIntoleranceCodeProgestogenAllergy:
+		return "Progestogen allergy"
+	case AllergyIntoleranceCodeAllylestrenolAllergy:
+		return "Allylestrenol allergy"
+	case AllergyIntoleranceCodeDydrogesteroneAllergy:
+		return "Dydrogesterone allergy"
+	case AllergyIntoleranceCodeProgesteroneAllergy:
+		return "Progesterone allergy"
+	case AllergyIntoleranceCodeGestronolAllergy:
+		return "Gestronol allergy"
+	case AllergyIntoleranceCodeHydroxyprogesteroneAllergy:
+		return "Hydroxyprogesterone allergy"
+	case AllergyIntoleranceCodeMegestrolAllergy:
+		return "Megestrol allergy"
+	case AllergyIntoleranceCodeNorethisteroneAllergy:
+		return "Norethisterone allergy"
+	case AllergyIntoleranceCodeLevonorgestrelAllergy:
+		return "Levonorgestrel allergy"
+	case AllergyIntoleranceCodeMedroxyprogesteroneAllergy:
+		return "Medroxyprogesterone allergy"
+	case AllergyIntoleranceCodeAnabolicSteroidsAllergy:
+		return "Anabolic steroids allergy"
+	case AllergyIntoleranceCodeTiboloneAllergy:
+		return "Tibolone allergy"
+	case AllergyIntoleranceCodeOxymetholoneAllergy:
+		return "Oxymetholone allergy"
+	case AllergyIntoleranceCodeNandroloneAllergy:
+		return "Nandrolone allergy"
+	case AllergyIntoleranceCodeStanozololAllergy:
+		return "Stanozolol allergy"
+	case AllergyIntoleranceCodeCyclofenilAllergy:
+		return "Cyclofenil allergy"
+	case AllergyIntoleranceCodeDanazolAllergy:
+		return "Danazol allergy"
+	case AllergyIntoleranceCodeGestrinoneAllergy:
+		return "Gestrinone allergy"
+	case AllergyIntoleranceCodeFinasterideAllergy:
+		return "Finasteride allergy"
+	case AllergyIntoleranceCodeFlutamideAllergy:
+		return "Flutamide allergy"
+	case AllergyIntoleranceCodeBicalutamideAllergy:
+		return "Bicalutamide allergy"
+	case AllergyIntoleranceCodeCyproteroneAllergy:
+		return "Cyproterone allergy"
+	case AllergyIntoleranceCodeAndrogenAllergy:
+		return "Androgen allergy"
+	case AllergyIntoleranceCodeMesteroloneAllergy:
+		return "Mesterolone allergy"
+	case AllergyIntoleranceCodeMethyltestosteroneAllergy:
+		return "Methyltestosterone allergy"
+	case AllergyIntoleranceCodeTestosteroneAllergy:
+		return "Testosterone allergy"
+	case AllergyIntoleranceCodeEstrogenAllergy:
+		return "Estrogen allergy"
+	case AllergyIntoleranceCodeEstradiolAllergy:
+		return "Estradiol allergy"
+	case AllergyIntoleranceCodeQuinestradolAllergy:
+		return "Quinestradol allergy"
+	case AllergyIntoleranceCodeQuinestrolAllergy:
+		return "Quinestrol allergy"
+	case AllergyIntoleranceCodeDienestrolAllergy:
+		return "Dienestrol allergy"
+	case AllergyIntoleranceCodeMestranolAllergy:
+		return "Mestranol allergy"
+	case AllergyIntoleranceCodeEthinylestradiolAllergy:
+		return "Ethinylestradiol allergy"
+	case AllergyIntoleranceCodeEstriolAllergy:
+		return "Estriol allergy"
+	case AllergyIntoleranceCodeConjugatedEstrogenAllergy:
+		return "Conjugated estrogen allergy"
+	case AllergyIntoleranceCodeStilbestrolAllergy:
+		return "Stilbestrol allergy"
+	case AllergyIntoleranceCodeClomipheneAllergy:
+		return "Clomiphene allergy"
+	case AllergyIntoleranceCodeErgolineDrugAllergy:
+		return "Ergoline drug allergy"
+	case AllergyIntoleranceCodeCabergolineAllergy:
+		return "Cabergoline allergy"
+	case AllergyIntoleranceCodeQuinagolideAllergy:
+		return "Quinagolide allergy"
+	case AllergyIntoleranceCodeLiothyronineAllergy:
+		return "Liothyronine allergy"
+	case AllergyIntoleranceCodeThyroxineAllergy:
+		return "Thyroxine allergy"
+	case AllergyIntoleranceCodeDesmopressinAllergy:
+		return "Desmopressin allergy"
+	case AllergyIntoleranceCodeTerlipressinAllergy:
+		return "Terlipressin allergy"
+	case AllergyIntoleranceCodeVasopressinAllergy:
+		return "Vasopressin allergy"
+	case AllergyIntoleranceCodeCorticotrophicHormoneAllergy:
+		return "Corticotrophic hormone allergy"
+	case AllergyIntoleranceCodeTetracosactrinAllergy:
+		return "Tetracosactrin allergy"
+	case AllergyIntoleranceCodeGonadRegulatingHormoneAllergy:
+		return "Gonad regulating hormone allergy"
+	case AllergyIntoleranceCodeGonadorelinAllergy:
+		return "Gonadorelin allergy"
+	case AllergyIntoleranceCodeNafarelinAllergy:
+		return "Nafarelin allergy"
+	case AllergyIntoleranceCodeBuserelinAllergy:
+		return "Buserelin allergy"
+	case AllergyIntoleranceCodeGoserelinAllergy:
+		return "Goserelin allergy"
+	case AllergyIntoleranceCodeTriptorelinAllergy:
+		return "Triptorelin allergy"
+	case AllergyIntoleranceCodeGonadotrophicHormoneAllergy:
+		return "Gonadotrophic hormone allergy"
+	case AllergyIntoleranceCodeLeuprorelinAllergy:
+		return "Leuprorelin allergy"
+	case AllergyIntoleranceCodeOxytocinAllergy:
+		return "Oxytocin allergy"
+	case AllergyIntoleranceCodeSomatrophicHormoneAllergy:
+		return "Somatrophic hormone allergy"
+	case AllergyIntoleranceCodeOctreotideAllergy:
+		return "Octreotide allergy"
+	case AllergyIntoleranceCodeThyrotrophicHormoneAllergy:
+		return "Thyrotrophic hormone allergy"
+	case AllergyIntoleranceCodeProtirelinAllergy:
+		return "Protirelin allergy"
+	case AllergyIntoleranceCodeThyrotrophinAllergy:
+		return "Thyrotrophin allergy"
+	case AllergyIntoleranceCodeBiphosphonatesAllergy:
+		return "Biphosphonates allergy"
+	case AllergyIntoleranceCodeCalciumRegulatingHormoneAllergy:
+		return "Calcium regulating hormone allergy"
+	case AllergyIntoleranceCodeCalcitoninAllergy:
+		return "Calcitonin allergy"
+	case AllergyIntoleranceCodeSalcatoninAllergy:
+		return "Salcatonin allergy"
+	case AllergyIntoleranceCodeCalcitoninPorkAllergy:
+		return "Calcitonin (pork) allergy"
+	case AllergyIntoleranceCodeEpoetinAlfaAllergy:
+		return "Epoetin alfa allergy"
+	case AllergyIntoleranceCodeEpoetinBetaAllergy:
+		return "Epoetin beta allergy"
+	case AllergyIntoleranceCodeGelatinAllergy:
+		return "Gelatin allergy"
+	case AllergyIntoleranceCodePerfluorochemicalAllergy:
+		return "Perfluorochemical allergy"
+	case AllergyIntoleranceCodeAntithrombinIiiAllergy:
+		return "Antithrombin III allergy"
+	case AllergyIntoleranceCodeFactorViiiByPassingFractionProductsAllergy:
+		return "Factor VIII by-passing fraction products allergy"
+	case AllergyIntoleranceCodeAncrodAllergy:
+		return "Ancrod allergy"
+	case AllergyIntoleranceCodeHeparinAllergy:
+		return "Heparin allergy"
+	case AllergyIntoleranceCodeEnoxaparinAllergy:
+		return "Enoxaparin allergy"
+	case AllergyIntoleranceCodeDalteparinAllergy:
+		return "Dalteparin allergy"
+	case AllergyIntoleranceCodeTinzaparinAllergy:
+		return "Tinzaparin allergy"
+	case AllergyIntoleranceCodeHeparinoidAllergy:
+		return "Heparinoid allergy"
+	case AllergyIntoleranceCodeNicoumaloneAllergy:
+		return "Nicoumalone allergy"
+	case AllergyIntoleranceCodeWarfarinAllergy:
+		return "Warfarin allergy"
+	case AllergyIntoleranceCodePhenindioneAllergy:
+		return "Phenindione allergy"
+	case AllergyIntoleranceCodeEthamsylateAllergy:
+		return "Ethamsylate allergy"
+	case AllergyIntoleranceCodeThromboplastinAllergy:
+		return "Thromboplastin allergy"
+	case AllergyIntoleranceCodeTranexamicAcidAllergy:
+		return "Tranexamic acid allergy"
+	case AllergyIntoleranceCodeCollagenAllergy:
+		return "Collagen allergy"
+	case AllergyIntoleranceCodeAprotininAllergy:
+		return "Aprotinin allergy"
+	case AllergyIntoleranceCodePolysaccharideIronComplexAllergy:
+		return "Polysaccharide iron complex allergy"
+	case AllergyIntoleranceCodeSodiumIronedetateAllergy:
+		return "Sodium ironedetate allergy"
+	case AllergyIntoleranceCodeIronSorbitolAllergy:
+		return "Iron sorbitol allergy"
+	case AllergyIntoleranceCodeFerrousSaltAllergy:
+		return "Ferrous salt allergy"
+	case AllergyIntoleranceCodeFerrousFumarateAllergy:
+		return "Ferrous fumarate allergy"
+	case AllergyIntoleranceCodeFerrousGluconateAllergy:
+		return "Ferrous gluconate allergy"
+	case AllergyIntoleranceCodeFerrousGlycineSulfateAllergy:
+		return "Ferrous glycine sulfate allergy"
+	case AllergyIntoleranceCodeFerrousSuccinateAllergy:
+		return "Ferrous succinate allergy"
+	case AllergyIntoleranceCodeFerrousSulfateAllergy:
+		return "Ferrous sulfate allergy"
+	case AllergyIntoleranceCodeFerrousPhosphateAllergy:
+		return "Ferrous phosphate allergy"
+	case AllergyIntoleranceCodeLCarnitineAllergy:
+		return "L-Carnitine allergy"
+	case AllergyIntoleranceCodeIodineCompoundsAllergy:
+		return "Iodine compounds allergy"
+	case AllergyIntoleranceCodeIodophoreAllergy:
+		return "Iodophore allergy"
+	case AllergyIntoleranceCodePovidoneIodineAllergy:
+		return "Povidone iodine allergy"
+	case AllergyIntoleranceCodeVitaminAAllergy:
+		return "Vitamin A allergy"
+	case AllergyIntoleranceCodeAllergyToVitaminDAndOrVitaminDDerivative:
+		return "Allergy to vitamin D and/or vitamin D derivative"
+	case AllergyIntoleranceCodeAllergyToVitaminKAndOrVitaminKDerivativeFinding:
+		return "Allergy to vitamin K and/or vitamin K derivative (finding)"
+	case AllergyIntoleranceCodeAlphaTocopherylAllergy:
+		return "Alpha-tocopheryl allergy"
+	case AllergyIntoleranceCodeNicotinicAcidAllergy:
+		return "Nicotinic acid allergy"
+	case AllergyIntoleranceCodeFolicAcidAllergy:
+		return "Folic acid allergy"
+	case AllergyIntoleranceCodeFolinicAcidAllergy:
+		return "Folinic acid allergy"
+	case AllergyIntoleranceCodeHydroxocobalaminAllergy:
+		return "Hydroxocobalamin allergy"
+	case AllergyIntoleranceCodeCyanocobalaminAllergy:
+		return "Cyanocobalamin allergy"
+	case AllergyIntoleranceCodeInositolAllergy:
+		return "Inositol allergy"
+	case AllergyIntoleranceCodeAscorbicAcidAllergy:
+		return "Ascorbic acid allergy"
+	case AllergyIntoleranceCodeSodiumPolystyreneSulfonateAllergy:
+		return "Sodium polystyrene sulfonate allergy"
+	case AllergyIntoleranceCodeFluorideAllergy:
+		return "Fluoride allergy"
+	case AllergyIntoleranceCodeGemfibrozilAllergy:
+		return "Gemfibrozil allergy"
+	case AllergyIntoleranceCodeProbucolAllergy:
+		return "Probucol allergy"
+	case AllergyIntoleranceCodeAcipimoxAllergy:
+		return "Acipimox allergy"
+	case AllergyIntoleranceCodeColestipolAllergy:
+		return "Colestipol allergy"
+	case AllergyIntoleranceCodeCholestyramineAllergy:
+		return "Cholestyramine allergy"
+	case AllergyIntoleranceCodeBezafibrateAllergy:
+		return "Bezafibrate allergy"
+	case AllergyIntoleranceCodeClofibrateAllergy:
+		return "Clofibrate allergy"
+	case AllergyIntoleranceCodeFenofibrateAllergy:
+		return "Fenofibrate allergy"
+	case AllergyIntoleranceCodeCiprofibrateAllergy:
+		return "Ciprofibrate allergy"
+	case AllergyIntoleranceCodeFishOilsAllergy:
+		return "Fish oils allergy"
+	case AllergyIntoleranceCodeOmega3MarineTriglyceridesAllergy:
+		return "Omega 3-marine triglycerides allergy"
+	case AllergyIntoleranceCodeHmgCoaReductaseInhibitorAllergy:
+		return "HMG COA reductase inhibitor allergy"
+	case AllergyIntoleranceCodeSimvastatinAllergy:
+		return "Simvastatin allergy"
+	case AllergyIntoleranceCodeFluvastatinAllergy:
+		return "Fluvastatin allergy"
+	case AllergyIntoleranceCodePravastatinAllergy:
+		return "Pravastatin allergy"
+	case AllergyIntoleranceCodeAdenosineAllergy:
+		return "Adenosine allergy"
+	case AllergyIntoleranceCodeDisopyramideAllergy:
+		return "Disopyramide allergy"
+	case AllergyIntoleranceCodeQuinidineAllergy:
+		return "Quinidine allergy"
+	case AllergyIntoleranceCodeFlecainideAllergy:
+		return "Flecainide allergy"
+	case AllergyIntoleranceCodeMexiletineAllergy:
+		return "Mexiletine allergy"
+	case AllergyIntoleranceCodeMoracizineAllergy:
+		return "Moracizine allergy"
+	case AllergyIntoleranceCodeProcainamideAllergy:
+		return "Procainamide allergy"
+	case AllergyIntoleranceCodePropafenoneAllergy:
+		return "Propafenone allergy"
+	case AllergyIntoleranceCodeTocainideAllergy:
+		return "Tocainide allergy"
+	case AllergyIntoleranceCodeBretyliumAllergy:
+		return "Bretylium allergy"
+	case AllergyIntoleranceCodeAmiodaroneAllergy:
+		return "Amiodarone allergy"
+	case AllergyIntoleranceCodeBendrofluazideAllergy:
+		return "Bendrofluazide allergy"
+	case AllergyIntoleranceCodeChlorothiazideAllergy:
+		return "Chlorothiazide allergy"
+	case AllergyIntoleranceCodeCyclopenthiazideAllergy:
+		return "Cyclopenthiazide allergy"
+	case AllergyIntoleranceCodeHydrochlorothiazideAllergy:
+		return "Hydrochlorothiazide allergy"
+	case AllergyIntoleranceCodeHydroflumethiazideAllergy:
+		return "Hydroflumethiazide allergy"
+	case AllergyIntoleranceCodeMethyclothiazideAllergy:
+		return "Methyclothiazide allergy"
+	case AllergyIntoleranceCodePolythiazideAllergy:
+		return "Polythiazide allergy"
+	case AllergyIntoleranceCodeFrusemideAllergy:
+		return "Frusemide allergy"
+	case AllergyIntoleranceCodeBumetanideAllergy:
+		return "Bumetanide allergy"
+	case AllergyIntoleranceCodeEthacrynicAcidAllergy:
+		return "Ethacrynic acid allergy"
+	case AllergyIntoleranceCodePiretanideAllergy:
+		return "Piretanide allergy"
+	case AllergyIntoleranceCodeTorasemideAllergy:
+		return "Torasemide allergy"
+	case AllergyIntoleranceCodeTriamtereneAllergy:
+		return "Triamterene allergy"
+	case AllergyIntoleranceCodeAldosteroneAntagonistsAllergy:
+		return "Aldosterone antagonists allergy"
+	case AllergyIntoleranceCodePotassiumCanrenoateAllergy:
+		return "Potassium canrenoate allergy"
+	case AllergyIntoleranceCodeSpironolactoneAllergy:
+		return "Spironolactone allergy"
+	case AllergyIntoleranceCodeAmilorideAllergy:
+		return "Amiloride allergy"
+	case AllergyIntoleranceCodeMannitolAllergy:
+		return "Mannitol allergy"
+	case AllergyIntoleranceCodeLactoseIntolerance:
+		return "Lactose intolerance"
+	case AllergyIntoleranceCodeSyndromeOfCarbohydrateIntolerance:
+		return "Syndrome of carbohydrate intolerance"
+	case AllergyIntoleranceCodeLactaseDeficiencyInDiseasesOtherThanOfTheSmallIntestine:
+		return "Lactase deficiency in diseases other than of the small intestine"
+	case AllergyIntoleranceCodeAcquiredMonosaccharideMalabsorption:
+		return "Acquired monosaccharide malabsorption"
+	case AllergyIntoleranceCodeGlycerolIntoleranceSyndrome:
+		return "Glycerol intolerance syndrome"
+	case AllergyIntoleranceCodeLysineIntolerance:
+		return "Lysine intolerance"
+	case AllergyIntoleranceCodeSucroseIntolerance:
+		return "Sucrose intolerance"
+	case AllergyIntoleranceCodeAcquiredFructoseIntoleranceDisorder:
+		return "Acquired fructose intolerance (disorder)"
+	case AllergyIntoleranceCodeNoKnownAllergySituation:
+		return "No known allergy (situation)"
+	case AllergyIntoleranceCodeNoKnownHistoryOfDrugAllergy:
+		return "No known history of drug allergy"
+	case AllergyIntoleranceCodeNoKnownInsectAllergySituation:
+		return "No known insect allergy (situation)"
+	case AllergyIntoleranceCodeNoKnownEnvironmentalAllergySituation:
+		return "No known environmental allergy (situation)"
+	case AllergyIntoleranceCodeNoKnownFoodAllergySituation:
+		return "No known food allergy (situation)"
+	case AllergyIntoleranceCodeNoKnownAnimalAllergySituation:
+		return "No known animal allergy (situation)"
+	case AllergyIntoleranceCodeNoKnownHeveaBrasiliensisLatexAllergySituation:
+		return "No known Hevea brasiliensis latex allergy (situation)"
+
+	default:
+		return "Unknown Allergy Intolerance Code"
+	}
+}
+
 /*
 Substance
 Hemoglobin Okaloosa
@@ -2507,7 +8584,7 @@ Calf thymus ribonuclease H
 Alcian blue 8GX
 2,3-dihydroxybenzoate serine ligase (substance)
 Potassium permanganate
-Chromium (51-Cr) albumin (substance)
+Chromium (51-Cr) albumin (substance)------
 Beef insulin
 Chlorine monoxide
 Osmium-183m (substance)

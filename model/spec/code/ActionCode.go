@@ -1,5 +1,10 @@
 package code
 
+import (
+	"fmt"
+	"strings"
+)
+
 type ActionCode int
 
 const (
@@ -13,6 +18,59 @@ const (
 	ActionCodeRecordInference
 	ActionCodeReportFlag
 )
+
+func AllActionCode() []ActionCode {
+	return []ActionCode{
+		ActionCodeSendMessage,
+		ActionCodeCollectInformation,
+		ActionCodePrescribeMedication,
+		ActionCodeRecommendAnImmunization,
+		ActionCodeOrderService,
+		ActionCodeProposeDiagnosis,
+		ActionCodeRecordDetectedIssue,
+		ActionCodeRecordInference,
+		ActionCodeReportFlag,
+	}
+}
+
+func FindActionCode(filter string) []ActionCode {
+	ret := make([]ActionCode, 0)
+	for _, at := range AllActionCode() {
+		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
+			ret = append(ret, at)
+		}
+	}
+	return ret
+}
+
+func (cpt ActionCode) ToString() {
+	fmt.Println(cpt.String())
+}
+
+func (cpt ActionCode) String() string {
+	switch cpt {
+	case ActionCodeSendMessage:
+		return "Send a message"
+	case ActionCodeCollectInformation:
+		return "Collect information"
+	case ActionCodePrescribeMedication:
+		return "Prescribe a medication"
+	case ActionCodeRecommendAnImmunization:
+		return "Recommend an immunization"
+	case ActionCodeOrderService:
+		return "Order a service"
+	case ActionCodeProposeDiagnosis:
+		return "Propose a diagnosis"
+	case ActionCodeRecordDetectedIssue:
+		return "Record a detected issue"
+	case ActionCodeRecordInference:
+		return "Record an inference"
+	case ActionCodeReportFlag:
+		return "Report a flag"
+	default:
+		return "Unknown Action Code"
+	}
+}
 
 /*
 Send a message
