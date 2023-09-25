@@ -35,7 +35,7 @@ func AllActionRelationshipType() []ActionRelationshipType {
 
 func FindActionRelationshipType(filter string) []ActionRelationshipType {
 	ret := make([]ActionRelationshipType, 0)
-	for _, at := range AllActionType() {
+	for _, at := range AllActionRelationshipType() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

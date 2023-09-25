@@ -14,9 +14,8 @@ const (
 
 func AllAllergyIntoleranceType() []AllergyIntoleranceType {
 	return []AllergyIntoleranceType{
-		AllergyIntoleranceTypeAllergy ,
+		AllergyIntoleranceTypeAllergy,
 		AllergyIntoleranceTypeIntolerance,
-	)
 	}
 }
 
@@ -36,8 +35,10 @@ func (cpt AllergyIntoleranceType) ToString() {
 
 func (cpt AllergyIntoleranceType) String() string {
 	switch cpt {
-	case AllergyIntoleranceTypeAllergy : return "Allergy"
-	case	AllergyIntoleranceTypeIntolerance: return "Intolerance"
+	case AllergyIntoleranceTypeAllergy:
+		return "Allergy"
+	case AllergyIntoleranceTypeIntolerance:
+		return "Intolerance"
 	default:
 		return "Unknown Allergy Intolerance Type"
 	}

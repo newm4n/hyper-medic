@@ -419,7 +419,7 @@ func AllAdministrableDoseForm() []AdministrableDoseForm {
 
 func FindAdministrableDoseForm(filter string) []AdministrableDoseForm {
 	ret := make([]AdministrableDoseForm, 0)
-	for _, at := range AllAdministrationSubpotentReason() {
+	for _, at := range AllAdministrableDoseForm() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

@@ -253,7 +253,7 @@ func AllPractitionerSpeciality() []PractitionerSpeciality {
 
 func FindPractitionerSpeciality(filter string) []PractitionerSpeciality {
 	ret := make([]PractitionerSpeciality, 0)
-	for _, at := range AllUDIDeviceStatus() {
+	for _, at := range AllPractitionerSpeciality() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

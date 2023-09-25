@@ -21,7 +21,7 @@ func AllActionCardinalityBehavior() []ActionCardinalityBehavior {
 
 func FindActionCardinalityBehavior(filter string) []ActionCardinalityBehavior {
 	ret := make([]ActionCardinalityBehavior, 0)
-	for _, at := range AllActionConditionKind() {
+	for _, at := range AllActionCardinalityBehavior() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

@@ -31,7 +31,7 @@ func AllAccountBillingStatus() []AccountBillingStatus {
 
 func FindAccountBillingStatus(filter string) []AccountBillingStatus {
 	ret := make([]AccountBillingStatus, 0)
-	for _, at := range AllAccountRelationship() {
+	for _, at := range AllAccountBillingStatus() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}
@@ -52,7 +52,7 @@ func (cpt AccountBillingStatus) String() string {
 	case AccountBillingStatusBilling:
 		return "billing"
 	case AccountBillingStatusClosedBaddebt:
-		return "closed-baddebt
+		return "closed-baddebt"
 	case AccountBillingStatusClosedVoided:
 		return "closed-voided"
 	case AccountBillingStatusClosedCompleted:

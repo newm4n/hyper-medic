@@ -57,7 +57,7 @@ func AllAdministrationMethodCode() []AdministrationMethodCode {
 
 func FindAdministrationMethodCode(filter string) []AdministrationMethodCode {
 	ret := make([]AdministrationMethodCode, 0)
-	for _, at := range AllAdverseEventActuality() {
+	for _, at := range AllAdministrationMethodCode() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

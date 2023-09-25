@@ -37,7 +37,7 @@ func AllAdditionalBindingPurpose() []AdditionalBindingPurpose {
 
 func FindAdditionalBindingPurpose(filter string) []AdditionalBindingPurpose {
 	ret := make([]AdditionalBindingPurpose, 0)
-	for _, at := range AllAdministrativeGender() {
+	for _, at := range AllAdditionalBindingPurpose() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

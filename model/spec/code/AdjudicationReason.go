@@ -21,7 +21,7 @@ func AllAdjudicationReason() []AdjudicationReason {
 
 func FindAdjudicationReason(filter string) []AdjudicationReason {
 	ret := make([]AdjudicationReason, 0)
-	for _, at := range AllAdministrationSubpotentReason() {
+	for _, at := range AllAdjudicationReason() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

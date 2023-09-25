@@ -23,7 +23,7 @@ func AllAllergyIntoleranceClinical() []AllergyIntoleranceClinical {
 
 func FindAllergyIntoleranceClinical(filter string) []AllergyIntoleranceClinical {
 	ret := make([]AllergyIntoleranceClinical, 0)
-	for _, at := range AllergyIntoleranceClinical() {
+	for _, at := range AllAllergyIntoleranceClinical() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

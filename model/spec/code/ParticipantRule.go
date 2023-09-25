@@ -1,6 +1,9 @@
 package code
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type ParticipantRole int
 
@@ -1600,6 +1603,16 @@ func AllParticipantRole() []ParticipantRole {
 		ParticipantRoleDialysisServiceRole,
 		ParticipantRoleSleepMedicineServiceRole,
 	}
+}
+
+func FindParticipantRole(filter string) []ParticipantRole {
+	ret := make([]ParticipantRole, 0)
+	for _, at := range AllParticipantRole() {
+		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
+			ret = append(ret, at)
+		}
+	}
+	return ret
 }
 
 func (pr ParticipantRole) ToString() {
