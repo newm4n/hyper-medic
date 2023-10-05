@@ -5,56 +5,56 @@ import (
 	"strings"
 )
 
-type AdverseEventType int
+type AdverseEventType string
 
 const (
-	AdverseEventType00 AdverseEventType = iota
-	AdverseEventType01
-	AdverseEventType02
-	AdverseEventType03
-	AdverseEventType04
-	AdverseEventType05
-	AdverseEventType06
-	AdverseEventType07
-	AdverseEventType08
-	AdverseEventType09
-	AdverseEventType10
-	AdverseEventType11
-	AdverseEventType12
-	AdverseEventType13
-	AdverseEventType14
-	AdverseEventType15
-	AdverseEventType16
-	AdverseEventType17
-	AdverseEventType18
-	AdverseEventType19
-	AdverseEventType20
-	AdverseEventType21
-	AdverseEventType22
-	AdverseEventType23
-	AdverseEventType24
-	AdverseEventType25
-	AdverseEventType26
-	AdverseEventType27
-	AdverseEventType28
-	AdverseEventType29
-	AdverseEventType30
-	AdverseEventType31
-	AdverseEventType32
-	AdverseEventType33
-	AdverseEventType34
-	AdverseEventType35
-	AdverseEventType36
-	AdverseEventType37
-	AdverseEventType38
-	AdverseEventType39
-	AdverseEventType40
-	AdverseEventType41
-	AdverseEventType42
-	AdverseEventType43
-	AdverseEventType44
-	AdverseEventType45
-	AdverseEventType46
+	AdverseEventType00 AdverseEventType = "370894009"
+	AdverseEventType01 AdverseEventType = "5331006"
+	AdverseEventType02 AdverseEventType = "13234002"
+	AdverseEventType03 AdverseEventType = "49380000"
+	AdverseEventType04 AdverseEventType = "52136000"
+	AdverseEventType05 AdverseEventType = "370895005"
+	AdverseEventType06 AdverseEventType = "370896006"
+	AdverseEventType07 AdverseEventType = "370897002"
+	AdverseEventType08 AdverseEventType = "370898007"
+	AdverseEventType09 AdverseEventType = "370899004"
+	AdverseEventType10 AdverseEventType = "370900009"
+	AdverseEventType11 AdverseEventType = "370901008"
+	AdverseEventType12 AdverseEventType = "370902001"
+	AdverseEventType13 AdverseEventType = "370903006"
+	AdverseEventType14 AdverseEventType = "370904000"
+	AdverseEventType15 AdverseEventType = "370905004"
+	AdverseEventType16 AdverseEventType = "370906003"
+	AdverseEventType17 AdverseEventType = "370907007"
+	AdverseEventType18 AdverseEventType = "370908002"
+	AdverseEventType19 AdverseEventType = "370909005"
+	AdverseEventType20 AdverseEventType = "370910000"
+	AdverseEventType21 AdverseEventType = "370911001"
+	AdverseEventType22 AdverseEventType = "370912008"
+	AdverseEventType23 AdverseEventType = "370913003"
+	AdverseEventType24 AdverseEventType = "370914009"
+	AdverseEventType25 AdverseEventType = "370915005"
+	AdverseEventType26 AdverseEventType = "370916006"
+	AdverseEventType27 AdverseEventType = "370917002"
+	AdverseEventType28 AdverseEventType = "370918007"
+	AdverseEventType29 AdverseEventType = "370919004"
+	AdverseEventType30 AdverseEventType = "370920005"
+	AdverseEventType31 AdverseEventType = "370921009"
+	AdverseEventType32 AdverseEventType = "370922002"
+	AdverseEventType33 AdverseEventType = "370923007"
+	AdverseEventType34 AdverseEventType = "370924001"
+	AdverseEventType35 AdverseEventType = "370925000"
+	AdverseEventType36 AdverseEventType = "370926004"
+	AdverseEventType37 AdverseEventType = "370927008"
+	AdverseEventType38 AdverseEventType = "397866006"
+	AdverseEventType39 AdverseEventType = "398226000"
+	AdverseEventType40 AdverseEventType = "405644001"
+	AdverseEventType41 AdverseEventType = "415169009"
+	AdverseEventType42 AdverseEventType = "424522003"
+	AdverseEventType43 AdverseEventType = "426106009"
+	AdverseEventType44 AdverseEventType = "427513009"
+	AdverseEventType45 AdverseEventType = "844579007"
+	AdverseEventType46 AdverseEventType = "1912002"
 )
 
 func AllAdverseEventType() []AdverseEventType {

@@ -5,171 +5,171 @@ import (
 	"strings"
 )
 
-type AllResourceType int
+type AllResourceType string
 
 const (
-	ResourceTypeAccount AllResourceType = iota
-	ResourceTypeActivityDefinition
-	ResourceTypeActorDefinition
-	ResourceTypeAdministrableProductDefinition
-	ResourceTypeAdverseEvent
-	ResourceTypeAllergyIntolerance
-	ResourceTypeAppointment
-	ResourceTypeAppointmentResponse
-	ResourceTypeArtifactAssessment
-	ResourceTypeAuditEvent
-	ResourceTypeBasic
-	ResourceTypeBinary
-	ResourceTypeBiologicallyDerivedProduct
-	ResourceTypeBiologicallyDerivedProductDispense
-	ResourceTypeBodyStructure
-	ResourceTypeBundle
-	ResourceTypeCanonicalResource
-	ResourceTypeCapabilityStatement
-	ResourceTypeCarePlan
-	ResourceTypeCareTeam
-	ResourceTypeChargeItem
-	ResourceTypeChargeItemDefinition
-	ResourceTypeCitation
-	ResourceTypeClaim
-	ResourceTypeClaimResponse
-	ResourceTypeClinicalImpression
-	ResourceTypeClinicalUseDefinition
-	ResourceTypeCodeSystem
-	ResourceTypeCommunication
-	ResourceTypeCommunicationRequest
-	ResourceTypeCompartmentDefinition
-	ResourceTypeComposition
-	ResourceTypeConceptMap
-	ResourceTypeCondition
-	ResourceTypeConditionDefinition
-	ResourceTypeConsent
-	ResourceTypeContract
-	ResourceTypeCoverage
-	ResourceTypeCoverageEligibilityRequest
-	ResourceTypeCoverageEligibilityResponse
-	ResourceTypeDetectedIssue
-	ResourceTypeDevice
-	ResourceTypeDeviceAssociation
-	ResourceTypeDeviceDefinition
-	ResourceTypeDeviceDispense
-	ResourceTypeDeviceMetric
-	ResourceTypeDeviceRequest
-	ResourceTypeDeviceUsage
-	ResourceTypeDiagnosticReport
-	ResourceTypeDocumentReference
-	ResourceTypeDomainResource
-	ResourceTypeEncounter
-	ResourceTypeEncounterHistory
-	ResourceTypeEndpoint
-	ResourceTypeEnrollmentRequest
-	ResourceTypeEnrollmentResponse
-	ResourceTypeEpisodeOfCare
-	ResourceTypeEventDefinition
-	ResourceTypeEvidence
-	ResourceTypeEvidenceReport
-	ResourceTypeEvidenceVariable
-	ResourceTypeExampleScenario
-	ResourceTypeExplanationOfBenefit
-	ResourceTypeFamilyMemberHistory
-	ResourceTypeFlag
-	ResourceTypeFormularyItem
-	ResourceTypeGenomicStudy
-	ResourceTypeGoal
-	ResourceTypeGraphDefinition
-	ResourceTypeGroup
-	ResourceTypeGuidanceResponse
-	ResourceTypeHealthcareService
-	ResourceTypeImagingSelection
-	ResourceTypeImagingStudy
-	ResourceTypeImmunization
-	ResourceTypeImmunizationEvaluation
-	ResourceTypeImmunizationRecommendation
-	ResourceTypeImplementationGuide
-	ResourceTypeIngredient
-	ResourceTypeInsurancePlan
-	ResourceTypeInventoryItem
-	ResourceTypeInventoryReport
-	ResourceTypeInvoice
-	ResourceTypeLibrary
-	ResourceTypeLinkage
-	ResourceTypeList
-	ResourceTypeLocation
-	ResourceTypeManufacturedItemDefinition
-	ResourceTypeMeasure
-	ResourceTypeMeasureReport
-	ResourceTypeMedication
-	ResourceTypeMedicationAdministration
-	ResourceTypeMedicationDispense
-	ResourceTypeMedicationKnowledge
-	ResourceTypeMedicationRequest
-	ResourceTypeMedicationStatement
-	ResourceTypeMedicinalProductDefinition
-	ResourceTypeMessageDefinition
-	ResourceTypeMessageHeader
-	ResourceTypeMetadataResource
-	ResourceTypeMolecularSequence
-	ResourceTypeNamingSystem
-	ResourceTypeNutritionIntake
-	ResourceTypeNutritionOrder
-	ResourceTypeNutritionProduct
-	ResourceTypeObservation
-	ResourceTypeObservationDefinition
-	ResourceTypeOperationDefinition
-	ResourceTypeOperationOutcome
-	ResourceTypeOrganization
-	ResourceTypeOrganizationAffiliation
-	ResourceTypePackagedProductDefinition
-	ResourceTypeParameters
-	ResourceTypePatient
-	ResourceTypePaymentNotice
-	ResourceTypePaymentReconciliation
-	ResourceTypePermission
-	ResourceTypePerson
-	ResourceTypePlanDefinition
-	ResourceTypePractitioner
-	ResourceTypePractitionerRole
-	ResourceTypeProcedure
-	ResourceTypeProvenance
-	ResourceTypeQuestionnaire
-	ResourceTypeQuestionnaireResponse
-	ResourceTypeRegulatedAuthorization
-	ResourceTypeRelatedPerson
-	ResourceTypeRequestOrchestration
-	ResourceTypeRequirements
-	ResourceTypeResearchStudy
-	ResourceTypeResearchSubject
-	ResourceTypeResource
-	ResourceTypeRiskAssessment
-	ResourceTypeSchedule
-	ResourceTypeSearchParameter
-	ResourceTypeServiceRequest
-	ResourceTypeSlot
-	ResourceTypeSpecimen
-	ResourceTypeSpecimenDefinition
-	ResourceTypeStructureDefinition
-	ResourceTypeStructureMap
-	ResourceTypeSubscription
-	ResourceTypeSubscriptionStatus
-	ResourceTypeSubscriptionTopic
-	ResourceTypeSubstance
-	ResourceTypeSubstanceDefinition
-	ResourceTypeSubstanceNucleicAcid
-	ResourceTypeSubstancePolymer
-	ResourceTypeSubstanceProtein
-	ResourceTypeSubstanceReferenceInformation
-	ResourceTypeSubstanceSourceMaterial
-	ResourceTypeSupplyDelivery
-	ResourceTypeSupplyRequest
-	ResourceTypeTask
-	ResourceTypeTerminologyCapabilities
-	ResourceTypeTestPlan
-	ResourceTypeTestReport
-	ResourceTypeTestScript
-	ResourceTypeTransport
-	ResourceTypeValueSet
-	ResourceTypeVerificationResult
-	ResourceTypeVisionPrescription
+	ResourceTypeAccount                            AllResourceType = "Account"
+	ResourceTypeActivityDefinition                 AllResourceType = "ActivityDefinition"
+	ResourceTypeActorDefinition                    AllResourceType = "ActorDefinition"
+	ResourceTypeAdministrableProductDefinition     AllResourceType = "AdministrableProductDefinition"
+	ResourceTypeAdverseEvent                       AllResourceType = "AdverseEvent"
+	ResourceTypeAllergyIntolerance                 AllResourceType = "AllergyIntolerance"
+	ResourceTypeAppointment                        AllResourceType = "Appointment"
+	ResourceTypeAppointmentResponse                AllResourceType = "AppointmentResponse"
+	ResourceTypeArtifactAssessment                 AllResourceType = "ArtifactAssessment"
+	ResourceTypeAuditEvent                         AllResourceType = "AuditEvent"
+	ResourceTypeBasic                              AllResourceType = "Basic"
+	ResourceTypeBinary                             AllResourceType = "Binary"
+	ResourceTypeBiologicallyDerivedProduct         AllResourceType = "BiologicallyDerivedProduct"
+	ResourceTypeBiologicallyDerivedProductDispense AllResourceType = "BiologicallyDerivedProductDispense"
+	ResourceTypeBodyStructure                      AllResourceType = "BodyStructure"
+	ResourceTypeBundle                             AllResourceType = "Bundle"
+	ResourceTypeCanonicalResource                  AllResourceType = "CanonicalResource"
+	ResourceTypeCapabilityStatement                AllResourceType = "CapabilityStatement"
+	ResourceTypeCarePlan                           AllResourceType = "CarePlan"
+	ResourceTypeCareTeam                           AllResourceType = "CareTeam"
+	ResourceTypeChargeItem                         AllResourceType = "ChargeItem"
+	ResourceTypeChargeItemDefinition               AllResourceType = "ChargeItemDefinition"
+	ResourceTypeCitation                           AllResourceType = "Citation"
+	ResourceTypeClaim                              AllResourceType = "Claim"
+	ResourceTypeClaimResponse                      AllResourceType = "ClaimResponse"
+	ResourceTypeClinicalImpression                 AllResourceType = "ClinicalImpression"
+	ResourceTypeClinicalUseDefinition              AllResourceType = "ClinicalUseDefinition"
+	ResourceTypeCodeSystem                         AllResourceType = "CodeSystem"
+	ResourceTypeCommunication                      AllResourceType = "Communication"
+	ResourceTypeCommunicationRequest               AllResourceType = "CommunicationRequest"
+	ResourceTypeCompartmentDefinition              AllResourceType = "CompartmentDefinition"
+	ResourceTypeComposition                        AllResourceType = "Composition"
+	ResourceTypeConceptMap                         AllResourceType = "ConceptMap"
+	ResourceTypeCondition                          AllResourceType = "Condition"
+	ResourceTypeConditionDefinition                AllResourceType = "ConditionDefinition"
+	ResourceTypeConsent                            AllResourceType = "Consent"
+	ResourceTypeContract                           AllResourceType = "Contract"
+	ResourceTypeCoverage                           AllResourceType = "Coverage"
+	ResourceTypeCoverageEligibilityRequest         AllResourceType = "CoverageEligibilityRequest"
+	ResourceTypeCoverageEligibilityResponse        AllResourceType = "CoverageEligibilityResponse"
+	ResourceTypeDetectedIssue                      AllResourceType = "DetectedIssue"
+	ResourceTypeDevice                             AllResourceType = "Device"
+	ResourceTypeDeviceAssociation                  AllResourceType = "DeviceAssociation"
+	ResourceTypeDeviceDefinition                   AllResourceType = "DeviceDefinition"
+	ResourceTypeDeviceDispense                     AllResourceType = "DeviceDispense"
+	ResourceTypeDeviceMetric                       AllResourceType = "DeviceMetric"
+	ResourceTypeDeviceRequest                      AllResourceType = "DeviceRequest"
+	ResourceTypeDeviceUsage                        AllResourceType = "DeviceUsage"
+	ResourceTypeDiagnosticReport                   AllResourceType = "DiagnosticReport"
+	ResourceTypeDocumentReference                  AllResourceType = "DocumentReference"
+	ResourceTypeDomainResource                     AllResourceType = "DomainResource"
+	ResourceTypeEncounter                          AllResourceType = "Encounter"
+	ResourceTypeEncounterHistory                   AllResourceType = "EncounterHistory"
+	ResourceTypeEndpoint                           AllResourceType = "Endpoint"
+	ResourceTypeEnrollmentRequest                  AllResourceType = "EnrollmentRequest"
+	ResourceTypeEnrollmentResponse                 AllResourceType = "EnrollmentResponse"
+	ResourceTypeEpisodeOfCare                      AllResourceType = "EpisodeOfCare"
+	ResourceTypeEventDefinition                    AllResourceType = "EventDefinition"
+	ResourceTypeEvidence                           AllResourceType = "Evidence"
+	ResourceTypeEvidenceReport                     AllResourceType = "EvidenceReport"
+	ResourceTypeEvidenceVariable                   AllResourceType = "EvidenceVariable"
+	ResourceTypeExampleScenario                    AllResourceType = "ExampleScenario"
+	ResourceTypeExplanationOfBenefit               AllResourceType = "ExplanationOfBenefit"
+	ResourceTypeFamilyMemberHistory                AllResourceType = "FamilyMemberHistory"
+	ResourceTypeFlag                               AllResourceType = "Flag"
+	ResourceTypeFormularyItem                      AllResourceType = "FormularyItem"
+	ResourceTypeGenomicStudy                       AllResourceType = "GenomicStudy"
+	ResourceTypeGoal                               AllResourceType = "Goal"
+	ResourceTypeGraphDefinition                    AllResourceType = "GraphDefinition"
+	ResourceTypeGroup                              AllResourceType = "Group"
+	ResourceTypeGuidanceResponse                   AllResourceType = "GuidanceResponse"
+	ResourceTypeHealthcareService                  AllResourceType = "HealthcareService"
+	ResourceTypeImagingSelection                   AllResourceType = "ImagingSelection"
+	ResourceTypeImagingStudy                       AllResourceType = "ImagingStudy"
+	ResourceTypeImmunization                       AllResourceType = "Immunization"
+	ResourceTypeImmunizationEvaluation             AllResourceType = "ImmunizationEvaluation"
+	ResourceTypeImmunizationRecommendation         AllResourceType = "ImmunizationRecommendation"
+	ResourceTypeImplementationGuide                AllResourceType = "ImplementationGuide"
+	ResourceTypeIngredient                         AllResourceType = "Ingredient"
+	ResourceTypeInsurancePlan                      AllResourceType = "InsurancePlan"
+	ResourceTypeInventoryItem                      AllResourceType = "InventoryItem"
+	ResourceTypeInventoryReport                    AllResourceType = "InventoryReport"
+	ResourceTypeInvoice                            AllResourceType = "Invoice"
+	ResourceTypeLibrary                            AllResourceType = "Library"
+	ResourceTypeLinkage                            AllResourceType = "Linkage"
+	ResourceTypeList                               AllResourceType = "List"
+	ResourceTypeLocation                           AllResourceType = "Location"
+	ResourceTypeManufacturedItemDefinition         AllResourceType = "ManufacturedItemDefinition"
+	ResourceTypeMeasure                            AllResourceType = "Measure"
+	ResourceTypeMeasureReport                      AllResourceType = "MeasureReport"
+	ResourceTypeMedication                         AllResourceType = "Medication"
+	ResourceTypeMedicationAdministration           AllResourceType = "MedicationAdministration"
+	ResourceTypeMedicationDispense                 AllResourceType = "MedicationDispense"
+	ResourceTypeMedicationKnowledge                AllResourceType = "MedicationKnowledge"
+	ResourceTypeMedicationRequest                  AllResourceType = "MedicationRequest"
+	ResourceTypeMedicationStatement                AllResourceType = "MedicationStatement"
+	ResourceTypeMedicinalProductDefinition         AllResourceType = "MedicinalProductDefinition"
+	ResourceTypeMessageDefinition                  AllResourceType = "MessageDefinition"
+	ResourceTypeMessageHeader                      AllResourceType = "MessageHeader"
+	ResourceTypeMetadataResource                   AllResourceType = "MetadataResource"
+	ResourceTypeMolecularSequence                  AllResourceType = "MolecularSequence"
+	ResourceTypeNamingSystem                       AllResourceType = "NamingSystem"
+	ResourceTypeNutritionIntake                    AllResourceType = "NutritionIntake"
+	ResourceTypeNutritionOrder                     AllResourceType = "NutritionOrder"
+	ResourceTypeNutritionProduct                   AllResourceType = "NutritionProduct"
+	ResourceTypeObservation                        AllResourceType = "Observation"
+	ResourceTypeObservationDefinition              AllResourceType = "ObservationDefinition"
+	ResourceTypeOperationDefinition                AllResourceType = "OperationDefinition"
+	ResourceTypeOperationOutcome                   AllResourceType = "OperationOutcome"
+	ResourceTypeOrganization                       AllResourceType = "Organization"
+	ResourceTypeOrganizationAffiliation            AllResourceType = "OrganizationAffiliation"
+	ResourceTypePackagedProductDefinition          AllResourceType = "PackagedProductDefinition"
+	ResourceTypeParameters                         AllResourceType = "Parameters"
+	ResourceTypePatient                            AllResourceType = "Patient"
+	ResourceTypePaymentNotice                      AllResourceType = "PaymentNotice"
+	ResourceTypePaymentReconciliation              AllResourceType = "PaymentReconciliation"
+	ResourceTypePermission                         AllResourceType = "Permission"
+	ResourceTypePerson                             AllResourceType = "Person"
+	ResourceTypePlanDefinition                     AllResourceType = "PlanDefinition"
+	ResourceTypePractitioner                       AllResourceType = "Practitioner"
+	ResourceTypePractitionerRole                   AllResourceType = "PractitionerRole"
+	ResourceTypeProcedure                          AllResourceType = "Procedure"
+	ResourceTypeProvenance                         AllResourceType = "Provenance"
+	ResourceTypeQuestionnaire                      AllResourceType = "Questionnaire"
+	ResourceTypeQuestionnaireResponse              AllResourceType = "QuestionnaireResponse"
+	ResourceTypeRegulatedAuthorization             AllResourceType = "RegulatedAuthorization"
+	ResourceTypeRelatedPerson                      AllResourceType = "RelatedPerson"
+	ResourceTypeRequestOrchestration               AllResourceType = "RequestOrchestration"
+	ResourceTypeRequirements                       AllResourceType = "Requirements"
+	ResourceTypeResearchStudy                      AllResourceType = "ResearchStudy"
+	ResourceTypeResearchSubject                    AllResourceType = "ResearchSubject"
+	ResourceTypeResource                           AllResourceType = "Resource"
+	ResourceTypeRiskAssessment                     AllResourceType = "RiskAssessment"
+	ResourceTypeSchedule                           AllResourceType = "Schedule"
+	ResourceTypeSearchParameter                    AllResourceType = "SearchParameter"
+	ResourceTypeServiceRequest                     AllResourceType = "ServiceRequest"
+	ResourceTypeSlot                               AllResourceType = "Slot"
+	ResourceTypeSpecimen                           AllResourceType = "Specimen"
+	ResourceTypeSpecimenDefinition                 AllResourceType = "SpecimenDefinition"
+	ResourceTypeStructureDefinition                AllResourceType = "StructureDefinition"
+	ResourceTypeStructureMap                       AllResourceType = "StructureMap"
+	ResourceTypeSubscription                       AllResourceType = "Subscription"
+	ResourceTypeSubscriptionStatus                 AllResourceType = "SubscriptionStatus"
+	ResourceTypeSubscriptionTopic                  AllResourceType = "SubscriptionTopic"
+	ResourceTypeSubstance                          AllResourceType = "Substance"
+	ResourceTypeSubstanceDefinition                AllResourceType = "SubstanceDefinition"
+	ResourceTypeSubstanceNucleicAcid               AllResourceType = "SubstanceNucleicAcid"
+	ResourceTypeSubstancePolymer                   AllResourceType = "SubstancePolymer"
+	ResourceTypeSubstanceProtein                   AllResourceType = "SubstanceProtein"
+	ResourceTypeSubstanceReferenceInformation      AllResourceType = "SubstanceReferenceInformation"
+	ResourceTypeSubstanceSourceMaterial            AllResourceType = "SubstanceSourceMaterial"
+	ResourceTypeSupplyDelivery                     AllResourceType = "SupplyDelivery"
+	ResourceTypeSupplyRequest                      AllResourceType = "SupplyRequest"
+	ResourceTypeTask                               AllResourceType = "Task"
+	ResourceTypeTerminologyCapabilities            AllResourceType = "TerminologyCapabilities"
+	ResourceTypeTestPlan                           AllResourceType = "TestPlan"
+	ResourceTypeTestReport                         AllResourceType = "TestReport"
+	ResourceTypeTestScript                         AllResourceType = "TestScript"
+	ResourceTypeTransport                          AllResourceType = "Transport"
+	ResourceTypeValueSet                           AllResourceType = "ValueSet"
+	ResourceTypeVerificationResult                 AllResourceType = "VerificationResult"
+	ResourceTypeVisionPrescription                 AllResourceType = "VisionPrescription"
 )
 
 func AllAllResourceType() []AllResourceType {

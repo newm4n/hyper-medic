@@ -5,16 +5,16 @@ import (
 	"strings"
 )
 
-type AdverseEventCategory int
+type AdverseEventCategory string
 
 const (
-	AdverseEventCategoryWrongPatient AdverseEventCategory = iota
-	AdverseEventCategoryProcedureMishap
-	AdverseEventCategoryMedicationMishap
-	AdverseEventCategoryDevice
-	AdverseEventCategoryUnsafePhysicalEnvironment
-	AdverseEventCategoryHospitalAcquiredInfection
-	AdverseEventCategoryWrongBodySite
+	AdverseEventCategoryWrongPatient              AdverseEventCategory = "wrong-patient"
+	AdverseEventCategoryProcedureMishap           AdverseEventCategory = "procedure-mishap"
+	AdverseEventCategoryMedicationMishap          AdverseEventCategory = "medication-mishap"
+	AdverseEventCategoryDevice                    AdverseEventCategory = "device"
+	AdverseEventCategoryUnsafePhysicalEnvironment AdverseEventCategory = "unsafe-physical-environment"
+	AdverseEventCategoryHospitalAcquiredInfection AdverseEventCategory = "hospital-aquired-infection"
+	AdverseEventCategoryWrongBodySite             AdverseEventCategory = "wrong-body-site"
 )
 
 func AllAdverseEventCategory() []AdverseEventCategory {

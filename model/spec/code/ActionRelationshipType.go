@@ -5,18 +5,18 @@ import (
 	"strings"
 )
 
-type ActionRelationshipType int
+type ActionRelationshipType string
 
 const (
-	ActionRelationshipTypeBefore ActionRelationshipType = iota
-	ActionRelationshipTypeBeforeStart
-	ActionRelationshipTypeBeforeEnd
-	ActionRelationshipTypeConcurrent
-	ActionRelationshipTypeConcurrentWithStart
-	ActionRelationshipTypeConcurrentWithEnd
-	ActionRelationshipTypeAfter
-	ActionRelationshipTypeAfterStart
-	ActionRelationshipTypeAfterEnd
+	ActionRelationshipTypeBefore              ActionRelationshipType = "before"
+	ActionRelationshipTypeBeforeStart         ActionRelationshipType = "before-start"
+	ActionRelationshipTypeBeforeEnd           ActionRelationshipType = "before-end"
+	ActionRelationshipTypeConcurrent          ActionRelationshipType = "concurrent"
+	ActionRelationshipTypeConcurrentWithStart ActionRelationshipType = "concurrent-with-start"
+	ActionRelationshipTypeConcurrentWithEnd   ActionRelationshipType = "concurrent-with-end"
+	ActionRelationshipTypeAfter               ActionRelationshipType = "after"
+	ActionRelationshipTypeAfterStart          ActionRelationshipType = "after-start"
+	ActionRelationshipTypeAfterEnd            ActionRelationshipType = "after-end"
 )
 
 func AllActionRelationshipType() []ActionRelationshipType {

@@ -8,5 +8,5 @@ type IUDICarrier interface {
 	GetJurisdictionURI()
 	GetCarrierAIDC() []byte
 	GetCarrierHRF() string
-	GetEntryType() code.UDIEntryType
+	GetEntryType() code.UdiEntryType
 }

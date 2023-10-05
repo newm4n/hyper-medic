@@ -5,196 +5,196 @@ import (
 	"strings"
 )
 
-type Language int
+type Language string
 
 const (
-	AB Language = iota
-	AA
-	AF
-	AK
-	SQ
-	AM
-	AR
-	AN
-	HY
-	AS
-	AV
-	AE
-	AY
-	AZ
-	BM
-	BA
-	EU
-	BE
-	BN
-	BH
-	BI
-	BS
-	BR
-	BG
-	MY
-	CA
-	CH
-	CE
-	NY
-	ZH
-	ZH_HANS
-	ZH_HANT
-	CV
-	KW
-	CO
-	CR
-	HR
-	CS
-	DA
-	DV
-	NL
-	DZ
-	EN
-	EO
-	ET
-	EE
-	FO
-	FJ
-	FI
-	FR
-	FF
-	GL
-	GD
-	GV
-	KA
-	DE
-	EL
-	KL
-	GN
-	GU
-	HT
-	HA
-	HE
-	HZ
-	HI
-	HO
-	HU
-	IS
-	IO
-	IG
-	ID
-	IA
-	IE
-	IU
-	IK
-	GA
-	IT
-	JA
-	JV
-	KN
-	KR
-	KS
-	KK
-	KM
-	KI
-	RW
-	RN
-	KY
-	KV
-	KG
-	KO
-	KU
-	KJ
-	LO
-	LA
-	LV
-	LI
-	LN
-	LT
-	LU
-	LG
-	LB
-	MK
-	MG
-	MS
-	ML
-	MT
-	MI
-	MR
-	MH
-	MO
-	MN
-	NA
-	NV
-	NG
-	ND
-	NE
-	NO
-	NB
-	NN
-	II
-	OC
-	OJ
-	CU
-	OR
-	OM
-	OS
-	PI
-	PS
-	FA
-	PL
-	PT
-	PA
-	QU
-	RM
-	RO
-	RU
-	SE
-	SM
-	SG
-	SA
-	SR
-	SH
-	ST
-	TN
-	SN
-	SD
-	SI
-	SS
-	SK
-	SL
-	SO
-	NR
-	ES
-	SU
-	SW
-	SV
-	TL
-	TY
-	TG
-	TA
-	TT
-	TE
-	TH
-	BO
-	TI
-	TO
-	TS
-	TR
-	TK
-	TW
-	UG
-	UK
-	UR
-	UZ
-	VE
-	VI
-	VO
-	WA
-	CY
-	WO
-	FY
-	XH
-	YI
-	YO
-	ZA
-	ZU
+	AB      Language = "AB"
+	AA      Language = "AA"
+	AF      Language = "AF"
+	AK      Language = "AK"
+	SQ      Language = "SQ"
+	AM      Language = "AM"
+	AR      Language = "AR"
+	AN      Language = "AN"
+	HY      Language = "HY"
+	AS      Language = "AS"
+	AV      Language = "AV"
+	AE      Language = "AE"
+	AY      Language = "AY"
+	AZ      Language = "AZ"
+	BM      Language = "BM"
+	BA      Language = "BA"
+	EU      Language = "EU"
+	BE      Language = "BE"
+	BN      Language = "BN"
+	BH      Language = "BH"
+	BI      Language = "BI"
+	BS      Language = "BS"
+	BR      Language = "BR"
+	BG      Language = "BG"
+	MY      Language = "MY"
+	CA      Language = "CA"
+	CH      Language = "CH"
+	CE      Language = "CE"
+	NY      Language = "NY"
+	ZH      Language = "ZH"
+	ZH_HANS Language = "ZH_HANS"
+	ZH_HANT Language = "ZH_HANT"
+	CV      Language = "CV"
+	KW      Language = "KW"
+	CO      Language = "CO"
+	CR      Language = "CR"
+	HR      Language = "HR"
+	CS      Language = "CS"
+	DA      Language = "DA"
+	DV      Language = "DV"
+	NL      Language = "NL"
+	DZ      Language = "DZ"
+	EN      Language = "EN"
+	EO      Language = "EO"
+	ET      Language = "ET"
+	EE      Language = "EE"
+	FO      Language = "FO"
+	FJ      Language = "FJ"
+	FI      Language = "FI"
+	FR      Language = "FR"
+	FF      Language = "FF"
+	GL      Language = "GL"
+	GD      Language = "GD"
+	GV      Language = "GV"
+	KA      Language = "KA"
+	DE      Language = "DE"
+	EL      Language = "EL"
+	KL      Language = "KL"
+	GN      Language = "GN"
+	GU      Language = "GU"
+	HT      Language = "HT"
+	HA      Language = "HA"
+	HE      Language = "HE"
+	HZ      Language = "HZ"
+	HI      Language = "HI"
+	HO      Language = "HO"
+	HU      Language = "HU"
+	IS      Language = "IS"
+	IO      Language = "IO"
+	IG      Language = "IG"
+	ID      Language = "ID"
+	IA      Language = "IA"
+	IE      Language = "IE"
+	IU      Language = "IU"
+	IK      Language = "IK"
+	GA      Language = "GA"
+	IT      Language = "IT"
+	JA      Language = "JA"
+	JV      Language = "JV"
+	KN      Language = "KN"
+	KR      Language = "KR"
+	KS      Language = "KS"
+	KK      Language = "KK"
+	KM      Language = "KM"
+	KI      Language = "KI"
+	RW      Language = "RW"
+	RN      Language = "RN"
+	KY      Language = "KY"
+	KV      Language = "KV"
+	KG      Language = "KG"
+	KO      Language = "KO"
+	KU      Language = "KU"
+	KJ      Language = "KJ"
+	LO      Language = "LO"
+	LA      Language = "LA"
+	LV      Language = "LV"
+	LI      Language = "LI"
+	LN      Language = "LN"
+	LT      Language = "LT"
+	LU      Language = "LU"
+	LG      Language = "LG"
+	LB      Language = "LB"
+	MK      Language = "MK"
+	MG      Language = "MG"
+	MS      Language = "MS"
+	ML      Language = "ML"
+	MT      Language = "MT"
+	MI      Language = "MI"
+	MR      Language = "MR"
+	MH      Language = "MH"
+	MO      Language = "MO"
+	MN      Language = "MN"
+	NA      Language = "NA"
+	NV      Language = "NV"
+	NG      Language = "NG"
+	ND      Language = "ND"
+	NE      Language = "NE"
+	NO      Language = "NO"
+	NB      Language = "NB"
+	NN      Language = "NN"
+	II      Language = "II"
+	OC      Language = "OC"
+	OJ      Language = "OJ"
+	CU      Language = "CU"
+	OR      Language = "OR"
+	OM      Language = "OM"
+	OS      Language = "OS"
+	PI      Language = "PI"
+	PS      Language = "PS"
+	FA      Language = "FA"
+	PL      Language = "PL"
+	PT      Language = "PT"
+	PA      Language = "PA"
+	QU      Language = "QU"
+	RM      Language = "RM"
+	RO      Language = "RO"
+	RU      Language = "RU"
+	SE      Language = "SE"
+	SM      Language = "SM"
+	SG      Language = "SG"
+	SA      Language = "SA"
+	SR      Language = "SR"
+	SH      Language = "SH"
+	ST      Language = "ST"
+	TN      Language = "TN"
+	SN      Language = "SN"
+	SD      Language = "SD"
+	SI      Language = "SI"
+	SS      Language = "SS"
+	SK      Language = "SK"
+	SL      Language = "SL"
+	SO      Language = "SO"
+	NR      Language = "NR"
+	ES      Language = "ES"
+	SU      Language = "SU"
+	SW      Language = "SW"
+	SV      Language = "SV"
+	TL      Language = "TL"
+	TY      Language = "TY"
+	TG      Language = "TG"
+	TA      Language = "TA"
+	TT      Language = "TT"
+	TE      Language = "TE"
+	TH      Language = "TH"
+	BO      Language = "BO"
+	TI      Language = "TI"
+	TO      Language = "TO"
+	TS      Language = "TS"
+	TR      Language = "TR"
+	TK      Language = "TK"
+	TW      Language = "TW"
+	UG      Language = "UG"
+	UK      Language = "UK"
+	UR      Language = "UR"
+	UZ      Language = "UZ"
+	VE      Language = "VE"
+	VI      Language = "VI"
+	VO      Language = "VO"
+	WA      Language = "WA"
+	CY      Language = "CY"
+	WO      Language = "WO"
+	FY      Language = "FY"
+	XH      Language = "XH"
+	YI      Language = "YI"
+	YO      Language = "YO"
+	ZA      Language = "ZA"
+	ZU      Language = "ZU"
 )
 
 func AllLanguage() []Language {

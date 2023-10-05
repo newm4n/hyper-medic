@@ -5,16 +5,16 @@ import (
 	"strings"
 )
 
-type AccountBillingStatus int
+type AccountBillingStatus string
 
 const (
-	AccountBillingStatusOpen AccountBillingStatus = iota
-	AccountBillingStatusCareCompleteNotbilled
-	AccountBillingStatusBilling
-	AccountBillingStatusClosedBaddebt
-	AccountBillingStatusClosedVoided
-	AccountBillingStatusClosedCompleted
-	AccountBillingStatusClosedCombined
+	AccountBillingStatusOpen                  AccountBillingStatus = "open"
+	AccountBillingStatusCareCompleteNotbilled AccountBillingStatus = "carecomplete-notbilled"
+	AccountBillingStatusBilling               AccountBillingStatus = "billing"
+	AccountBillingStatusClosedBaddebt         AccountBillingStatus = "closed-baddebt"
+	AccountBillingStatusClosedVoided          AccountBillingStatus = "closed-voided"
+	AccountBillingStatusClosedCompleted       AccountBillingStatus = "closed-completed"
+	AccountBillingStatusClosedCombined        AccountBillingStatus = "closed-combined"
 )
 
 func AllAccountBillingStatus() []AccountBillingStatus {

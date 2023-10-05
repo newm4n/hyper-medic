@@ -5,15 +5,15 @@ import (
 	"strings"
 )
 
-type AdverseEventCausalityAssess int
+type AdverseEventCausalityAssess string
 
 const (
-	AdverseEventCausalityAssessCertain AdverseEventCausalityAssess = iota
-	AdverseEventCausalityAssessProbablyLikely
-	AdverseEventCausalityAssessPossible
-	AdverseEventCausalityAssessUnlikely
-	AdverseEventCausalityAssessConditionalClassified
-	AdverseEventCausalityAssessUnassessableUnclassifiable
+	AdverseEventCausalityAssessCertain                    AdverseEventCausalityAssess = "certain"
+	AdverseEventCausalityAssessProbablyLikely             AdverseEventCausalityAssess = "probably-likely"
+	AdverseEventCausalityAssessPossible                   AdverseEventCausalityAssess = "possible"
+	AdverseEventCausalityAssessUnlikely                   AdverseEventCausalityAssess = "unlikely"
+	AdverseEventCausalityAssessConditionalClassified      AdverseEventCausalityAssess = "conditional-classified"
+	AdverseEventCausalityAssessUnassessableUnclassifiable AdverseEventCausalityAssess = "unassessable-unclassifiable"
 )
 
 func AllAdverseEventCausalityAssess() []AdverseEventCausalityAssess {

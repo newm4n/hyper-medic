@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-type AllergyIntoleranceClinical int
+type AllergyIntoleranceClinical string
 
 const (
-	AllergyIntoleranceClinicalActive AllergyIntoleranceClinical = iota
-	AllergyIntoleranceClinicalInactive
-	AllergyIntoleranceClinicalResolved
+	AllergyIntoleranceClinicalActive   AllergyIntoleranceClinical = "active"
+	AllergyIntoleranceClinicalInactive AllergyIntoleranceClinical = "inactive"
+	AllergyIntoleranceClinicalResolved AllergyIntoleranceClinical = "resolved"
 )
 
 func AllAllergyIntoleranceClinical() []AllergyIntoleranceClinical {

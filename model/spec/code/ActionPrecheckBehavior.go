@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type ActionPrecheckBehavior int
+type ActionPrecheckBehavior string
 
 const (
-	ActionPrecheckBehaviorYes ActionPrecheckBehavior = iota
-	ActionPrecheckBehaviorNo
+	ActionPrecheckBehaviorYes ActionPrecheckBehavior = "yes"
+	ActionPrecheckBehaviorNo  ActionPrecheckBehavior = "no"
 )
 
 func AllActionPrecheckBehavior() []ActionPrecheckBehavior {

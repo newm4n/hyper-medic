@@ -5,15 +5,15 @@ import (
 	"strings"
 )
 
-type ActionSelectionBehavior int
+type ActionSelectionBehavior string
 
 const (
-	ActionSelectionBehaviorAny ActionSelectionBehavior = iota
-	ActionSelectionBehaviorAll
-	ActionSelectionBehaviorAllOrNone
-	ActionSelectionBehaviorExactlyOne
-	ActionSelectionBehaviorAtMostOne
-	ActionSelectionBehaviorOneOrMore
+	ActionSelectionBehaviorAny        ActionSelectionBehavior = "any"
+	ActionSelectionBehaviorAll        ActionSelectionBehavior = "all"
+	ActionSelectionBehaviorAllOrNone  ActionSelectionBehavior = "all-or-none"
+	ActionSelectionBehaviorExactlyOne ActionSelectionBehavior = "exactly-one"
+	ActionSelectionBehaviorAtMostOne  ActionSelectionBehavior = "at-most-one"
+	ActionSelectionBehaviorOneOrMore  ActionSelectionBehavior = "one-or-more"
 )
 
 func AllActionSelectionBehavior() []ActionSelectionBehavior {

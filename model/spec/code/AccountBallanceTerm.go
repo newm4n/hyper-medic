@@ -5,14 +5,14 @@ import (
 	"strings"
 )
 
-type AccountBalanceTerm int
+type AccountBalanceTerm string
 
 const (
-	AccountBalanceTermCurrent AccountBalanceTerm = iota
-	AccountBalanceTerm30
-	AccountBalanceTerm60
-	AccountBalanceTerm90
-	AccountBalanceTerm120
+	AccountBalanceTermCurrent AccountBalanceTerm = "current\t"
+	AccountBalanceTerm30      AccountBalanceTerm = "10"
+	AccountBalanceTerm60      AccountBalanceTerm = "13"
+	AccountBalanceTerm90      AccountBalanceTerm = "90"
+	AccountBalanceTerm120     AccountBalanceTerm = "120"
 )
 
 func AllAccountBalanceTerm() []AccountBalanceTerm {

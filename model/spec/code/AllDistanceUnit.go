@@ -5,15 +5,15 @@ import (
 	"strings"
 )
 
-type AllDistanceUnit int
+type AllDistanceUnit string
 
 const (
-	AllDistanceUnitMilliMeter AllDistanceUnit = iota
-	AllDistanceUnitCentiMeter
-	AllDistanceUnitDesiMeter
-	AllDistanceUnitMeter
-	AllDistanceUnitKiloMeter
-	AllDistanceUnitNanoMeter
+	AllDistanceUnitNanoMeter  AllDistanceUnit = "Nano Meter"
+	AllDistanceUnitMilliMeter AllDistanceUnit = "Milli Meter"
+	AllDistanceUnitCentiMeter AllDistanceUnit = "Centi Meter"
+	AllDistanceUnitDesiMeter  AllDistanceUnit = "Desi Meter"
+	AllDistanceUnitMeter      AllDistanceUnit = "Meter"
+	AllDistanceUnitKiloMeter  AllDistanceUnit = "Kilo Meter"
 )
 
 func AllAllDistanceUnit() []AllDistanceUnit {

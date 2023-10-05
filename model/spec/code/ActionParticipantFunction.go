@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-type ActionParticipantFunction int
+type ActionParticipantFunction string
 
 const (
-	ActionParticipantFunctionPerformer ActionParticipantFunction = iota
-	ActionParticipantFunctionAuthor
-	ActionParticipantFunctionReviewer
-	ActionParticipantFunctionWitness
+	ActionParticipantFunctionPerformer ActionParticipantFunction = "performer"
+	ActionParticipantFunctionAuthor    ActionParticipantFunction = "author"
+	ActionParticipantFunctionReviewer  ActionParticipantFunction = "reviewer"
+	ActionParticipantFunctionWitness   ActionParticipantFunction = "witness"
 )
 
 func AllActionParticipantFunction() []ActionParticipantFunction {

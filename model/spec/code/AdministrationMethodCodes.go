@@ -5,29 +5,29 @@ import (
 	"strings"
 )
 
-type AdministrationMethodCode int
+type AdministrationMethodCode string
 
 const (
-	AdministrationMethodCodeDoseFormAdministrationMethod AdministrationMethodCode = iota
-	AdministrationMethodCodeAdminister
-	AdministrationMethodCodeApply
-	AdministrationMethodCodeChew
-	AdministrationMethodCodeInsert
-	AdministrationMethodCodeInstill
-	AdministrationMethodCodeSwallow
-	AdministrationMethodCodeSpray
-	AdministrationMethodCodeInhale
-	AdministrationMethodCodeInject
-	AdministrationMethodCodeSuck
-	AdministrationMethodCodeInfuse
-	AdministrationMethodCodeRinse
-	AdministrationMethodCodeGargle
-	AdministrationMethodCodeRinseOrWash
-	AdministrationMethodCodeOrodisperse
-	AdministrationMethodCodeImplant
-	AdministrationMethodCodeInsufflate
-	AdministrationMethodCodeDialysis
-	AdministrationMethodCodeBathe
+	AdministrationMethodCodeDoseFormAdministrationMethod AdministrationMethodCode = "736665006"
+	AdministrationMethodCodeAdminister                   AdministrationMethodCode = "738990001"
+	AdministrationMethodCodeApply                        AdministrationMethodCode = "738991002"
+	AdministrationMethodCodeChew                         AdministrationMethodCode = "738992009"
+	AdministrationMethodCodeInsert                       AdministrationMethodCode = "738993004"
+	AdministrationMethodCodeInstill                      AdministrationMethodCode = "738994005"
+	AdministrationMethodCodeSwallow                      AdministrationMethodCode = "738995006"
+	AdministrationMethodCodeSpray                        AdministrationMethodCode = "738996007"
+	AdministrationMethodCodeInhale                       AdministrationMethodCode = "740666001"
+	AdministrationMethodCodeInject                       AdministrationMethodCode = "740685003"
+	AdministrationMethodCodeSuck                         AdministrationMethodCode = "764498003"
+	AdministrationMethodCodeInfuse                       AdministrationMethodCode = "764794000"
+	AdministrationMethodCodeRinse                        AdministrationMethodCode = "782155003"
+	AdministrationMethodCodeGargle                       AdministrationMethodCode = "782168006"
+	AdministrationMethodCodeRinseOrWash                  AdministrationMethodCode = "785900008"
+	AdministrationMethodCodeOrodisperse                  AdministrationMethodCode = "823034001"
+	AdministrationMethodCodeImplant                      AdministrationMethodCode = "827107003"
+	AdministrationMethodCodeInsufflate                   AdministrationMethodCode = "1010690008"
+	AdministrationMethodCodeDialysis                     AdministrationMethodCode = "1231460007"
+	AdministrationMethodCodeBathe                        AdministrationMethodCode = "58841000052102"
 )
 
 func AllAdministrationMethodCode() []AdministrationMethodCode {

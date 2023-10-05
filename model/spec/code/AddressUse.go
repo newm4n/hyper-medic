@@ -5,17 +5,17 @@ import (
 	"strings"
 )
 
-type AddressUse int
+type AddressUse string
 
 const (
-	AddressUseHome AddressUse = iota
-	AddressUseWork
-	AddressUseTemp
-	AddressUseOld
-	AddressUseBilling
+	AddressUseHome    AddressUse = "home"
+	AddressUseWork    AddressUse = "work"
+	AddressUseTemp    AddressUse = "temp"
+	AddressUseOld     AddressUse = "old"
+	AddressUseBilling AddressUse = "billing"
 )
 
-func AllAddressUses() []AddressUse {
+func AllAddressUse() []AddressUse {
 	return []AddressUse{
 		AddressUseHome,
 		AddressUseWork,
@@ -25,9 +25,9 @@ func AllAddressUses() []AddressUse {
 	}
 }
 
-func FindAddressUses(filter string) []AddressUse {
+func FindAddressUse(filter string) []AddressUse {
 	ret := make([]AddressUse, 0)
-	for _, at := range AllAddressUses() {
+	for _, at := range AllAddressUse() {
 		if strings.ToLower(at.String())[0:len(filter)] == strings.ToLower(filter) {
 			ret = append(ret, at)
 		}

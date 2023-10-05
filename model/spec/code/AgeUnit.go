@@ -5,17 +5,17 @@ import (
 	"strings"
 )
 
-type AgeUnit int
+type AgeUnit string
 
 const (
-	AgeUnitMilliSeconds AgeUnit = iota
-	AgeUnitSeconds
-	AgeUnitMinutes
-	AgeUnitHours
-	AgeUnitDays
-	AgeUnitWeeks
-	AgeUnitMonths
-	AgeUnitYears
+	AgeUnitMilliSeconds AgeUnit = "MilliSecond"
+	AgeUnitSeconds      AgeUnit = "Second"
+	AgeUnitMinutes      AgeUnit = "Minute"
+	AgeUnitHours        AgeUnit = "Hour"
+	AgeUnitDays         AgeUnit = "Day"
+	AgeUnitWeeks        AgeUnit = "Week"
+	AgeUnitMonths       AgeUnit = "Month"
+	AgeUnitYears        AgeUnit = "Year"
 )
 
 func AllAgeUnit() []AgeUnit {

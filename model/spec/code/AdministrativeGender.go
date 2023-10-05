@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-type AdministrativeGender int
+type AdministrativeGender string
 
 const (
-	AdministrativeGenderMale AdministrativeGender = iota
-	AdministrativeGenderFemale
-	AdministrativeGenderOther
-	AdministrativeGenderUnknown
+	AdministrativeGenderMale    AdministrativeGender = "male"
+	AdministrativeGenderFemale  AdministrativeGender = "female"
+	AdministrativeGenderOther   AdministrativeGender = "other"
+	AdministrativeGenderUnknown AdministrativeGender = "unknown"
 )
 
 func AllAdministrativeGender() []AdministrativeGender {

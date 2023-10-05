@@ -5,19 +5,19 @@ import (
 	"strings"
 )
 
-type AdditionalBindingPurpose int
+type AdditionalBindingPurpose string
 
 const (
-	AdditionalBindingPurposeMaximum AdditionalBindingPurpose = iota
-	AdditionalBindingPurposeMinimum
-	AdditionalBindingPurposeRequired
-	AdditionalBindingPurposeConformance
-	AdditionalBindingPurposeCandidate
-	AdditionalBindingPurposeCurrent
-	AdditionalBindingPurposePreferred
-	AdditionalBindingPurposeUISuggested
-	AdditionalBindingPurposeStarter
-	AdditionalBindingPurposeComponent
+	AdditionalBindingPurposeMaximum     AdditionalBindingPurpose = "maximum"
+	AdditionalBindingPurposeMinimum     AdditionalBindingPurpose = "minimum"
+	AdditionalBindingPurposeRequired    AdditionalBindingPurpose = "required"
+	AdditionalBindingPurposeConformance AdditionalBindingPurpose = "extensible"
+	AdditionalBindingPurposeCandidate   AdditionalBindingPurpose = "candidate"
+	AdditionalBindingPurposeCurrent     AdditionalBindingPurpose = "current"
+	AdditionalBindingPurposePreferred   AdditionalBindingPurpose = "preferred"
+	AdditionalBindingPurposeUISuggested AdditionalBindingPurpose = "ui"
+	AdditionalBindingPurposeStarter     AdditionalBindingPurpose = "started"
+	AdditionalBindingPurposeComponent   AdditionalBindingPurpose = "component"
 )
 
 func AllAdditionalBindingPurpose() []AdditionalBindingPurpose {

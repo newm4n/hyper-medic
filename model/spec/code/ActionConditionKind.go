@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-type ActionConditionKind int
+type ActionConditionKind string
 
 const (
-	ActionConditionKindApplicability ActionConditionKind = iota
-	ActionConditionKindStart
-	ActionConditionKindStop
+	ActionConditionKindApplicability ActionConditionKind = "applicability\t"
+	ActionConditionKindStart         ActionConditionKind = "start"
+	ActionConditionKindStop          ActionConditionKind = "stop"
 )
 
 func AllActionConditionKind() []ActionConditionKind {

@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type AdverseEventSeriousness int
+type AdverseEventSeriousness string
 
 const (
-	AdverseEventSeriousnessNonserious AdverseEventSeriousness = iota
-	AdverseEventSeriousnessSerious
+	AdverseEventSeriousnessNonserious AdverseEventSeriousness = "non-serious"
+	AdverseEventSeriousnessSerious    AdverseEventSeriousness = "serious"
 )
 
 func AllAdverseEventSeriousness() []AdverseEventSeriousness {

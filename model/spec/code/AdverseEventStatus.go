@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-type AdverseEventStatus int
+type AdverseEventStatus string
 
 const (
-	AdverseEventStatusInProgress AdverseEventStatus = iota
-	AdverseEventStatusCompleted
-	AdverseEventStatusEnteredInError
-	AdverseEventStatusUnknown
+	AdverseEventStatusInProgress     AdverseEventStatus = "in-progress"
+	AdverseEventStatusCompleted      AdverseEventStatus = "completed"
+	AdverseEventStatusEnteredInError AdverseEventStatus = "entered-in-error"
+	AdverseEventStatusUnknown        AdverseEventStatus = "unknown"
 )
 
 func AllAdverseEventStatus() []AdverseEventStatus {

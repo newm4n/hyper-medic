@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type AdverseEventActuality int
+type AdverseEventActuality string
 
 const (
-	AdverseEventActualityActual AdverseEventActuality = iota
-	AdverseEventActualityPotential
+	AdverseEventActualityActual    AdverseEventActuality = "actual"
+	AdverseEventActualityPotential AdverseEventActuality = "potential"
 )
 
 func AllAdverseEventActuality() []AdverseEventActuality {

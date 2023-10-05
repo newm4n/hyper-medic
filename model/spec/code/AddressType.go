@@ -2,12 +2,12 @@ package code
 
 import "strings"
 
-type AddressType int
+type AddressType string
 
 const (
-	AddressTypePostal AddressType = iota
-	AddressTypePhysical
-	AddressTypeBoth
+	AddressTypePostal   AddressType = "postal"
+	AddressTypePhysical AddressType = "physical"
+	AddressTypeBoth     AddressType = "both"
 )
 
 func AllAddressTypes() []AddressType {

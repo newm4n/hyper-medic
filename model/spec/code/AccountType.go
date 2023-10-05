@@ -5,19 +5,19 @@ import (
 	"strings"
 )
 
-type AccountType int
+type AccountType string
 
 const (
-	AccountTypeActAccountCode AccountType = iota
-	AccountTypeAccountReceivable
-	AccountTypeCash
-	AccountTypeCreditCard
-	AccountTypeAmericanExpress
-	AccountTypeDinersClub
-	AccountTypeDiscoverCard
-	AccountTypeMasterCard
-	AccountTypeVisa
-	AccountTypePatientBillingAccount
+	AccountTypeActAccountCode        AccountType = "ActAccountCode"
+	AccountTypeAccountReceivable     AccountType = "ACCTRECEIVABLE"
+	AccountTypeCash                  AccountType = "CASH"
+	AccountTypeCreditCard            AccountType = "CC"
+	AccountTypeAmericanExpress       AccountType = "AE"
+	AccountTypeDinersClub            AccountType = "DN"
+	AccountTypeDiscoverCard          AccountType = "DV"
+	AccountTypeMasterCard            AccountType = "MC"
+	AccountTypeVisa                  AccountType = "V"
+	AccountTypePatientBillingAccount AccountType = "PBILLACT"
 )
 
 func AllAccountType() []AccountType {

@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-type ActionGroupingBehavior int
+type ActionGroupingBehavior string
 
 const (
-	ActionGroupingBehaviorVisualGroup ActionGroupingBehavior = iota
-	ActionGroupingBehaviorLogicalGroup
-	ActionGroupingBehaviorSentenceGroup
+	ActionGroupingBehaviorVisualGroup   ActionGroupingBehavior = "visual-group"
+	ActionGroupingBehaviorLogicalGroup  ActionGroupingBehavior = "logical-group"
+	ActionGroupingBehaviorSentenceGroup ActionGroupingBehavior = "sentence-group"
 )
 
 func AllActionGroupingBehavior() []ActionGroupingBehavior {

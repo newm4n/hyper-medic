@@ -9,7 +9,7 @@ type IRelatedPerson interface {
 	GetIndentifier() string
 	IsActive() bool
 	GetPatient() IPatient
-	GetRelationshio() code.RelatedPersonRelationShipType
+	GetRelationshio() code.RelatedpersonRelationshipType
 	GetName() IHumanName
 	GetTelecom() []IContactPoint
 	GetGender() code.Gender

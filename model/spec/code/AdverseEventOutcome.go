@@ -5,14 +5,14 @@ import (
 	"strings"
 )
 
-type AdverseEventOutcome int
+type AdverseEventOutcome string
 
 const (
-	AdverseEventOutcome1 AdverseEventOutcome = iota
-	AdverseEventOutcome2
-	AdverseEventOutcome3
-	AdverseEventOutcome4
-	AdverseEventOutcome5
+	AdverseEventOutcome1 AdverseEventOutcome = "397882007"
+	AdverseEventOutcome2 AdverseEventOutcome = "398056004"
+	AdverseEventOutcome3 AdverseEventOutcome = "405531001"
+	AdverseEventOutcome4 AdverseEventOutcome = "405532008"
+	AdverseEventOutcome5 AdverseEventOutcome = "405535005"
 )
 
 func AllAdverseEventOutcome() []AdverseEventOutcome {

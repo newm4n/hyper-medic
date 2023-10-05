@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type AdjudicationError int
+type AdjudicationError string
 
 const (
-	AdjudicationErrorMissingIdentifier AdjudicationError = iota
-	AdjudicationErrorMissingCreationDate
+	AdjudicationErrorMissingIdentifier   AdjudicationError = "a001"
+	AdjudicationErrorMissingCreationDate AdjudicationError = "a002"
 )
 
 func AllAdjudicationError() []AdjudicationError {

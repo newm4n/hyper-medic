@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-type ActionType int
+type ActionType string
 
 const (
-	ActionTypeCreate ActionType = iota
-	ActionTypeUpdate
-	ActionTypeRemove
-	ActionTypeFireEvent
+	ActionTypeCreate    ActionType = "create"
+	ActionTypeUpdate    ActionType = "update"
+	ActionTypeRemove    ActionType = "move"
+	ActionTypeFireEvent ActionType = "fire-event"
 )
 
 func AllActionType() []ActionType {

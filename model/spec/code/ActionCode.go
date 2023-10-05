@@ -5,18 +5,18 @@ import (
 	"strings"
 )
 
-type ActionCode int
+type ActionCode string
 
 const (
-	ActionCodeSendMessage ActionCode = iota
-	ActionCodeCollectInformation
-	ActionCodePrescribeMedication
-	ActionCodeRecommendAnImmunization
-	ActionCodeOrderService
-	ActionCodeProposeDiagnosis
-	ActionCodeRecordDetectedIssue
-	ActionCodeRecordInference
-	ActionCodeReportFlag
+	ActionCodeSendMessage             ActionCode = "send-message"
+	ActionCodeCollectInformation      ActionCode = "collect-information"
+	ActionCodePrescribeMedication     ActionCode = "prescribe-medication"
+	ActionCodeRecommendAnImmunization ActionCode = "recommend-immunization"
+	ActionCodeOrderService            ActionCode = "order-service"
+	ActionCodeProposeDiagnosis        ActionCode = "propose-diagnosis"
+	ActionCodeRecordDetectedIssue     ActionCode = "record-detected-issue"
+	ActionCodeRecordInference         ActionCode = "record-inference"
+	ActionCodeReportFlag              ActionCode = "report-flag"
 )
 
 func AllActionCode() []ActionCode {

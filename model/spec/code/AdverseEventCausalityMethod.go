@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-type AdverseEventCausalityMethod int
+type AdverseEventCausalityMethod string
 
 const (
-	AdverseEventCausalityMethodProbabilityScale AdverseEventCausalityMethod = iota
-	AdverseEventCausalityMethodBayesian
-	AdverseEventCausalityMethodChecklist
+	AdverseEventCausalityMethodProbabilityScale AdverseEventCausalityMethod = "probability-scale"
+	AdverseEventCausalityMethodBayesian         AdverseEventCausalityMethod = "bayesian"
+	AdverseEventCausalityMethodChecklist        AdverseEventCausalityMethod = "checklist"
 )
 
 func AllAdverseEventCausalityMethod() []AdverseEventCausalityMethod {

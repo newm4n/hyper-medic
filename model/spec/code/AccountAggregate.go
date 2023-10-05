@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-type AccountAggregate int
+type AccountAggregate string
 
 const (
-	AccountAggregatePatent AccountAggregate = iota
-	AccountAggregateInsurance
-	AccountAggregateTotal
+	AccountAggregatePatent    AccountAggregate = "patient"
+	AccountAggregateInsurance AccountAggregate = "insurance"
+	AccountAggregateTotal     AccountAggregate = "total"
 )
 
 func AllAccountAggregate() []AccountAggregate {

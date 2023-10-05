@@ -5,14 +5,14 @@ import (
 	"strings"
 )
 
-type ActionReasonCode int
+type ActionReasonCode string
 
 const (
-	ActionReasonCodeOffPathway ActionReasonCode = iota
-	ActionReasonCodeRiskAssessment
-	ActionReasonCodeCareGapDetected
-	ActionReasonCodeDrugFrugInteraction
-	ActionReasonCodeQualityMeasure
+	ActionReasonCodeOffPathway          ActionReasonCode = "off-pathway"
+	ActionReasonCodeRiskAssessment      ActionReasonCode = "risk-assessment"
+	ActionReasonCodeCareGapDetected     ActionReasonCode = "care-gap"
+	ActionReasonCodeDrugFrugInteraction ActionReasonCode = "drug-drug-interaction"
+	ActionReasonCodeQualityMeasure      ActionReasonCode = "quality-measure"
 )
 
 func AllActionReasonCode() []ActionReasonCode {

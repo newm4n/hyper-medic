@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type AccountRelationship int
+type AccountRelationship string
 
 const (
-	AccountRelationshipParent AccountRelationship = iota
-	AccountRelationshipGuarantor
+	AccountRelationshipParent    AccountRelationship = "parent"
+	AccountRelationshipGuarantor AccountRelationship = "guarantor"
 )
 
 func AllAccountRelationship() []AccountRelationship {

@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+/* TODO change type to string */
 type AllergyIntoleranceCode int
 
 const (

@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type ActionCardinalityBehavior int
+type ActionCardinalityBehavior string
 
 const (
-	ActionCardinalityBehaviorSingle ActionCardinalityBehavior = iota
-	ActionCardinalityBehaviorMultiple
+	ActionCardinalityBehaviorSingle   ActionCardinalityBehavior = "single"
+	ActionCardinalityBehaviorMultiple ActionCardinalityBehavior = "multiple"
 )
 
 func AllActionCardinalityBehavior() []ActionCardinalityBehavior {

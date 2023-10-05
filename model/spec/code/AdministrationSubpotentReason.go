@@ -5,15 +5,15 @@ import (
 	"strings"
 )
 
-type AdministrationSubpotentReason int
+type AdministrationSubpotentReason string
 
 const (
-	AdministrationSubpotentReasonPartialDose AdministrationSubpotentReason = iota
-	AdministrationSubpotentReasonVomited
-	AdministrationSubpotentReasonColdChainBreak
-	AdministrationSubpotentReasonManufacturerRecall
-	AdministrationSubpotentReasonAdverseStorage
-	AdministrationSubpotentReasonExpiredProduct
+	AdministrationSubpotentReasonPartialDose        AdministrationSubpotentReason = "Partial Dose"
+	AdministrationSubpotentReasonVomited            AdministrationSubpotentReason = "Vomited"
+	AdministrationSubpotentReasonColdChainBreak     AdministrationSubpotentReason = "Cold Chain Break"
+	AdministrationSubpotentReasonManufacturerRecall AdministrationSubpotentReason = "Manufacturer Recall"
+	AdministrationSubpotentReasonAdverseStorage     AdministrationSubpotentReason = "Adverse Storage"
+	AdministrationSubpotentReasonExpiredProduct     AdministrationSubpotentReason = "Expired Product"
 )
 
 func AllAdministrationSubpotentReason() []AdministrationSubpotentReason {

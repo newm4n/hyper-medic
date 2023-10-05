@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-type ActionRequiredBehavior int
+type ActionRequiredBehavior string
 
 const (
-	ActionRequiredBehaviorMust ActionRequiredBehavior = iota
-	ActionRequiredBehaviorCould
-	ActionRequiredBehaviorMustUnlessDocumented
+	ActionRequiredBehaviorMust                 ActionRequiredBehavior = "must"
+	ActionRequiredBehaviorCould                ActionRequiredBehavior = "could"
+	ActionRequiredBehaviorMustUnlessDocumented ActionRequiredBehavior = "must-unless-documented"
 )
 
 func AllActionRequiredBehavior() []ActionRequiredBehavior {

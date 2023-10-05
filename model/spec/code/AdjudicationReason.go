@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type AdjudicationReason int
+type AdjudicationReason string
 
 const (
-	AdjudicationReasonNotCovered AdjudicationReason = iota
-	AdjudicationReasonPlanLimitReached
+	AdjudicationReasonNotCovered       AdjudicationReason = "ar001"
+	AdjudicationReasonPlanLimitReached AdjudicationReason = "ar002"
 )
 
 func AllAdjudicationReason() []AdjudicationReason {

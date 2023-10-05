@@ -5,11 +5,11 @@ import (
 	"strings"
 )
 
-type AllergyIntoleranceType int
+type AllergyIntoleranceType string
 
 const (
-	AllergyIntoleranceTypeAllergy AllergyIntoleranceType = iota
-	AllergyIntoleranceTypeIntolerance
+	AllergyIntoleranceTypeAllergy     AllergyIntoleranceType = "allergy"
+	AllergyIntoleranceTypeIntolerance AllergyIntoleranceType = "intolerance"
 )
 
 func AllAllergyIntoleranceType() []AllergyIntoleranceType {

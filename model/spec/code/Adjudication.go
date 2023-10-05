@@ -5,17 +5,17 @@ import (
 	"strings"
 )
 
-type Adjudication int
+type Adjudication string
 
 const (
-	AdjudicationSubmittedAmount Adjudication = iota
-	AdjudicationCoPay
-	AdjudicationEligibleAmount
-	AdjudicationDeductible
-	AdjudicationUnallocatedDeductible
-	AdjudicationEligiblePercentage
-	Adjudicationax
-	AdjudicationBenefitAmount
+	AdjudicationSubmittedAmount       Adjudication = "submitted"
+	AdjudicationCoPay                 Adjudication = "copay"
+	AdjudicationEligibleAmount        Adjudication = "eligible"
+	AdjudicationDeductible            Adjudication = "deductible"
+	AdjudicationUnallocatedDeductible Adjudication = "unallocdeduct"
+	AdjudicationEligiblePercentage    Adjudication = "eligpercent"
+	Adjudicationax                    Adjudication = "tax"
+	AdjudicationBenefitAmount         Adjudication = "benefit"
 )
 
 func AllAdjudication() []Adjudication {

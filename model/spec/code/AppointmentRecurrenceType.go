@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-type AppointmentRecurrenceType int
+type AppointmentRecurrenceType string
 
 const (
-	AppointmentRecurrenceTypeDaily AppointmentRecurrenceType = iota
-	AppointmentRecurrenceTypeWeekly
-	AppointmentRecurrenceTypeMonthly
-	AppointmentRecurrenceTypeYearly
+	AppointmentRecurrenceTypeDaily   AppointmentRecurrenceType = "d"
+	AppointmentRecurrenceTypeWeekly  AppointmentRecurrenceType = "wk"
+	AppointmentRecurrenceTypeMonthly AppointmentRecurrenceType = "mo"
+	AppointmentRecurrenceTypeYearly  AppointmentRecurrenceType = "a"
 )
 
 func AllAppointmentRecurrenceType() []AppointmentRecurrenceType {

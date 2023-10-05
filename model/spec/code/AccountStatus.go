@@ -5,14 +5,14 @@ import (
 	"strings"
 )
 
-type AccountStatus int
+type AccountStatus string
 
 const (
-	AccountStatusActive AccountStatus = iota
-	AccountStatusInactive
-	AccountStatusEnteredInError
-	AccountStatusUnHold
-	AccountStatusUnknown
+	AccountStatusActive         AccountStatus = "active"
+	AccountStatusInactive       AccountStatus = "inactive"
+	AccountStatusEnteredInError AccountStatus = "entered-in-error"
+	AccountStatusUnHold         AccountStatus = "on-hold"
+	AccountStatusUnknown        AccountStatus = "unknown"
 )
 
 func AllAccountStatus() []AccountStatus {

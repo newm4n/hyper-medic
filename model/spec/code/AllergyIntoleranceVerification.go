@@ -5,14 +5,14 @@ import (
 	"strings"
 )
 
-type AllergyIntoleranceVerification int
+type AllergyIntoleranceVerification string
 
 const (
-	AllergyIntoleranceVerificationUnconfirmed AllergyIntoleranceVerification = iota
-	AllergyIntoleranceVerificationPresumed
-	AllergyIntoleranceVerificationConfirmed
-	AllergyIntoleranceVerificationRefuted
-	AllergyIntoleranceVerificationEnteredInError
+	AllergyIntoleranceVerificationUnconfirmed    AllergyIntoleranceVerification = "unconfirmed"
+	AllergyIntoleranceVerificationPresumed       AllergyIntoleranceVerification = "presumed"
+	AllergyIntoleranceVerificationConfirmed      AllergyIntoleranceVerification = "confirmed"
+	AllergyIntoleranceVerificationRefuted        AllergyIntoleranceVerification = "refuted"
+	AllergyIntoleranceVerificationEnteredInError AllergyIntoleranceVerification = "entered-in-error"
 )
 
 func AllAllergyIntoleranceVerification() []AllergyIntoleranceVerification {

@@ -5,13 +5,13 @@ import (
 	"strings"
 )
 
-type AdverseEventParticipantFunction int
+type AdverseEventParticipantFunction string
 
 const (
-	AdverseEventParticipantFunctionInformant AdverseEventParticipantFunction = iota
-	AdverseEventParticipantFunctionParticipation
-	AdverseEventParticipantFunctionWitness
-	AdverseEventParticipantFunctionAuthorOriginator
+	AdverseEventParticipantFunctionInformant        AdverseEventParticipantFunction = "INF"
+	AdverseEventParticipantFunctionParticipation    AdverseEventParticipantFunction = "PART"
+	AdverseEventParticipantFunctionWitness          AdverseEventParticipantFunction = "WIT"
+	AdverseEventParticipantFunctionAuthorOriginator AdverseEventParticipantFunction = "AUT"
 )
 
 func AllAAdverseEventParticipantFunction() []AdverseEventParticipantFunction {

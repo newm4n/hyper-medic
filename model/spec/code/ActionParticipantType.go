@@ -5,19 +5,19 @@ import (
 	"strings"
 )
 
-type ActionParticipantType int
+type ActionParticipantType string
 
 const (
-	ActionParticipantTypeCareTeam ActionParticipantType = iota
-	ActionParticipantTypeDevice
-	ActionParticipantTypeGroup
-	ActionParticipantTypeHealthcareService
-	ActionParticipantTypeLocation
-	ActionParticipantTypeOrganization
-	ActionParticipantTypePatient
-	ActionParticipantTypePractitioner
-	ActionParticipantTypePractitionerRole
-	ActionParticipantTypeRelatedPerson
+	ActionParticipantTypeCareTeam          ActionParticipantType = "careteam"
+	ActionParticipantTypeDevice            ActionParticipantType = "device"
+	ActionParticipantTypeGroup             ActionParticipantType = "group"
+	ActionParticipantTypeHealthcareService ActionParticipantType = "healthcareservice"
+	ActionParticipantTypeLocation          ActionParticipantType = "location"
+	ActionParticipantTypeOrganization      ActionParticipantType = "organization"
+	ActionParticipantTypePatient           ActionParticipantType = "patient"
+	ActionParticipantTypePractitioner      ActionParticipantType = "practitioner"
+	ActionParticipantTypePractitionerRole  ActionParticipantType = "practitionerrole"
+	ActionParticipantTypeRelatedPerson     ActionParticipantType = "relatedperson"
 )
 
 func AllActionParticipantType() []ActionParticipantType {

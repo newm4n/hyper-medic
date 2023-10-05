@@ -5,18 +5,18 @@ import (
 	"strings"
 )
 
-type AllTimeUnit int
+type AllTimeUnit string
 
 const (
-	AllTimeUnitMicroSecond AllTimeUnit = iota
-	AllTimeUnitMillisecond
-	AllTimeUnitSecond
-	AllTimeUnitMinute
-	AllTimeUnitHour
-	AllTimeUnitDay
-	AllTimeUnitWeek
-	AllTimeUnitMonth
-	AllTimeUnitYear
+	AllTimeUnitMicroSecond AllTimeUnit = "Micro Second"
+	AllTimeUnitMillisecond AllTimeUnit = "Milli Second"
+	AllTimeUnitSecond      AllTimeUnit = "Second"
+	AllTimeUnitMinute      AllTimeUnit = "Minute"
+	AllTimeUnitHour        AllTimeUnit = "Hour"
+	AllTimeUnitDay         AllTimeUnit = "Day"
+	AllTimeUnitWeek        AllTimeUnit = "Week"
+	AllTimeUnitMonth       AllTimeUnit = "Month"
+	AllTimeUnitYear        AllTimeUnit = "Year"
 )
 
 func AllAllTimeUnit() []AllTimeUnit {
