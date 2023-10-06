@@ -5,21 +5,20 @@ import (
 	"strings"
 )
 
-/* TODO change type to string */
-type AttributeEstimateType int
+type AttributeEstimateType string
 
 const (
-	AttributeEstimateTypeCochransQstatistic AttributeEstimateType = iota
-	AttributeEstimateTypeConfidenceInterval
-	AttributeEstimateTypeCredibleInterval
-	AttributeEstimateTypeIsquared
-	AttributeEstimateTypeInterquartileRange
-	AttributeEstimateTypePValue
-	AttributeEstimateTypeRange
-	AttributeEstimateTypeStandardDeviation
-	AttributeEstimateTypeStandardErrorOfTheMean
-	AttributeEstimateTypeTauSquared
-	AttributeEstimateTypeVariance
+	AttributeEstimateTypeCochransQstatistic     AttributeEstimateType = "0000419"
+	AttributeEstimateTypeConfidenceInterval     AttributeEstimateType = "C53324"
+	AttributeEstimateTypeCredibleInterval       AttributeEstimateType = "0000455"
+	AttributeEstimateTypeIsquared               AttributeEstimateType = "0000420"
+	AttributeEstimateTypeInterquartileRange     AttributeEstimateType = "C53245"
+	AttributeEstimateTypePValue                 AttributeEstimateType = "C44185"
+	AttributeEstimateTypeRange                  AttributeEstimateType = "C38013"
+	AttributeEstimateTypeStandardDeviation      AttributeEstimateType = "C53322"
+	AttributeEstimateTypeStandardErrorOfTheMean AttributeEstimateType = "0000037 "
+	AttributeEstimateTypeTauSquared             AttributeEstimateType = "0000421"
+	AttributeEstimateTypeVariance               AttributeEstimateType = "C48918"
 )
 
 func AllAttributeEstimateType() []AttributeEstimateType {
@@ -79,18 +78,3 @@ func (au AttributeEstimateType) String() string {
 		return "Unknown Address Use"
 	}
 }
-
-/*
-Cochran's Q statistic
-Confidence interval
-Credible interval
-I-squared
-Interquartile range
-P-value
-Range
-Standard deviation
-Standard error of the mean
-Tau squared
-Variance
-
-*/

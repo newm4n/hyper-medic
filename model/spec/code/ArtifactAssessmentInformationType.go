@@ -5,16 +5,15 @@ import (
 	"strings"
 )
 
-/* TODO change type to string */
-type ArtifactAssessmentInformationType int
+type ArtifactAssessmentInformationType string
 
 const (
-	ArtifactAssessmentInformationTypeComment ArtifactAssessmentInformationType = iota
-	ArtifactAssessmentInformationTypeClassifier
-	ArtifactAssessmentInformationTypeRating
-	ArtifactAssessmentInformationTypeContainer
-	ArtifactAssessmentInformationTypeResponse
-	ArtifactAssessmentInformationTypeChangeRequest
+	ArtifactAssessmentInformationTypeComment       ArtifactAssessmentInformationType = "comment"
+	ArtifactAssessmentInformationTypeClassifier    ArtifactAssessmentInformationType = "classifier"
+	ArtifactAssessmentInformationTypeRating        ArtifactAssessmentInformationType = "rating"
+	ArtifactAssessmentInformationTypeContainer     ArtifactAssessmentInformationType = "container"
+	ArtifactAssessmentInformationTypeResponse      ArtifactAssessmentInformationType = "response"
+	ArtifactAssessmentInformationTypeChangeRequest ArtifactAssessmentInformationType = "change-request"
 )
 
 func AllArtifactAssessmentInformationType() []ArtifactAssessmentInformationType {

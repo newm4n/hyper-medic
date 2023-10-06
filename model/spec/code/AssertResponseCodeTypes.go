@@ -5,61 +5,60 @@ import (
 	"strings"
 )
 
-/* TODO change type to string */
-type AssertResponseCodeTypes int
+type AssertResponseCodeTypes string
 
 const (
-	AssertResponseCodeTypesContinue AssertResponseCodeTypes = iota
-	AssertResponseCodeTypesSwitchingProtocols
-	AssertResponseCodeTypesOK
-	AssertResponseCodeTypesCreated
-	AssertResponseCodeTypesAccepted
-	AssertResponseCodeTypesNonAuthoritativeInformation
-	AssertResponseCodeTypesNoContent
-	AssertResponseCodeTypesResetContent
-	AssertResponseCodeTypesPartialContent
-	AssertResponseCodeTypesMultipleChoices
-	AssertResponseCodeTypesMovedPermanently
-	AssertResponseCodeTypesFound
-	AssertResponseCodeTypesSeeOther
-	AssertResponseCodeTypesNotModified
-	AssertResponseCodeTypesUseProxy
-	AssertResponseCodeTypesTemporaryRedirect
-	AssertResponseCodeTypesPermanentRedirect
-	AssertResponseCodeTypesBadRequest
-	AssertResponseCodeTypesUnauthorized
-	AssertResponseCodeTypesPaymentRequired
-	AssertResponseCodeTypesForbidden
-	AssertResponseCodeTypesNotFound
-	AssertResponseCodeTypesMethodNotAllowed
-	AssertResponseCodeTypesNotAcceptable
-	AssertResponseCodeTypesProxyAuthenticationRequired
-	AssertResponseCodeTypesRequestTimeout
-	AssertResponseCodeTypesConflict
-	AssertResponseCodeTypesGone
-	AssertResponseCodeTypesLengthRequired
-	AssertResponseCodeTypesPreconditionFailed
-	AssertResponseCodeTypesContentTooLarge
-	AssertResponseCodeTypesURITooLong
-	AssertResponseCodeTypesUnsupportedMediaType
-	AssertResponseCodeTypesRangeNotSatisfiable
-	AssertResponseCodeTypesExpectationFailed
-	AssertResponseCodeTypesMisdirectedRequest
-	AssertResponseCodeTypesUnprocessableContent
-	AssertResponseCodeTypesUpgradeRequired
-	AssertResponseCodeTypesInternalServerError
-	AssertResponseCodeTypesNotImplemented
-	AssertResponseCodeTypesBadGateway
-	AssertResponseCodeTypesServiceUnavailable
-	AssertResponseCodeTypesGatewayTimeout
-	AssertResponseCodeTypesHTTPVersionNotSupported
+	AssertResponseCodeTypesContinue                    AssertResponseCodeTypes = "continue"
+	AssertResponseCodeTypesSwitchingProtocols          AssertResponseCodeTypes = "switchingProtocols"
+	AssertResponseCodeTypesOkay                        AssertResponseCodeTypes = "okay"
+	AssertResponseCodeTypesCreated                     AssertResponseCodeTypes = "created"
+	AssertResponseCodeTypesAccepted                    AssertResponseCodeTypes = "accepted"
+	AssertResponseCodeTypesNonAuthoritativeInformation AssertResponseCodeTypes = "nonAuthoritativeInformation"
+	AssertResponseCodeTypesNoContent                   AssertResponseCodeTypes = "noContent"
+	AssertResponseCodeTypesResetContent                AssertResponseCodeTypes = "resetContent"
+	AssertResponseCodeTypesPartialContent              AssertResponseCodeTypes = "partialContent"
+	AssertResponseCodeTypesMultipleChoices             AssertResponseCodeTypes = "multipleChoices"
+	AssertResponseCodeTypesMovedPermanently            AssertResponseCodeTypes = "movedPermanently"
+	AssertResponseCodeTypesFound                       AssertResponseCodeTypes = "found"
+	AssertResponseCodeTypesSeeOther                    AssertResponseCodeTypes = "seeOther"
+	AssertResponseCodeTypesNotModified                 AssertResponseCodeTypes = "notModified"
+	AssertResponseCodeTypesUseProxy                    AssertResponseCodeTypes = "useProxy"
+	AssertResponseCodeTypesTemporaryRedirect           AssertResponseCodeTypes = "temporaryRedirect"
+	AssertResponseCodeTypesPermanentRedirect           AssertResponseCodeTypes = "permanentRedirect"
+	AssertResponseCodeTypesBadRequest                  AssertResponseCodeTypes = "badRequest"
+	AssertResponseCodeTypesUnauthorized                AssertResponseCodeTypes = "unauthorized"
+	AssertResponseCodeTypesPaymentRequired             AssertResponseCodeTypes = "paymentRequired"
+	AssertResponseCodeTypesForbidden                   AssertResponseCodeTypes = "forbidden"
+	AssertResponseCodeTypesNotFound                    AssertResponseCodeTypes = "notFound"
+	AssertResponseCodeTypesMethodNotAllowed            AssertResponseCodeTypes = "methodNotAllowed"
+	AssertResponseCodeTypesNotAcceptable               AssertResponseCodeTypes = "notAcceptable"
+	AssertResponseCodeTypesProxyAuthenticationRequired AssertResponseCodeTypes = "proxyAuthenticationRequired"
+	AssertResponseCodeTypesRequestTimeout              AssertResponseCodeTypes = "requestTimeout"
+	AssertResponseCodeTypesConflict                    AssertResponseCodeTypes = "conflict"
+	AssertResponseCodeTypesGone                        AssertResponseCodeTypes = "gone"
+	AssertResponseCodeTypesLengthRequired              AssertResponseCodeTypes = "lengthRequired"
+	AssertResponseCodeTypesPreconditionFailed          AssertResponseCodeTypes = "preconditionFailed"
+	AssertResponseCodeTypesContentTooLarge             AssertResponseCodeTypes = "contentTooLarge"
+	AssertResponseCodeTypesUriTooLong                  AssertResponseCodeTypes = "uriTooLong"
+	AssertResponseCodeTypesUnsupportedMediaType        AssertResponseCodeTypes = "unsupportedMediaType"
+	AssertResponseCodeTypesRangeNotSatisfiable         AssertResponseCodeTypes = "rangeNotSatisfiable"
+	AssertResponseCodeTypesExpectationFailed           AssertResponseCodeTypes = "expectationFailed"
+	AssertResponseCodeTypesMisdirectedRequest          AssertResponseCodeTypes = "misdirectedRequest"
+	AssertResponseCodeTypesUnprocessableContent        AssertResponseCodeTypes = "unprocessableContent"
+	AssertResponseCodeTypesUpgradeRequired             AssertResponseCodeTypes = "upgradeRequired"
+	AssertResponseCodeTypesInternalServerError         AssertResponseCodeTypes = "internalServerError"
+	AssertResponseCodeTypesNotImplemented              AssertResponseCodeTypes = "notImplemented"
+	AssertResponseCodeTypesBadGateway                  AssertResponseCodeTypes = "badGateway"
+	AssertResponseCodeTypesServiceUnavailable          AssertResponseCodeTypes = "serviceUnavailable"
+	AssertResponseCodeTypesGatewayTimeout              AssertResponseCodeTypes = "gatewayTimeout"
+	AssertResponseCodeTypesHttpVersionNotSupported     AssertResponseCodeTypes = "httpVersionNotSupported"
 )
 
 func AllAssertResponseCodeTypes() []AssertResponseCodeTypes {
 	return []AssertResponseCodeTypes{
 		AssertResponseCodeTypesContinue,
 		AssertResponseCodeTypesSwitchingProtocols,
-		AssertResponseCodeTypesOK,
+		AssertResponseCodeTypesOkay,
 		AssertResponseCodeTypesCreated,
 		AssertResponseCodeTypesAccepted,
 		AssertResponseCodeTypesNonAuthoritativeInformation,
@@ -88,7 +87,7 @@ func AllAssertResponseCodeTypes() []AssertResponseCodeTypes {
 		AssertResponseCodeTypesLengthRequired,
 		AssertResponseCodeTypesPreconditionFailed,
 		AssertResponseCodeTypesContentTooLarge,
-		AssertResponseCodeTypesURITooLong,
+		AssertResponseCodeTypesUriTooLong,
 		AssertResponseCodeTypesUnsupportedMediaType,
 		AssertResponseCodeTypesRangeNotSatisfiable,
 		AssertResponseCodeTypesExpectationFailed,
@@ -100,7 +99,7 @@ func AllAssertResponseCodeTypes() []AssertResponseCodeTypes {
 		AssertResponseCodeTypesBadGateway,
 		AssertResponseCodeTypesServiceUnavailable,
 		AssertResponseCodeTypesGatewayTimeout,
-		AssertResponseCodeTypesHTTPVersionNotSupported,
+		AssertResponseCodeTypesHttpVersionNotSupported,
 	}
 }
 
@@ -123,7 +122,7 @@ func (au AssertResponseCodeTypes) String() string {
 		return "Continue"
 	case AssertResponseCodeTypesSwitchingProtocols:
 		return "Switching Protocols"
-	case AssertResponseCodeTypesOK:
+	case AssertResponseCodeTypesOkay:
 		return "OK"
 	case AssertResponseCodeTypesCreated:
 		return "Created"
@@ -181,7 +180,7 @@ func (au AssertResponseCodeTypes) String() string {
 		return "Precondition Failed"
 	case AssertResponseCodeTypesContentTooLarge:
 		return "Content Too Large"
-	case AssertResponseCodeTypesURITooLong:
+	case AssertResponseCodeTypesUriTooLong:
 		return "URI Too Long"
 	case AssertResponseCodeTypesUnsupportedMediaType:
 		return "Unsupported Media Type"
@@ -205,57 +204,10 @@ func (au AssertResponseCodeTypes) String() string {
 		return "Service Unavailable"
 	case AssertResponseCodeTypesGatewayTimeout:
 		return "Gateway Timeout"
-	case AssertResponseCodeTypesHTTPVersionNotSupported:
+	case AssertResponseCodeTypesHttpVersionNotSupported:
 		return "HTTP Version Not Supported"
+
 	default:
 		return "Unknown Address Use"
 	}
 }
-
-/*
-Continue
-Switching Protocols
-OK
-Created
-Accepted
-Non-Authoritative Information
-No Content
-Reset Content
-Partial Content
-Multiple Choices
-Moved Permanently
-Found
-See Other
-Not Modified
-Use Proxy
-Temporary Redirect
-Permanent Redirect
-Bad Request
-Unauthorized
-Payment Required
-Forbidden
-Not Found
-Method Not Allowed
-Not Acceptable
-Proxy Authentication Required
-Request Timeout
-Conflict
-Gone
-Length Required
-Precondition Failed
-Content Too Large
-URI Too Long
-Unsupported Media Type
-Range Not Satisfiable
-Expectation Failed
-Misdirected Request
-Unprocessable Content
-Upgrade Required
-Internal Server Error
-Not Implemented
-Bad Gateway
-Service Unavailable
-Gateway Timeout
-HTTP Version Not Supported
-
-*/

@@ -5,15 +5,14 @@ import (
 	"strings"
 )
 
-/* TODO change type to string */
-type AuditEventAction int
+type AuditEventAction string
 
 const (
-	AuditEventActionCreate AuditEventAction = iota
-	AuditEventActionRead
-	AuditEventActionUpdate
-	AuditEventActionDelete
-	AuditEventActionExecute
+	AuditEventActionCreate  AuditEventAction = "C"
+	AuditEventActionRead    AuditEventAction = "R"
+	AuditEventActionUpdate  AuditEventAction = "U"
+	AuditEventActionDelete  AuditEventAction = "D"
+	AuditEventActionExecute AuditEventAction = "E"
 )
 
 func AllAuditEventAction() []AuditEventAction {

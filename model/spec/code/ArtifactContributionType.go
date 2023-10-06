@@ -5,24 +5,23 @@ import (
 	"strings"
 )
 
-/* TODO change type to string */
-type ArtifactContributionType int
+type ArtifactContributionType string
 
 const (
-	ArtifactContributionTypeConceptualization ArtifactContributionType = iota
-	ArtifactContributionTypeDataCuration
-	ArtifactContributionTypeFormalAnalysis
-	ArtifactContributionTypeFundingAcquisition
-	ArtifactContributionTypeInvestigation
-	ArtifactContributionTypeMethodology
-	ArtifactContributionTypeProjectAdministration
-	ArtifactContributionTypeResources
-	ArtifactContributionTypeSoftware
-	ArtifactContributionTypeSupervision
-	ArtifactContributionTypeValidation
-	ArtifactContributionTypeVisualization
-	ArtifactContributionTypeWritingOriginalDraft
-	ArtifactContributionTypeWritingReviewEditing
+	ArtifactContributionTypeConceptualization     ArtifactContributionType = "conceptualization"
+	ArtifactContributionTypeDataCuration          ArtifactContributionType = "data-curation"
+	ArtifactContributionTypeFormalAnalysis        ArtifactContributionType = "formal-analysis"
+	ArtifactContributionTypeFundingAcquisition    ArtifactContributionType = "funding-acquisition"
+	ArtifactContributionTypeInvestigation         ArtifactContributionType = "investigation"
+	ArtifactContributionTypeMethodology           ArtifactContributionType = "methodology"
+	ArtifactContributionTypeProjectAdministration ArtifactContributionType = "project-administration"
+	ArtifactContributionTypeResources             ArtifactContributionType = "resources"
+	ArtifactContributionTypeSoftware              ArtifactContributionType = "software"
+	ArtifactContributionTypeSupervision           ArtifactContributionType = "supervision"
+	ArtifactContributionTypeValidation            ArtifactContributionType = "validation"
+	ArtifactContributionTypeVisualization         ArtifactContributionType = "visualization"
+	ArtifactContributionTypeWritingOriginalDraft  ArtifactContributionType = "writing-original-draft"
+	ArtifactContributionTypeWritingReviewEditing  ArtifactContributionType = "writing-review-editing"
 )
 
 func AllArtifactContributionType() []ArtifactContributionType {
@@ -91,21 +90,3 @@ func (au ArtifactContributionType) String() string {
 		return "Unknown Artifact Contribution Type"
 	}
 }
-
-/*
-Conceptualization
-Data curation
-Formal analysis
-Funding acquisition
-Investigation
-Methodology
-Project administration
-Resources
-Software
-Supervision
-Validation
-Visualization
-Writing - original draft
-Writing - review & editing
-
-*/
